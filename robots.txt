@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://moneycle.github.io/sitemap.xml 
