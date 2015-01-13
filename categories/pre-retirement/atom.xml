@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[The Money Monocle]]></title>
-  <link href="http://moneycle.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Pre-retirement | The Money Monocle]]></title>
+  <link href="http://moneycle.github.io/categories/pre-retirement/atom.xml" rel="self"/>
   <link href="http://moneycle.github.io/"/>
   <updated>2015-01-12T17:32:02-07:00</updated>
   <id>http://moneycle.github.io/</id>

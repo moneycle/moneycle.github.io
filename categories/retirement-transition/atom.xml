@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[The Money Monocle]]></title>
-  <link href="http://moneycle.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Retirement Transition | The Money Monocle]]></title>
+  <link href="http://moneycle.github.io/categories/retirement-transition/atom.xml" rel="self"/>
   <link href="http://moneycle.github.io/"/>
   <updated>2015-01-12T17:32:02-07:00</updated>
   <id>http://moneycle.github.io/</id>
@@ -12,15 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[The Case Against Roth 401(k)]]></title>
-    <link href="http://moneycle.github.io/2015/01/12/case-against-roth-401k/"/>
-    <updated>2015-01-12T17:09:02-07:00</updated>
-    <id>http://moneycle.github.io/2015/01/12/case-against-roth-401k</id>
-    <content type="html"><![CDATA[<p>The Finance Buff makes a good case for contributing to a Traditional 401k before contributing to a Roth 401k.</p>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[First Blog Post Test]]></title>
