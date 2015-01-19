@@ -1,0 +1,13 @@
+# Site settings
+title: The Money Monocle
+email: moneycle@squeat.com
+description: > # this means to ignore newlines until "baseurl:"
+  Don your money monocle as we look at issues related to
+  money, investing and early retirement.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://moneycle.com" # the base hostname & protocol for your site
+twitter_username: squeat
+github_username:  moneycle
+
+# Build settings
+markdown: kramdown

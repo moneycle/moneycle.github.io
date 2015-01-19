@@ -1,0 +1,5 @@
+---
+layout: {{ layout }}
+title: {{ title }}
+categories: [planning, transition, retirement]
+---
