@@ -1,9 +1,10 @@
 # Site settings
-title: The Moneycle
+title: Moneycle
 email: sir@moneycle.com
 description: > # this means to ignore newlines until "baseurl:"
-  Don your money monocle as we examine topics related to
-  money, investing and early retirement.
+  Don your money monocle (top hats are optional)
+  as we explore topics related to money,
+  investing and early retirement.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://moneycle.com" # the base hostname & protocol for your site
 twitter_username: moneymonocle
