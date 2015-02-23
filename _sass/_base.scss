@@ -93,7 +93,7 @@ a {
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color: darken($brand-color, 10%);
     }
 
     &:hover {
@@ -201,4 +201,12 @@ pre {
             fill: $grey-color;
         }
     }
+}
+
+article {
+  .post-image  {
+    width: 48%;
+    float: right;
+    margin: 0 0 12px 12px;
+  }
 }
