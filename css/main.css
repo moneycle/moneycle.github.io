@@ -7,15 +7,20 @@ dl, dd, ol, ul, figure {
   margin: 0;
   padding: 0; }
 
+table {
+  padding: 1.5em; }
+  table th, table td {
+    padding: 0 0.5em; }
+
 /**
  * Basic styling
  */
 body {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 19px;
   line-height: 1.5;
-  font-weight: 300;
-  color: #111;
+  font-weight: 400;
+  color: #555;
   background-color: #fdfdfd;
   -webkit-text-size-adjust: 100%; }
 
@@ -42,7 +47,7 @@ figure > img {
   display: block; }
 
 figcaption {
-  font-size: 14px; }
+  font-size: 16.625px; }
 
 /**
  * Lists
@@ -58,18 +63,19 @@ li > ol {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 300; }
+  font-weight: 500;
+  color: #333; }
 
 /**
  * Links
  */
 a {
-  color: #2a7ae2;
+  color: #228844;
   text-decoration: none; }
   a:visited {
-    color: #1756a9; }
+    color: #185f30; }
   a:hover {
-    color: #111;
+    color: #555;
     text-decoration: underline; }
 
 /**
@@ -90,7 +96,7 @@ blockquote {
  */
 pre,
 code {
-  font-size: 15px;
+  font-size: 18px;
   border: 1px solid #e8e8e8;
   border-radius: 3px;
   background-color: #eef; }
@@ -142,23 +148,37 @@ pre {
   .icon > svg path {
     fill: #828282; }
 
+article .post-image {
+  width: 48%;
+  float: right;
+  margin: 0 0 12px 12px; }
+
+abstract .post-image {
+  width: 24%;
+  float: right;
+  margin: 0 0 12px 12px; }
+
+.brand-color {
+  color: #228844; }
+
 /**
  * Site header
  */
 .site-header {
-  border-top: 5px solid #424242;
+  border-top: 5px solid #228844;
   border-bottom: 1px solid #e8e8e8;
   min-height: 56px;
   position: relative; }
 
 .site-title {
-  font-size: 26px;
+  font-size: 28px;
+  font-weight: 500;
   line-height: 56px;
   letter-spacing: -1px;
   margin-bottom: 0;
   float: left; }
   .site-title, .site-title:visited {
-    color: #424242; }
+    color: #5c5c5c; }
 
 .site-nav {
   float: right;
@@ -166,7 +186,7 @@ pre {
   .site-nav .menu-icon {
     display: none; }
   .site-nav .page-link {
-    color: #111;
+    color: #555;
     line-height: 1.5; }
     .site-nav .page-link:not(:first-child) {
       margin-left: 20px; }
@@ -191,7 +211,7 @@ pre {
           width: 18px;
           height: 15px; }
           .site-nav .menu-icon > svg path {
-            fill: #424242; }
+            fill: #5c5c5c; }
       .site-nav .trigger {
         clear: both;
         display: none; }
@@ -270,7 +290,7 @@ pre {
     margin-bottom: 30px; }
 
 .post-meta {
-  font-size: 14px;
+  font-size: 16.625px;
   color: #828282; }
 
 .post-link {
@@ -285,7 +305,7 @@ pre {
 
 .post-title {
   font-size: 42px;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   line-height: 1; }
   @media screen and (max-width: 800px) {
     .post-title {
@@ -294,12 +314,12 @@ pre {
 .post-content {
   margin-bottom: 30px; }
   .post-content h2 {
-    font-size: 32px; }
+    font-size: 30px; }
     @media screen and (max-width: 800px) {
       .post-content h2 {
         font-size: 28px; } }
   .post-content h3 {
-    font-size: 26px; }
+    font-size: 24px; }
     @media screen and (max-width: 800px) {
       .post-content h3 {
         font-size: 22px; } }

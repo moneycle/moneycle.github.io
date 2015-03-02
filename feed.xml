@@ -1,27 +1,157 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>The Moneycle</title>
-    <description>Don your money monocle as we examine topics related to money, investing and early retirement.
+    <title>M&lt;span class=&#39;brand-color&#39;&gt;o&lt;/span&gt;neycle</title>
+    <description>Don your money monocle (top hats are optional) as we explore topics related to money, investing and early retirement.
 </description>
     <link>http://moneycle.com/</link>
     <atom:link href="http://moneycle.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 20 Feb 2015 21:19:21 -0700</pubDate>
-    <lastBuildDate>Fri, 20 Feb 2015 21:19:21 -0700</lastBuildDate>
+    <pubDate>Mon, 02 Mar 2015 10:40:34 -0700</pubDate>
+    <lastBuildDate>Mon, 02 Mar 2015 10:40:34 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
-        <title>Test Post</title>
-        <description>&lt;h2 id=&quot;testing-octopress&quot;&gt;Testing octopress&lt;/h2&gt;
+        <title>A Penny Saved Is Four Dollars Earned</title>
+        <description>&lt;p&gt;We’ve all heard the phrase “a penny saved is a penny earned”, which is usually
+attributed to Benjamin Franklin.  And while Benjamin Franklin, inventor of the
+bifocals, is revered by the monocle-loving crowd, his adage does not
+accurately represent the true worth of a penny saved in the context of an early
+retirement.  Let’s take a look at what a penny saved in your monthly expenses
+equals in terms of how much money you need to save.&lt;/p&gt;
 
-&lt;p&gt;Here’s some text.&lt;/p&gt;
+&lt;h2 id=&quot;retirement-income&quot;&gt;Retirement Income&lt;/h2&gt;
+
+&lt;p&gt;When thinking about retirement income, a good rule-of-thumb is to use the 4% rule.
+This isn’t a hard and fast rule, but it does give us a good idea of how much
+money we need to save for a particular income.  For example, a portfolio of
+$300,000 can reasonably be expected to generate an income of $12,000 per year
+(4% of $300,000), or $1000 per month.  Conversely, if we want an
+income of $1000 per month, we need to save 300 times that amount in our retirement
+account.&lt;/p&gt;
+
+&lt;p&gt;When we talk about income needs in retirement, all we’re really talking about
+is covering our living expenses.  So, if we can reduce our expenses by
+$1 per month, then we can retire with $300 less in our portfolio.&lt;/p&gt;
+
+&lt;h2 id=&quot;taxes&quot;&gt;Taxes&lt;/h2&gt;
+
+&lt;p&gt;Accounting for taxes can be a little more tricky because the tax rate depends
+on when the money is taxed.  If it is taxed while you are in your peak earning
+years, you might be paying a combined 33% or more federal and state taxes,
+not to mention sales tax on whatever your are spending your money on.
+But after retirement, you should be in a lower tax bracket.&lt;/p&gt;
+
+&lt;p&gt;For the sake of argument, let’s assume you have deferred your taxes until retirement
+and that the money you’re spending is coming out of a traditional IRA.
+And let’s say you’re in the 15% federal bracket, 5% state and 5% sales tax.
+It’s pretty easy to get to 25% combined taxes even at lower tax brackets.&lt;/p&gt;
+
+&lt;p&gt;When accounting for taxes, instead of saving $300 now to spend $1 later, we would
+have to save $400 with an assumed 25% total tax rate.  So, if you start with $400,
+and subtract 25%, or $100 for taxes, then you arrive at the $300 needed to sustain
+$1 in monthly spending.&lt;/p&gt;
+
+&lt;p&gt;In equation form, you need to save &lt;code&gt;$300/(1-tax_rate)&lt;/code&gt; to sustain a dollar of monthly
+expenses.  For example, if you’re combined tax rate is 40%, then the
+amount you need to earn to save for a $1 monthly expense would be &lt;code&gt;$300/0.6&lt;/code&gt; or $500!&lt;/p&gt;
+
+&lt;h2 id=&quot;monthly-expenses&quot;&gt;Monthly Expenses&lt;/h2&gt;
+
+&lt;p&gt;Using the $400 multiplier, consider some typical monthly expenses and their
+impact on your savings.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;If you will be spending …&lt;/th&gt;
+      &lt;th&gt;You need to save…&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;$8 your Hulu subscription&lt;/td&gt;
+      &lt;td&gt;$3,200&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;$30 to have your dachshund bathed&lt;/td&gt;
+      &lt;td&gt;$12,000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;$50 extra on your phone bill&lt;/td&gt;
+      &lt;td&gt;$20,000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;$100 extra on your cable bill&lt;/td&gt;
+      &lt;td&gt;$30,000&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;The math on this is easy to do in your head, which is partly why I chose the
+25% tax rate for our examples.
+Multiplying by 400 is simply multiplying by 2 twice then adding 2 zeroes.
+So, when you consider the money you need to save to cover a cost of say, $6.35,
+times 2 is $12.70, times 2 is $25.40, and add 2 zeros to arrive at $2540.
+You don’t need a fancy monocle to do that in your head!&lt;/p&gt;
+
+&lt;h2 id=&quot;daily-expenses&quot;&gt;Daily Expenses&lt;/h2&gt;
+
+&lt;p&gt;Daily expenses have an even bigger impact per dollar.  If you consider a daily
+expense to be around 25 times per month, then you need 25*$400, or $10,000,
+to cover every $1 of daily expenses in the future. 
+The math couldn’t be easier, just add 4 zeros.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;If you will be spending …&lt;/th&gt;
+      &lt;th&gt;You need to save…&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;$1 to have your monocle cleaned&lt;/td&gt;
+      &lt;td&gt;$10,000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;$2 for a fountain drink with lunch&lt;/td&gt;
+      &lt;td&gt;$20,000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;$5 for a venti Starbucks Frappucino&lt;/td&gt;
+      &lt;td&gt;$50,000&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Now, if you can’t live without your Starbucks, maybe just downgrading to the
+grande size will save you $10,000.  And maybe you could even learn to clean
+your own damn monocle and save another $10,000.&lt;/p&gt;
+
+&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;I have been a little bit loose with the numbers partially because it’s hard to
+know exactly what your withdrawal and tax rates will be.
+But the point of this article is to give you some ballpark numbers with which
+to evaluate whether an added expense is worth it.
+Simply put, to figure out how much money you’ll need to support an expense rate:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;for monthly expenses, multiply the expense by 400.&lt;/li&gt;
+  &lt;li&gt;for daily expenses, multiply the expense by 10,000.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Hopefully this will make you stop and think the next time you find yourself paying
+a little more for something and help you decide if it’s worth the extra cost.&lt;/p&gt;
 </description>
-        <pubDate>Sun, 18 Jan 2015 23:11:26 -0700</pubDate>
-        <link>http://moneycle.com/planning/2015/01/18/test-post.html</link>
-        <guid isPermaLink="true">http://moneycle.com/planning/2015/01/18/test-post.html</guid>
+        <pubDate>Sat, 28 Feb 2015 00:00:00 -0700</pubDate>
+        <link>http://moneycle.com/investing/spending/2015/02/28/a-penny-saved-is-four-dollars-earned.html</link>
+        <guid isPermaLink="true">http://moneycle.com/investing/spending/2015/02/28/a-penny-saved-is-four-dollars-earned.html</guid>
         
         
-        <category>planning</category>
+        <category>investing</category>
+        
+        <category>spending</category>
         
       </item>
     
