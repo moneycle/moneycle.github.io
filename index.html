@@ -14,10 +14,12 @@ layout: default
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
+        <abstract class="post-content">
+          {% if post.image %}<img class="post-image" src="{{ post.image }}"/>{% endif %}
+          {{ post.abstract }}
+        </abstract>
       </li>
     {% endfor %}
   </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>

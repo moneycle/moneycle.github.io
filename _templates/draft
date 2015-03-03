@@ -1,5 +1,8 @@
 ---
 layout: {{ layout }}
 title: {{ title }}
-categories: [investing, spending, other]
+tags: [investing, spending, other]
+image: /images/testing.jpg
+abstract: >
+  Testing, one, two, three.
 ---

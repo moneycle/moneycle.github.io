@@ -8,7 +8,12 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
-
+table {
+  padding: 1.5em;
+  th, td {
+    padding: 0 0.5em;
+  }
+}
 
 /**
  * Basic styling
@@ -17,7 +22,7 @@ body {
     font-family: $base-font-family;
     font-size: $base-font-size;
     line-height: $base-line-height;
-    font-weight: 300;
+    font-weight: 400;
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
@@ -80,8 +85,10 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 300;
+  font-weight: 500;
+  color: $headline-color;
 }
+
 
 
 
@@ -127,7 +134,7 @@ blockquote {
  */
 pre,
 code {
-    font-size: 15px;
+    font-size: 18px;
     border: 1px solid $grey-color-light;
     border-radius: 3px;
     background-color: #eef;
@@ -209,4 +216,16 @@ article {
     float: right;
     margin: 0 0 12px 12px;
   }
+}
+
+abstract {
+  .post-image  {
+    width: 24%;
+    float: right;
+    margin: 0 0 12px 12px;
+  }
+}
+
+.brand-color {
+  color: $brand-color;
 }
