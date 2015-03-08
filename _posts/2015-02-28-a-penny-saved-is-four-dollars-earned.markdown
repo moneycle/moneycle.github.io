@@ -13,9 +13,8 @@ We've all heard the phrase "a penny saved is a penny earned", which is usually
 attributed to Benjamin Franklin, inventor of the bifocals.
 And while Benjamin Franklin is revered by the monocle-loving crowd,
 his adage does not accurately represent the true worth of a penny saved in the
-context of an early retirement.  
-Let's take a look at what a penny saved in your monthly expenses
-equals in terms of how much money you need to save.
+context of an early retirement.  Let's take a look at what a penny saved in your
+monthly expenses equals in terms of how much money you need to save.
 
 ## Retirement Income
 
@@ -45,9 +44,8 @@ And let's say you're in the 15% federal bracket, 5% state and 5% sales tax.
 It's pretty easy to get to 25% combined taxes even at lower tax brackets.
 
 With this 25% tax rate, instead of saving $300 now to spend $1 later, we would
-have to save $400.  
-So, if you start with $400, and subtract 25%, or $100 for taxes, then you arrive
-at the $300 needed to sustain $1 in monthly spending.
+have to save $400.  So, if you start with $400, and subtract 25%, or $100 for
+taxes, then you arrive at the $300 needed to sustain $1 in monthly spending.
 
 In equation form, you need to save `$300/(1-tax_rate)` to sustain a dollar of monthly
 expenses.  For example, if you're combined tax rate is 40%, then the
@@ -68,11 +66,11 @@ impact on your savings.
   |------------------------------------+---------------------|
 
 The math on this is easy to do in your head, which is partly why I chose the
-25% tax rate for our examples.
-Multiplying by 400 is simply multiplying by 2 twice then adding 2 zeroes.
-So, when you consider the money you need to save to cover a cost of say, $6.35,
-times 2 is $12.70, times 2 is $25.40, and add 2 zeros to arrive at $2540.
-You don't need a fancy monocle to do that in your head!
+25% tax rate for our examples.  Multiplying by 400 is simply multiplying by
+2 twice then adding 2 zeroes.  So, when you consider the money you need to
+save to cover a cost of say, $6.35, times 2 is $12.70, times 2 is $25.40,
+and add 2 zeros to arrive at $2540.  You don't need a fancy monocle to do
+that in your head!
 
 ## Daily Expenses
 
@@ -96,11 +94,13 @@ your own damn monocle and save another $10,000.
 ## Summary
 
 I have been a little bit loose with the numbers partially because it's hard to
-know exactly what your withdrawal and tax rates will be.
-But the point of this article is to give you some ballpark numbers with which
-to evaluate whether an added expense is worth it.
-Simply put, to figure out how much money you'll need to support a spending level
-in retirement:
+know exactly what your withdrawal and tax rates will be.  But the point of this
+article is to give you some ballpark numbers with which to evaluate whether an
+added expense is worth it.  Simply put, to figure out how much money you'll
+need to support a spending level in retirement:
 
   * for monthly expenses, multiply the expense by 400.
   * for daily expenses, multiply the expense by 10,000.
+
+Hopefully this rule-of-thumb will help you think about the impact of
+spending on your retirement.
