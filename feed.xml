@@ -6,17 +6,18 @@
 </description>
     <link>http://www.moneycle.com/</link>
     <atom:link href="http://www.moneycle.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 03 Mar 2015 00:08:04 -0700</pubDate>
-    <lastBuildDate>Tue, 03 Mar 2015 00:08:04 -0700</lastBuildDate>
+    <pubDate>Sat, 07 Mar 2015 22:26:26 -0700</pubDate>
+    <lastBuildDate>Sat, 07 Mar 2015 22:26:26 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>A Penny Saved Is Four Dollars Earned</title>
         <description>&lt;p&gt;We’ve all heard the phrase “a penny saved is a penny earned”, which is usually
-attributed to Benjamin Franklin.  And while Benjamin Franklin, inventor of the
-bifocals, is revered by the monocle-loving crowd, his adage does not
-accurately represent the true worth of a penny saved in the context of an early
-retirement.  Let’s take a look at what a penny saved in your monthly expenses
+attributed to Benjamin Franklin, inventor of the bifocals.
+And while Benjamin Franklin is revered by the monocle-loving crowd,
+his adage does not accurately represent the true worth of a penny saved in the
+context of an early retirement.&lt;br /&gt;
+Let’s take a look at what a penny saved in your monthly expenses
 equals in terms of how much money you need to save.&lt;/p&gt;
 
 &lt;h2 id=&quot;retirement-income&quot;&gt;Retirement Income&lt;/h2&gt;
@@ -46,10 +47,10 @@ and that the money you’re spending is coming out of a traditional IRA.
 And let’s say you’re in the 15% federal bracket, 5% state and 5% sales tax.
 It’s pretty easy to get to 25% combined taxes even at lower tax brackets.&lt;/p&gt;
 
-&lt;p&gt;When accounting for taxes, instead of saving $300 now to spend $1 later, we would
-have to save $400 with an assumed 25% total tax rate.  So, if you start with $400,
-and subtract 25%, or $100 for taxes, then you arrive at the $300 needed to sustain
-$1 in monthly spending.&lt;/p&gt;
+&lt;p&gt;With this 25% tax rate, instead of saving $300 now to spend $1 later, we would
+have to save $400.&lt;br /&gt;
+So, if you start with $400, and subtract 25%, or $100 for taxes, then you arrive
+at the $300 needed to sustain $1 in monthly spending.&lt;/p&gt;
 
 &lt;p&gt;In equation form, you need to save &lt;code&gt;$300/(1-tax_rate)&lt;/code&gt; to sustain a dollar of monthly
 expenses.  For example, if you’re combined tax rate is 40%, then the
@@ -57,7 +58,7 @@ amount you need to earn to save for a $1 monthly expense would be &lt;code&gt;$3
 
 &lt;h2 id=&quot;monthly-expenses&quot;&gt;Monthly Expenses&lt;/h2&gt;
 
-&lt;p&gt;Using the $400 multiplier, consider some typical monthly expenses and their
+&lt;p&gt;Using the $400 multiplier from above, consider some typical monthly expenses and their
 impact on your savings.&lt;/p&gt;
 
 &lt;table&gt;
@@ -82,7 +83,7 @@ impact on your savings.&lt;/p&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;$100 extra on your cable bill&lt;/td&gt;
-      &lt;td&gt;$30,000&lt;/td&gt;
+      &lt;td&gt;$40,000&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -134,15 +135,13 @@ your own damn monocle and save another $10,000.&lt;/p&gt;
 know exactly what your withdrawal and tax rates will be.
 But the point of this article is to give you some ballpark numbers with which
 to evaluate whether an added expense is worth it.
-Simply put, to figure out how much money you’ll need to support an expense rate:&lt;/p&gt;
+Simply put, to figure out how much money you’ll need to support a spending level
+in retirement:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;for monthly expenses, multiply the expense by 400.&lt;/li&gt;
   &lt;li&gt;for daily expenses, multiply the expense by 10,000.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;Hopefully this will make you stop and think the next time you find yourself paying
-a little more for something and help you decide if it’s worth the extra cost.&lt;/p&gt;
 </description>
         <pubDate>Sat, 28 Feb 2015 00:00:00 -0700</pubDate>
         <link>http://www.moneycle.com/a-penny-saved-is-four-dollars-earned/</link>

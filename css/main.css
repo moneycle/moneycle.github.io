@@ -311,6 +311,10 @@ abstract .post-image {
     .post-title {
       font-size: 36px; } }
 
+.post-abstract {
+  font-style: italic;
+  margin: 30px; }
+
 .post-content {
   margin-bottom: 30px; }
   .post-content h2 {
