@@ -6,14 +6,15 @@ tags: [investing, spending]
 image: /images/piggy-bank-640_360.jpg
 abstract: >
   What is the true impact of spending relative to how much you need to
-  save to support that spending?
+  save to support that spending in retirement?
 ---
 
 We've all heard the phrase "a penny saved is a penny earned", which is usually
-attributed to Benjamin Franklin.  And while Benjamin Franklin, inventor of the
-bifocals, is revered by the monocle-loving crowd, his adage does not
-accurately represent the true worth of a penny saved in the context of an early
-retirement.  Let's take a look at what a penny saved in your monthly expenses
+attributed to Benjamin Franklin, inventor of the bifocals.
+And while Benjamin Franklin is revered by the monocle-loving crowd,
+his adage does not accurately represent the true worth of a penny saved in the
+context of an early retirement.  
+Let's take a look at what a penny saved in your monthly expenses
 equals in terms of how much money you need to save.
 
 ## Retirement Income
@@ -43,10 +44,10 @@ and that the money you're spending is coming out of a traditional IRA.
 And let's say you're in the 15% federal bracket, 5% state and 5% sales tax.
 It's pretty easy to get to 25% combined taxes even at lower tax brackets.
 
-When accounting for taxes, instead of saving $300 now to spend $1 later, we would
-have to save $400 with an assumed 25% total tax rate.  So, if you start with $400,
-and subtract 25%, or $100 for taxes, then you arrive at the $300 needed to sustain
-$1 in monthly spending.
+With this 25% tax rate, instead of saving $300 now to spend $1 later, we would
+have to save $400.  
+So, if you start with $400, and subtract 25%, or $100 for taxes, then you arrive
+at the $300 needed to sustain $1 in monthly spending.
 
 In equation form, you need to save `$300/(1-tax_rate)` to sustain a dollar of monthly
 expenses.  For example, if you're combined tax rate is 40%, then the
@@ -54,7 +55,7 @@ amount you need to earn to save for a $1 monthly expense would be `$300/0.6` or 
 
 ## Monthly Expenses
 
-Using the $400 multiplier, consider some typical monthly expenses and their
+Using the $400 multiplier from above, consider some typical monthly expenses and their
 impact on your savings.
 
   |------------------------------------+---------------------|
@@ -63,7 +64,7 @@ impact on your savings.
   | $8 your Hulu subscription          | $3,200              |
   | $30 to have your dachshund bathed  | $12,000             |
   | $50 extra on your phone bill       | $20,000             |
-  | $100 extra on your cable bill      | $30,000             |
+  | $100 extra on your cable bill      | $40,000             |
   |------------------------------------+---------------------|
 
 The math on this is easy to do in your head, which is partly why I chose the
@@ -98,10 +99,8 @@ I have been a little bit loose with the numbers partially because it's hard to
 know exactly what your withdrawal and tax rates will be.
 But the point of this article is to give you some ballpark numbers with which
 to evaluate whether an added expense is worth it.
-Simply put, to figure out how much money you'll need to support an expense rate:
+Simply put, to figure out how much money you'll need to support a spending level
+in retirement:
 
   * for monthly expenses, multiply the expense by 400.
   * for daily expenses, multiply the expense by 10,000.
-
-Hopefully this will make you stop and think the next time you find yourself paying
-a little more for something and help you decide if it's worth the extra cost.
