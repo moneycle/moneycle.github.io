@@ -6,9 +6,183 @@
 </description>
     <link>http://www.moneycle.com/</link>
     <atom:link href="http://www.moneycle.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 08 Mar 2015 00:41:44 -0700</pubDate>
-    <lastBuildDate>Sun, 08 Mar 2015 00:41:44 -0700</lastBuildDate>
+    <pubDate>Fri, 27 Mar 2015 19:39:12 -0600</pubDate>
+    <lastBuildDate>Fri, 27 Mar 2015 19:39:12 -0600</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>How to Take Early IRA Withdrawals Without Penalty</title>
+        <description>&lt;p&gt;If you are like many early retirees, when you are ready to retire you may find most
+of your savings will end up in you &lt;a href=&quot;http://www.investopedia.com/terms/d/deferredaccount.asp&quot;&gt;tax-deferred accounts&lt;/a&gt;
+like a traditional 401k or IRA.  If you are younger than 59.5 years old,
+ then how do you withdraw your funds without penalty?&lt;/p&gt;
+
+&lt;p&gt;Three possible choices for withdrawing your money without penalty are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Roth Ladder - a Roth ladder is where you convert your traditional IRA
+  funds to Roth then withdraw them 5 years later.&lt;/li&gt;
+  &lt;li&gt;Annuities - traditional IRA funds can be used to purchase a single premium
+  immediate annuity&lt;/li&gt;
+  &lt;li&gt;Substantially Equal Period Payments (SEPP) - also referred to as 72(t) which
+  which is the section of the tax code that allows this withdrawal.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;why-sepp&quot;&gt;Why SEPP?&lt;/h2&gt;
+
+&lt;p&gt;While I prefer the Roth Ladder approach for withdrawing fund, it may not be enough
+to meet your spending needs if you don’t have enough in your Roth to begin with.
+Annuities have their place in retirement too, but for early retirees they are
+less attractive (rates go up as you get older).  The SEPP withdrawal can help
+fill the spending gap until you are 59.5 at which point you will have other
+options to avoid penalties.&lt;/p&gt;
+
+&lt;h2 id=&quot;sepp-rules&quot;&gt;SEPP Rules&lt;/h2&gt;
+
+&lt;p&gt;There are a couple of things you need to be aware of when setting up a SEPP
+withdrawal.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The account you from which you do you SEPP withdrawals needs to be a stand-alone
+  account.&lt;/li&gt;
+  &lt;li&gt;You cannot trade in to or out of the SEPP account after the payments have begun.
+  Doing so will result in stiff penalties, so don’t do it.&lt;/li&gt;
+  &lt;li&gt;You must continue withdrawals for at least 5 years and until you are age
+  59.5 or greater.&lt;/li&gt;
+  &lt;li&gt;You must calculate your withdraw using one of three methods:
+    * amortization
+    * annuitization
+    * required-minimum distributions (RMD)&lt;/li&gt;
+  &lt;li&gt;If you ever get audited you may need to show the calculation, so document
+  the calculation and save it somewhere you can find later.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;While there are 3 approved methods for withdrawing your money, I suggest you stick
+with amortization.  The RMD method will give the smallest amount of money, especially
+for younger retirees, since it is just your account value divided by your remaining
+life expectancy. Amortization and annuitization tend to result in similar payouts
+that are both larger than RMD.  And a larger payout is good because it means you can
+use a smaller portion of your retirement funds for the SEPP withdrawals and retain some
+flexibility with your remaining funds.  Between amortization and annuitization
+I prefer the amortization method because it is a easier to calculate and
+therefore less prone to error.&lt;/p&gt;
+
+&lt;h2 id=&quot;setup-the-sepp-account&quot;&gt;Setup the SEPP Account&lt;/h2&gt;
+
+&lt;p&gt;When you have decided to setup a SEPP withdrawal, the first thing you should do
+is create a separate account inside of your existing brokerage account.  For example,
+if you have funds at Vanguard, you can break your accounts into separate sub-accounts
+that each have their own set of funds in them.&lt;/p&gt;
+
+&lt;p&gt;The amount you put into your SEPP account depends largely on the calculation
+you’ll be doing below.  I recommend that you determine how much &lt;strong&gt;income&lt;/strong&gt; you
+will need from the SEPP withdrawal and reverse the calculation to determine how much
+money to put into your newly created account.&lt;/p&gt;
+
+&lt;h2 id=&quot;doublecheck-the-calculation&quot;&gt;Doublecheck the Calculation&lt;/h2&gt;
+
+&lt;p&gt;Below are three ways to do this calculation: spreadsheet formula, web calculators
+and good old mathematics. All 3 methods should give you the same number so it’s
+a good idea to try at least 2 of these methods to sanity check that you’re doing
+it right.&lt;/p&gt;
+
+&lt;p&gt;For all of these methods, you will need the following 3 numbers:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;code&gt;rate&lt;/code&gt; = 120% of the Applicable Federal Rate.  Don’t worry, you’re not alone,
+  nobody else has heard of this number either.  It’s a number that the IRS
+  publishes monthly and can be
+  &lt;a href=&quot;http://apps.irs.gov/app/picklist/list/federalRates.html&quot;&gt;found here&lt;/a&gt;.
+  You are allowed to choose one of the past 2 months when you do the calculation
+  but to be safe I would just choose the rate from the most recent month.&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;expetancy&lt;/code&gt; = your remaining life expectancy in years.  This is also published
+  by the IRS and can be &lt;a href=&quot;http://www.irs.gov/pub/irs-pdf/p590b.pdf&quot;&gt;found here&lt;/a&gt;.
+  Look in Appendix B for the life expectancy tables using the age you will be on
+  your birthday this year.&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;principal&lt;/code&gt; = the size of the account you will be taking distributions from.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;spreadsheet-formula&quot;&gt;Spreadsheet Formula&lt;/h3&gt;
+
+&lt;p&gt;The spreadsheet formula that I have tested using Google Spreadsheet is simply:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+=-pmt(rate, expectancy, principal)
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;This will give you the amount you can withdraw annually so divide by 12 if you
+are going to make monthly withdrawals.&lt;/p&gt;
+
+&lt;h3 id=&quot;sepp-calculators&quot;&gt;SEPP Calculators&lt;/h3&gt;
+
+&lt;p&gt;There are several calculators that will help you figure out the SEPP withdrawals.
+I recommend the following:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://72t.net/72t/Calculator/Distributions&quot;&gt;72t.net Calculator&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.dinkytown.net/java/Retire72T.html&quot;&gt;Dinkytown Calculator&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I prefer the 72t.net calculator since it gives results to the nearest penny.
+But go ahead and verify that you get the same number to the nearest dollar from
+both calculators.&lt;/p&gt;
+
+&lt;h3 id=&quot;math-equation&quot;&gt;Math Equation&lt;/h3&gt;
+
+&lt;p&gt;For the mathematically inclined, you can also plug your numbers into
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Amortization_calculator#The_formula&quot;&gt;the annuity formula&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+income = principal * rate / (1 - (1+rate)^-expectancy)
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;account-size-needed-for-a-desired-income&quot;&gt;Account Size Needed for a Desired Income&lt;/h2&gt;
+
+&lt;p&gt;There’s a good chance that, if you are thinking about using SEPP withdrawals, you
+know how much income you need and just want to figure out how much principal you
+need to put aside generate that income.&lt;/p&gt;
+
+&lt;p&gt;One approach would be to calculate how much income you get from $100,000 then
+divide that into your desired income to figure out how much to scale up the $100,000.&lt;/p&gt;
+
+&lt;p&gt;For example, let’s say you want an annual income of $12,000,
+the current mid-term rate is 2.04%, and your remaining life expectancy is 36 years.
+Plugging in those numbers for $100,000 of principal gives you an income of $3,948.53.
+To get to your desired income of $12,000 you then divide $12,000 by $3,948.53 and
+multiply by $100,000 to arrive at a principal of $303,910.&lt;/p&gt;
+
+&lt;p&gt;The more direct approach, is to invert the ‘math equation’ above and calculate
+your payment directly with this formula:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+principal = income * (1 - (1+rate)^-expectancy) / rate
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;In any case, once you arrive at what you think the correct principal amount is,
+double check it by any of the above methods to make sure it gives you the desired
+income.  Then set aside that amount in an account that you won’t touch except to
+do the SEPP withdrawals.&lt;/p&gt;
+
+&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;SEPP withdrawals aren’t for everyone.  But if you find yourself in a situation
+where you need to use them, this article should help you figure out how to do the
+calculations needed. Regardless of what happens in the market you should
+continue withdrawing the exact same amount, so have your brokerage do
+an automatic withdrawal so that you aren’t tempted to mess with it.
+Also, don’t forget that you will need to pay income taxes on your withdrawals
+since this is just income that you deferred from the past.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 27 Mar 2015 18:55:50 -0600</pubDate>
+        
+          <link>http://www.moneycle.com/how-to-take-early-ira-withdrawals-without-penalty/</link>
+        
+        <guid isPermaLink="true">http://www.moneycle.com/how-to-take-early-ira-withdrawals-without-penalty/</guid>
+        
+        <category>spending</category>
+        
+        
+      </item>
     
       <item>
         <title>The Case Against Roth 401(k)</title>

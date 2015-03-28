@@ -333,6 +333,12 @@ abstract .post-image {
       .post-content h4 {
         font-size: 18px; } }
 
+.footnotes {
+  border-top: 1px solid #828282;
+  padding-top: 8px;
+  margin-top: 40px;
+  font-size: 14px; }
+
 /**
  * Syntax highlighting styles
  */
