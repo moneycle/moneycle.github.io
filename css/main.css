@@ -157,6 +157,8 @@ abstract .post-image {
   width: 24%;
   float: right;
   margin: 0 0 12px 12px; }
+abstract .post-more {
+  font-style: italic; }
 
 .brand-color {
   color: #228844; }
