@@ -2,5 +2,5 @@
 layout: link
 title: {{ title }}
 date: {{ date }}
-url: {{ url }}
+link: {{ url }}
 ---
