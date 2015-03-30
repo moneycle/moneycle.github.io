@@ -3,7 +3,7 @@ layout: post
 title: "A Penny Saved Is Four Dollars Earned"
 date: 2015-02-28
 tags: [investing, spending]
-image: /images/benjamin_franklin.jpg
+image: /images/benjamin-franklin-383_479.jpeg
 abstract: >
   What is the true impact of spending relative to how much you need to
   save to support that spending in retirement?
