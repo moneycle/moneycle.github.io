@@ -4,8 +4,6 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
-
   <ul class="post-list">
     {% for post in site.posts %}
       <li>
@@ -21,9 +19,9 @@ layout: default
         <abstract class="post-content">
           {% if post.image %}<img class="post-image" src="{{ post.image }}"/>{% endif %}
           {% if post.abstract %}
-            {{ post.abstract }}
+            {{ post.abstract }} <a class="post-more" href="{{ post.url | prepend: site.baseurl }}">... more</a>
           {% else %}
-            {{ post.content }}
+            {{ post.content | strip_html }} <a class="post-more" href="{{ post.url | prepend: site.baseurl }}">... comment</a></em>
           {% endif %}
         </abstract>
       </li>
