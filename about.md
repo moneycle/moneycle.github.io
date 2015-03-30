@@ -2,6 +2,8 @@
 layout: page
 title: About
 permalink: /about/
+image: /images/monocle-cigar-442_540.jpeg
+
 ---
 
 The top hat, monocle and mustachio have come to symbolize rich fat cats with lots of
