@@ -21,7 +21,7 @@ layout: default
           {% if post.abstract %}
             {{ post.abstract }} <a class="post-more" href="{{ post.url | prepend: site.baseurl }}">... more</a>
           {% else %}
-            {{ post.content | strip_html }} <a class="post-more" href="{{ post.url | prepend: site.baseurl }}">... comment</a></em>
+            {{ post.content | strip_html }} <a class="post-more" href="{{ post.url | prepend: site.baseurl }}">... discuss</a></em>
           {% endif %}
         </abstract>
       </li>

@@ -17,14 +17,14 @@ of your savings will end up in you [tax-deferred accounts](http://www.investoped
 like a traditional 401k or IRA.  If you are younger than 59.5 years old,
  then how do you withdraw your funds without penalty?
 
-Three possible choices for withdrawing your money without penalty are:
+Here are three possible choices for withdrawing your money without penalty:
 
   * Roth Ladder - a Roth ladder is where you convert your traditional IRA
   funds to Roth then withdraw them 5 years later.
   * Annuities - traditional IRA funds can be used to purchase a single premium
   immediate annuity
   * Substantially Equal Period Payments (SEPP) - also referred to as 72(t) which
-  which is the section of the tax code that allows this withdrawal.
+  is the section of the tax code that allows this withdrawal.
 
 
 ## Why SEPP?
@@ -41,17 +41,17 @@ options to avoid penalties.
 There are a couple of things you need to be aware of when setting up a SEPP
 withdrawal.
 
-  1. The account you from which you do you SEPP withdrawals needs to be a stand-alone
+  * The account you from which you do you SEPP withdrawals needs to be a stand-alone
   account.
-  1. You cannot trade in to or out of the SEPP account after the payments have begun.
+  * You cannot trade in or out of the SEPP account after the payments have begun.
   Doing so will result in stiff penalties, so don't do it.
-  1. You must continue withdrawals for at least 5 years and until you are age
+  * You must continue withdrawals for at least 5 years and until you are age
   59.5 or greater.
-  1. You must calculate your withdraw using one of three methods:
-    * amortization
-    * annuitization
-    * required-minimum distributions (RMD)
-  1. If you ever get audited you may need to show the calculation, so document
+  * You must calculate your withdrawal using one of three methods:
+    - amortization
+    - annuitization
+    - required-minimum distributions (RMD)
+  * If you ever get audited you may need to show the calculation, so document
   the calculation and save it somewhere you can find later.
 
 While there are 3 approved methods for withdrawing your money, I suggest you stick
@@ -72,8 +72,8 @@ if you have funds at Vanguard, you can break your accounts into separate sub-acc
 that each have their own set of funds in them.
 
 The amount you put into your SEPP account depends largely on the calculation
-you'll be doing below.  I recommend that you determine how much **income** you
-will need from the SEPP withdrawal and reverse the calculation to determine how much
+you'll be doing below.  I recommend that you first determine how much **income** you
+will need from the SEPP withdrawal and then reverse the calculation to determine how much
 money to put into your newly created account.
 
 ## Doublecheck the Calculation
@@ -91,7 +91,7 @@ For all of these methods, you will need the following 3 numbers:
   [found here](http://apps.irs.gov/app/picklist/list/federalRates.html).
   You are allowed to choose one of the past 2 months when you do the calculation
   but to be safe I would just choose the rate from the most recent month.
-  1. `expetancy` = your remaining life expectancy in years.  This is also published
+  1. `expectancy` = your remaining life expectancy in years.  This is also published
   by the IRS and can be [found here](http://www.irs.gov/pub/irs-pdf/p590b.pdf).
   Look in Appendix B for the life expectancy tables using the age you will be on
   your birthday this year.
@@ -131,12 +131,12 @@ income = principal * rate / (1 - (1+rate)^-expectancy)
 
 ## Account Size Needed for a Desired Income
 
-There's a good chance that, if you are thinking about using SEPP withdrawals, you
-know how much income you need and just want to figure out how much principal you
-need to put aside generate that income.
+If you are thinking about using SEPP withdrawals, there's a good chance that you
+already know how much income you need and just want to figure out how much principal
+you need to put aside to generate that income.
 
 One approach would be to calculate how much income you get from $100,000 then
-divide that into your desired income to figure out how much to scale up the $100,000.
+use that to figure out how much you need for your desired income level.
 
 For example, let's say you want an annual income of $12,000,
 the current mid-term rate is 2.04%, and your remaining life expectancy is 36 years.
