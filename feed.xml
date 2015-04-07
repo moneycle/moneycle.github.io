@@ -6,8 +6,8 @@
 </description>
     <link>http://www.moneycle.com/</link>
     <atom:link href="http://www.moneycle.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 29 Mar 2015 20:45:02 -0600</pubDate>
-    <lastBuildDate>Sun, 29 Mar 2015 20:45:02 -0600</lastBuildDate>
+    <pubDate>Mon, 06 Apr 2015 20:28:44 -0600</pubDate>
+    <lastBuildDate>Mon, 06 Apr 2015 20:28:44 -0600</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -36,7 +36,7 @@ of your savings will end up in you &lt;a href=&quot;http://www.investopedia.com/
 like a traditional 401k or IRA.  If you are younger than 59.5 years old,
  then how do you withdraw your funds without penalty?&lt;/p&gt;
 
-&lt;p&gt;Three possible choices for withdrawing your money without penalty are:&lt;/p&gt;
+&lt;p&gt;Here are three possible choices for withdrawing your money without penalty:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Roth Ladder - a Roth ladder is where you convert your traditional IRA
@@ -44,7 +44,7 @@ like a traditional 401k or IRA.  If you are younger than 59.5 years old,
   &lt;li&gt;Annuities - traditional IRA funds can be used to purchase a single premium
   immediate annuity&lt;/li&gt;
   &lt;li&gt;Substantially Equal Period Payments (SEPP) - also referred to as 72(t) which
-  which is the section of the tax code that allows this withdrawal.&lt;/li&gt;
+  is the section of the tax code that allows this withdrawal.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;why-sepp&quot;&gt;Why SEPP?&lt;/h2&gt;
@@ -61,20 +61,23 @@ options to avoid penalties.&lt;/p&gt;
 &lt;p&gt;There are a couple of things you need to be aware of when setting up a SEPP
 withdrawal.&lt;/p&gt;
 
-&lt;ol&gt;
+&lt;ul&gt;
   &lt;li&gt;The account you from which you do you SEPP withdrawals needs to be a stand-alone
   account.&lt;/li&gt;
-  &lt;li&gt;You cannot trade in to or out of the SEPP account after the payments have begun.
+  &lt;li&gt;You cannot trade in or out of the SEPP account after the payments have begun.
   Doing so will result in stiff penalties, so don’t do it.&lt;/li&gt;
   &lt;li&gt;You must continue withdrawals for at least 5 years and until you are age
   59.5 or greater.&lt;/li&gt;
-  &lt;li&gt;You must calculate your withdraw using one of three methods:
-    * amortization
-    * annuitization
-    * required-minimum distributions (RMD)&lt;/li&gt;
+  &lt;li&gt;You must calculate your withdrawal using one of three methods:
+    &lt;ul&gt;
+      &lt;li&gt;amortization&lt;/li&gt;
+      &lt;li&gt;annuitization&lt;/li&gt;
+      &lt;li&gt;required-minimum distributions (RMD)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
   &lt;li&gt;If you ever get audited you may need to show the calculation, so document
   the calculation and save it somewhere you can find later.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;While there are 3 approved methods for withdrawing your money, I suggest you stick
 with amortization.  The RMD method will give the smallest amount of money, especially
@@ -94,8 +97,8 @@ if you have funds at Vanguard, you can break your accounts into separate sub-acc
 that each have their own set of funds in them.&lt;/p&gt;
 
 &lt;p&gt;The amount you put into your SEPP account depends largely on the calculation
-you’ll be doing below.  I recommend that you determine how much &lt;strong&gt;income&lt;/strong&gt; you
-will need from the SEPP withdrawal and reverse the calculation to determine how much
+you’ll be doing below.  I recommend that you first determine how much &lt;strong&gt;income&lt;/strong&gt; you
+will need from the SEPP withdrawal and then reverse the calculation to determine how much
 money to put into your newly created account.&lt;/p&gt;
 
 &lt;h2 id=&quot;doublecheck-the-calculation&quot;&gt;Doublecheck the Calculation&lt;/h2&gt;
@@ -114,7 +117,7 @@ it right.&lt;/p&gt;
   &lt;a href=&quot;http://apps.irs.gov/app/picklist/list/federalRates.html&quot;&gt;found here&lt;/a&gt;.
   You are allowed to choose one of the past 2 months when you do the calculation
   but to be safe I would just choose the rate from the most recent month.&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;expetancy&lt;/code&gt; = your remaining life expectancy in years.  This is also published
+  &lt;li&gt;&lt;code&gt;expectancy&lt;/code&gt; = your remaining life expectancy in years.  This is also published
   by the IRS and can be &lt;a href=&quot;http://www.irs.gov/pub/irs-pdf/p590b.pdf&quot;&gt;found here&lt;/a&gt;.
   Look in Appendix B for the life expectancy tables using the age you will be on
   your birthday this year.&lt;/li&gt;
@@ -157,12 +160,12 @@ income = principal * rate / (1 - (1+rate)^-expectancy)
 
 &lt;h2 id=&quot;account-size-needed-for-a-desired-income&quot;&gt;Account Size Needed for a Desired Income&lt;/h2&gt;
 
-&lt;p&gt;There’s a good chance that, if you are thinking about using SEPP withdrawals, you
-know how much income you need and just want to figure out how much principal you
-need to put aside generate that income.&lt;/p&gt;
+&lt;p&gt;If you are thinking about using SEPP withdrawals, there’s a good chance that you
+already know how much income you need and just want to figure out how much principal
+you need to put aside to generate that income.&lt;/p&gt;
 
 &lt;p&gt;One approach would be to calculate how much income you get from $100,000 then
-divide that into your desired income to figure out how much to scale up the $100,000.&lt;/p&gt;
+use that to figure out how much you need for your desired income level.&lt;/p&gt;
 
 &lt;p&gt;For example, let’s say you want an annual income of $12,000,
 the current mid-term rate is 2.04%, and your remaining life expectancy is 36 years.
