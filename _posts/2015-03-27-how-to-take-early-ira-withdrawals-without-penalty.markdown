@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to Take Early IRA Withdrawals Without Penalty"
+title: "How to Take Early IRA Withdrawals without Penalty"
 date: 2015-03-27T18:55:50-06:00
 tags: [spending]
 image: /images/oscilloscope-periodic.jpeg
@@ -12,10 +12,11 @@ abstract: >
   the size of the account from which you will be taking your payments.
 ---
 
-If you are like many early retirees, when you are ready to retire you may find most
-of your savings will end up in you [tax-deferred accounts](http://www.investopedia.com/terms/d/deferredaccount.asp)
-like a traditional 401k or IRA.  If you are younger than 59.5 years old,
- then how do you withdraw your funds without penalty?
+If you are like many early retirees, then you may find most
+of your savings are tied up in your [tax-deferred accounts](http://www.investopedia.com/terms/d/deferredaccount.asp)
+like traditional 401k or IRA accounts when you are ready to retire.
+If you are younger than 59.5 years old,
+then how do you withdraw your funds without penalty?
 
 Here are three possible choices for withdrawing your money without penalty:
 
