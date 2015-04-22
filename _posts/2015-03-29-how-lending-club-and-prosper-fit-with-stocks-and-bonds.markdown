@@ -1,6 +1,6 @@
 ---
 layout: link
-title: "How Lending Club and Prosper Fit With Stocks and Bonds"
+title: "How Lending Club and Prosper Fit with Stocks and Bonds"
 date: 2015-03-29T11:42:09-06:00
 link: http://www.lendingmemo.com/stocks-bonds-lending-club-prosper/
 ---
