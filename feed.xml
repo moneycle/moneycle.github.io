@@ -6,25 +6,190 @@
 </description>
     <link>http://www.moneycle.com/</link>
     <atom:link href="http://www.moneycle.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 21 Apr 2015 22:47:18 -0600</pubDate>
-    <lastBuildDate>Tue, 21 Apr 2015 22:47:18 -0600</lastBuildDate>
+    <pubDate>Thu, 23 Apr 2015 22:15:03 -0600</pubDate>
+    <lastBuildDate>Thu, 23 Apr 2015 22:15:03 -0600</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
-        <title>How Lending Club and Prosper Fit with Stocks and Bonds</title>
-        <description>&lt;p&gt;Peer-to-peer (P2P) lending could be thought of as another asset class for
-your portfolio.  This article from LendingMemo suggests it’s somewhere between
-stocks and bonds.
-Since it is still a nascent type of investment, the jury is out on how it will
-perform in different kinds of markets.  I think it has great promise
-as a part of your portfolio, however I wouldn’t go up to 20% as suggested
-by the article unless you have a higher tolerance for risk.&lt;/p&gt;
+        <title>Maximize Your Employer Match before Using a Roth 401(k)</title>
+        <description>&lt;p&gt;While the Roth 401(k) is still a fairly new&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; option in the 401(k) world,
+&lt;a href=&quot;http://aon.mediaroom.com/2014-04-28-Aon-Hewitt-Analysis-Finds-More-Employers-Adding-Roth-Features-to-Expand-Savings-Options&quot;&gt;half of employers&lt;/a&gt;
+now offer a Roth option.  While contributing
+to a Roth is not necessarily the best choice for everyone, it can be a good
+choice for younger workers who haven’t reached their peak earnings potential
+(and tax bracket).&lt;/p&gt;
+
+&lt;p&gt;However, younger workers also tend to be those who are struggling to survive and
+may have a hard time contributing enough to get the full match that their employer
+provides.  For workers in this donut hole, it may make more sense
+to contribute to the traditional 401(k) to get the maximum benefit.&lt;/p&gt;
+
+&lt;h3 id=&quot;example&quot;&gt;Example&lt;/h3&gt;
+
+&lt;p&gt;Let’s look at a hypothetical example.  Let’s say your employer matches 50% of
+your contribution up to 8%.  So if you are able to contribute 8%, the company
+will match 4%.  And let’s assume you are single and making $75,000 which puts
+you in the 25% tax bracket. Further, let’s assume that the most
+you can afford to contribute to your 401(k) is $6,000 (before taxes)
+or 8% of your income.  In other words, in order to cover your cost of living,
+you need an income stream of $69,000/year after your 401(k) contributions are taken out.&lt;/p&gt;
+
+&lt;p&gt;If you’re contributing to a Roth, your $6000 becomes $4,500 after taxes which
+is how much you can actually afford to contribute.  In this scenario,
+you are getting 3% of the company match, but are missing out on the other 1% of
+free money that your company could match.&lt;/p&gt;
+
+&lt;p&gt;Conversely, if you defer your taxes and contribute the entire $6,000 to a traditional
+401(k), you will get the entire match from your employer which amounts to an
+additional $750 added to your 401(k).&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt;Roth 401(k)&lt;/th&gt;
+      &lt;th&gt;Traditional 401(k)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Gross Income&lt;/td&gt;
+      &lt;td&gt;$75,000&lt;/td&gt;
+      &lt;td&gt;$75,000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;401(k) Contribution&lt;/td&gt;
+      &lt;td&gt;$4,500&lt;/td&gt;
+      &lt;td&gt;$6,000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;401(k) Taxes&lt;/td&gt;
+      &lt;td&gt;$1,500&lt;/td&gt;
+      &lt;td&gt;$0 (deferred)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Livable Income&lt;/td&gt;
+      &lt;td&gt;$69,000&lt;/td&gt;
+      &lt;td&gt;$69,000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Employer Match&lt;/td&gt;
+      &lt;td&gt;$2,250&lt;/td&gt;
+      &lt;td&gt;$3,000&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Of course, eventually you will have to pay taxes on your traditional 401(k)
+contribution.  If your future tax rate is still 25%, then you will pay the same
+$1,500 (adjusted for gains) as you would have in the Roth case.  So you’re still
+ahead by $750 (plus future gains).  Or in percentage terms, you would be ahead by
+&lt;code&gt;(6000(1-0.25)+3000)/(6000-1500+2250)&lt;/code&gt; or 7.14%.&lt;/p&gt;
+
+&lt;p&gt;If you are able to reduce your tax rate in retirement, which most early retirees
+do, then the gain is even higher.  For example, if you pull your money out while in
+a 15% tax bracket, then your potential gain is &lt;code&gt;(6000(1-0.15)+3000)/(6000-1500+2250)&lt;/code&gt;
+or 20%!  A 20% future gain just by picking the right type of 401(k) is a pretty
+big deal.&lt;/p&gt;
+
+&lt;p&gt;What if your rate is higher in the future?  At what higher tax rate would you
+break even?  To figure that out we solve the equation
+&lt;code&gt;6000(1-rate)+3000 = 6000(1-0.25)+2250&lt;/code&gt; which gives a rate of 37.5%.
+That means your future tax rate would have to be above 37.5% in order for the
+Roth to be the right choice in this scenario.
+And since you’d have to earn over $425,000 to hit the 39% tax rate, this is
+what I would call a good problem to have and you can afford to hire a
+financial advisor to help you figure it out.&lt;/p&gt;
+
+&lt;h3 id=&quot;counter-example&quot;&gt;Counter Example&lt;/h3&gt;
+
+&lt;p&gt;What if you have enough money to contribute fully to either a Roth or a traditional
+401(k)?  In the above example, instead of assuming you can invest $6000, let’s assume
+you can invest $8,000 (and live off of $67,000) which will give you the maximum
+employer match either way.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt;Roth 401(k)&lt;/th&gt;
+      &lt;th&gt;Traditional 401(k)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Gross Income&lt;/td&gt;
+      &lt;td&gt;$75,000&lt;/td&gt;
+      &lt;td&gt;$75,000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;401(k) Contribution&lt;/td&gt;
+      &lt;td&gt;$6,000&lt;/td&gt;
+      &lt;td&gt;$8,000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;401(k) Taxes&lt;/td&gt;
+      &lt;td&gt;$2,000&lt;/td&gt;
+      &lt;td&gt;$0 (deferred)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Livable Income&lt;/td&gt;
+      &lt;td&gt;$67,000&lt;/td&gt;
+      &lt;td&gt;$67,000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Employer Match&lt;/td&gt;
+      &lt;td&gt;$3,000&lt;/td&gt;
+      &lt;td&gt;$3,000&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;In this case, it comes down to what your current tax rate is versus your future
+tax rate.  With these numbers the comparison is between &lt;code&gt;(8000(1-current_tax)+3000)&lt;/code&gt;
+(Roth) and &lt;code&gt;(8000(1-future_tax)+3000)&lt;/code&gt; (traditional).  In other words, the decision
+comes down to a simple comparison of tax rates and whether you think you will be
+able to reduce your future tax rate.&lt;/p&gt;
+
+&lt;p&gt;But there’s actually more to it than that.
+It’s really a comparison between today’s &lt;em&gt;marginal&lt;/em&gt; tax
+rate versus your retirement’s &lt;em&gt;total&lt;/em&gt; tax rate&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.  Why?  Because if you’re living
+off of your money in the future, some of the money you withdraw will be at a 0%
+tax rate, and some at 10%, and so-on up to your marginal tax rate.
+So even if your future marginal tax rate is the same as your current tax rate,
+your future total tax rate would be lower because you have to fill
+in those lower tax buckets first.  In other words, there’s a good chance that the
+traditional 401(k) will still fare better than the Roth 401(k) if you don’t
+inflate your future lifestyle spending.&lt;/p&gt;
+
+&lt;h3 id=&quot;summary&quot;&gt;Summary&lt;/h3&gt;
+
+&lt;p&gt;Younger workers in lower tax brackets are often encouraged to invest in the Roth
+option provided by their employers so that they can take advantage of their lower
+career tax rates.  However, these workers should also consider that they could
+be giving up free money if they are unable to contribute up to the full value
+matched by their employers.  When in doubt, make sure you
+get your full employer match using traditional 401(k) contributions before
+contributing to a Roth 401(k).&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Roth_401(k)&quot;&gt;Roth 401(k)&lt;/a&gt; first went into effect in 2006. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;http://thefinancebuff.com/case-against-roth-401k.html&quot;&gt;“The Case Against Roth 401(k)”&lt;/a&gt;. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
 </description>
-        <pubDate>Sun, 29 Mar 2015 11:42:09 -0600</pubDate>
+        <pubDate>Thu, 23 Apr 2015 00:00:00 -0600</pubDate>
         
-          <link>http://www.lendingmemo.com/stocks-bonds-lending-club-prosper/</link>
+          <link>http://www.moneycle.com/maximize-your-employer-match-before-using-a-roth-401-k/</link>
         
-        <guid isPermaLink="true">http://www.moneycle.com/how-lending-club-and-prosper-fit-with-stocks-and-bonds/</guid>
+        <guid isPermaLink="true">http://www.moneycle.com/maximize-your-employer-match-before-using-a-roth-401-k/</guid>
+        
+        <category>investing</category>
         
         
       </item>
@@ -203,21 +368,6 @@ since this is just income that you deferred from the past.&lt;/p&gt;
         <guid isPermaLink="true">http://www.moneycle.com/how-to-take-early-ira-withdrawals-without-penalty/</guid>
         
         <category>spending</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>The Case Against Roth 401(k)</title>
-        <description>&lt;p&gt;This is an older article by The Finance Buff but still a relevant explanation
-about why contributing to a traditional 401k/IRA is usually better than 
-contributing to a Roth 401k/IRA.&lt;/p&gt;
-</description>
-        <pubDate>Wed, 04 Mar 2015 23:12:57 -0700</pubDate>
-        
-          <link>http://thefinancebuff.com/case-against-roth-401k.html</link>
-        
-        <guid isPermaLink="true">http://www.moneycle.com/the-case-against-roth-401-k/</guid>
         
         
       </item>

@@ -153,6 +153,9 @@ article .post-image {
   float: right;
   margin: 0 0 12px 12px; }
 
+.post-list li {
+  overflow: auto; }
+
 abstract .post-image {
   width: 24%;
   float: right;
