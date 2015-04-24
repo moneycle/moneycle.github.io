@@ -218,6 +218,10 @@ article {
   }
 }
 
+.post-list li {
+  overflow: auto;
+}
+
 abstract {
   .post-image  {
     width: 24%;

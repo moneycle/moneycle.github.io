@@ -17,7 +17,8 @@ layout: default
           {% endif %}
         </h2>
         <abstract class="post-content">
-          {% if post.image %}<img class="post-image" src="{{ post.image }}"/>{% endif %}
+          {% if post.image %}<img class="post-image" src="{{ post.image }}"/>
+          {% endif %}
           {% if post.abstract %}
             {{ post.abstract }} <a class="post-more" href="{{ post.url | prepend: site.baseurl }}">... more</a>
           {% else %}
