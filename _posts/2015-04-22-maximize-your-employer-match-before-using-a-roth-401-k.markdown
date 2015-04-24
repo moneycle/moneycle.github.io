@@ -111,17 +111,10 @@ Younger workers in lower tax brackets are often encouraged to invest in the Roth
 option provided by their employers so that they can take advantage of their lower
 career tax rates.  However, these workers should also consider that they could
 be giving up free money if they are unable to contribute up to the full value
-matched by their employers.  The rule of thumb here is to make sure you
-get your full match using traditional 401(k) contributions before contributing
-to a Roth 401(k).  Also, most people in their peak-earning years should avoid
-Roth 401(k) contributions so they can defer taxes to their lower-earning
-retirement years.  While there are some non-financial reasons to contribute
-to a Roth[^3], mathematically the only time you should contribute to a Roth is
-if you think you'll find yourself in a much higher tax bracket at retirement.
-
+matched by their employers.  When in doubt, make sure you
+get your full employer match using traditional 401(k) contributions before
+contributing to a Roth 401(k).
 
 [^1]: [Roth 401(k)](http://en.wikipedia.org/wiki/Roth_401(k)) first went into effect in 2006.
 
 [^2]: ["The Case Against Roth 401(k)"](http://thefinancebuff.com/case-against-roth-401k.html).
-
-[^3]: In a future post we will talk about when you should contribute to a Roth and how much.
