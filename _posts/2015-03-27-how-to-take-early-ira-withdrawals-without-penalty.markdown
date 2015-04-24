@@ -3,7 +3,7 @@ layout: post
 title: "How to Take Early IRA Withdrawals without Penalty"
 date: 2015-03-27T18:55:50-06:00
 tags: [spending]
-image: /images/oscilloscope-periodic.jpeg
+image: /images/mechanical-calculator.jpeg
 abstract: >
   The Substantially Equal Periodic Payments (SEPP) rule, also known as Internal
   Revenue Code section 72(t), is one way to legally withdraw your traditional
