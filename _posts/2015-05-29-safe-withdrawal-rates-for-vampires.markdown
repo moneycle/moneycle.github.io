@@ -131,7 +131,93 @@ Even with the moderate 60/40 portfolio, Vlad has a decent chance that his portfo
 One way he could reduce the volatility of his expenses is to allocate a portion
 of his portfolio to a spending buffer.
 
-![Example Allocation with Spending Buffer](/images/allocation-with-buffer.png)
+<div id="pieWithBuffer"></div>
+
+<script>
+var pie = new d3pie("pieWithBuffer", {
+	"header": {
+		"title": {
+			"text": "Example Allocation with a Spending Buffer",
+			"fontSize": 22
+		},
+	},
+	"size": {
+		"canvasHeight": 400,
+		"canvasWidth": 590,
+		"pieOuterRadius": "88%"
+	},
+	"data": {
+		"content": [
+			{
+				"label": "Buffer",
+				"value": 13,
+				"color": "#387e45",
+        "caption": "buffer % varies with withdrawals"
+			},
+			{
+				"label": "Bonds",
+				"value": 27,
+				"color": "#386a7e",
+        "caption": "bond % = (stock % - buffer %)"
+			},
+			{
+				"label": "Stocks",
+				"value": 60,
+				"color": "#7e3838",
+        "caption": "stock % depends on vampire's risk tolerance"
+			}
+		]
+	},
+	"labels": {
+		"outer": {
+			"format": "none",
+			"pieDistance": 32
+		},
+		"inner": {
+			"format": "label"
+		},
+		"mainLabel": {
+			"color": "#e1e1e1",
+			"font": "verdana",
+			"fontSize": 12
+		},
+		"percentage": {
+			"color": "#e1e1e1",
+			"font": "verdana",
+			"decimalPlaces": 0
+		},
+		"value": {
+			"color": "#e1e1e1",
+			"font": "verdana"
+		},
+		"lines": {
+			"enabled": true,
+			"color": "#cccccc"
+		},
+		"truncation": {
+			"enabled": true
+		}
+	},
+	"tooltips": {
+		"enabled": true,
+		"type": "caption",
+		"string": "{label}: {percentage}%"
+	},
+	"effects": {
+		"pullOutSegmentOnClick": {
+			"effect": "linear",
+			"speed": 200,
+			"size": 12
+		}
+	},
+	"callbacks": {
+    "onload": function() { pie.openSegment(0); },
+		"onMouseoverSegment": null,
+		"onMouseoutSegment": null,
+		"onClickSegment": null
+	}
+});
+</script>
 
 To describe how a spending buffer works, consider a 5-year spending buffer
 as an example.  With a 5-year buffer, Vlad would carve out 4 times his annual
@@ -144,7 +230,7 @@ for spending in the following year.
 
 Having a 5-year buffer for his spending means that Vlad's spending will only be
 impacted by 1/5th of the fluctuations in the market.  The standard deviation of
-Vlad's spending will be reduced by[^2] `1/sqrt(5)`.
+Vlad's spending will be reduced[^2] by approximately `1/sqrt(5)`.
 In our example with a 60/40 split, the standard deviation goes from 11% down to 5%.
 Vampires get grumpy with big swings in spending so this helps to prevent Vlad
 from biting people.
@@ -260,7 +346,7 @@ stream kicks in.  It would be interesting to see how much of an effect that is.
 
 
 [^1]: Portfolio return for mixed portfolios are crude approximations for illustrative purposes only.
-[^2]: [Standard error of the mean](http://en.wikipedia.org/wiki/Standard_error#Standard_error_of_the_mean).
+[^2]: See [standard error of the mean](http://en.wikipedia.org/wiki/Standard_error#Standard_error_of_the_mean).
 [^22]: No relation to [Buffy the Vampire Slayer](https://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer).
 [^3]: Bonds and buffer percentages are initial values, buffer size varies slightly after the first year.
 [^4]: I'm pretty sure vampires are not subject to the rules concerning age of 59.5 and withdrawals.
