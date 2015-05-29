@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Safe Withdrawal Rates for Vampires"
-date: 2015-05-24
+date: 2015-05-29
 tags: [investing, spending, other]
 image: /images/nosferatu-max-shreck.jpeg
 abstract: >
@@ -79,7 +79,7 @@ Let's see what happens if we assume Vlad invests everything in stocks.
 Moneychimp has an [excellent tool](http://www.moneychimp.com/features/market_cagr.htm)
 for getting historical stock returns.
 With this tool you can see that for the past 100 years (1915-2014) stocks have
-returned a compounded averaged of 10.31%.
+returned a compounded average rate of 10.31%.
 If Vlad could invest in Vanguard Total Stock Market ETF (VTI),
 he would incur a fee of 0.05% for a total return of 10.26%.  To be a little
 conservative, let's round that down to 10.2%.
@@ -110,7 +110,7 @@ So if Vlad invests his bond portfolio in Vanguard Total Bond Market ETF (BND)
 with an expense ratio of 0.07%, let's assume he gets a return of 5.3% on the bonds.
 
 The following table shows the maximum withdrawal rates for different portfolio
-allocations:
+allocations based on the returns estimated for each allocation:
 
 | Stocks/Bonds =                     | 20/80 | 40/60 | 60/40 | 80/20 |
 |----------------                    | :----:| :---: | :---: | :---: |
@@ -122,51 +122,244 @@ allocations:
 The "Expense Multiplier" value represents the amount of money that Vlad needs
 to save before he begins his retirement in terms of his annual expenses.
 So for a moderate 60/40 portfolio, Vlad would need to save at least 22 times his
-annual expenses before he could retire from his night job.
+annual expenses before he could retire from his night job, and he could withdraw
+up to 4.7% to keep up with inflation.
 
 ## Buffer the Vampire Strategy[^22]
 
 Even with the moderate 60/40 portfolio, Vlad has a decent chance that his portfolio
-(and spending) could drop by 20% in any given year.  
-One way he could reduce the volatility of his expenses is to allocate a portion
-of his portfolio to a spending buffer.
+(and spending) could drop by 14%[^7] in any given year.  
+One way he could reduce the volatility of his expenses even further is to allocate
+a portion of his portfolio to a spending buffer.
+
+To describe how a spending buffer works, consider a 5-year spending buffer
+as an example.  With a 5-year buffer, Vlad would carve out 4 times his annual
+expenses as part of his portfolio.  Since this represents the next 4 years of
+his spending, it would be invested conservatively in short-term bond and cash
+equivalents.  At the end of each year, Vlad applies his withdrawal rate to his
+entire portfolio then moves that amount into his spending buffer (now the buffer
+has 5 years worth of spending).  He then withdraws 1/5th of the spending buffer
+for spending in the following year.
 
 <div id="pieWithBuffer"></div>
+<div id="stock-slider" style="width: 300px;" align="center"></div>
+
+Having a 5-year buffer for his spending means that Vlad's spending will only be
+impacted by 1/5th of the fluctuations in the market.  The standard deviation of
+Vlad's spending will be reduced[^2] by approximately `1/sqrt(5)`.
+In our example with a 60/40 split, the standard deviation goes from 11% down to 5%.
+Vampires get grumpy with big swings in spending so this helps to prevent Vlad
+from biting people.
+
+One possible downside of the buffering is that the returns from Vlad's portfolio
+would be slightly reduced.  Assuming that the buffer piece is allocated to the
+bond side of the portfolio, then the bond returns would be reduced if the buffer
+is allocated to cash or cash equivalents.
+
+Re-working the original equations with a spending buffer:
+
+```
+(P - kW)(1 + r) + kW - W >= P(1 + i)
+```
+
+where `k = spending buffer size in years`.  In this equation `P-kW` represents
+the piece of the portfolio that is invested and `kW-W` represents the buffer after
+1 year's worth of spending has been withdrawn.  In short, we want the appreciation
+from the invested part of the portfolio to be enough so that the **entire**
+portfolio keeps up with inflation.
+
+Solving this equation for withdrawal rate,
+
+```
+w <= (r - i) / (1 + kr)
+```
+
+Taking this a little further, if Vlad wants to keep the stock portion of the
+portfolio fixed at some percentage while bonds and the buffer make up the remainder,
+then the rate of return could be written in terms of this percentage,
+
+```
+r = p*r_s + (1 - p)*r_b - (k - 1)*r_b*w
+```
+
+Where
+
+  * `x = percentage of portfolio in stocks`
+  * `r_s = rate of return on stocks`
+  * `r_b = rate of return on bonds`
+
+The first 2 terms of this equation represent the return we would have had without
+buffering and the last term represents the amount of potential returns lost to
+the buffering.
+
+Substituting `r` from the last equation into the equation before that gives us
+a quadratic equation to solve for withdrawal rate (I may expand this
+in another article but will leave this detail out for now).
+
+All this math probably is putting you to sleep so let's look at some portfolios.
+
+| Stocks/Bonds[^3]/Buffer[^3] =   | 20/72/8  | 40/50/10 | 60/27/13 | 80/5/15 |
+|----------------                 | :-------:| :---:    | :---:    | :---:   |
+| Historical Portfolio Return[^1] | 5.9%     | 6.7%     | 7.6%     | 8.4%    |
+| Spending Standard Deviation[^6] | 2%       | 3.5%     | 5%       | 7%      |
+| Maximum Withdrawal Rate         | 2.0%     | 2.6%     | 3.2%     | 3.7%    |
+| Expense Multiplier              | 50       | 38       | 31       | 27      |
+
+So, if our friend Vlad has a portfolio with 60% in stocks and transfers 3.2%
+of his portfolio to his 5-year spending buffer every year, his portfolio should roughly
+keep pace with inflation.  The buffer needed for this withdrawal would account for
+about 13% of his overall portfolio initially and would fluctuate with the market.
+And the reduced variations in his income due to the buffering should help Vlad
+sleep during the day.
+
+## Caveats
+
+While this article explores the safe withdrawal rates for a portfolio that follows
+historical returns, this is known to not be a good strategy for determining actual
+safe withdrawal rates.  This is really more of a thought experiment to think about
+long-term withdrawals combined with the spending buffer concept in order to reduce
+income volatility.
+
+Probably a better way to complete this analysis would be to do a monte-carlo simulation
+with an appropriate success criterion.  For example, most studies of 30-year withdrawal
+rates consider how a withdrawal performs relative to how often the portfolio drops to
+zero during the 30-year period.  For a vampire, the measure of success would probably
+be whether the portfolio has kept pace with inflation over 50 years (or more).
+
+## Insights
+
+In spite of it's weaknesses, this analysis does shed some light on very-long-term
+withdrawals.
+
+For an aggressively allocated (80% stock) 5-year buffered portfolio, the
+withdrawal rate of 3.7% could keep up with inflation. This rate isn't too
+far off from the widely discussed 4% rates you see in the financial press but it
+is for a pretty aggressive allocation.  Reducing stock allocation quickly reduces the "safe"
+withdrawal rate.  A much safer 40% allocation requires reducing the withdrawal rate all
+the way down to 2.6%.  This highlights the need to
+stay invested in higher-performing assets in order to keep up with long-term inflation.
+
+The buffered withdrawal strategy could be employed to cushion the ups and down of the
+markets.  One cost of a buffered strategy is that it will reduce overall returns
+by about 0.6% for moderate allocations.
+But that lost return could be recouped by increasing the stock allocation by about 10%.
+The 5-year buffer suggested here has a good chance of spanning at least 1 or 2 good
+years even over the course of a bear market.  Over all 5-year periods stock returns
+have been [positive about 87% of the time](http://awealthofcommonsense.com/u-s-stock-investors-doomed-high-returns/).
+This suggests that 87% of the time the 5-year buffered income would continue to increase.
+
+Another cost of buffering is that it reduces the withdrawal rate that can keep
+up with inflation.  So the ultimate balance is between stability and income.
+If you want more income, you **could** reduce the buffer size and take a higher
+amount of income with full understanding that you should see larger swings in the market.
+You could also do away with buffering and reduce the volatility by choosing a less
+risky allocation.  Over the very long term it seems like Vlad would do better by
+keeping his portfolio as heavily invested as is bearable and using buffering to
+reduce the volatility.
+
+If you are a vampire who wants to implement a Roth ladder strategy, you might
+want to consider a 6-year buffer. This would allow you convert your traditional IRA
+to a Roth IRA and wait the required 5 years before withdrawing the money without
+penalty[^4].  But 6-years is a long time to not keep money invested so with such
+a large buffer it might make sense to invest 1 or 2 years of a bigger buffer into
+a bond fund.
+
+## Next Steps
+
+If there's any interest, the next logical step for this analysis would be to
+take it to the domain of monte-carlo simulations to see how the estimated rates
+do over very long periods with the given portfolios.
+
+Another interesting variation of this analysis would be to include the effects
+of social security on withdrawal rates.  Future social security or
+pension earnings will probably allow for increased withdrawals until that income
+stream kicks in.  It would be interesting to see how much of an effect that is.
+
+
+[^1]: Portfolio return for mixed portfolios are crude approximations for illustrative purposes only.
+[^2]: See [standard error of the mean](http://en.wikipedia.org/wiki/Standard_error#Standard_error_of_the_mean).
+[^22]: No relation to [Buffy the Vampire Slayer](https://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer).
+[^3]: Bonds and buffer percentages are initial values, buffer size varies slightly after the first year.
+[^4]: I'm pretty sure vampires are not subject to the rules concerning age of 59.5 and withdrawals.
+[^5]: Standard deviations for different allocations estimated from graph on [this page](http://www.forbes.com/sites/rickferri/2015/02/06/the-center-of-gravity-for-retirees/2/)
+[^6]: Based on portfolio deviation divided by sqrt(5) for the buffering effect.
+[^7]: 14% drop is 2 standard deviations, or 22%, below average return of 8.2%
+
+[^10]: Stock Performance - 1915-2014: 10.31%, std dev = 19.9%
+[^11]: Bond Performance - 1926-2014: 5.4%, std dev = 5.6%, comes from a combination of [Vanguard data](https://personal.vanguard.com/us/insights/saving-investing/model-portfolio-allocations) and the [comparable intermediate govt bond](http://www.jvlassociates.com/files/Performance%20Probabilities%20(Bell%20Curve%20)%20%201926%20-%202014.pdf).
+
+[^12]: Inflation numbers - 1915-2014: 3.2% from [moneychimp inflation calculator](http://www.moneychimp.com/articles/econ/inflation_calculator.htm).
+
+
 
 <script>
+var pieData = [
+  {
+    "label": "Buffer",
+    "value": 13,
+    "color": "#387e45",
+    "caption": "{percentage}%, withdrawal = 3.2%"
+  },
+  {
+    "label": "Bonds",
+    "value": 27,
+    "color": "#386a7e",
+    "caption": "{percentage}%"
+  },
+  {
+    "label": "Stocks",
+    "value": 60,
+    "color": "#7e3838",
+    "caption": "{percentage}%"
+  }
+];
+stockReturn = 0.102;
+bondReturn = 0.053;
+inflationRate = 0.032;
+bufferSize = 5;
+
+updateData = function(stockPercent) {
+    var stock = stockPercent * 0.01
+  var bufferlessReturn = stock*stockReturn + (1-stock)*bondReturn;
+  var a = bufferSize*(bufferSize-1)*bondReturn;
+  var b = 1+(bufferSize-1)*bondReturn+bufferSize*bufferlessReturn;
+  var c = bufferlessReturn - inflationRate;
+  var withdrawalRate = (b-Math.sqrt(b*b-4*a*c))/(2*a);
+  var bufferPercent = (bufferSize-1)*withdrawalRate*100;
+  var bondPercent = 100-stockPercent-bufferPercent;
+
+  pieData[0].value = bufferPercent;
+  pieData[0].caption = "{percentage}%, withdrawal = " + Math.round(withdrawalRate*1000)/10 + "%"
+  pieData[1].value = bondPercent;
+  pieData[2].value = stockPercent;
+}
+updateData(55);
+
 var pie = new d3pie("pieWithBuffer", {
 	"header": {
 		"title": {
-			"text": "Example Allocation with a Spending Buffer",
+			"text":     "Portfolio Allocation with a Spending Buffer",
 			"fontSize": 22
 		},
+    subtitle: {
+      text:     "5-year buffer, 10.2% stock returns, 5.3% bond returns",
+      color:    "#666666",
+      fontSize: 14,
+    }
 	},
+  footer: {
+    text: 	  "use slider to change stock allocation",
+    color:    "#666666",
+    fontSize: 10,
+    location: "bottom-center"
+  },
 	"size": {
 		"canvasHeight": 400,
 		"canvasWidth": 590,
 		"pieOuterRadius": "88%"
 	},
 	"data": {
-		"content": [
-			{
-				"label": "Buffer",
-				"value": 13,
-				"color": "#387e45",
-        "caption": "buffer % varies with withdrawals"
-			},
-			{
-				"label": "Bonds",
-				"value": 27,
-				"color": "#386a7e",
-        "caption": "bond % = (stock % - buffer %)"
-			},
-			{
-				"label": "Stocks",
-				"value": 60,
-				"color": "#7e3838",
-        "caption": "stock % depends on vampire's risk tolerance"
-			}
-		]
+		"content": pieData
 	},
 	"labels": {
 		"outer": {
@@ -217,143 +410,9 @@ var pie = new d3pie("pieWithBuffer", {
 		"onClickSegment": null
 	}
 });
+
+d3.select('#stock-slider').call(d3.slider().axis(true).min(0).max(85).step(5).value(pieData[2].value).on("slideend", function(evt, stockPercent) {
+  updateData(stockPercent);
+  pie.updateProp("data.content", pieData);
+}));
 </script>
-
-To describe how a spending buffer works, consider a 5-year spending buffer
-as an example.  With a 5-year buffer, Vlad would carve out 4 times his annual
-expenses as part of his portfolio.  Since this represents the next 4 years of
-his spending, it would be invested conservatively in short-term bond and cash
-equivalents.  At the end of each year, Vlad applies his withdrawal rate to his
-entire portfolio then moves that amount into his spending buffer (now the buffer
-has 5 years worth of spending).  He then withdraws 1/5th of the spending buffer
-for spending in the following year.
-
-Having a 5-year buffer for his spending means that Vlad's spending will only be
-impacted by 1/5th of the fluctuations in the market.  The standard deviation of
-Vlad's spending will be reduced[^2] by approximately `1/sqrt(5)`.
-In our example with a 60/40 split, the standard deviation goes from 11% down to 5%.
-Vampires get grumpy with big swings in spending so this helps to prevent Vlad
-from biting people.
-
-One possible downside of the buffering is that the returns from Vlad's portfolio
-would be slightly reduced.  Assuming that the buffer piece is allocated to the
-bond side of the portfolio, then the bond returns would be reduced if the buffer
-is allocated to cash or cash equivalents.
-
-Re-working the original equations with a spending buffer:
-
-```
-(P - kW)(1 + r) + kW - W >= P(1 + i)
-```
-
-where `k = spending buffer size in years`.  In this equation `P-kW` represents
-the piece of the portfolio is invested and `kW-W` represents the buffer after
-1 year's spending has been withdrawn.
-
-Solving this equation for withdrawal rate,
-
-```
-w <= (r - i) / (1 + kr)
-```
-
-Taking this a little further, if Vlad wants to keep the stock portion of the
-portfolio fixed at some percentage while bonds and the buffer make up the remainder,
-then the rate of return could be written in terms of this percentage,
-
-```
-r = p*r_s + (1 - p)*r_b - (k - 1)*r_b*w
-```
-
-Where
-
-  * `x = percentage of portfolio in stocks`
-  * `r_s = rate of return on stocks`
-  * `r_b = rate of return on bonds`
-
-The first 2 terms of this equation represent the return we would have had without
-buffering and the last term represents the amount of potential returns lost to
-the buffering.
-
-Substituting `r` from the last equation into the equation before that gives us
-a good old quadratic equation to solve for withdrawal rate (I may expand this
-in another article but will leave this detail out for now).
-
-All this math probably is putting you to sleep so let's look at some portfolios.
-
-| Stocks/Bonds[^3]/Buffer[^3] =   | 20/72/8  | 40/50/10 | 60/27/13 | 80/5/15 |
-|----------------                 | :-------:| :---:    | :---:    | :---:   |
-| Historical Portfolio Return[^1] | 5.9%     | 6.7%     | 7.6%     | 8.4%    |
-| Spending Standard Deviation[^6] | 2%       | 3.5%     | 5%       | 7%      |
-| Maximum Withdrawal Rate         | 2.0%     | 2.6%     | 3.2%     | 3.7%    |
-| Expense Multiplier              | 50       | 38       | 31       | 27      |
-
-So, if our friend Vlad has a portfolio with 60% in stocks and transfers 3.2%
-of his portfolio to his 5-year spending buffer every year, his portfolio should roughly
-keep pace with inflation.  And the reduced variations in his income due to the
-buffering should help Vlad sleep during the day.
-
-## Caveats
-
-While this article explores the safe withdrawal rates for a portfolio that follows
-historical returns, this is known to not be a good strategy for determining actual
-safe withdrawal rates.  This is really more of a thought experiment to think about
-long-term withdrawals combined with the spending buffer concept in order to reduce
-income volatility.
-
-Probably a better way to complete this analysis would be to use a monte-carlo simulation
-with an appropriate success criterion.  For example, most studies of 30-year withdrawal
-rates consider how a withdrawal performs relative to how often the portfolio drops to
-zero during the 30-year period.  For a vampire, the measure of success would probably
-be whether the portfolio has kept pace with inflation over 50 years (or more).
-
-## Insights
-
-In spite of it's weaknesses, this analysis does shed some light on very-long-term
-withdrawals.
-
-For an agressively allocated (80% stock) portfolio, the withdrawal rate of 3.7% could keep
-up with inflation if historical returns continue into the future. This rate isn't too
-far off from the widely discussed 4% rates you see in the financial press but it
-is for an 80% stock portfolio.  Reducing stock allocation quickly reduces the "safe"
-withdrawal rate.  A much safer 40% allocation requires reducing the withdrawal rate all
-the way down to 2.6%.  This highlights the need to
-stay invested in higher-performing assets in order to keep up with inflation.
-
-The buffered withdrawal strategy could be employed to cushion the ups and down of the
-markets.  The expense of a buffered strategy is that it will slightly reduce
-overall returns, but retired vampires are probably more interested in stability than returns.
-The 5-year buffer suggested here has a good chance of spanning at least 1 or 2 good
-years even over the course of a bear market.  Over all 5-year periods stocks have been
-[positive about 87% of the time](http://awealthofcommonsense.com/u-s-stock-investors-doomed-high-returns/).
-This suggests that 87% of the time the buffered income would continue to increase.
-
-If you are a vampire who wants to implement a Roth ladder strategy, you might
-want to consider a 6-year buffer. This would allow you convert your traditional IRA
-to a Roth IRA and wait the required 5 years before withdrawing the money without
-penalty[^4].  But 6-years is a long time to not keep money invested so it might make
-sense to invest 1 or 2 years of that buffer into a total bond fund.
-
-## Next Steps
-
-If there's any interest, the next logical step for this analysis would be to
-take it to the domain of monte-carlo simulations to see how the estimated rates
-do over very long periods with the given portfolios.
-
-Another interesting variation of this analysis would be to include the effects
-of social security on withdrawal rates.  Future social security or
-pension earnings will probably allow for increased withdrawals until that income
-stream kicks in.  It would be interesting to see how much of an effect that is.
-
-
-[^1]: Portfolio return for mixed portfolios are crude approximations for illustrative purposes only.
-[^2]: See [standard error of the mean](http://en.wikipedia.org/wiki/Standard_error#Standard_error_of_the_mean).
-[^22]: No relation to [Buffy the Vampire Slayer](https://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer).
-[^3]: Bonds and buffer percentages are initial values, buffer size varies slightly after the first year.
-[^4]: I'm pretty sure vampires are not subject to the rules concerning age of 59.5 and withdrawals.
-[^5]: Standard deviations for different allocations estimated from graph on [this page](http://www.forbes.com/sites/rickferri/2015/02/06/the-center-of-gravity-for-retirees/2/)
-[^6]: Based on portfolio deviation divided by sqrt(5) for the buffering effect.
-
-[^10]: Stock Performance - 1915-2014: 10.31%, std dev = 19.9%
-[^11]: Bond Performance - 1926-2014: 5.4%, std dev = 5.6%, comes from a combination of [Vanguard data](https://personal.vanguard.com/us/insights/saving-investing/model-portfolio-allocations) and the [comparable intermediate govt bond](http://www.jvlassociates.com/files/Performance%20Probabilities%20(Bell%20Curve%20)%20%201926%20-%202014.pdf).
-
-[^12]: Inflation numbers - 1915-2014: 3.2% from [moneychimp inflation calculator](http://www.moneychimp.com/articles/econ/inflation_calculator.htm).
