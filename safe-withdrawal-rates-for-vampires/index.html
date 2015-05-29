@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Safe Withdrawal Rates for Vampires</title>
+  <meta name="description" content="If you search the web for retirement withdrawal strategies,you can find countless articles about how to withdraw your fund within theconstruct of a 30-year r...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://www.moneycle.com/safe-withdrawal-rates-for-vampires/">
+  <link rel="alternate" type="application/rss+xml" title="Moneycle" href="http://www.moneycle.com/feed.xml" />
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.4/d3.min.js"></script>
+  <script src="/javascript/d3pie.min.js"></script>
+  <script src="/javascript/d3.slider.js"></script>
+  <link rel="stylesheet" href="/css/d3.slider.css">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">M<span class='brand-color'>o</span>neycle</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Safe Withdrawal Rates for Vampires</h1>
+    <p class="post-meta">May 29, 2015</p>
+  </header>
+
+  <div class="post-abstract">
+    If you're going to live forever, will a 4% withdrawal rate sustain you? This article explores the withdrawal rate that will help you keep up with inflation for the really long term.
+
+  </div>
+
+  <article class="post-content">
+    <img class="post-image" src="/images/nosferatu-max-shreck.jpeg"/>
+    <p>If you search the web for retirement withdrawal strategies,
+you can find countless articles about how to withdraw your fund within the
+construct of a 30-year retirement.  The most commonly cited strategy is the 4%
+withdrawal strategy which starts withdrawing 4% of the initial portfolio value
+and increases spending each year by the rate of inflation.
+Using monte carlo analysis techniques, such a portfolio
+may be found to have some small probability of exhausting the portfolio before
+30 years have passed.</p>
+
+<p>But if you’re a Vampire named Vlad and want your assets to last forever, you can’t
+afford to have your portfolio run dry in 30 years or even 100 years.
+Or maybe you aren’t not a vampire but are retiring early and want your funds to last
+50 years, which seems like forever.
+Let’s explore the idea of withdrawing funds from a portfolio indefinitely
+to try to gain some insights into long-term safe withdrawal rates.</p>
+
+<h2 id="the-vampire-strategy">The Vampire Strategy</h2>
+
+<p>One way Vlad can ensure that he never runs out of money is to just withdraw a fixed
+percentage from the portfolio every year.  But Vlad doesn’t want his spending power
+to decrease each year, so he needs to be careful with how much he spends.  In other
+words, he wants his portfolio on average to grow by the rate of inflation while at
+the same time withdrawing some amount of money to live on.  In equation form:</p>
+
+<p><code>
+(portfolio-withdrawal)(1+appreciation) &gt;= portfolio(1+inflation)
+</code></p>
+
+<p>This equation says that the portfolio in a given year will appreciate by at
+least the rate of inflation after subtracting the withdrawal amount.
+Let’s use shorter variable names to help make it more readable</p>
+
+<p><code>
+(P - W)(1 + r) &gt;= P(1 + i)
+</code></p>
+
+<p>where</p>
+
+<ul>
+  <li><code>P = portfolio value</code></li>
+  <li><code>W = withdrawal amount</code></li>
+  <li><code>w = withdrawal rate = W/P</code></li>
+  <li><code>r = porfolio appreciation</code></li>
+  <li><code>i = inflation rate</code></li>
+</ul>
+
+<p>Replacing withdrawal amount with <code>W = Pw</code>,</p>
+
+<p>Then we can divide both sides of the equation by the <code>P</code> we get:</p>
+
+<p><code>
+(1 - w)(1 + r) &gt;= (1 + i)
+</code></p>
+
+<p>And now it’s fairly simple to solve the <code>withdrawal rate</code> as:</p>
+
+<p><code>
+w &lt;= (r - i) / (1 + r)
+</code></p>
+
+<p>Notice that the numerator is the difference between Vlad’s portfolio return
+and long-term inflation.  So if his portfolio appreciates at a rate less than
+inflation, he’ll have to work forever.</p>
+
+<h3 id="stocks-only">Stocks Only</h3>
+
+<p>Let’s see what happens if we assume Vlad invests everything in stocks.</p>
+
+<p>Moneychimp has an <a href="http://www.moneychimp.com/features/market_cagr.htm">excellent tool</a>
+for getting historical stock returns.
+With this tool you can see that for the past 100 years (1915-2014) stocks have
+returned a compounded average rate of 10.31%.
+If Vlad could invest in Vanguard Total Stock Market ETF (VTI),
+he would incur a fee of 0.05% for a total return of 10.26%.  To be a little
+conservative, let’s round that down to 10.2%.
+Moneychimp also has an <a href="http://www.moneychimp.com/articles/econ/inflation_calculator.htm">inflation calculator</a>
+which shows a historical inflation rate of 3.2% over the same time period.</p>
+
+<p>Plugging those numbers into the above equations gives:</p>
+
+<p><code>
+withdrawal rate &lt;= 6.35%
+</code></p>
+
+<p>So, with average stock returns and average inflation values, a withdrawal of 6.35%
+or less could allow Vlad to keep up with inflation.  Keep in mind that average
+returns are not realistic.  In fact, those average returns have a standard deviation
+of 19.9% so if Vlad just used a 100% stock portfolio, he would have about a 95%
+chance that his portfolio would return between -30% and +50%.  A 30% loss would
+be a big hit to his annual income so Vlad probably wants to consider ways to smooth
+out the market swings.</p>
+
+<h3 id="stocks-and-bonds">Stocks and Bonds</h3>
+
+<p>One way to reduced volatility to a portfolio is by adding bonds.</p>
+
+<p>Historical bond rates are harder to come by but over period of 1926-2014
+bonds have returned approximately 5.4% with a standard deviation of 5.6%<sup id="fnref:11"><a href="#fn:11" class="footnote">1</a></sup>.
+So if Vlad invests his bond portfolio in Vanguard Total Bond Market ETF (BND)
+with an expense ratio of 0.07%, let’s assume he gets a return of 5.3% on the bonds.</p>
+
+<p>The following table shows the maximum withdrawal rates for different portfolio
+allocations based on the returns estimated for each allocation:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Stocks/Bonds =</th>
+      <th style="text-align: center">20/80</th>
+      <th style="text-align: center">40/60</th>
+      <th style="text-align: center">60/40</th>
+      <th style="text-align: center">80/20</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Historical Portfolio Return<sup id="fnref:1"><a href="#fn:1" class="footnote">2</a></sup></td>
+      <td style="text-align: center">6.6%</td>
+      <td style="text-align: center">7.3%</td>
+      <td style="text-align: center">8.2%</td>
+      <td style="text-align: center">9.2%</td>
+    </tr>
+    <tr>
+      <td>Spending Standard Deviation<sup id="fnref:5"><a href="#fn:5" class="footnote">3</a></sup></td>
+      <td style="text-align: center">5%</td>
+      <td style="text-align: center">8%</td>
+      <td style="text-align: center">11%</td>
+      <td style="text-align: center">15%</td>
+    </tr>
+    <tr>
+      <td>Maximum Withdrawal Rate</td>
+      <td style="text-align: center">2.9%</td>
+      <td style="text-align: center">3.8%</td>
+      <td style="text-align: center">4.7%</td>
+      <td style="text-align: center">5.5%</td>
+    </tr>
+    <tr>
+      <td>Expense Multiplier</td>
+      <td style="text-align: center">35</td>
+      <td style="text-align: center">27</td>
+      <td style="text-align: center">22</td>
+      <td style="text-align: center">18</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The “Expense Multiplier” value represents the amount of money that Vlad needs
+to save before he begins his retirement in terms of his annual expenses.
+So for a moderate 60/40 portfolio, Vlad would need to save at least 22 times his
+annual expenses before he could retire from his night job, and he could withdraw
+up to 4.7% to keep up with inflation.</p>
+
+<h2 id="buffer-the-vampire-strategy22">Buffer the Vampire Strategy<sup id="fnref:22"><a href="#fn:22" class="footnote">4</a></sup></h2>
+
+<p>Even with the moderate 60/40 portfolio, Vlad has a decent chance that his portfolio
+(and spending) could drop by 14%<sup id="fnref:7"><a href="#fn:7" class="footnote">5</a></sup> in any given year.<br />
+One way he could reduce the volatility of his expenses even further is to allocate
+a portion of his portfolio to a spending buffer.</p>
+
+<p>To describe how a spending buffer works, consider a 5-year spending buffer
+as an example.  With a 5-year buffer, Vlad would carve out 4 times his annual
+expenses as part of his portfolio.  Since this represents the next 4 years of
+his spending, it would be invested conservatively in short-term bond and cash
+equivalents.  At the end of each year, Vlad applies his withdrawal rate to his
+entire portfolio then moves that amount into his spending buffer (now the buffer
+has 5 years worth of spending).  He then withdraws 1/5th of the spending buffer
+for spending in the following year.</p>
+
+<div id="pieWithBuffer"></div>
+<div id="stock-slider" style="width: 300px;" align="center"></div>
+
+<p>Having a 5-year buffer for his spending means that Vlad’s spending will only be
+impacted by 1/5th of the fluctuations in the market.  The standard deviation of
+Vlad’s spending will be reduced<sup id="fnref:2"><a href="#fn:2" class="footnote">6</a></sup> by approximately <code>1/sqrt(5)</code>.
+In our example with a 60/40 split, the standard deviation goes from 11% down to 5%.
+Vampires get grumpy with big swings in spending so this helps to prevent Vlad
+from biting people.</p>
+
+<p>One possible downside of the buffering is that the returns from Vlad’s portfolio
+would be slightly reduced.  Assuming that the buffer piece is allocated to the
+bond side of the portfolio, then the bond returns would be reduced if the buffer
+is allocated to cash or cash equivalents.</p>
+
+<p>Re-working the original equations with a spending buffer:</p>
+
+<p><code>
+(P - kW)(1 + r) + kW - W &gt;= P(1 + i)
+</code></p>
+
+<p>where <code>k = spending buffer size in years</code>.  In this equation <code>P-kW</code> represents
+the piece of the portfolio that is invested and <code>kW-W</code> represents the buffer after
+1 year’s worth of spending has been withdrawn.  In short, we want the appreciation
+from the invested part of the portfolio to be enough so that the <strong>entire</strong>
+portfolio keeps up with inflation.</p>
+
+<p>Solving this equation for withdrawal rate,</p>
+
+<p><code>
+w &lt;= (r - i) / (1 + kr)
+</code></p>
+
+<p>Taking this a little further, if Vlad wants to keep the stock portion of the
+portfolio fixed at some percentage while bonds and the buffer make up the remainder,
+then the rate of return could be written in terms of this percentage,</p>
+
+<p><code>
+r = p*r_s + (1 - p)*r_b - (k - 1)*r_b*w
+</code></p>
+
+<p>Where</p>
+
+<ul>
+  <li><code>x = percentage of portfolio in stocks</code></li>
+  <li><code>r_s = rate of return on stocks</code></li>
+  <li><code>r_b = rate of return on bonds</code></li>
+</ul>
+
+<p>The first 2 terms of this equation represent the return we would have had without
+buffering and the last term represents the amount of potential returns lost to
+the buffering.</p>
+
+<p>Substituting <code>r</code> from the last equation into the equation before that gives us
+a quadratic equation to solve for withdrawal rate (I may expand this
+in another article but will leave this detail out for now).</p>
+
+<p>All this math probably is putting you to sleep so let’s look at some portfolios.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Stocks/Bonds<sup id="fnref:3"><a href="#fn:3" class="footnote">7</a></sup>/Buffer<sup id="fnref:3:1"><a href="#fn:3" class="footnote">7</a></sup> =</th>
+      <th style="text-align: center">20/72/8</th>
+      <th style="text-align: center">40/50/10</th>
+      <th style="text-align: center">60/27/13</th>
+      <th style="text-align: center">80/5/15</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Historical Portfolio Return<sup id="fnref:1:1"><a href="#fn:1" class="footnote">2</a></sup></td>
+      <td style="text-align: center">5.9%</td>
+      <td style="text-align: center">6.7%</td>
+      <td style="text-align: center">7.6%</td>
+      <td style="text-align: center">8.4%</td>
+    </tr>
+    <tr>
+      <td>Spending Standard Deviation<sup id="fnref:6"><a href="#fn:6" class="footnote">8</a></sup></td>
+      <td style="text-align: center">2%</td>
+      <td style="text-align: center">3.5%</td>
+      <td style="text-align: center">5%</td>
+      <td style="text-align: center">7%</td>
+    </tr>
+    <tr>
+      <td>Maximum Withdrawal Rate</td>
+      <td style="text-align: center">2.0%</td>
+      <td style="text-align: center">2.6%</td>
+      <td style="text-align: center">3.2%</td>
+      <td style="text-align: center">3.7%</td>
+    </tr>
+    <tr>
+      <td>Expense Multiplier</td>
+      <td style="text-align: center">50</td>
+      <td style="text-align: center">38</td>
+      <td style="text-align: center">31</td>
+      <td style="text-align: center">27</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>So, if our friend Vlad has a portfolio with 60% in stocks and transfers 3.2%
+of his portfolio to his 5-year spending buffer every year, his portfolio should roughly
+keep pace with inflation.  The buffer needed for this withdrawal would account for
+about 13% of his overall portfolio initially and would fluctuate with the market.
+And the reduced variations in his income due to the buffering should help Vlad
+sleep during the day.</p>
+
+<h2 id="caveats">Caveats</h2>
+
+<p>While this article explores the safe withdrawal rates for a portfolio that follows
+historical returns, this is known to not be a good strategy for determining actual
+safe withdrawal rates.  This is really more of a thought experiment to think about
+long-term withdrawals combined with the spending buffer concept in order to reduce
+income volatility.</p>
+
+<p>Probably a better way to complete this analysis would be to do a monte-carlo simulation
+with an appropriate success criterion.  For example, most studies of 30-year withdrawal
+rates consider how a withdrawal performs relative to how often the portfolio drops to
+zero during the 30-year period.  For a vampire, the measure of success would probably
+be whether the portfolio has kept pace with inflation over 50 years (or more).</p>
+
+<h2 id="insights">Insights</h2>
+
+<p>In spite of it’s weaknesses, this analysis does shed some light on very-long-term
+withdrawals.</p>
+
+<p>For an aggressively allocated (80% stock) 5-year buffered portfolio, the
+withdrawal rate of 3.7% could keep up with inflation. This rate isn’t too
+far off from the widely discussed 4% rates you see in the financial press but it
+is for a pretty aggressive allocation.  Reducing stock allocation quickly reduces the “safe”
+withdrawal rate.  A much safer 40% allocation requires reducing the withdrawal rate all
+the way down to 2.6%.  This highlights the need to
+stay invested in higher-performing assets in order to keep up with long-term inflation.</p>
+
+<p>The buffered withdrawal strategy could be employed to cushion the ups and down of the
+markets.  One cost of a buffered strategy is that it will reduce overall returns
+by about 0.6% for moderate allocations.
+But that lost return could be recouped by increasing the stock allocation by about 10%.
+The 5-year buffer suggested here has a good chance of spanning at least 1 or 2 good
+years even over the course of a bear market.  Over all 5-year periods stock returns
+have been <a href="http://awealthofcommonsense.com/u-s-stock-investors-doomed-high-returns/">positive about 87% of the time</a>.
+This suggests that 87% of the time the 5-year buffered income would continue to increase.</p>
+
+<p>Another cost of buffering is that it reduces the withdrawal rate that can keep
+up with inflation.  So the ultimate balance is between stability and income.
+If you want more income, you <strong>could</strong> reduce the buffer size and take a higher
+amount of income with full understanding that you should see larger swings in the market.
+You could also do away with buffering and reduce the volatility by choosing a less
+risky allocation.  Over the very long term it seems like Vlad would do better by
+keeping his portfolio as heavily invested as is bearable and using buffering to
+reduce the volatility.</p>
+
+<p>If you are a vampire who wants to implement a Roth ladder strategy, you might
+want to consider a 6-year buffer. This would allow you convert your traditional IRA
+to a Roth IRA and wait the required 5 years before withdrawing the money without
+penalty<sup id="fnref:4"><a href="#fn:4" class="footnote">9</a></sup>.  But 6-years is a long time to not keep money invested so with such
+a large buffer it might make sense to invest 1 or 2 years of a bigger buffer into
+a bond fund.</p>
+
+<h2 id="next-steps">Next Steps</h2>
+
+<p>If there’s any interest, the next logical step for this analysis would be to
+take it to the domain of monte-carlo simulations to see how the estimated rates
+do over very long periods with the given portfolios.</p>
+
+<p>Another interesting variation of this analysis would be to include the effects
+of social security on withdrawal rates.  Future social security or
+pension earnings will probably allow for increased withdrawals until that income
+stream kicks in.  It would be interesting to see how much of an effect that is.</p>
+
+<script>
+var pieData = [
+  {
+    "label": "Buffer",
+    "value": 13,
+    "color": "#387e45",
+    "caption": "{percentage}%, withdrawal = 3.2%"
+  },
+  {
+    "label": "Bonds",
+    "value": 27,
+    "color": "#386a7e",
+    "caption": "{percentage}%"
+  },
+  {
+    "label": "Stocks",
+    "value": 60,
+    "color": "#7e3838",
+    "caption": "{percentage}%"
+  }
+];
+stockReturn = 0.102;
+bondReturn = 0.053;
+inflationRate = 0.032;
+bufferSize = 5;
+
+updateData = function(stockPercent) {
+    var stock = stockPercent * 0.01
+  var bufferlessReturn = stock*stockReturn + (1-stock)*bondReturn;
+  var a = bufferSize*(bufferSize-1)*bondReturn;
+  var b = 1+(bufferSize-1)*bondReturn+bufferSize*bufferlessReturn;
+  var c = bufferlessReturn - inflationRate;
+  var withdrawalRate = (b-Math.sqrt(b*b-4*a*c))/(2*a);
+  var bufferPercent = (bufferSize-1)*withdrawalRate*100;
+  var bondPercent = 100-stockPercent-bufferPercent;
+
+  pieData[0].value = bufferPercent;
+  pieData[0].caption = "{percentage}%, withdrawal = " + Math.round(withdrawalRate*1000)/10 + "%"
+  pieData[1].value = bondPercent;
+  pieData[2].value = stockPercent;
+}
+updateData(55);
+
+var pie = new d3pie("pieWithBuffer", {
+	"header": {
+		"title": {
+			"text":     "Portfolio Allocation with a Spending Buffer",
+			"fontSize": 22
+		},
+    subtitle: {
+      text:     "5-year buffer, 10.2% stock returns, 5.3% bond returns",
+      color:    "#666666",
+      fontSize: 14,
+    }
+	},
+  footer: {
+    text: 	  "use slider to change stock allocation",
+    color:    "#666666",
+    fontSize: 10,
+    location: "bottom-center"
+  },
+	"size": {
+		"canvasHeight": 400,
+		"canvasWidth": 590,
+		"pieOuterRadius": "88%"
+	},
+	"data": {
+		"content": pieData
+	},
+	"labels": {
+		"outer": {
+			"format": "none",
+			"pieDistance": 32
+		},
+		"inner": {
+			"format": "label"
+		},
+		"mainLabel": {
+			"color": "#e1e1e1",
+			"font": "verdana",
+			"fontSize": 12
+		},
+		"percentage": {
+			"color": "#e1e1e1",
+			"font": "verdana",
+			"decimalPlaces": 0
+		},
+		"value": {
+			"color": "#e1e1e1",
+			"font": "verdana"
+		},
+		"lines": {
+			"enabled": true,
+			"color": "#cccccc"
+		},
+		"truncation": {
+			"enabled": true
+		}
+	},
+	"tooltips": {
+		"enabled": true,
+		"type": "caption",
+		"string": "{label}: {percentage}%"
+	},
+	"effects": {
+		"pullOutSegmentOnClick": {
+			"effect": "linear",
+			"speed": 200,
+			"size": 12
+		}
+	},
+	"callbacks": {
+    "onload": function() { pie.openSegment(0); },
+		"onMouseoverSegment": null,
+		"onMouseoutSegment": null,
+		"onClickSegment": null
+	}
+});
+
+d3.select('#stock-slider').call(d3.slider().axis(true).min(0).max(85).step(5).value(pieData[2].value).on("slideend", function(evt, stockPercent) {
+  updateData(stockPercent);
+  pie.updateProp("data.content", pieData);
+}));
+</script>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:11">
+      <p>Bond Performance - 1926-2014: 5.4%, std dev = 5.6%, comes from a combination of <a href="https://personal.vanguard.com/us/insights/saving-investing/model-portfolio-allocations">Vanguard data</a> and the <a href="http://www.jvlassociates.com/files/Performance%20Probabilities%20(Bell%20Curve%20)%20%201926%20-%202014.pdf">comparable intermediate govt bond</a>. <a href="#fnref:11" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:1">
+      <p>Portfolio return for mixed portfolios are crude approximations for illustrative purposes only. <a href="#fnref:1" class="reversefootnote">&#8617;</a> <a href="#fnref:1:1" class="reversefootnote">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:5">
+      <p>Standard deviations for different allocations estimated from graph on <a href="http://www.forbes.com/sites/rickferri/2015/02/06/the-center-of-gravity-for-retirees/2/">this page</a> <a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:22">
+      <p>No relation to <a href="https://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer">Buffy the Vampire Slayer</a>. <a href="#fnref:22" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:7">
+      <p>14% drop is 2 standard deviations, or 22%, below average return of 8.2% <a href="#fnref:7" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>See <a href="http://en.wikipedia.org/wiki/Standard_error#Standard_error_of_the_mean">standard error of the mean</a>. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>Bonds and buffer percentages are initial values, buffer size varies slightly after the first year. <a href="#fnref:3" class="reversefootnote">&#8617;</a> <a href="#fnref:3:1" class="reversefootnote">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:6">
+      <p>Based on portfolio deviation divided by sqrt(5) for the buffering effect. <a href="#fnref:6" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p>I’m pretty sure vampires are not subject to the rules concerning age of 59.5 and withdrawals. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+  </article>
+
+</div>
+
+<div class="comments">
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'moneycle';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>M<span class='brand-color'>o</span>neycle</li>
+          <li><a href="mailto:sir@moneycle.com">sir@moneycle.com</a></li>
+          <li>&copy; <time datetime="2015-05-29T17:17:17-06:00">2015</time>. All rights reserved.</li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          <li>
+            <a href="/feed.xml">RSS feed</a>
+          </li>
+
+          
+          <li>
+            <a href="https://twitter.com/moneymonocle">
+              <span class="icon  icon--twitter">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+                </svg>
+              </span>
+
+              <span class="username">moneymonocle</span>
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://github.com/moneycle">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">moneycle</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">Don your money monocle (top hats are optional) as we explore topics related to money, investing and early retirement.
+</p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
