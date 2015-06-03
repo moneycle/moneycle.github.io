@@ -179,7 +179,7 @@ portfolio fixed at some percentage while bonds and the buffer make up the remain
 then the rate of return could be written in terms of this percentage,
 
 ```
-r = p*r_s + (1 - p)*r_b - (k - 1)*r_b*w
+r = p*r_s + (1 - p)*r_b - (k - 1)*w*r_b
 ```
 
 Where
@@ -190,7 +190,7 @@ Where
 
 The first 2 terms of this equation represent the return we would have had without
 buffering and the last term represents the amount of potential returns lost to
-the buffering.
+the buffering (assuming it would have been invested in bonds).
 
 Substituting `r` from the last equation into the equation before that gives us
 a quadratic equation to solve for withdrawal rate (I may expand this
@@ -355,7 +355,7 @@ var pie = new d3pie("pieWithBuffer", {
   },
 	"size": {
 		"canvasHeight": 400,
-		"canvasWidth": 590,
+		"canvasWidth": 420,
 		"pieOuterRadius": "88%"
 	},
 	"data": {
