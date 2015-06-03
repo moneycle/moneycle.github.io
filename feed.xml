@@ -6,8 +6,8 @@
 </description>
     <link>http://www.moneycle.com/</link>
     <atom:link href="http://www.moneycle.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 03 Jun 2015 12:05:14 -0600</pubDate>
-    <lastBuildDate>Wed, 03 Jun 2015 12:05:14 -0600</lastBuildDate>
+    <pubDate>Wed, 03 Jun 2015 14:49:48 -0600</pubDate>
+    <lastBuildDate>Wed, 03 Jun 2015 14:49:48 -0600</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -218,13 +218,13 @@ portfolio fixed at some percentage while bonds and the buffer make up the remain
 then the rate of return could be written in terms of this percentage,&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;
-r = p*r_s + (1 - p)*r_b - (k - 1)*w*r_b
+r = s*r_s + (1 - s)*r_b - (k - 1)*w*r_b
 &lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Where&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;x = percentage of portfolio in stocks&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;s = percentage of portfolio in stocks&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;&lt;code&gt;r_s = rate of return on stocks&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;&lt;code&gt;r_b = rate of return on bonds&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
