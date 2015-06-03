@@ -179,12 +179,12 @@ portfolio fixed at some percentage while bonds and the buffer make up the remain
 then the rate of return could be written in terms of this percentage,
 
 ```
-r = p*r_s + (1 - p)*r_b - (k - 1)*w*r_b
+r = s*r_s + (1 - s)*r_b - (k - 1)*w*r_b
 ```
 
 Where
 
-  * `x = percentage of portfolio in stocks`
+  * `s = percentage of portfolio in stocks`
   * `r_s = rate of return on stocks`
   * `r_b = rate of return on bonds`
 
