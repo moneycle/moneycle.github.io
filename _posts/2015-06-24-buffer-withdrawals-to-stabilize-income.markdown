@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Buffered Withdrawals Stabilize Retirement Spending"
-date: 2015-06-11T10:21:10-06:00
+title: "Buffer Withdrawals to Stabilize Income"
+date: 2015-06-24
 tags: [investing, spending, other]
-image: /images/testing.jpg
+image: /images/aspirin-car.jpg
 abstract: >
   Withdrawing money from your portfolio using a fixed percentage
   can guarantee that you'll never run out of money but it also ties the
@@ -44,8 +44,9 @@ Each year, you take a percentage of your portfolio (your withdrawal rate) and ad
 it to your buffer.  Then you divide that buffer by the size (in years) and withdraw
 that amount as your income for the coming year.  If your buffer size is `k` years,
 this means that normally you will have `k-1` years worth of spending sitting in the buffer.
-Your buffer will only temporarily have `k` years of spending between the short time
-between when you add funds to the buffer and withdraw the funds from the buffer.
+Your buffer will only temporarily have `k` years of spending in the short time
+between when you add annual withdrawal to the buffer and then withdraw your
+spending funds from the buffer.
 
 Why do this?  The main reason to do this is to buffer the ups and downs of the
 stock market.  The bigger your buffer is, the smaller the variation will be
@@ -59,7 +60,7 @@ directly withdrawing a fixed percentage from your portfolio.
 
 ## Some Math
 
-So if we define a single years' worth of the buffer to be `W`, then
+Let's define a single years' worth of the buffer to be `W`, then
 
 ```
 P = V + (k-1)W
@@ -75,8 +76,10 @@ V = S + B
 And the withdrawal buffer would be invested conservatively in cash-equivalents
 since that is the money will support your living expenses in the near future.
 
-The Galeno Strategy invests everything in stocks which means that the percentage
-of the overall portfolio in stocks fluctuates.
+{% include pie-buffer.html %}
+
+Galeno's version of this strategy invests everything in stocks which means that
+the percentage of the overall portfolio in stocks fluctuates.
 I would prefer to keep the stock percentage at some fixed value so I will
 diverge from the Galeno Strategy on this point.
 If the stock percentage is `s`,
@@ -104,9 +107,13 @@ P = sP + B + (k-1)wP
 
 The bond piece is the part of the portfolio that fluctuates to accommodate swings
 in the stock market and can be written as,
+
 ```
 B = (1-s)P - (k-1)wP
 ```
+
+Notice that for the degenerate case of no buffer (k=1), the bond percentage is
+simply `(1-s)`.  So for a 60% stock target, the bonds would be 40% as expected.
 
 ## Keeping Up with Inflation
 
@@ -125,7 +132,7 @@ Substituting `W=wP` and solving for `w`,
 w < (r - i) / (1 + kr)
 ```
 
-Interestingly, even in the degenerate case where we don't have a buffer (`k=1`),
+Interestingly, even in the degenerate case where we don't have a buffer (k=1),
 then the maximum withdrawal rate that keeps up with inflation is not simply `r-i`
 but is reduced by `1/(1+r)`.  For example, if your portfolio returns 7% and inflation
 is 3%, then the maximum withdrawal would not be 4% but rather it would be,
@@ -141,67 +148,6 @@ Also notice that your withdrawal rate decreases with bigger buffer sizes.
 This is because it is assumed that the buffer has zero gains.  You could mitigate
 this by investing a part of your buffer in bonds but you will be increasing your
 income volatility slightly if you do so.
-
-## Initial Buffer Size with Inflation
-
-If you don't consider inflation when you create your initial buffer, you might
-not actually keep up with inflation for the first few years.  Consider a hypothetical
-portfolio that exactly keeps with inflation.  Thus your withdrawal amount keeps up
-with inflation.  This all sounds great until you realize that you will be dividing
-your buffer by `k` so your initial withdrawal would only capture `1/k` of the gains.
-
-This may not be a big deal for you if you want to be conservative at the beginning
-of retirement.  You may be able to tighten your belt a little initially and wait
-for the effects of inflation to catch up to your buffer.  But you can also make
-an adjustment to your inital buffer by considering the current inflation rate
-when making the current buffer.
-
-So, instead of making your initial buffer with `kwP` dollars, the idea is to
-figure out an initial value for `k`, call it `k'`, such that your next withdrawal
-will keep up with today's rate of inflation.  In equation form,
-
-```
-starting_buffer - expenses + next_withdrawal = startin_buffer*(1+i)
-```
-
-In terms of the variables we have already defined and assuming the next withdrawal
-also keeps up with inflation,
-
-```
-U-U/k + W(1+i) = U(1+i)
-```
-
-Now replace the buffer size `U` with `k'W`,
-
-```
-k'W - k'W/k + (1+i)W = k'W(1+i)
-```
-
-Solving for `k'`
-
-```
-k' = α k
-```
-
-```
-α = (1+i) / (1 + ki)
-```
-
-The multiplier `α` represents how much to adjust `k` by for the initial
-buffer size if you want next year's income to adjust by inflation.  If inflation
-is zero, then no adjustment is needed because `α` will be 1.
-
-
-For example, if you have a 6-year buffer and inflation is currently 2% then,
-
-```
-k' = 6 * (1 + 0.02) / (1+6*0.02) = 5.46
-```
-
-Furthermore, if you are taking a 3% withdrawal, then your initial buffer
-would be `5.46*3.5%` or 16.4% and you would effectively withdrawal 16.4%/6
-or 2.73% in that first year even though you are moving 3% into your buffer
-each year.
 
 ## Roth Ladder
 
@@ -227,12 +173,10 @@ with a 3-5 year maturity using the withdrawn funds.
 
 Here are the basic steps for using a buffered withdrawal.  In these
 steps, by way of example, let's assume a buffer size of 6 years and a withdrawal
-rate of 3% and a current inflation rate of 2%.
+rate of 3%.
 
-  1. Determine your initial buffer size.  If you want to keep it simple,
-  multiply your buffer size by your withdrawal rate (3%*6 = 18%).  If you
-  want to consider inflation, your initial buffer size is `w*k (1+i) / (1 + ki)`,
-  for 2% inflation, 3%*5.46 = 16.4%.
+  1. Determine your initial buffer size.  Simply multiply your buffer size by
+  your withdrawal rate (6*3% = 18%).
 
   2. Set aside your initial buffer size somewhere in an account with safe funds.
   For example, if your portfolio is $1,000,000 then set aside 18% or $180k
@@ -243,9 +187,9 @@ rate of 3% and a current inflation rate of 2%.
   remove $30k of spending for this year.  There is now $150k left in your
   buffer that you will not touch until next year.
 
-  4. Set aside your stock allocation.  For example, if you like a 60/40 allocation,
-  rebalance your portfolio so that you have your target allocation (e.g. 60% of $970k = $582k)
-  in stocks.
+  4. Rebalance your stock allocation.  For example, if you use a 60% stock allocation,
+  rebalance your remaining portfolio so that you have 60% in stocks
+  (e.g. 60% of $970k = $582k).
 
   5. Invest the remainder in bonds (e.g. 970-582-150=$240k).
 
@@ -257,12 +201,25 @@ rate of 3% and a current inflation rate of 2%.
   $1,040,000.
 
   8. Multiply your new portfolio value by your withdrawal rate to get your
-  withdrawal amount.  For example, $1,040,000*3% = $31,200.
+  buffer increment.  For example, $1,040,000*3% = $31,200.  
 
-  9. Add that withdrawal amount to your existing buffer.
+  9. Move the buffer increment amount into your existing buffer.  You might
+  want to consider your allocation before moving funds so as to avoid moving
+  funds twice.
 
   10. Go back to step 3 and repeat.
 
+## Summary
+
+Implementing a buffered withdrawal strategy is one way to reduce the volatility
+of spending in early retirement by spreading portfolio gains and losses between
+multiple years.  It also can be used in conjunction with a Roth conversion ladder
+for retirees needing to convert the tax-deferred IRA funds to Roth IRA funds.
+Implementing such a strategy is fairly easy if you follow the steps outlined above.
+
+### Related
+
+* [Safe Withdrawal Rates for Vampires](/safe-withdrawal-rates-for-vampires/)
 
 
 [^1]: See [standard error of the mean](http://en.wikipedia.org/wiki/Standard_error#Standard_error_of_the_mean).

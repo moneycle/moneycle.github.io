@@ -141,8 +141,7 @@ entire portfolio then moves that amount into his spending buffer (now the buffer
 has 5 years worth of spending).  He then withdraws 1/5th of the spending buffer
 for spending in the following year.
 
-<div id="pieWithBuffer"></div>
-<div id="stock-slider" style="width: 300px;" align="center"></div>
+{% include pie-buffer.html %}
 
 Having a 5-year buffer for his spending means that Vlad's spending will only be
 impacted by 1/5th of the fluctuations in the market.  The standard deviation of
@@ -275,6 +274,10 @@ of social security on withdrawal rates.  Future social security or
 pension earnings will probably allow for increased withdrawals until that income
 stream kicks in.  It would be interesting to see how much of an effect that is.
 
+### Related
+
+* [Buffer Withdrawals to Stabilize Income](/buffer-withdrawals-to-stabilize-income/)
+
 
 [^1]: Portfolio return for mixed portfolios are crude approximations for illustrative purposes only.
 [^2]: See [standard error of the mean](http://en.wikipedia.org/wiki/Standard_error#Standard_error_of_the_mean).
@@ -289,130 +292,3 @@ stream kicks in.  It would be interesting to see how much of an effect that is.
 [^11]: Bond Performance - 1926-2014: 5.4%, std dev = 5.6%, comes from a combination of [Vanguard data](https://personal.vanguard.com/us/insights/saving-investing/model-portfolio-allocations) and the [comparable intermediate govt bond](http://www.jvlassociates.com/files/Performance%20Probabilities%20(Bell%20Curve%20)%20%201926%20-%202014.pdf).
 
 [^12]: Inflation numbers - 1915-2014: 3.2% from [moneychimp inflation calculator](http://www.moneychimp.com/articles/econ/inflation_calculator.htm).
-
-
-
-<script>
-var pieData = [
-  {
-    "label": "Buffer",
-    "value": 13,
-    "color": "#387e45",
-    "caption": "{percentage}%, withdrawal = 3.2%"
-  },
-  {
-    "label": "Bonds",
-    "value": 27,
-    "color": "#386a7e",
-    "caption": "{percentage}%"
-  },
-  {
-    "label": "Stocks",
-    "value": 60,
-    "color": "#7e3838",
-    "caption": "{percentage}%"
-  }
-];
-stockReturn = 0.102;
-bondReturn = 0.053;
-inflationRate = 0.032;
-bufferSize = 5;
-
-updateData = function(stockPercent) {
-    var stock = stockPercent * 0.01
-  var bufferlessReturn = stock*stockReturn + (1-stock)*bondReturn;
-  var a = bufferSize*(bufferSize-1)*bondReturn;
-  var b = 1+(bufferSize-1)*bondReturn+bufferSize*bufferlessReturn;
-  var c = bufferlessReturn - inflationRate;
-  var withdrawalRate = (b-Math.sqrt(b*b-4*a*c))/(2*a);
-  var bufferPercent = (bufferSize-1)*withdrawalRate*100;
-  var bondPercent = 100-stockPercent-bufferPercent;
-
-  pieData[0].value = bufferPercent;
-  pieData[0].caption = "{percentage}%, withdrawal = " + Math.round(withdrawalRate*1000)/10 + "%"
-  pieData[1].value = bondPercent;
-  pieData[2].value = stockPercent;
-}
-updateData(55);
-
-var pie = new d3pie("pieWithBuffer", {
-	"header": {
-		"title": {
-			"text":     "Portfolio Allocation with a Spending Buffer",
-			"fontSize": 22
-		},
-    subtitle: {
-      text:     "5-year buffer, 10.2% stock returns, 5.3% bond returns",
-      color:    "#666666",
-      fontSize: 14,
-    }
-	},
-  footer: {
-    text: 	  "use slider to change stock allocation",
-    color:    "#666666",
-    fontSize: 10,
-    location: "bottom-center"
-  },
-	"size": {
-		"canvasHeight": 400,
-		"canvasWidth": 420,
-		"pieOuterRadius": "88%"
-	},
-	"data": {
-		"content": pieData
-	},
-	"labels": {
-		"outer": {
-			"format": "none",
-			"pieDistance": 32
-		},
-		"inner": {
-			"format": "label"
-		},
-		"mainLabel": {
-			"color": "#e1e1e1",
-			"font": "verdana",
-			"fontSize": 12
-		},
-		"percentage": {
-			"color": "#e1e1e1",
-			"font": "verdana",
-			"decimalPlaces": 0
-		},
-		"value": {
-			"color": "#e1e1e1",
-			"font": "verdana"
-		},
-		"lines": {
-			"enabled": true,
-			"color": "#cccccc"
-		},
-		"truncation": {
-			"enabled": true
-		}
-	},
-	"tooltips": {
-		"enabled": true,
-		"type": "caption",
-		"string": "{label}: {percentage}%"
-	},
-	"effects": {
-		"pullOutSegmentOnClick": {
-			"effect": "linear",
-			"speed": 200,
-			"size": 12
-		}
-	},
-	"callbacks": {
-    "onload": function() { pie.openSegment(0); },
-		"onMouseoverSegment": null,
-		"onMouseoutSegment": null,
-		"onClickSegment": null
-	}
-});
-
-d3.select('#stock-slider').call(d3.slider().axis(true).min(0).max(85).step(5).value(pieData[2].value).on("slideend", function(evt, stockPercent) {
-  updateData(stockPercent);
-  pie.updateProp("data.content", pieData);
-}));
-</script>
