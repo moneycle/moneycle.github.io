@@ -19,7 +19,7 @@ Because you only retire once, I prefer to be a little more conservative
 and use an expense multiplier of 30 which corresponds to a 3.33% withdrawal rate.
 
 While this kind of rule is a great rule of thumb for giving people an idea of
-how much money they will need to save, it tends to ignore the future income that
+how much money they will need to save, it tends to ignore the income that
 you will earn from a future income stream such as social security or a pension[^2].
 In the early retirement circles the effects of social security tend to be ignored
 perhaps because it seems like far-off and insignificant event.  But the effects
@@ -271,7 +271,7 @@ achieving retirement even when your portfolio stagnates.
 
 [^1]: For most people, delaying social security benefits to age 70 is the best decision, so all examples in this article assume that social security benefits will start at that age.
 
-[^2]: Most of this articles talks about social security for brevity's sake but the same principles apply equally to other future income streams such as pensions.
+[^2]: Most of this article refers to social security for brevity's sake but the same principles apply equally to other future income streams such as pensions.
 
 [^3]: The Social Security Administration uses the maximum 35 years of earnings over your entire working career in their formula to determine your benefits.
 
