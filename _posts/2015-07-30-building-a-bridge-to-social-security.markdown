@@ -13,7 +13,7 @@ If you read any early [retirement blogs](http://www.mrmoneymustache.com/2012/05/
 you may have encountered a rule of thumb that says something like
 "you need to save 25 times your annual expenses in order to retire".  That 25
 number, the *expense multiplier*, comes from a 4% withdrawal assumption. So
-if you withdrawal 4% from your portfolio to cover your expenses, that means your
+if you withdraw 4% from your portfolio to cover your expenses, that means your
 portfolio must be at least as big as the inverse of 4% or 25.
 Because you only retire once, I prefer to be a little more conservative
 and use an expense multiplier of 30 which corresponds to a 3.33% withdrawal rate.
