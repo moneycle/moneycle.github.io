@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Building a Bridge to Social Security</title>
+  <meta name="description" content="If you read any early retirement blogs,you may have encountered a rule of thumb that says something like“you need to save 25 times your annual expenses in or...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://www.moneycle.com/building-a-bridge-to-social-security/">
+  <link rel="alternate" type="application/rss+xml" title="Moneycle" href="http://www.moneycle.com/feed.xml" />
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.4/d3.min.js"></script>
+  <script src="/javascript/d3pie.min.js"></script>
+  <script src="/javascript/d3.slider.js"></script>
+  <link rel="stylesheet" href="/css/d3.slider.css">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">M<span class='brand-color'>o</span>neycle</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Building a Bridge to Social Security</h1>
+    <p class="post-meta">Jul 30, 2015</p>
+  </header>
+
+  <div class="post-abstract">
+    You may be able to retire earlier than you think if you factor in how much social security or pension income you will receive in the future.
+
+  </div>
+
+  <article class="post-content">
+    <img class="post-image" src="/images/golden-gate.jpg"/>
+    <p>If you read any early <a href="http://www.mrmoneymustache.com/2012/05/29/how-much-do-i-need-for-retirement/">retirement blogs</a>,
+you may have encountered a rule of thumb that says something like
+“you need to save 25 times your annual expenses in order to retire”.  That 25
+number, the <em>expense multiplier</em>, comes from a 4% withdrawal assumption. So
+if you withdrawal 4% from your portfolio to cover your expenses, that means your
+portfolio must be at least as big as the inverse of 4% or 25.
+Because you only retire once, I prefer to be a little more conservative
+and use an expense multiplier of 30 which corresponds to a 3.33% withdrawal rate.</p>
+
+<p>While this kind of rule is a great rule of thumb for giving people an idea of
+how much money they will need to save, it tends to ignore the future income that
+you will earn from a future income stream such as social security or a pension<sup id="fnref:2"><a href="#fn:2" class="footnote">1</a></sup>.
+In the early retirement circles the effects of social security tend to be ignored
+perhaps because it seems like far-off and insignificant event.  But the effects
+of that extra income increase over time so your financial independence could be
+closer than you previously thought.</p>
+
+<h2 id="simple-example">Simple Example</h2>
+
+<p>To illustrate the effects with an extreme example, consider the case of somebody
+named Woodrow who is 69 years old and has expenses of $40,000/year. Furthermore,
+if Woodrow expects to receive $40,000/year from social security at age 70<sup id="fnref:1"><a href="#fn:1" class="footnote">2</a></sup>,
+then he will only need to have savings of $40,000 to be able to retire right now.
+In this extreme example, Woodrow’s expense multiplier is 1 because he only needs
+to have saved 1 times his annual expenses in order to retire now.
+Think of needed savings as a 1-year bridge that allow Woodrow to live
+comfortably until his full social security benefits kick in.</p>
+
+<p><img src="/images/ss-bridge-short.png" alt="Retiring a little early" /></p>
+
+<p>In the illustration above, the green area represents the funds that are
+needed to fill the gap until social security kicks in.</p>
+
+<p>In scenarios like this, where your future social security payments will cover your expenses,
+it’s fairly easy to extrapolate this simple example to longer time periods.
+In such scenarios you only need to save enough money to get to the age when
+you will begin collecting social security.
+So if Woodrow had been age 60 in the above example, he would need to have savings
+of <code>10*$50,000</code> or $500,000 in order to cover his expenses for the 10 years before
+he received social security.  His expense multiplier is the number of
+years until he begins collecting social security.</p>
+
+<p>Also of note, if Woodrow is 30 or more years from receiving social security,
+he doesn’t necessarily need a portfolio bigger than 30 times his expenses because,
+theoretically he should be able to live off of the 3.33% withdrawal indefinitely
+(or whatever you consider to be a safe withdrawal rate).</p>
+
+<h2 id="early-retirement-example">Early Retirement Example</h2>
+
+<p>The above example is interesting and illustrates how accounting for
+social security can dramatically reduce a person’s expense multiplier.
+But early retirees are more likely to be in a situation where the social security
+amount will not cover all of their expenses in the future because they may not
+have contributed a full 35 years into the system.  In this case, a social security
+bridge may need to be supplemented by additional withdrawals to meet spending needs.</p>
+
+<p><img src="/images/ss-bridge-medium.png" alt="Retiring early" /></p>
+
+<p>Let’s consider another person named Priscilla who is aged 55 and estimates that
+she will receive $30k/year (in today’s dollars) from social security if she waits
+until age 70.
+But Priscilla’s expenses are $40k/year.  To bridge the 15-year social security gap,
+Priscilla needs 15 times the $30k, or $450k to get her to the level of income
+that social security will provide.
+Then she will need an additional piece of her portfolio to get her the
+extra $10k/year needed to cover her expenses.  Using a 3.33% withdrawal rate
+means Priscilla will need an additional <code>30*$10k</code> or $300k.</p>
+
+<p>In Priscilla’s example she would need $750k to retire at age 55 with $40k in
+expenses.  This means that her expense multiplier is reduced from 30
+(inverse of 3.33%) to <code>750k/40k</code> or 18.75.
+To put it another way, without considering social security Priscilla might have
+concluded that she needed to save <code>30*40k</code> or $1.2m, which is 60% more than the $750k
+she actually needs when taking social security into account.</p>
+
+<h2 id="very-early-retirement-example">Very Early Retirement Example</h2>
+
+<p>Retiring very early can put you into a situation where building a social
+security bridge doesn’t make sense initially.  For example, if you retire at age 30, then
+building a bridge for 40 years means you might start withdrawing funds at a 2.5%
+rate which is likely more conservative than necessary.
+To get around this problem, you can initially take withdrawals at your preferred
+safe withdrawal rate until you hit the age of <code>70-1/withdrawal_rate</code>.
+Then you can implement a social security bridge from that age forward.
+This is illustrated below where initially all income is from safe withdrawals,
+then a social security bridge kicks in later.</p>
+
+<p><img src="/images/ss-bridge-long.png" alt="Retiring Even Earlier" /></p>
+
+<p>Consider the case of Gunther who is retiring at age 35.  Good for you Gunther!
+Because Gunther has contributed into social security for much less time than the
+maximum of 35 years<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup>, his estimated social security payments at age 70 will only
+be $10k.  Because his social security payments are so far in the future, he needs to have
+an initial portfolio equal to his expenses divided by his withdrawal rate.</p>
+
+<p>So if Gunther needs $40k of income and wants to use a 3.33% withdrawal rate,
+he should start with a portfolio of <code>30*$40k</code> or $1.2m.  Then, at age 40, he
+can break his portfolio into two pieces.  One piece, $300k (or higher depending
+on inflation and social security adjustments), will be used as
+a social security bridge.  The remaining part of his portfolio can continue
+at the safe withdrawal rate.</p>
+
+<p>Why would Gunther do use a social security brige at all?  The funds
+in the social security bridge piece of his portfolio will be withdrawn at ever
+increasing withdrawal rate until age 70. This means that Gunther’s overall
+withdrawal rate that is effectively higher than 3.33% and increases as he
+approaches age 70 when social security will takes over.  In other words, he
+can safely increase his income between ages 40 and 70 beyond what he would have
+received if he had maintained a 3.33% withdrawal rate.</p>
+
+<p>One thing that very early retirees should be aware of is that you need to
+contribute into the social security system at least 40 quarters (10 years)
+in order to be eligible for social security payments.  So if you’re an extreme
+saver and can retire in 9 years and 11 months, it would probably be a good idea
+to work that extra month to become eligible for social security benefits later
+in life.  If you’re lucky enough to be in this situation, check the social
+<a href="http://www.ssa.gov/OACT/COLA/QC.html">security site</a> to make sure you don’t
+leave yourself short.</p>
+
+<h2 id="the-bridge-fund">The Bridge Fund</h2>
+
+<p>How do you build a social security bridge?  The trick is to allocate a chunk
+of money that will pay you an income equal to what you expect to receive from
+social security in the future.  Fortunately, the social security administration
+reports your expected benefits in today’s dollars and adjusts them up every year
+based on current inflation.  This makes it easier to project how much money
+you need now because the calculations are done in current dollars.</p>
+
+<p>There are several ways you could build a bridge fund.</p>
+
+<ul>
+  <li>
+    <p><strong>Bond ladder</strong> - you could build a bond ladder for the bridge period.  This might
+ work well for somebody between 65 and 70 who wants to delay taking social security for
+ a few years.  But if you are more than 5 years from taking social security, you
+ might want to take a little more risk so that you can keep up with inflation.</p>
+  </li>
+  <li>
+    <p><strong>Single Premium Immediate Annuities</strong> - an insurance company would be happy to
+sell you a SPIA that is “term certain”.  For example, if you are 60, you could
+buy a 10-year term-certain immediate annuity that pays you a fixed income for the next 10
+years.  You could also buy one with inflation protection but that will cost a little more.
+While I think <strong>lifetime</strong> annuities are a really good option to protect against
+longevity risk (outliving your money), a term-certain annuity doesn’t have an
+actuarial component associated with it so you might be able to do better elsewhere.
+But there’s something to be said for a guaranteed stream of income so perhaps this
+option will appeal to you.</p>
+  </li>
+  <li>
+    <p><strong>Income Replacement Funds</strong> - Fidelity offers a particular type of fund called
+<a href="http://moneyover55.about.com/od/investmentincome/a/incomereplacement.htm">Income Replacement Funds</a>
+that are designed to distribute your invested funds over a particular period of time.
+One of the stated purposes of these funds is as a bridge to a future income stream
+such as a pension or social security.  The funds do this by investing in a mix of stocks,
+bonds, and cash equivalents and become more conservative as the they nears their
+end date.  Think of this as a period-certain annuity with more risk and possibly more return.
+This might be a good choice if you can handle a little more risk and like something simple.</p>
+  </li>
+  <li>
+    <p><strong>DIY Bridge Fund</strong> - You could build your own bridge fund using low-cost index funds.
+In a future article I will propose a way to build your own bridge fund using a simple
+allocation of low-cost funds.</p>
+  </li>
+</ul>
+
+<h2 id="math">Math</h2>
+
+<p>Now is the time for the geeky part of the article.  Let’s try to develop an
+equation to describe the effective expense multiplier that takes future social
+security income into account.</p>
+
+<p>The equation for your future income can be written as,</p>
+
+<p><code>
+income_total = income_ss + porfolio_remaining*withdrawal_rate
+</code></p>
+
+<p>If you consider that your future portfolio will be reduced by the amount of
+income that was used as a social security bridge, then the amount of income you
+have left to apply your withdrawal rate to is approximately,</p>
+
+<p><code>
+porfolio_remaining = portfolio_current - years_until_ss * income_ss
+</code></p>
+
+<p>The 2nd term of the above equation represents an approximation of how much
+your portfolio will be reduced by building your social security bridge.
+This will vary depending on how you build that bridge but this is a good
+ballpark estimate.</p>
+
+<p>Ultimately we’re interested in determining the expense multiplier needed for
+retirement.  In other words, how big would my portfolio need to be in
+order to be retire today.  Defining the effective expense multiplier as,</p>
+
+<p><code>
+multiplier_effective = portfolio_current / income_total
+</code></p>
+
+<p>Further, let’s define the safe withdrawal rate multiplier as just</p>
+
+<p><code>
+multiplier_safe = 1 / withdrawal_safe
+</code></p>
+
+<p>Plugging all those equations in and solving for <code>multiplier_effective</code>
+gives:</p>
+
+<p><code>
+multiplier_effective = multiplier_safe - (income_ss/income_total) * (multiplier_safe - years_until_ss)
+</code></p>
+
+<p>Notice that the closer you are to collecting social security, the smaller your
+effective expense multiplier is.  So each year you do this calculation will bring you
+closer to retirement even if your portfolio doesn’t grow.  The amount you will
+reduce your effective expense multiplier each year is the ratio of your social security
+income to your total needed income.</p>
+
+<p>Let’s try applying this equation to Woodrow’s example where he will retire in 1 years:</p>
+
+<p><code>
+multiplier_effective = 30 - (50k/50k) * (30 - 1) = 30 - 29 = 1
+</code></p>
+
+<p>Which is exactly as we expect.  In fact, in cases like Woodrow’s, where the income
+from social security equals (or exceeds) the total income needed, then the equation
+for the effective expense multiplier reduces to:</p>
+
+<p><code>
+multiplier_effective = multiplier_safe - 1 * (multiplier_safe - years_until_ss)
+                     = years_until_ss
+</code></p>
+
+<p>Now try Priscilla’s example,</p>
+
+<p><code>
+multiplier_effective = 30 - (30k/40k)*(30-15) = 30 - 11.25 = 18.75
+</code></p>
+
+<p>Priscilla’s effective withdrawal rate in the first year would be approximately
+<code>1/18.75</code> or 5.33%. You may be thinking that a withdrawal of 5.33% is too high
+but remember, she is still withdrawing a conservative 3.33% on the funds outside
+of the bridge fund.</p>
+
+<p>Also, if Priscilla waits one more year to retire, then her effective expense multiplier
+would go down by (30k/40k) or 0.75, so if she waits until age 56 her expense multiplier
+would be 18.0 so she could be closer to retirement even if her portfolio didn’t
+grow at all.</p>
+
+<p>Some people would have you believe that social security will be greatly diminished
+in the future.  Whether or not that’s true, time will tell.  If you are worried about
+this possibility then simply adjust downward your social security estimate in the
+above equations to a level you feel comfortable with<sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup>.</p>
+
+<h2 id="summary">Summary</h2>
+
+<p>The inverse of the withdrawal rate is often used as an expense multiplier to figure
+out how big a person’s portfolio needs to be to cover retirement expenses.
+Oftentimes this is stated in terms of how big a portfolio needs to be in order
+to cover expenses <em>above</em> social security income.  It’s common for early retirees
+to assume that this expense multiplier also applies to their total income but it doesn’t
+because it doesn’t account for future income streams like social security.</p>
+
+<p>By considering how much your future social security income will affect your expense
+multiplier, you may find that you can retire earlier than you previously thought.
+And every year you wait, your expense multiplier goes down so you can move closer to
+achieving retirement even when your portfolio stagnates.</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:2">
+      <p>Most of this articles talks about social security for brevity’s sake but the same principles apply equally to other future income streams such as pensions. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:1">
+      <p>For most people, delaying social security benefits to age 70 is the best decision, so all examples in this article assume that social security benefits will start at that age. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>The Social Security Administration uses the maximum 35 years of earnings over your entire working career in their formula to determine your benefits. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p>Yes, I ended that sentence with a preposition.  And I also think that social security will be available when I’m eligible for it.  That’s how crazy I am. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+  </article>
+
+</div>
+
+<div class="googlead">
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- Moneycle Responsive -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-1137447718577367"
+       data-ad-slot="3849810865"
+       data-ad-format="auto"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+
+<div class="comments">
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'moneycle';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>M<span class='brand-color'>o</span>neycle</li>
+          <li><a href="mailto:sir@moneycle.com">sir@moneycle.com</a></li>
+          <li>&copy; <time datetime="2015-07-30T16:19:36-06:00">2015</time>. All rights reserved.</li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          <li>
+            <a href="/feed.xml">RSS feed</a>
+          </li>
+
+          
+          <li>
+            <a href="https://twitter.com/moneymonocle">
+              <span class="icon  icon--twitter">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+                </svg>
+              </span>
+
+              <span class="username">moneymonocle</span>
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://github.com/moneycle">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">moneycle</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">Don your money monocle (top hats are optional) as we explore topics related to money, investing and early retirement.
+</p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
