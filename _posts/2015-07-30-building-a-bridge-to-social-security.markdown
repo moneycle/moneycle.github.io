@@ -262,7 +262,7 @@ out how big a person's portfolio needs to be to cover retirement expenses.
 Oftentimes this is stated in terms of how big a portfolio needs to be in order
 to cover expenses *above* social security income.  It's common for early retirees
 to assume that this expense multiplier also applies to their total income but it doesn't
-because it doesn't account for future income streams like social security.
+account for future income streams like social security.
 
 By considering how much your future social security income will affect your expense
 multiplier, you may find that you can retire earlier than you previously thought.
