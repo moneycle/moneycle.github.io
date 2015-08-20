@@ -269,6 +269,10 @@ multiplier, you may find that you can retire earlier than you previously thought
 And every year you wait, your expense multiplier goes down so you can move closer to
 achieving retirement even when your portfolio stagnates.
 
+### Related
+
+* [Estimating Your Social Security Benefit for an Early Retirement](/estimating-your-social-security-benefit-for-an-early-retirement/)
+
 [^1]: For most people, delaying social security benefits to age 70 is the best decision, so all examples in this article assume that social security benefits will start at that age.
 
 [^2]: Most of this article refers to social security for brevity's sake but the same principles apply equally to other future income streams such as pensions.
