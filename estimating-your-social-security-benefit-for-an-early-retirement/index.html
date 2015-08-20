@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Estimating Your Social Security Benefit for an Early Retirement</title>
+  <meta name="description" content="As demonstrated in the Social Security bridge article,knowing how much your benefit will be could have a large bearing on when you will be able to retire.Unf...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://www.moneycle.com/estimating-your-social-security-benefit-for-an-early-retirement/">
+  <link rel="alternate" type="application/rss+xml" title="Moneycle" href="http://www.moneycle.com/feed.xml" />
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.4/d3.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.js"></script>
+
+  <script src="/javascript/d3pie.min.js"></script>
+  <script src="/javascript/d3.slider.js"></script>
+  <link rel="stylesheet" href="/css/d3.slider.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.css">
+
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">M<span class='brand-color'>o</span>neycle</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Estimating Your Social Security Benefit for an Early Retirement</h1>
+    <p class="post-meta">Aug 20, 2015</p>
+  </header>
+
+  <div class="post-abstract">
+    How much will your Social Security benefit be if you retire before your full retirement age?
+
+  </div>
+
+  <article class="post-content">
+    <img class="post-image" src="/images/chimp-typing.jpeg"/>
+    <p>As demonstrated in the <a href="./building-a-bridge-to-social-security">Social Security bridge</a> article,
+knowing how much your benefit will be could have a large bearing on when you will be able to retire.
+Unfortunately, the benefits statement that the Social Security Administration (SSA) provides
+only estimates your benefit amount in terms of your continued employment until
+your full retirement age.  But you may want to know how much your benefit would
+be if you retired before your full retirement age.</p>
+
+<h2 id="prerequisite">Prerequisite</h2>
+
+<p>Before you can estimate your benefit at all, you need to suck it up and get
+your last Social Security statement.  If you’ve never logged into the SSA website
+then you may have already received a statement.  By default the SSA sends these
+statements every 5 years starting at age 25.  But if you want the most up-to-date statement then
+you’ll need to <a href="http://www.ssa.gov/signin">log in to the SSA website</a> to see it.</p>
+
+<h2 id="quick-estimate">Quick Estimate</h2>
+
+<p>If you just want a quick back-of-the-envelope estimate of your benefits then you
+can project the estimated benefit that the SSA provides to the number of years
+you hope to work.  Near the top of the Social Security statement is a section titled
+“Your Estimated Benefits”.  Because delaying benefits to age 70 is usually the smartest
+choice, get the number on the line that says “if you continue working until age 70”.
+This number represents what your benefit might be at age 70 if you continued working at your
+current level of income.</p>
+
+<p>The way social security works is that they use your top 35 earning years, adjusted for inflation,
+in a formula to calculate your benefits.  And because the estimate on your statement assumes
+you will work until age 70 which is likely more than 35 years, the estimate assumes
+you will not retire early.  For a quick estimate, in the case where you will work less
+than 35 years, you can estimate your benefit as:</p>
+
+<p><code>
+  estimated_benefit = ssa_estimate * years_worked / 35
+</code></p>
+
+<p>Let’s demonstrate this with an example.  If the SSA says your estimated benefit is
+$2800/month but you want to quit working after 25 years of employment, then your
+early-retirement estimate would be about <code>2800 * 25 / 35</code> or $2000/month.</p>
+
+<p>You can see that each additional year, up until your 35th working year increases
+your benefit by about <code>1/N</code> percent.  So working 26 years instead of 25 years means you
+would get about 26/25 or 4% more than if you stopped working after 25 years.  But
+working 11 instead of 10 years could increase that future benefit by 10%.</p>
+
+<p>Also, working more than 35 years likely will have little effect on your
+benefit except that it might replace one of your lower-earning years in the calculation.</p>
+
+<p>Keep in mind that you don’t qualify for Social Security benefits until you have worked
+40 quarters (10 years).  So if you’re a super saver and are tempted to retire after
+9.9 years, you might want to see if it’s worth working another month or two to qualify
+for the benefits.</p>
+
+<h2 id="better-estimate">Better Estimate</h2>
+
+<p>There are quite a few Social Security calculators out there but most of them are
+more geared towards what the best strategy is for taking social security.  The
+best calculator I’ve found for estimating your social security benefits is <a href="http://www.ssa.gov/planners/retire/AnypiaApplet.html">the
+“Online Calculator” on the SSA website</a>.
+Let’s go through how to utilize this calculator for estimating early retirement
+benefits.</p>
+
+<p>After setting your birthday, the first entry to change on the calculator is the “Age at Retirement”.
+Change that from the default value of 66 to 70 because delaying benefits until age 70
+is usually the best thing to do.</p>
+
+<p><img src="/images/ss_estimate_age_at_retirement_70.png" alt="age at retirement = 70" /></p>
+
+<p>Filling in the earnings section on the calculator is somewhat tedious.
+There’s no easy way to do it, just type all your earnings into the calculator.
+It’s important that they are entered on the correct years because the calculator will apply
+different adjustments for inflation depending on the year.</p>
+
+<p>Once you have all the numbers entered, it’s time to sanity check your numbers.
+Take the number in the last year of the table (2014 as of this writing), and
+put that same number in the “Earnings for 2015” and “Earnings for 2016 and later”
+fields then click “Calculate Benefit.”  For example, if you earned $60,000 in 2014,
+enter that for 2015, 2016 and beyond.</p>
+
+<p><img src="/images/ss_estimate_verify.png" alt="verify amounts" /></p>
+
+<p>Now calculate your benefits by pressing the “Calculate Benefit” button and vieiwing
+the estimates in the “Benefit estimates” section of the calculator.
+If you entered all of your data correctly into the calculator then the field labeled
+“Your monthly retirement benefit” on the calculator should exactly match the amount
+labeled “if you continue working until age 70” on your Social Security statement.</p>
+
+<p><img src="/images/ss_estimate_result.png" alt="estimate results" /></p>
+
+<p>Now it’s time to play with the numbers.  What if you want to retire at the beginning
+of next year.  You can enter your estimated earnings for the current year and
+enter zero for “Earnings in 2016 and later”.</p>
+
+<p><img src="/images/ss_estimate_retire_next_year.png" alt="retire next year" /></p>
+
+<p>Unfortunately, this tool isn’t great for what-if scenarios a few years into the
+future.  But you can trick it into giving an answer that might be close to your
+scenario.</p>
+
+<p>For example, what if you have worked 20 years and want to retire 5 years from now.
+The tool doesn’t let you enter 5 future years of income followed by zeroes.
+So instead, you could take that 5 years of earnings and spread it over the remainder
+of the 35 year timespan and enter that number as your future earnings.  Mathematically,
+the number to enter for future earnings is,</p>
+
+<p><code>
+fake_future_earnings = actual_earnings * years_until_retirement / (35 - years_worked)
+</code></p>
+
+<p>By way of example, if you have worked 20 years and expect to earn $60,000 for the next
+5 years, that’s $300,000 total.  Spreading that $300,000 over 35-20 = 15 years means
+that you would enter $20,000 for your future earnings.</p>
+
+<p><img src="/images/ss_estimate_retire_5_years.png" alt="retire in 5 years" /></p>
+
+<p>Now it’s time for a disclaimer.  Estimating future benefits based on several years
+of fake earnings is probably not going to be terribly accurate because you won’t
+actually be working those future years until you hit 35 years of employment and future
+inflation could wreak havoc with such an estimate.  So take this part with a grain of salt.
+But it should be at least as accurate as the “quick estimate” above.</p>
+
+<h2 id="summary">Summary</h2>
+
+<p>Knowing your future Social Security benefits can be important when determining when you will be able
+to retire.  For example, if you want to <a href="/building-a-bridge-to-social-security/">build a Social Security bridge</a>
+you need to know how much money to dedicate to the bridge.</p>
+
+<p>This article gives you both a quick-and-dirty method and a more accurate method using the calculator
+provided by the Social Security Administration.  So dust off your monocle and figure out how much your
+benefit will be.</p>
+
+<h3 id="related">Related</h3>
+
+<ul>
+  <li><a href="/building-a-bridge-to-social-security/">Building a Bridge to Social Security</a></li>
+</ul>
+
+  </article>
+
+</div>
+
+<div class="googlead">
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- Moneycle Responsive -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-1137447718577367"
+       data-ad-slot="3849810865"
+       data-ad-format="auto"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+
+<div class="comments">
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'moneycle';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>M<span class='brand-color'>o</span>neycle</li>
+          <li><a href="mailto:sir@moneycle.com">sir@moneycle.com</a></li>
+          <li>&copy; <time datetime="2015-08-20T10:46:31-06:00">2015</time>. All rights reserved.</li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          <li>
+            <a href="/feed.xml">RSS feed</a>
+          </li>
+
+          
+          <li>
+            <a href="https://twitter.com/moneymonocle">
+              <span class="icon  icon--twitter">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+                </svg>
+              </span>
+
+              <span class="username">moneymonocle</span>
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://github.com/moneycle">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">moneycle</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">Don your money monocle (top hats are optional) as we explore topics related to money, investing and early retirement.
+</p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
