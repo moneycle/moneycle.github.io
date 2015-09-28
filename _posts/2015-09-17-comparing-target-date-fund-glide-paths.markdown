@@ -105,7 +105,7 @@ All funds except BlackRock start at 90% equities.  If I had allocated 1/3 of the
 to equities then BlackRock would also have close to a 90% equity position at the
 beginning too so consider that when looking at the graph.
 
-Most funds have finished there glide paths within 7 years but T. Rowe Price continues
+Most funds have finished their glide paths within 7 years but T. Rowe Price continues
 the glide down for 30 years.
 
 ## General Thoughts
