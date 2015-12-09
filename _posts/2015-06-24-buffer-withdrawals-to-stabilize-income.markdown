@@ -220,6 +220,7 @@ Implementing such a strategy is fairly easy if you follow the steps outlined abo
 ### Related
 
 * [Safe Withdrawal Rates for Vampires](/safe-withdrawal-rates-for-vampires/)
+* [The 30-30 Withdrawal Strategy](/the-30-30-withdrawal-strategy/)
 
 
 [^1]: See [standard error of the mean](http://en.wikipedia.org/wiki/Standard_error#Standard_error_of_the_mean).

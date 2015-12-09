@@ -277,6 +277,7 @@ stream kicks in.  It would be interesting to see how much of an effect that is.
 ### Related
 
 * [Buffer Withdrawals to Stabilize Income](/buffer-withdrawals-to-stabilize-income/)
+* [The 30-30 Withdrawal Strategy](/the-30-30-withdrawal-strategy/)
 
 
 [^1]: Portfolio return for mixed portfolios are crude approximations for illustrative purposes only.
