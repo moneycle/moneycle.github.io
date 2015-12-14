@@ -31,7 +31,7 @@ The "30-30 Withdrawal Strategy" described by this article has the advantages of 
 constant-percentage strategy but attempts to buffer the market variations by using
 shock-absorbing buffer.  The name of the strategy comes from the withdrawal rate and buffer size.
 The basic idea of this strategy is that you move a fixed percentage of your portfolio (1/30) into
-a spending buffer each year, then you use take a fixed amount from that buffer (1/30)
+a spending buffer each year, then you take a fixed amount from that buffer (1/30)
 for monthly living expenses.
 
 <center><div markdown="1">
