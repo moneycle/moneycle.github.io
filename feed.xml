@@ -6,9 +6,120 @@
 </description>
     <link>http://www.moneycle.com/</link>
     <atom:link href="http://www.moneycle.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 14 Dec 2015 15:43:04 -0700</pubDate>
-    <lastBuildDate>Mon, 14 Dec 2015 15:43:04 -0700</lastBuildDate>
+    <pubDate>Sun, 03 Jan 2016 17:16:15 -0700</pubDate>
+    <lastBuildDate>Sun, 03 Jan 2016 17:16:15 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Vanguard Managed Payout Quacks Like a Buffered Withdrawal</title>
+        <description>&lt;p&gt;The &lt;a href=&quot;https://personal.vanguard.com/us/funds/snapshot?FundId=1498&amp;amp;FundIntExt=INT&quot;&gt;Vanguard Managed Payout Fund&lt;/a&gt;
+(VMP) is a fairly unique offering in the current landscape of mutual funds.
+While some companies offer funds called “Income Replacement Funds”
+which are designed to provide an income stream for a fixed period of years,
+this Vanguard fund is the only fund that I know of that seeks to provide a
+income stream indefinitely.  And the formula used to calculate this income
+stream has similarities to the &lt;a href=&quot;/buffer-withdrawals-to-stabilize-income/&quot;&gt;buffered withdrawal strategy&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;vanguards-managed-payout-formula&quot;&gt;Vanguard’s Managed Payout Formula&lt;/h2&gt;
+
+&lt;p&gt;The formula used to calculate monthly income for the VMP Fund can be
+found in &lt;a href=&quot;https://personal.vanguard.com/pub/Pdf/p1498.pdf&quot;&gt;the prospectus&lt;/a&gt;.
+Here’s a screenshot of that formula:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/vg-managed-payout-formula.png&quot; alt=&quot;managed payout formula&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;On the left side of the equation, the thing that jumps out is that the income
+is based on a 4% withdrawal.&lt;/p&gt;
+
+&lt;p&gt;The right hand side of the equation describes what value is being multiplied by 4%.
+Since the overall formula represents the “Monthly distribution per share”,
+we can estimate the monthly distribution dollar amount by multiplying
+both sides by the number of shares owned.
+This means our annual distribution is simply 4% of the average value
+of the “hypothetical account” over the past 3 years.  By reading the prospectus,
+the “hypothetical account” represents what the account balance would have been if
+it had been held over the previous 3 years while receiving income according
+to the above formula.&lt;/p&gt;
+
+&lt;p&gt;Graphically, the average of the hypothetical account is taken by averaging
+the portfolio’s value each day over the past 3 years as illustrated below
+(I was too lazy to fill in all days of each year so use your imagination).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/vmp-daily-avg.png&quot; alt=&quot;daily average&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;That average is then multiplied by 4% to determine the annual withdrawal amount.&lt;/p&gt;
+
+&lt;p&gt;How does this compare to what we do when we take buffered withdrawals from
+a portfolio?&lt;/p&gt;
+
+&lt;h2 id=&quot;buffered-withdrawal&quot;&gt;Buffered Withdrawal&lt;/h2&gt;
+
+&lt;p&gt;The basic idea of a buffered withdrawal is that, once a year, you take a percentage
+of your overall portfolio and move that into your spending buffer.  Then you
+divide your spending buffer by your buffer size (in years) to arrive at your
+income for the coming year.  This is illustrated for a 4-year buffer below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/vmp-yearly-avg.png&quot; alt=&quot;yearly average&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In the illustration, for the buffer calculation at the beginning of 2016,
+the income would be approximately&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+income = withdrawal_rate * (V_2013 + V_2014 + V_2015 + V_2016) / 4
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Notice that this is 4 years instead of 3 because we are taking the 4 data points
+at the beginning of each year.  This 4-year annual average would be closest in
+value to the 3-year daily average that VMP uses.&lt;/p&gt;
+
+&lt;h2 id=&quot;comparison&quot;&gt;Comparison&lt;/h2&gt;
+
+&lt;p&gt;The main difference between the VMP formula and the buffered
+withdrawal formula is the averaging period.  The VMP formula averages the account
+value daily whereas the buffered withdrawal averages once a year.
+If those averages turn out to be the same then the equations will give the
+same amount of income.
+And intuitively, those averages will be pretty close to each other,
+or at least “close enough” for the purposes of determining how much income to take.
+The exception would be in years with sharp up or down turns, the daily average
+could be a bit different than the annual average,
+but I’m not sure that it would be qualitatively better.
+In fact, an annual average will be “smoother” because it smooths out the effects
+of sharp market turns.&lt;/p&gt;
+
+&lt;p&gt;I don’t think either method is hugely better than the other.  In both cases,
+if the market is going up, the amount of income to be withdrawn in the next year
+will go up at a related but smaller rate.  Likewise when the market goes down.&lt;/p&gt;
+
+&lt;h2 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h2&gt;
+
+&lt;p&gt;I found it interesting that the Vanguard Managed Payout formula was pretty similar
+in theory to the buffered withdrawal strategy.  Vanguard doesn’t call it a
+buffered withdrawal but the effect is the same in that the effects of market swings
+will be smoothed by averaging the account over recent valuations.  If you like
+the idea of a 4-year buffer that withdrawals at a rate of 4% per year, then the
+simplicity of the VMP fund might appeal to you.  But, if you would like more control
+over your portfolio, buffer size and withdrawal rate, then you might prefer to follow
+the withdrawal strategy outlined in the &lt;a href=&quot;/buffer-withdrawals-to-stabilize-income/&quot;&gt;Buffered Withdrawal&lt;/a&gt;
+article.&lt;/p&gt;
+
+&lt;h3 id=&quot;related&quot;&gt;Related&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/buffer-withdrawals-to-stabilize-income/&quot;&gt;Buffer Withdrawals to Stabilize Income&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/the-30-30-withdrawal-strategy/&quot;&gt;The 30-30 Withdrawal Strategy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 03 Jan 2016 00:00:00 -0700</pubDate>
+        
+          <link>http://www.moneycle.com/vanguard-managed-payout-quacks-like-a-buffered-withdrawal/</link>
+        
+        <guid isPermaLink="true">http://www.moneycle.com/vanguard-managed-payout-quacks-like-a-buffered-withdrawal/</guid>
+        
+        <category>spending</category>
+        
+        
+      </item>
     
       <item>
         <title>The 30-30 Withdrawal Strategy</title>
@@ -2323,152 +2434,6 @@ since this is just income that you deferred from the past.&lt;/p&gt;
           <link>http://www.moneycle.com/how-to-take-early-ira-withdrawals-without-penalty/</link>
         
         <guid isPermaLink="true">http://www.moneycle.com/how-to-take-early-ira-withdrawals-without-penalty/</guid>
-        
-        <category>spending</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>A Penny Saved Is Four Dollars Earned</title>
-        <description>&lt;p&gt;We’ve all heard the phrase “a penny saved is a penny earned”, which is usually
-attributed to Benjamin Franklin, inventor of the bifocals.
-And while Benjamin Franklin is revered by the monocle-loving crowd,
-his adage does not accurately represent the true worth of a penny saved in the
-context of an early retirement.  Let’s take a look at what a penny saved in your
-monthly expenses equals in terms of how much money you need to save.&lt;/p&gt;
-
-&lt;h2 id=&quot;retirement-income&quot;&gt;Retirement Income&lt;/h2&gt;
-
-&lt;p&gt;When thinking about retirement income, a good rule-of-thumb is to use the 4% rule.
-This isn’t a hard and fast rule, but it does give us a good idea of how much
-money we need to save for a particular income.  For example, a portfolio of
-$300,000 can reasonably be expected to generate an income of $12,000 per year
-(4% of $300,000), or $1000 per month.  Conversely, if we want an
-income of $1000 per month, we need to save 300 times that amount in our retirement
-account.&lt;/p&gt;
-
-&lt;p&gt;When we talk about income needs in retirement, all we’re really talking about
-is covering our living expenses.  So, if we can reduce our expenses by
-$1 per month, then we can retire with $300 less in our portfolio.&lt;/p&gt;
-
-&lt;h2 id=&quot;taxes&quot;&gt;Taxes&lt;/h2&gt;
-
-&lt;p&gt;Accounting for taxes can be a little more tricky because the tax rate depends
-on when the money is taxed.  If it is taxed while you are in your peak earning
-years, you might be paying a combined 33% or more federal and state taxes,
-not to mention sales tax on whatever your are spending your money on.
-But after retirement, you should be in a lower tax bracket.&lt;/p&gt;
-
-&lt;p&gt;For the sake of argument, let’s assume you have deferred your taxes until retirement
-and that the money you’re spending is coming out of a traditional IRA.
-And let’s say you’re in the 15% federal bracket, 5% state and 5% sales tax.
-It’s pretty easy to get to 25% combined taxes even at lower tax brackets.&lt;/p&gt;
-
-&lt;p&gt;With this 25% tax rate, instead of saving $300 now to spend $1 later, we would
-have to save $400.  So, if you start with $400, and subtract 25%, or $100 for
-taxes, then you arrive at the $300 needed to sustain $1 in monthly spending.&lt;/p&gt;
-
-&lt;p&gt;In equation form, you need to save &lt;code&gt;$300/(1-tax_rate)&lt;/code&gt; to sustain a dollar of monthly
-expenses.  For example, if you’re combined tax rate is 40%, then the
-amount you need to earn to save for a $1 monthly expense would be &lt;code&gt;$300/0.6&lt;/code&gt; or $500!&lt;/p&gt;
-
-&lt;h2 id=&quot;monthly-expenses&quot;&gt;Monthly Expenses&lt;/h2&gt;
-
-&lt;p&gt;Using the $400 multiplier from above, consider some typical monthly expenses and their
-impact on your savings.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;If you will be spending …&lt;/th&gt;
-      &lt;th&gt;You need to save…&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;$8 your Hulu subscription&lt;/td&gt;
-      &lt;td&gt;$3,200&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;$30 to have your dachshund bathed&lt;/td&gt;
-      &lt;td&gt;$12,000&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;$50 extra on your phone bill&lt;/td&gt;
-      &lt;td&gt;$20,000&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;$100 extra on your cable bill&lt;/td&gt;
-      &lt;td&gt;$40,000&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;The math on this is easy to do in your head, which is partly why I chose the
-25% tax rate for our examples.  Multiplying by 400 is simply multiplying by
-2 twice then adding 2 zeroes.  So, when you consider the money you need to
-save to cover a cost of say, $6.35, times 2 is $12.70, times 2 is $25.40,
-and add 2 zeros to arrive at $2540.  You don’t need a fancy monocle to do
-that in your head!&lt;/p&gt;
-
-&lt;h2 id=&quot;daily-expenses&quot;&gt;Daily Expenses&lt;/h2&gt;
-
-&lt;p&gt;Daily expenses have an even bigger impact per dollar.  If you consider a daily
-expense to be around 25 times per month, then you need 25*$400, or $10,000,
-to cover every $1 of daily expenses in the future.
-The math couldn’t be easier, just add 4 zeros.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;If you will be spending …&lt;/th&gt;
-      &lt;th&gt;You need to save…&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;$1 to have your monocle cleaned&lt;/td&gt;
-      &lt;td&gt;$10,000&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;$2 for a fountain drink with lunch&lt;/td&gt;
-      &lt;td&gt;$20,000&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;$5 for a venti Starbucks Frappucino&lt;/td&gt;
-      &lt;td&gt;$50,000&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Now, if you can’t live without your Starbucks, maybe just downgrading to the
-grande size will save you $10,000.  And maybe you could even learn to clean
-your own damn monocle and save another $10,000.&lt;/p&gt;
-
-&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
-
-&lt;p&gt;I have been a little bit loose with the numbers partially because it’s hard to
-know exactly what your withdrawal and tax rates will be.  But the point of this
-article is to give you some ballpark numbers with which to evaluate whether an
-added expense is worth it.  Simply put, to figure out how much money you’ll
-need to support a spending level in retirement:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;for monthly expenses, multiply the expense by 400.&lt;/li&gt;
-  &lt;li&gt;for daily expenses, multiply the expense by 10,000.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Hopefully this rule-of-thumb will help you think about the impact of
-spending on your retirement.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 28 Feb 2015 00:00:00 -0700</pubDate>
-        
-          <link>http://www.moneycle.com/a-penny-saved-is-four-dollars-earned/</link>
-        
-        <guid isPermaLink="true">http://www.moneycle.com/a-penny-saved-is-four-dollars-earned/</guid>
-        
-        <category>investing</category>
         
         <category>spending</category>
         
