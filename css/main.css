@@ -71,12 +71,13 @@ h1, h2, h3, h4, h5, h6 {
  */
 a {
   color: #228844;
-  text-decoration: none; }
+  text-decoration: none;
+  border-bottom: 1px dotted #228844; }
   a:visited {
-    color: #185f30; }
+    color: #2cb158; }
   a:hover {
     color: #555;
-    text-decoration: underline; }
+    border-bottom: 1px solid #228844; }
 
 /**
  * Blockquotes

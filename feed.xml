@@ -6,9 +6,111 @@
 </description>
     <link>http://www.moneycle.com/</link>
     <atom:link href="http://www.moneycle.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 03 Jan 2016 17:16:15 -0700</pubDate>
-    <lastBuildDate>Sun, 03 Jan 2016 17:16:15 -0700</lastBuildDate>
+    <pubDate>Fri, 22 Jan 2016 16:45:39 -0700</pubDate>
+    <lastBuildDate>Fri, 22 Jan 2016 16:45:39 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>HSA Tax Advantages</title>
+        <description>&lt;p&gt;This time of year has me thinking more about taxes than normal because I recently
+took a first stab at income taxes for 2015.  While doing my taxes I noticed the
+subject of Health Savings Accounts (HSAs) coming up in a couple different places
+so I thought I would share why HSAs can be an awesome place to invest your savings.&lt;/p&gt;
+
+&lt;p&gt;The main reason that HSAs are great is the ability to pay for things with pre-tax
+dollars.  Depending on your tax bracket, this can be a huge “investment”.  Consider
+going to the doctor and spending $100 from an HSA with before-tax dollars.
+If you had to use after-tax dollars for that same $100 expense, and you were in
+the 25% tax bracket, you would need to earn $133.33 in order to have the $100 left
+over to pay the doctor.  Or to look at it another way, by using an HSA
+you avoided spending $33.33 before tax, which is $25 after tax.&lt;/p&gt;
+
+&lt;p&gt;To put that mathematically, the money saved by using money
+from an HSA instead of after-tax dollars is,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;money_saved = (money_without_hsa - money_with_hsa)*(1-tax_rate)
+money_without_hsa = invoice_amount/(1-tax_rate)
+money_with_hsa = invoice_amount
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;which reduces to,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;money_saved = invoice_amount*tax_rate
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So, if you know you are going to have X dollars in medical expenses, it behooves
+you to have X dollars sitting in your HSA because you will save X dollars
+multiplied by your marginal tax rate in after tax dollars.&lt;/p&gt;
+
+&lt;h2 id=&quot;common-hsa-uses&quot;&gt;Common HSA uses&lt;/h2&gt;
+
+&lt;p&gt;The most common uses for HSAs are basic medial expenses.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Dentist - use your HSA card to pay for that cleaning or root canal.&lt;/li&gt;
+  &lt;li&gt;Doctor - doctor bills could be has high as your deductible, so you probably
+want to build your HSA up to the amount of your deductible to cover large
+expenses.&lt;/li&gt;
+  &lt;li&gt;Prescriptions - those Viagra pills are expensive!&lt;/li&gt;
+  &lt;li&gt;Vision - in addition to regular visits to the eye doctor, you can use HSA funds
+to pay for eyeglasses and eye surgeries including laser surgeries.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;lesser-known-hsa-uses&quot;&gt;Lesser Known HSA uses&lt;/h2&gt;
+
+&lt;p&gt;Here are some ways to use HSA dollars that you may not have heard about.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Long-Term Care (LTC) premiums - there are limits, but LTC policy premiums
+can be paid in part using HSA dollars.  The older you are, the more of your
+premiums are allowed to be paid using HSA dollars.  For tax-year 2015 the
+limits are as follows:
+    &lt;ul&gt;
+      &lt;li&gt;40 years old and younger – $380&lt;/li&gt;
+      &lt;li&gt;41–50 years old – $710&lt;/li&gt;
+      &lt;li&gt;51–60 years old – $1,430&lt;/li&gt;
+      &lt;li&gt;61–70 years old – $3,800&lt;/li&gt;
+      &lt;li&gt;70 years old and older – $4,750&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Medicare premiums - you can’t continue contributing to your HSA after you
+hit medicare age (65).  But you &lt;em&gt;can&lt;/em&gt; use your HSA funds to pay for supplemental
+Medicare insurance such as Medicare Part B, D or Medicare Advantage.  This
+is a good reason to contribute above and beyond your deductible level before
+you hit age 65.&lt;/li&gt;
+  &lt;li&gt;Construction expenses - as you get older, you may find you need to need to
+make modifications to your house.  Construction expenses to accommodate
+somebody with medical issues may be paid for using HSA funds.  Examples include
+wheelchair ramps, hand rails, widening doorways, etc..&lt;/li&gt;
+  &lt;li&gt;Vasectomy - pair your vasectomy operation with your Viagra prescription and
+put the whole thing on your HSA debit card!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There are a ton of other things you can use HSA funds for.  Check out
+&lt;a href=&quot;https://www.irs.gov/pub/irs-pdf/p502.pdf&quot;&gt;the IRS publication&lt;/a&gt; for details.&lt;/p&gt;
+
+&lt;p&gt;In the grand scheme of investing, HSAs are &lt;a href=&quot;https://www.bogleheads.org/wiki/Prioritizing_investments&quot;&gt;generally considered the 3rd priority&lt;/a&gt;
+behind (1) getting your 401k match if you have it and (2) paying off credit cards.
+Besides the advantages described above, HSAs also act like an IRA in that the
+growth of funds inside the HSA are tax deferred.  While you can take the funds
+out after age 65 and be taxed on them just like an IRA, it’s probably best to
+leave your money in the HSA and continue using it to pay for medical expenses
+until the HSA is drained.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 22 Jan 2016 00:00:00 -0700</pubDate>
+        
+          <link>http://www.moneycle.com/hsa-tax-advantages/</link>
+        
+        <guid isPermaLink="true">http://www.moneycle.com/hsa-tax-advantages/</guid>
+        
+        <category>investing</category>
+        
+        <category>spending</category>
+        
+        <category>other</category>
+        
+        
+      </item>
     
       <item>
         <title>Vanguard Managed Payout Quacks Like a Buffered Withdrawal</title>
@@ -2258,184 +2360,6 @@ contributing to a Roth 401(k).&lt;/p&gt;
         <guid isPermaLink="true">http://www.moneycle.com/maximize-your-employer-match-before-using-a-roth-401-k/</guid>
         
         <category>investing</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>How to Take Early IRA Withdrawals without Penalty</title>
-        <description>&lt;p&gt;If you are like many early retirees, then you may find most
-of your savings are tied up in your &lt;a href=&quot;http://www.investopedia.com/terms/d/deferredaccount.asp&quot;&gt;tax-deferred accounts&lt;/a&gt;
-like traditional 401k or IRA accounts when you are ready to retire.
-If you are younger than 59.5 years old,
-then how do you withdraw your funds without penalty?&lt;/p&gt;
-
-&lt;p&gt;Here are three possible choices for withdrawing your money without penalty:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Roth Ladder - a Roth ladder is where you convert your traditional IRA
-  funds to Roth then withdraw them 5 years later.&lt;/li&gt;
-  &lt;li&gt;Annuities - traditional IRA funds can be used to purchase a single premium
-  immediate annuity&lt;/li&gt;
-  &lt;li&gt;Substantially Equal Period Payments (SEPP) - also referred to as 72(t) which
-  is the section of the tax code that allows this withdrawal.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;why-sepp&quot;&gt;Why SEPP?&lt;/h2&gt;
-
-&lt;p&gt;While I prefer the Roth Ladder approach for withdrawing fund, it may not be enough
-to meet your spending needs if you don’t have enough in your Roth to begin with.
-Annuities have their place in retirement too, but for early retirees they are
-less attractive (rates go up as you get older).  The SEPP withdrawal can help
-fill the spending gap until you are 59.5 at which point you will have other
-options to avoid penalties.&lt;/p&gt;
-
-&lt;h2 id=&quot;sepp-rules&quot;&gt;SEPP Rules&lt;/h2&gt;
-
-&lt;p&gt;There are a couple of things you need to be aware of when setting up a SEPP
-withdrawal.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The account you from which you do you SEPP withdrawals needs to be a stand-alone
-  account.&lt;/li&gt;
-  &lt;li&gt;You cannot trade in or out of the SEPP account after the payments have begun.
-  Doing so will result in stiff penalties, so don’t do it.&lt;/li&gt;
-  &lt;li&gt;You must continue withdrawals for at least 5 years and until you are age
-  59.5 or greater.&lt;/li&gt;
-  &lt;li&gt;You must calculate your withdrawal using one of three methods:
-    &lt;ul&gt;
-      &lt;li&gt;amortization&lt;/li&gt;
-      &lt;li&gt;annuitization&lt;/li&gt;
-      &lt;li&gt;required-minimum distributions (RMD)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;If you ever get audited you may need to show the calculation, so document
-  the calculation and save it somewhere you can find later.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;While there are 3 approved methods for withdrawing your money, I suggest you stick
-with amortization.  The RMD method will give the smallest amount of money, especially
-for younger retirees, since it is just your account value divided by your remaining
-life expectancy. Amortization and annuitization tend to result in similar payouts
-that are both larger than RMD.  And a larger payout is good because it means you can
-use a smaller portion of your retirement funds for the SEPP withdrawals and retain some
-flexibility with your remaining funds.  Between amortization and annuitization
-I prefer the amortization method because it is a easier to calculate and
-therefore less prone to error.&lt;/p&gt;
-
-&lt;h2 id=&quot;setup-the-sepp-account&quot;&gt;Setup the SEPP Account&lt;/h2&gt;
-
-&lt;p&gt;When you have decided to setup a SEPP withdrawal, the first thing you should do
-is create a separate account inside of your existing brokerage account.  For example,
-if you have funds at Vanguard, you can break your accounts into separate sub-accounts
-that each have their own set of funds in them.&lt;/p&gt;
-
-&lt;p&gt;The amount you put into your SEPP account depends largely on the calculation
-you’ll be doing below.  I recommend that you first determine how much &lt;strong&gt;income&lt;/strong&gt; you
-will need from the SEPP withdrawal and then reverse the calculation to determine how much
-money to put into your newly created account.&lt;/p&gt;
-
-&lt;h2 id=&quot;doublecheck-the-calculation&quot;&gt;Doublecheck the Calculation&lt;/h2&gt;
-
-&lt;p&gt;Below are three ways to do this calculation: spreadsheet formula, web calculators
-and good old mathematics. All 3 methods should give you the same number so it’s
-a good idea to try at least 2 of these methods to sanity check that you’re doing
-it right.&lt;/p&gt;
-
-&lt;p&gt;For all of these methods, you will need the following 3 numbers:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;code&gt;rate&lt;/code&gt; = 120% of the Applicable Federal Rate.  Don’t worry, you’re not alone,
-  nobody else has heard of this number either.  It’s a number that the IRS
-  publishes monthly and can be
-  &lt;a href=&quot;http://apps.irs.gov/app/picklist/list/federalRates.html&quot;&gt;found here&lt;/a&gt;.
-  You are allowed to choose one of the past 2 months when you do the calculation
-  but to be safe I would just choose the rate from the most recent month.&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;expectancy&lt;/code&gt; = your remaining life expectancy in years.  This is also published
-  by the IRS and can be &lt;a href=&quot;http://www.irs.gov/pub/irs-pdf/p590b.pdf&quot;&gt;found here&lt;/a&gt;.
-  Look in Appendix B for the life expectancy tables using the age you will be on
-  your birthday this year.&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;principal&lt;/code&gt; = the size of the account you will be taking distributions from.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;spreadsheet-formula&quot;&gt;Spreadsheet Formula&lt;/h3&gt;
-
-&lt;p&gt;The spreadsheet formula that I have tested using Google Spreadsheet is simply:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-=-pmt(rate, expectancy, principal)
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;This will give you the amount you can withdraw annually so divide by 12 if you
-are going to make monthly withdrawals.&lt;/p&gt;
-
-&lt;h3 id=&quot;sepp-calculators&quot;&gt;SEPP Calculators&lt;/h3&gt;
-
-&lt;p&gt;There are several calculators that will help you figure out the SEPP withdrawals.
-I recommend the following:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://72t.net/72t/Calculator/Distributions&quot;&gt;72t.net Calculator&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.dinkytown.net/java/Retire72T.html&quot;&gt;Dinkytown Calculator&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I prefer the 72t.net calculator since it gives results to the nearest penny.
-But go ahead and verify that you get the same number to the nearest dollar from
-both calculators.&lt;/p&gt;
-
-&lt;h3 id=&quot;math-equation&quot;&gt;Math Equation&lt;/h3&gt;
-
-&lt;p&gt;For the mathematically inclined, you can also plug your numbers into
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Amortization_calculator#The_formula&quot;&gt;the annuity formula&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-income = principal * rate / (1 - (1+rate)^-expectancy)
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;account-size-needed-for-a-desired-income&quot;&gt;Account Size Needed for a Desired Income&lt;/h2&gt;
-
-&lt;p&gt;If you are thinking about using SEPP withdrawals, there’s a good chance that you
-already know how much income you need and just want to figure out how much principal
-you need to put aside to generate that income.&lt;/p&gt;
-
-&lt;p&gt;One approach would be to calculate how much income you get from $100,000 then
-use that to figure out how much you need for your desired income level.&lt;/p&gt;
-
-&lt;p&gt;For example, let’s say you want an annual income of $12,000,
-the current mid-term rate is 2.04%, and your remaining life expectancy is 36 years.
-Plugging in those numbers for $100,000 of principal gives you an income of $3,948.53.
-To get to your desired income of $12,000 you then divide $12,000 by $3,948.53 and
-multiply by $100,000 to arrive at a principal of $303,910.&lt;/p&gt;
-
-&lt;p&gt;The more direct approach, is to invert the ‘math equation’ above and calculate
-your payment directly with this formula:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-principal = income * (1 - (1+rate)^-expectancy) / rate
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;In any case, once you arrive at what you think the correct principal amount is,
-double check it by any of the above methods to make sure it gives you the desired
-income.  Then set aside that amount in an account that you won’t touch except to
-do the SEPP withdrawals.&lt;/p&gt;
-
-&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
-
-&lt;p&gt;SEPP withdrawals aren’t for everyone.  But if you find yourself in a situation
-where you need to use them, this article should help you figure out how to do the
-calculations needed. Regardless of what happens in the market you should
-continue withdrawing the exact same amount, so have your brokerage do
-an automatic withdrawal so that you aren’t tempted to mess with it.
-Also, don’t forget that you will need to pay income taxes on your withdrawals
-since this is just income that you deferred from the past.&lt;/p&gt;
-</description>
-        <pubDate>Fri, 27 Mar 2015 18:55:50 -0600</pubDate>
-        
-          <link>http://www.moneycle.com/how-to-take-early-ira-withdrawals-without-penalty/</link>
-        
-        <guid isPermaLink="true">http://www.moneycle.com/how-to-take-early-ira-withdrawals-without-penalty/</guid>
-        
-        <category>spending</category>
         
         
       </item>
