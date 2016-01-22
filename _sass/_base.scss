@@ -98,14 +98,15 @@ h1, h2, h3, h4, h5, h6 {
 a {
     color: $brand-color;
     text-decoration: none;
+    border-bottom: 1px dotted $brand-color;
 
     &:visited {
-        color: darken($brand-color, 10%);
+        color: lighten($brand-color, 10%);
     }
 
     &:hover {
         color: $text-color;
-        text-decoration: underline;
+        border-bottom: 1px solid $brand-color;
     }
 }
 
