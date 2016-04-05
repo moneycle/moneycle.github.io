@@ -124,7 +124,7 @@ for groceries, then you need to spend at least `$75/(.06-.02) = $1875` per year
 Another possible downside is how Amex defines grocery stores.  If you buy groceries
 at a superstore like Target, Costco, Sam's Club or Walmart, then Amex doesn't
 count those purchases towards the 6% reward.  They only count the "regular"
-grocery stores such as Safeway, Albertons, or King Soopers.
+grocery stores such as Safeway, Albertsons, or King Soopers.
 So be aware of that before you sign up for this card.
 
 Another downside to this card is the 2.7% foreign transaction fee.  If you travel
