@@ -6,9 +6,507 @@
 </description>
     <link>http://www.moneycle.com/</link>
     <atom:link href="http://www.moneycle.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 05 Apr 2016 10:43:56 -0600</pubDate>
-    <lastBuildDate>Tue, 05 Apr 2016 10:43:56 -0600</lastBuildDate>
+    <pubDate>Sat, 07 May 2016 01:51:09 -0600</pubDate>
+    <lastBuildDate>Sat, 07 May 2016 01:51:09 -0600</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Affordable Care Act May Increase Your Marginal Tax Rate</title>
+        <description>&lt;p&gt;If you retire before you are eligible for Medicare at age 65, then you
+may find yourself buying health insurance through one of the Affordable Care Act
+health exchanges.
+Furthermore, if your taxable income falls below 4 times the
+Federal Poverty Level (FPL), then you will qualify for a subsidy which
+could pay for a nice chunk of your health insurance premium.
+For 2016 the FPL is set at $11,770 for singles and $15,930 for couples, so
+you could be eligible for a tax credit for incomes below $47,080 (single) or
+$63,720 (couples).&lt;/p&gt;
+
+&lt;p&gt;What does this have to do with marginal tax rates?  It turns out that the
+subsidy is a tax credit which gradually decreases as your taxable income increases.
+For example, if your &lt;a href=&quot;http://www.investopedia.com/terms/m/magi.asp&quot;&gt;modified adjusted gross income&lt;/a&gt;
+(MAGI) is between 3 and 4
+times the FPL ($47,790 to $63,720 for couples), then your tax credit decreases
+by 9.56% for every extra dollar earned.  And even though it’s a credit and not
+a tax, the effect of a decreasing credit is mathematically equivalent to a
+tax because the end result is that you will have 9.56% less money in your
+pocket for every dollar of increased income.  Adding that to the
+marginal tax rate means that your &lt;strong&gt;effective&lt;/strong&gt; marginal tax rate is higher
+if you’re in the income range where you receive a health care premium subsidy.&lt;/p&gt;
+
+&lt;p&gt;It’s certainly not bad to receive the tax credit because that’s free money.
+But it’s good to understand how this affects your tax rate so that you
+can plan on how and when to take income from your portfolio.&lt;/p&gt;
+
+&lt;h2 id=&quot;marginal-tax-rates&quot;&gt;Marginal Tax Rates&lt;/h2&gt;
+
+&lt;p&gt;If you pay your taxes, then you’re probably already well aware of the tax brackets,
+from 10% all the way up to 39.6% for the highest earners.  This article is
+focused on the 10% and 15% brackets because that’s where the ACA
+credits occur.&lt;/p&gt;
+
+&lt;p&gt;To keep things simple, I’m just going to consider the simple case of a married
+couple using the standard deduction ($12,600 in 2016) and the the personal
+exemptions ($4,050 in 2016) which means that the first $20,700 of adjusted
+gross income is tax free.  The same issue applies to single filers, just at
+a lower income level.  Here’s a graph of the marginal tax rates versus income
+for joint filers in 2016.&lt;/p&gt;
+
+&lt;div id=&quot;brackets&quot; class=&quot;chart&quot;&gt;
+    &lt;svg&gt;&lt;/svg&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If you itemize deductions, this graph will shift to the right by the amount
+that your deductions exceed the standard deduction ($12,600).&lt;/p&gt;
+
+&lt;h2 id=&quot;marginal-effects-of-tax-credit-decreases&quot;&gt;Marginal Effects of Tax Credit Decreases&lt;/h2&gt;
+
+&lt;p&gt;The IRS publishes a table that is used to calculate how much to reduce your
+ACA subsidy by comparing your income to the Federal Povery Level (FPL).
+This table can be found in Table 2 of the &lt;a href=&quot;https://www.irs.gov/pub/irs-pdf/i8962.pdf&quot;&gt;instructions for Form 8962&lt;/a&gt;
+which lists incomes levels from 100% through 400%.  For a married couple,
+the FPL is $15,930, so 100% to 400% of FPL corresponds to incomes between
+$15,930 and $63,720.&lt;/p&gt;
+
+&lt;p&gt;Since the IRS table publishes different values for each FPL percentage point,
+I have computed the marginal tax effect for every 1%  of FPL ($159) between 100%
+and 400% FPL to come up with the following graph.&lt;/p&gt;
+
+&lt;div id=&quot;acacredits&quot; class=&quot;chart&quot;&gt;
+    &lt;svg&gt;&lt;/svg&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Let’s break down this chart by income ranges:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;$15,930 - 21,187 (100-133% FPL)&lt;/strong&gt; - in the lower range the premium subsidy is
+ reduced by the smallest amount, 2.01%.  But many people in this range would be eligible
+ for Medicaid and may choose to not buy insurance and thus may not be affected at all.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;$21,187 (133% FPL)&lt;/strong&gt; - there is a spike at this income level because there’s
+ a jump in the subsidy reduction from 2.01% to 3.02%.  So as your income increases
+ from 132% to 133% of FPL, your subsidy goes down by &lt;code&gt;133*.0302-132*.0201&lt;/code&gt; =
+ 136% ($217 more taxes for $159 increase in income).&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;$21,187 - 47,790 (133-300% FPL)&lt;/strong&gt; - in this range the IRS table publishes an
+ ever increasing subsidy reduction rate which translates to a gradually
+ increasing marginal tax rate.  The jaggedness is due the rounding of the values
+ in the IRS table.  The average effect on marginal tax rate across this range is
+ &lt;code&gt;(300*.0956-133*.0302)/(300-133)&lt;/code&gt; = 14.8%.
+ At it’s peak it approaches 18.5% for incomes right below 300% of FPL.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;$47,740 - 63,720 (300-400% FPL)&lt;/strong&gt; - this is the top range in which a subsidy
+ is available and the reduction is a constant 9.56% across the entire range.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;$63,720 (400% FPL)&lt;/strong&gt; - technically there could be a huge spike (cliff) at this
+ income level because when you make $63,720, you lose all remaining premium
+ credits.  There could also be no spike if you choose the cheapest health care
+ plan, in which case your premium subsidy may have already been exhausted
+ at this income level.  I chose not to show it on the graph because it’s not a
+ constant percentage for all situations but it’s important to be aware of this
+ premium cliff.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To summarize, you will see an increase anywhere from 9.56% to as much as 18.5% in
+your effective marginal tax rate due to the reduction of the premium tax credit.
+The average increase across the whole range (133-400%) is 12.8%.  Since this
+occurs in the 10-15% income tax ranges, this is a big jump in marginal tax rates.&lt;/p&gt;
+
+&lt;h2 id=&quot;effective-marginal-tax-rate&quot;&gt;Effective Marginal Tax Rate&lt;/h2&gt;
+
+&lt;p&gt;The next graph simply combines the marginal tax rates with the effects of the
+reduction in premium subsidies to come up with the &lt;strong&gt;effective&lt;/strong&gt; marginal tax rate.
+It’s somewhat startling to see that the effective marginal tax rates can be higher
+than those for people earning over $96,000 (603% FPL).&lt;/p&gt;
+
+&lt;div id=&quot;effective&quot; class=&quot;chart&quot;&gt;
+    &lt;svg&gt;&lt;/svg&gt;
+&lt;/div&gt;
+
+&lt;p&gt;What we normally think of as the 10% tax bracket is now approximately a 25% tax
+bracket.  The lower end of the 15% tax bracket (below $48,000) has become a 32%
+tax bracket.  And between $48,000 and $64,000 the marginal tax rate is nearly 25%.
+We finally return to the 15% tax rate above $64,000 but lose the premium subsidy.&lt;/p&gt;
+
+&lt;h2 id=&quot;capital-gains&quot;&gt;Capital Gains&lt;/h2&gt;
+
+&lt;p&gt;Long-term capital gains are are similarly affected.  Instead of having zero
+marginal tax rates up to the 25% bracket, there are now significant marginal
+effects in the 133-400% FPL range.  And in the 250-300% FPL range you would be
+at a higher marginal rate (&amp;gt; 15%) than people with much higher incomes.&lt;/p&gt;
+
+&lt;div id=&quot;capgains&quot; class=&quot;chart&quot;&gt;
+    &lt;svg&gt;&lt;/svg&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;strategies&quot;&gt;Strategies&lt;/h2&gt;
+
+&lt;p&gt;The discovery of this increase in marginal tax rate has colored my views on
+how and when to take income from my portfolio.  It mostly boils down to the
+concept of delaying my taxable income until age 65 when Medicare
+kicks in and I no longer am eligible for ACA credits.  Alternatively, either
+Mrs. Moneycle or I could get a job with health benefits, but that requires
+working.&lt;/p&gt;
+
+&lt;p&gt;Here are some things you can do to push income forward.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Deplete taxable and Roth assets before touching IRA/401k funds&lt;/li&gt;
+  &lt;li&gt;Perform tax-loss harvesting to capture losses now (taking gains after 65)&lt;/li&gt;
+  &lt;li&gt;Defer IRA to Roth conversions which produce taxable income&lt;/li&gt;
+  &lt;li&gt;Move dividend-producing assets like bonds into IRAs&lt;/li&gt;
+  &lt;li&gt;Delay taking pensions and social security until after age 65&lt;/li&gt;
+  &lt;li&gt;When buying annuities, add a cost-of-living adjustment (COLA)
+  which gives you less income in the early years and more income later.&lt;/li&gt;
+  &lt;li&gt;Use delayed income annuities which start at age 65 or beyond&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If most of your investable assets are in tax-qualified accounts (IRA/401k),
+then you may not be able to defer your taxable income as much.  In this case
+I would recommend spreading your Roth and taxable asset withdrawals from now
+until age 65 so that you can get a little benefit each year.  But you might
+want to consider lumping those same assets over just a few years if it allows
+you to push your income below 400% FPL and get a tax subsidy for a few years.&lt;/p&gt;
+
+&lt;p&gt;Keep in mind, if you are able to push income forward until age 65, you probably
+want to take as much income as you can between ages 65 and 70 while staying
+in the 15% tax bracket.  This is because at age 70, you will most likely begin
+taking social security and also be required (at age 70.5) to take required minimum
+distributions from your IRAs which all adds up to more taxable income.  &lt;/p&gt;
+
+&lt;p&gt;So the overall strategy is,
+(1) take as little taxable income as possible while receiving ACA subsidies,
+(2) take as much taxable income as possible while not receiving ACA subsidies, and
+(3) make it to age 70 and thank your younger self for planning ahead.&lt;/p&gt;
+
+&lt;style&gt;
+  .chart {
+    clear: both;
+  }
+  .chart, svg {
+    height: 360px;
+  }
+&lt;/style&gt;
+
+&lt;script&gt;
+  var fpl = 15930;
+  var deduct = 20700;
+  var income10 = deduct;
+  var income15 = deduct + 18550;
+  var income25 = deduct + 75300;
+  var incomeMax = 100000;
+  var irsData = [
+    [99, 0],
+    [100, 0.0201],
+    [101, 0.0201],
+    [100*(income10-50)/fpl, 0.0201],
+    [100*(income10)/fpl, 0.0201],
+    [131, 0.0201],
+    [132, 0.0201],
+    [133, 0.0302],
+    [134, 0.0308],
+    [135, 0.0314],
+    [136, 0.0320],
+    [137, 0.0326],
+    [138, 0.0331],
+    [139, 0.0337],
+    [140, 0.0343],
+    [141, 0.0349],
+    [142, 0.0355],
+    [143, 0.0361],
+    [144, 0.0367],
+    [145, 0.0373],
+    [146, 0.0378],
+    [147, 0.0384],
+    [148, 0.0390],
+    [149, 0.0396],
+    [150, 0.0402],
+    [151, 0.0407],
+    [152, 0.0411],
+    [153, 0.0416],
+    [154, 0.0421],
+    [155, 0.0425],
+    [156, 0.0430],
+    [157, 0.0434],
+    [158, 0.0439],
+    [159, 0.0444],
+    [160, 0.0448],
+    [161, 0.0453],
+    [162, 0.0458],
+    [163, 0.0462],
+    [164, 0.0467],
+    [165, 0.0472],
+    [166, 0.0476],
+    [167, 0.0481],
+    [168, 0.0486],
+    [169, 0.0490],
+    [170, 0.0495],
+    [171, 0.0499],
+    [172, 0.0504],
+    [173, 0.0509],
+    [174, 0.0513],
+    [175, 0.0518],
+    [176, 0.0523],
+    [177, 0.0527],
+    [178, 0.0532],
+    [179, 0.0537],
+    [180, 0.0541],
+    [181, 0.0546],
+    [182, 0.0550],
+    [183, 0.0555],
+    [184, 0.0560],
+    [185, 0.0564],
+    [186, 0.0569],
+    [187, 0.0574],
+    [188, 0.0578],
+    [189, 0.0583],
+    [190, 0.0588],
+    [191, 0.0592],
+    [192, 0.0597],
+    [193, 0.0602],
+    [194, 0.0606],
+    [195, 0.0611],
+    [196, 0.0615],
+    [197, 0.0620],
+    [198, 0.0625],
+    [199, 0.0629],
+    [200, 0.0634],
+    [201, 0.0638],
+    [202, 0.0641],
+    [203, 0.0645],
+    [204, 0.0648],
+    [205, 0.0652],
+    [206, 0.0655],
+    [207, 0.0659],
+    [208, 0.0662],
+    [209, 0.0666],
+    [210, 0.0669],
+    [211, 0.0673],
+    [212, 0.0676],
+    [213, 0.0680],
+    [214, 0.0683],
+    [215, 0.0687],
+    [216, 0.0690],
+    [217, 0.0694],
+    [218, 0.0697],
+    [219, 0.0701],
+    [220, 0.0704],
+    [221, 0.0708],
+    [222, 0.0711],
+    [223, 0.0715],
+    [224, 0.0718],
+    [225, 0.0722],
+    [226, 0.0726],
+    [227, 0.0729],
+    [228, 0.0733],
+    [229, 0.0736],
+    [230, 0.0740],
+    [231, 0.0743],
+    [232, 0.0747],
+    [233, 0.0750],
+    [234, 0.0754],
+    [235, 0.0757],
+    [236, 0.0761],
+    [237, 0.0764],
+    [238, 0.0768],
+    [239, 0.0771],
+    [240, 0.0775],
+    [241, 0.0778],
+    [242, 0.0782],
+    [243, 0.0785],
+    [244, 0.0789],
+    [245, 0.0792],
+    [246, 0.0796],
+    [247, 0.0799],
+    [248, 0.0803],
+    [249, 0.0806],
+    [250, 0.0810],
+    [251, 0.0813],
+    [252, 0.0816],
+    [253, 0.0819],
+    [254, 0.0822],
+    [255, 0.0825],
+    [256, 0.0828],
+    [257, 0.0830],
+    [258, 0.0833],
+    [259, 0.0836],
+    [260, 0.0839],
+    [261, 0.0842],
+    [262, 0.0845],
+    [263, 0.0848],
+    [264, 0.0851],
+    [265, 0.0854],
+    [266, 0.0857],
+    [267, 0.0860],
+    [268, 0.0863],
+    [269, 0.0865],
+    [270, 0.0868],
+    [271, 0.0871],
+    [272, 0.0874],
+    [273, 0.0877],
+    [274, 0.0880],
+    [275, 0.0883],
+    [276, 0.0886],
+    [277, 0.0889],
+    [278, 0.0892],
+    [279, 0.0895],
+    [280, 0.0898],
+    [281, 0.0901],
+    [282, 0.0903],
+    [283, 0.0906],
+    [284, 0.0909],
+    [285, 0.0912],
+    [286, 0.0915],
+    [287, 0.0918],
+    [288, 0.0921],
+    [289, 0.0924],
+    [290, 0.0927],
+    [291, 0.0930],
+    [292, 0.0933],
+    [293, 0.0936],
+    [294, 0.0938],
+    [295, 0.0941],
+    [296, 0.0944],
+    [297, 0.0947],
+    [298, 0.0950],
+    [299, 0.0953],
+    [300, 0.0956],
+    [301, 0.0956],
+    [399, 0.0956],
+    [400, 0.0956],
+  ];
+
+  var prevX = 0, prevY = 0;
+  var acaTax = irsData.map(function(x) {
+    var tax = x[0] &lt;= 100 ? 0 : (x[0]*x[1] - prevX*prevY)/(x[0] - prevX);
+    var income = Math.round(prevX*fpl/100)
+    prevX = x[0]; prevY = x[1];
+    return [income, tax];
+  });
+
+  var bracketData = [
+    {
+      name: &#39;Marginal Tax Rate&#39;,
+      xy: [[0,0], [income10 - 50, 0], [income10, 0.10], [income15 - 50, 0.10], [income15, 0.15], [income25 - 50, 0.15], [income25, 0.25], [incomeMax, 0.25]],
+      color: &#39;#2020aa&#39;
+    },
+  ];
+
+  var acaData = [
+    {
+      name: &#39;ACA Tax Credit Reduction&#39;,
+      xy: acaTax.concat([[4*fpl+1, 0], [incomeMax, 0]]),
+      color: &#39;#20a020&#39;
+    },
+  ];
+
+  var combinedData = [
+    {
+      name: &#39;Effective Marginal Tax Rate&#39;,
+      xy: acaTax.map(function(x) {
+        income = x[0];
+        tax = x[1] + ((income &lt; income10) ? 0 : ((income &lt; income15) ? 0.1 : (income &lt; income25 ? 0.15 : 0.25)));
+        return [income, tax];
+      }).concat([[4*fpl+1, 0.15], [income25 - 50, 0.15], [income25, 0.25], [incomeMax, 0.25]]),
+      color: &#39;#a02020&#39;
+    },
+    {
+      name: bracketData[0].name,
+      xy: bracketData[0].xy,
+      color: bracketData[0].color,
+      disabled: true
+    },
+    {
+      name: acaData[0].name,
+      xy: acaData[0].xy,
+      color: acaData[0].color,
+      disabled: true
+    },
+  ];
+
+  var capGainsData = [
+    {
+      name: &#39;Effective Capital Gains Rate&#39;,
+      xy: acaTax.concat([[4*fpl+1, 0], [income25-50, 0], [income25, 0.15], [incomeMax, 0.15]]),
+      color: &#39;#a02020&#39;
+    },
+  ];
+
+  function newChart(data, selector, interactive) {
+
+    var aChart = nv.models.lineChart()
+                  .interactive(interactive)
+                  .useInteractiveGuideline(interactive)
+                  .showLegend(true)
+                  .showYAxis(true)
+                  .showXAxis(true);
+
+    aChart.xAxis
+        .axisLabel(&#39;Income (AGI)&#39;)
+        .tickFormat(d3.format(&#39;$,r&#39;))
+        .showMaxMin(false);
+
+    aChart.yAxis     //Chart y-axis settings
+        .axisLabel(&#39;Marginal Tax Rate&#39;)
+        .tickFormat(d3.format(&#39;.3p&#39;))
+        .showMaxMin(false);
+
+    aChart.xDomain([0, incomeMax*1.01]);
+    aChart.yDomain([0, 0.355]);
+
+    var chartData = chartifyData(data);
+
+    d3.select(selector)
+        .datum(chartData)
+        .call(aChart);
+
+    //Update the chart when window resizes.
+    nv.utils.windowResize(function() {
+      aChart.update();
+    });
+
+    return aChart;
+  }
+
+  function chartifyData(data) {
+    //Line chart data should be sent as an array of series objects.
+    return data.map(function(obj) {
+      return {
+        values: transformXY(obj.xy),
+        key: obj.name,
+        color: obj.color,
+        disabled: obj.disabled ? true : false
+      }
+    });
+  }
+
+  function transformXY(data) {
+    var result = [];
+    for (i = 0; i &lt; data.length; i++) {
+      var point = data[i];
+      result.push({x: point[0], y: point[1]});
+    }
+    return result;
+  }
+
+  nv.addGraph(newChart(bracketData, &#39;#brackets svg&#39;, true));
+  nv.addGraph(newChart(acaData, &#39;#acacredits svg&#39;, true));
+  nv.addGraph(newChart(combinedData, &#39;#effective svg&#39;, true));
+  nv.addGraph(newChart(capGainsData, &#39;#capgains svg&#39;, true));
+
+&lt;/script&gt;
+
+</description>
+        <pubDate>Sat, 07 May 2016 00:00:00 -0600</pubDate>
+        
+          <link>http://www.moneycle.com/affordable-care-act-may-increase-your-marginal-tax-rate/</link>
+        
+        <guid isPermaLink="true">http://www.moneycle.com/affordable-care-act-may-increase-your-marginal-tax-rate/</guid>
+        
+        <category>investing</category>
+        
+        <category>spending</category>
+        
+        <category>other</category>
+        
+        
+      </item>
     
       <item>
         <title>Top 5 Credit Cards</title>
@@ -2079,526 +2577,6 @@ Implementing such a strategy is fairly easy if you follow the steps outlined abo
           <link>http://www.moneycle.com/buffer-withdrawals-to-stabilize-income/</link>
         
         <guid isPermaLink="true">http://www.moneycle.com/buffer-withdrawals-to-stabilize-income/</guid>
-        
-        <category>investing</category>
-        
-        <category>spending</category>
-        
-        <category>other</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Safe Withdrawal Rates for Vampires</title>
-        <description>&lt;p&gt;If you search the web for retirement withdrawal strategies,
-you can find countless articles about how to withdraw your fund within the
-construct of a 30-year retirement.  The most commonly cited strategy is the 4%
-withdrawal strategy which starts withdrawing 4% of the initial portfolio value
-and increases spending each year by the rate of inflation.
-Using monte carlo analysis techniques, such a portfolio
-may be found to have some small probability of exhausting the portfolio before
-30 years have passed.&lt;/p&gt;
-
-&lt;p&gt;But if you’re a Vampire named Vlad and want your assets to last forever, you can’t
-afford to have your portfolio run dry in 30 years or even 100 years.
-Or maybe you aren’t not a vampire but are retiring early and want your funds to last
-50 years, which seems like forever.
-Let’s explore the idea of withdrawing funds from a portfolio indefinitely
-to try to gain some insights into long-term safe withdrawal rates.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-vampire-strategy&quot;&gt;The Vampire Strategy&lt;/h2&gt;
-
-&lt;p&gt;One way Vlad can ensure that he never runs out of money is to just withdraw a fixed
-percentage from the portfolio every year.  But Vlad doesn’t want his spending power
-to decrease each year, so he needs to be careful with how much he spends.  In other
-words, he wants his portfolio on average to grow by the rate of inflation while at
-the same time withdrawing some amount of money to live on.  In equation form:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-(portfolio-withdrawal)(1+appreciation) &amp;gt;= portfolio(1+inflation)
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;This equation says that the portfolio in a given year will appreciate by at
-least the rate of inflation after subtracting the withdrawal amount.
-Let’s use shorter variable names to help make it more readable&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-(P - W)(1 + r) &amp;gt;= P(1 + i)
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;where&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;P = portfolio value&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;W = withdrawal amount&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;w = withdrawal rate = W/P&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;r = porfolio appreciation&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;i = inflation rate&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Replacing withdrawal amount with &lt;code&gt;W = Pw&lt;/code&gt;,&lt;/p&gt;
-
-&lt;p&gt;Then we can divide both sides of the equation by the &lt;code&gt;P&lt;/code&gt; we get:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-(1 - w)(1 + r) &amp;gt;= (1 + i)
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;And now it’s fairly simple to solve the &lt;code&gt;withdrawal rate&lt;/code&gt; as:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-w &amp;lt;= (r - i) / (1 + r)
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Notice that the numerator is the difference between Vlad’s portfolio return
-and long-term inflation.  So if his portfolio appreciates at a rate less than
-inflation, he’ll have to work forever.&lt;/p&gt;
-
-&lt;h3 id=&quot;stocks-only&quot;&gt;Stocks Only&lt;/h3&gt;
-
-&lt;p&gt;Let’s see what happens if we assume Vlad invests everything in stocks.&lt;/p&gt;
-
-&lt;p&gt;Moneychimp has an &lt;a href=&quot;http://www.moneychimp.com/features/market_cagr.htm&quot;&gt;excellent tool&lt;/a&gt;
-for getting historical stock returns.
-With this tool you can see that for the past 100 years (1915-2014) stocks have
-returned a compounded average rate of 10.31%.
-If Vlad could invest in Vanguard Total Stock Market ETF (VTI),
-he would incur a fee of 0.05% for a total return of 10.26%.  To be a little
-conservative, let’s round that down to 10.2%.
-Moneychimp also has an &lt;a href=&quot;http://www.moneychimp.com/articles/econ/inflation_calculator.htm&quot;&gt;inflation calculator&lt;/a&gt;
-which shows a historical inflation rate of 3.2% over the same time period.&lt;/p&gt;
-
-&lt;p&gt;Plugging those numbers into the above equations gives:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-withdrawal rate &amp;lt;= 6.35%
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;So, with average stock returns and average inflation values, a withdrawal of 6.35%
-or less could allow Vlad to keep up with inflation.  Keep in mind that average
-returns are not realistic.  In fact, those average returns have a standard deviation
-of 19.9% so if Vlad just used a 100% stock portfolio, he would have about a 95%
-chance that his portfolio would return between -30% and +50%.  A 30% loss would
-be a big hit to his annual income so Vlad probably wants to consider ways to smooth
-out the market swings.&lt;/p&gt;
-
-&lt;h3 id=&quot;stocks-and-bonds&quot;&gt;Stocks and Bonds&lt;/h3&gt;
-
-&lt;p&gt;One way to reduced volatility to a portfolio is by adding bonds.&lt;/p&gt;
-
-&lt;p&gt;Historical bond rates are harder to come by but over period of 1926-2014
-bonds have returned approximately 5.4% with a standard deviation of 5.6%&lt;sup id=&quot;fnref:11&quot;&gt;&lt;a href=&quot;#fn:11&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.
-So if Vlad invests his bond portfolio in Vanguard Total Bond Market ETF (BND)
-with an expense ratio of 0.07%, let’s assume he gets a return of 5.3% on the bonds.&lt;/p&gt;
-
-&lt;p&gt;The following table shows the maximum withdrawal rates for different portfolio
-allocations based on the returns estimated for each allocation:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Stocks/Bonds =&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;20/80&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;40/60&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;60/40&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;80/20&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Historical Portfolio Return&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;6.6%&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;7.3%&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;8.2%&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;9.2%&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spending Standard Deviation&lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;5%&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;8%&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;11%&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;15%&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Maximum Withdrawal Rate&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2.9%&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3.8%&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;4.7%&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;5.5%&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Expense Multiplier&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;35&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;27&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;22&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;18&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;The “Expense Multiplier” value represents the amount of money that Vlad needs
-to save before he begins his retirement in terms of his annual expenses.
-So for a moderate 60/40 portfolio, Vlad would need to save at least 22 times his
-annual expenses before he could retire from his night job, and he could withdraw
-up to 4.7% to keep up with inflation.&lt;/p&gt;
-
-&lt;h2 id=&quot;buffer-the-vampire-strategy22&quot;&gt;Buffer the Vampire Strategy&lt;sup id=&quot;fnref:22&quot;&gt;&lt;a href=&quot;#fn:22&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/h2&gt;
-
-&lt;p&gt;Even with the moderate 60/40 portfolio, Vlad has a decent chance that his portfolio
-(and spending) could drop by 14%&lt;sup id=&quot;fnref:7&quot;&gt;&lt;a href=&quot;#fn:7&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt; in any given year.&lt;br /&gt;
-One way he could reduce the volatility of his expenses even further is to allocate
-a portion of his portfolio to a spending buffer.&lt;/p&gt;
-
-&lt;p&gt;To describe how a spending buffer works, consider a 5-year spending buffer
-as an example.  With a 5-year buffer, Vlad would carve out 4 times his annual
-expenses as part of his portfolio.  Since this represents the next 4 years of
-his spending, it would be invested conservatively in short-term bond and cash
-equivalents.  At the end of each year, Vlad applies his withdrawal rate to his
-entire portfolio then moves that amount into his spending buffer (now the buffer
-has 5 years worth of spending).  He then withdraws 1/5th of the spending buffer
-for spending in the following year.&lt;/p&gt;
-
-&lt;div id=&quot;pieWithBuffer&quot;&gt;&lt;/div&gt;
-&lt;div id=&quot;stock-slider&quot; style=&quot;width: 300px;&quot; align=&quot;center&quot;&gt;&lt;/div&gt;
-
-&lt;script&gt;
-var pieData = [
-  {
-    &quot;label&quot;: &quot;Buffer&quot;,
-    &quot;value&quot;: 13,
-    &quot;color&quot;: &quot;#387e45&quot;,
-    &quot;caption&quot;: &quot;{percentage}%, withdrawal = 3.2%&quot;
-  },
-  {
-    &quot;label&quot;: &quot;Bonds&quot;,
-    &quot;value&quot;: 27,
-    &quot;color&quot;: &quot;#386a7e&quot;,
-    &quot;caption&quot;: &quot;{percentage}%&quot;
-  },
-  {
-    &quot;label&quot;: &quot;Stocks&quot;,
-    &quot;value&quot;: 60,
-    &quot;color&quot;: &quot;#7e3838&quot;,
-    &quot;caption&quot;: &quot;{percentage}%&quot;
-  }
-];
-stockReturn = 0.102;
-bondReturn = 0.053;
-inflationRate = 0.032;
-bufferSize = 5;
-
-updateData = function(stockPercent) {
-    var stock = stockPercent * 0.01
-  var bufferlessReturn = stock*stockReturn + (1-stock)*bondReturn;
-  var a = bufferSize*(bufferSize-1)*bondReturn;
-  var b = 1+(bufferSize-1)*bondReturn+bufferSize*bufferlessReturn;
-  var c = bufferlessReturn - inflationRate;
-  var withdrawalRate = (b-Math.sqrt(b*b-4*a*c))/(2*a);
-  var bufferPercent = (bufferSize-1)*withdrawalRate*100;
-  var bondPercent = 100-stockPercent-bufferPercent;
-
-  pieData[0].value = bufferPercent;
-  pieData[0].caption = &quot;{percentage}%, withdrawal = &quot; + Math.round(withdrawalRate*1000)/10 + &quot;%&quot;
-  pieData[1].value = bondPercent;
-  pieData[2].value = stockPercent;
-}
-updateData(55);
-
-var pie = new d3pie(&quot;pieWithBuffer&quot;, {
-	&quot;header&quot;: {
-		&quot;title&quot;: {
-			&quot;text&quot;:     &quot;Portfolio Allocation with a Spending Buffer&quot;,
-			&quot;fontSize&quot;: 22
-		},
-    subtitle: {
-      text:     bufferSize + &quot;-year buffer, 10.2% stock returns, 5.3% bond returns, 3.2% inflation&quot;,
-      color:    &quot;#666666&quot;,
-      fontSize: 14,
-    }
-	},
-  footer: {
-    text: 	  &quot;use slider to change stock allocation&quot;,
-    color:    &quot;#666666&quot;,
-    fontSize: 10,
-    location: &quot;bottom-center&quot;
-  },
-	&quot;size&quot;: {
-		&quot;canvasHeight&quot;: 400,
-		&quot;canvasWidth&quot;: 430,
-		&quot;pieOuterRadius&quot;: &quot;88%&quot;
-	},
-	&quot;data&quot;: {
-		&quot;content&quot;: pieData
-	},
-	&quot;labels&quot;: {
-		&quot;outer&quot;: {
-			&quot;format&quot;: &quot;none&quot;,
-			&quot;pieDistance&quot;: 32
-		},
-		&quot;inner&quot;: {
-			&quot;format&quot;: &quot;label&quot;
-		},
-		&quot;mainLabel&quot;: {
-			&quot;color&quot;: &quot;#e1e1e1&quot;,
-			&quot;font&quot;: &quot;verdana&quot;,
-			&quot;fontSize&quot;: 12
-		},
-		&quot;percentage&quot;: {
-			&quot;color&quot;: &quot;#e1e1e1&quot;,
-			&quot;font&quot;: &quot;verdana&quot;,
-			&quot;decimalPlaces&quot;: 0
-		},
-		&quot;value&quot;: {
-			&quot;color&quot;: &quot;#e1e1e1&quot;,
-			&quot;font&quot;: &quot;verdana&quot;
-		},
-		&quot;lines&quot;: {
-			&quot;enabled&quot;: true,
-			&quot;color&quot;: &quot;#cccccc&quot;
-		},
-		&quot;truncation&quot;: {
-			&quot;enabled&quot;: true
-		}
-	},
-	&quot;tooltips&quot;: {
-		&quot;enabled&quot;: true,
-		&quot;type&quot;: &quot;caption&quot;,
-		&quot;string&quot;: &quot;{label}: {percentage}%&quot;
-	},
-	&quot;effects&quot;: {
-		&quot;pullOutSegmentOnClick&quot;: {
-			&quot;effect&quot;: &quot;linear&quot;,
-			&quot;speed&quot;: 200,
-			&quot;size&quot;: 12
-		}
-	},
-	&quot;callbacks&quot;: {
-    &quot;onload&quot;: function() { pie.openSegment(0); },
-		&quot;onMouseoverSegment&quot;: null,
-		&quot;onMouseoutSegment&quot;: null,
-		&quot;onClickSegment&quot;: null
-	}
-});
-
-d3.select(&#39;#stock-slider&#39;).call(d3.slider().axis(true).min(0).max(85).step(5).value(pieData[2].value).on(&quot;slideend&quot;, function(evt, stockPercent) {
-  updateData(stockPercent);
-  pie.updateProp(&quot;data.content&quot;, pieData);
-}));
-&lt;/script&gt;
-
-&lt;p&gt;Having a 5-year buffer for his spending means that Vlad’s spending will only be
-impacted by 1/5th of the fluctuations in the market.  The standard deviation of
-Vlad’s spending will be reduced&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt; by approximately &lt;code&gt;1/sqrt(5)&lt;/code&gt;.
-In our example with a 60/40 split, the standard deviation goes from 11% down to 5%.
-Vampires get grumpy with big swings in spending so this helps to prevent Vlad
-from biting people.&lt;/p&gt;
-
-&lt;p&gt;One possible downside of the buffering is that the returns from Vlad’s portfolio
-would be slightly reduced.  Assuming that the buffer piece is allocated to the
-bond side of the portfolio, then the bond returns would be reduced if the buffer
-is allocated to cash or cash equivalents.&lt;/p&gt;
-
-&lt;p&gt;Re-working the original equations with a spending buffer:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-(P - kW)(1 + r) + kW - W &amp;gt;= P(1 + i)
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;where &lt;code&gt;k = spending buffer size in years&lt;/code&gt;.  In this equation &lt;code&gt;P-kW&lt;/code&gt; represents
-the piece of the portfolio that is invested and &lt;code&gt;kW-W&lt;/code&gt; represents the buffer after
-1 year’s worth of spending has been withdrawn.  In short, we want the appreciation
-from the invested part of the portfolio to be enough so that the &lt;strong&gt;entire&lt;/strong&gt;
-portfolio keeps up with inflation.&lt;/p&gt;
-
-&lt;p&gt;Solving this equation for withdrawal rate,&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-w &amp;lt;= (r - i) / (1 + kr)
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Taking this a little further, if Vlad wants to keep the stock portion of the
-portfolio fixed at some percentage while bonds and the buffer make up the remainder,
-then the rate of return could be written in terms of this percentage,&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-r = s*r_s + (1 - s)*r_b - (k - 1)*w*r_b
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Where&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;s = percentage of portfolio in stocks&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;r_s = rate of return on stocks&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;r_b = rate of return on bonds&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The first 2 terms of this equation represent the return we would have had without
-buffering and the last term represents the amount of potential returns lost to
-the buffering (assuming it would have been invested in bonds).&lt;/p&gt;
-
-&lt;p&gt;Substituting &lt;code&gt;r&lt;/code&gt; from the last equation into the equation before that gives us
-a quadratic equation to solve for withdrawal rate (I may expand this
-in another article but will leave this detail out for now).&lt;/p&gt;
-
-&lt;p&gt;All this math probably is putting you to sleep so let’s look at some portfolios.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Stocks/Bonds&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;7&lt;/a&gt;&lt;/sup&gt;/Buffer&lt;sup id=&quot;fnref:3:1&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;7&lt;/a&gt;&lt;/sup&gt; =&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;20/72/8&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;40/50/10&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;60/27/13&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;80/5/15&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Historical Portfolio Return&lt;sup id=&quot;fnref:1:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;5.9%&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;6.7%&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;7.6%&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;8.4%&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spending Standard Deviation&lt;sup id=&quot;fnref:6&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot;&gt;8&lt;/a&gt;&lt;/sup&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2%&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3.5%&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;5%&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;7%&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Maximum Withdrawal Rate&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2.0%&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2.6%&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3.2%&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3.7%&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Expense Multiplier&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;50&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;38&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;31&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;27&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;So, if our friend Vlad has a portfolio with 60% in stocks and transfers 3.2%
-of his portfolio to his 5-year spending buffer every year, his portfolio should roughly
-keep pace with inflation.  The buffer needed for this withdrawal would account for
-about 13% of his overall portfolio initially and would fluctuate with the market.
-And the reduced variations in his income due to the buffering should help Vlad
-sleep during the day.&lt;/p&gt;
-
-&lt;h2 id=&quot;caveats&quot;&gt;Caveats&lt;/h2&gt;
-
-&lt;p&gt;While this article explores the safe withdrawal rates for a portfolio that follows
-historical returns, this is known to not be a good strategy for determining actual
-safe withdrawal rates.  This is really more of a thought experiment to think about
-long-term withdrawals combined with the spending buffer concept in order to reduce
-income volatility.&lt;/p&gt;
-
-&lt;p&gt;Probably a better way to complete this analysis would be to do a monte-carlo simulation
-with an appropriate success criterion.  For example, most studies of 30-year withdrawal
-rates consider how a withdrawal performs relative to how often the portfolio drops to
-zero during the 30-year period.  For a vampire, the measure of success would probably
-be whether the portfolio has kept pace with inflation over 50 years (or more).&lt;/p&gt;
-
-&lt;h2 id=&quot;insights&quot;&gt;Insights&lt;/h2&gt;
-
-&lt;p&gt;In spite of it’s weaknesses, this analysis does shed some light on very-long-term
-withdrawals.&lt;/p&gt;
-
-&lt;p&gt;For an aggressively allocated (80% stock) 5-year buffered portfolio, the
-withdrawal rate of 3.7% could keep up with inflation. This rate isn’t too
-far off from the widely discussed 4% rates you see in the financial press but it
-is for a pretty aggressive allocation.  Reducing stock allocation quickly reduces the “safe”
-withdrawal rate.  A much safer 40% allocation requires reducing the withdrawal rate all
-the way down to 2.6%.  This highlights the need to
-stay invested in higher-performing assets in order to keep up with long-term inflation.&lt;/p&gt;
-
-&lt;p&gt;The buffered withdrawal strategy could be employed to cushion the ups and down of the
-markets.  One cost of a buffered strategy is that it will reduce overall returns
-by about 0.6% for moderate allocations.
-But that lost return could be recouped by increasing the stock allocation by about 10%.
-The 5-year buffer suggested here has a good chance of spanning at least 1 or 2 good
-years even over the course of a bear market.  Over all 5-year periods stock returns
-have been &lt;a href=&quot;http://awealthofcommonsense.com/u-s-stock-investors-doomed-high-returns/&quot;&gt;positive about 87% of the time&lt;/a&gt;.
-This suggests that 87% of the time the 5-year buffered income would continue to increase.&lt;/p&gt;
-
-&lt;p&gt;Another cost of buffering is that it reduces the withdrawal rate that can keep
-up with inflation.  So the ultimate balance is between stability and income.
-If you want more income, you &lt;strong&gt;could&lt;/strong&gt; reduce the buffer size and take a higher
-amount of income with full understanding that you should see larger swings in the market.
-You could also do away with buffering and reduce the volatility by choosing a less
-risky allocation.  Over the very long term it seems like Vlad would do better by
-keeping his portfolio as heavily invested as is bearable and using buffering to
-reduce the volatility.&lt;/p&gt;
-
-&lt;p&gt;If you are a vampire who wants to implement a Roth ladder strategy, you might
-want to consider a 6-year buffer. This would allow you convert your traditional IRA
-to a Roth IRA and wait the required 5 years before withdrawing the money without
-penalty&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;9&lt;/a&gt;&lt;/sup&gt;.  But 6-years is a long time to not keep money invested so with such
-a large buffer it might make sense to invest 1 or 2 years of a bigger buffer into
-a bond fund.&lt;/p&gt;
-
-&lt;h2 id=&quot;next-steps&quot;&gt;Next Steps&lt;/h2&gt;
-
-&lt;p&gt;If there’s any interest, the next logical step for this analysis would be to
-take it to the domain of monte-carlo simulations to see how the estimated rates
-do over very long periods with the given portfolios.&lt;/p&gt;
-
-&lt;p&gt;Another interesting variation of this analysis would be to include the effects
-of social security on withdrawal rates.  Future social security or
-pension earnings will probably allow for increased withdrawals until that income
-stream kicks in.  It would be interesting to see how much of an effect that is.&lt;/p&gt;
-
-&lt;h3 id=&quot;related&quot;&gt;Related&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/buffer-withdrawals-to-stabilize-income/&quot;&gt;Buffer Withdrawals to Stabilize Income&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/the-30-30-withdrawal-strategy/&quot;&gt;The 30-30 Withdrawal Strategy&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:11&quot;&gt;
-      &lt;p&gt;Bond Performance - 1926-2014: 5.4%, std dev = 5.6%, comes from a combination of &lt;a href=&quot;https://personal.vanguard.com/us/insights/saving-investing/model-portfolio-allocations&quot;&gt;Vanguard data&lt;/a&gt; and the &lt;a href=&quot;http://www.jvlassociates.com/files/Performance%20Probabilities%20(Bell%20Curve%20)%20%201926%20-%202014.pdf&quot;&gt;comparable intermediate govt bond&lt;/a&gt;. &lt;a href=&quot;#fnref:11&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;Portfolio return for mixed portfolios are crude approximations for illustrative purposes only. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:1:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:5&quot;&gt;
-      &lt;p&gt;Standard deviations for different allocations estimated from graph on &lt;a href=&quot;http://www.forbes.com/sites/rickferri/2015/02/06/the-center-of-gravity-for-retirees/2/&quot;&gt;this page&lt;/a&gt; &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:22&quot;&gt;
-      &lt;p&gt;No relation to &lt;a href=&quot;https://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer&quot;&gt;Buffy the Vampire Slayer&lt;/a&gt;. &lt;a href=&quot;#fnref:22&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:7&quot;&gt;
-      &lt;p&gt;14% drop is 2 standard deviations, or 22%, below average return of 8.2% &lt;a href=&quot;#fnref:7&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;See &lt;a href=&quot;http://en.wikipedia.org/wiki/Standard_error#Standard_error_of_the_mean&quot;&gt;standard error of the mean&lt;/a&gt;. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:3&quot;&gt;
-      &lt;p&gt;Bonds and buffer percentages are initial values, buffer size varies slightly after the first year. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:3:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:6&quot;&gt;
-      &lt;p&gt;Based on portfolio deviation divided by sqrt(5) for the buffering effect. &lt;a href=&quot;#fnref:6&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:4&quot;&gt;
-      &lt;p&gt;I’m pretty sure vampires are not subject to the rules concerning age of 59.5 and withdrawals. &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Fri, 29 May 2015 00:00:00 -0600</pubDate>
-        
-          <link>http://www.moneycle.com/safe-withdrawal-rates-for-vampires/</link>
-        
-        <guid isPermaLink="true">http://www.moneycle.com/safe-withdrawal-rates-for-vampires/</guid>
         
         <category>investing</category>
         
