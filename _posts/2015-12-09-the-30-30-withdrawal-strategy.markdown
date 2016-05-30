@@ -161,3 +161,4 @@ Rinse and repeat.
 
 * [Safe Withdrawal Rates for Vampires](/safe-withdrawal-rates-for-vampires/)
 * [Buffer Withdrawals to Stabilize Income](/buffer-withdrawals-to-stabilize-income/)
+* [Super-Simple Virtual-Buffer Withdrawal Strategy](/super-simple-virtual-buffer-withdrawal-strategy/)

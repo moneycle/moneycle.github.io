@@ -339,3 +339,9 @@ the buffer is "virtual".  Whether or not you keep an actual buffer is up to you.
 Generally it's a good idea to keep a couple years or so of spending outside
 of your investments so that you know it will be there when you need it.  But this
 strategy doesn't require you do so, it's up to you.
+
+### Related
+
+* [Safe Withdrawal Rates for Vampires](/safe-withdrawal-rates-for-vampires/)
+* [Buffer Withdrawals to Stabilize Income](/buffer-withdrawals-to-stabilize-income/)
+* [The 30-30 Withdrawal Strategy](/the-30-30-withdrawal-strategy/)
