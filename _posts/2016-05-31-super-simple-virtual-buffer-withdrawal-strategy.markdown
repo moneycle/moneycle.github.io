@@ -327,8 +327,8 @@ withdrawal rates will have larger smoothing effects.
 
 ## Parting Thoughts
 
-Albert Einstein is quoted as saying that "Everything should be made as
-simple as possible, but not simpler".  The super-simple virtual-buffer withdrawal
+Albert Einstein has been attributed with the saying that "everything should be made
+as simple as possible, but not simpler".  The super-simple virtual-buffer withdrawal
 strategy is simple and requires no bookkeeping other than checking your portfolio
 value once a year.  Is there a simpler strategy?  Yes, you could simply
 take a constant value out without checking your portfolio balance.
