@@ -99,7 +99,7 @@ together.  Pretty simple right?
 
 As easy as this calculation is, I couldn't help but noticing that dividing by
 900 is a little awkward.  What if we changed the buffer size so that we ended
-up dividing by 1000.  If we can divide by 1000 then the calculation can almost
+up dividing by 1000?  If we can divide by 1000 then the calculation can almost
 be done in your head.  To state this mathematically, we want,
 
     12k/w = 1000
