@@ -332,7 +332,8 @@ as simple as possible, but not simpler".  The super-simple virtual-buffer withdr
 strategy is simple and requires no bookkeeping other than checking your portfolio
 value once a year.  Is there a simpler strategy?  Yes, you could simply
 take a constant value out without checking your portfolio balance.
-But such a strategy would be risky since it ignores a declining portfolio balance.
+But such a strategy could be risky since it ignores the possibility of a
+declining portfolio balance.
 
 The super-simple strategy also has flexibility which comes from the fact that
 the buffer is "virtual".  Whether or not you keep an actual buffer is up to you.
