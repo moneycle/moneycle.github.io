@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Super-Simple Virtual-Buffer Withdrawal Strategy</title>
+  <meta name="description" content="While the 30-30 Withdrawal Strategy is anice clean method for withdrawing money from your portfolio,it does require you to keep track of a buffer whichdrives...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://www.moneycle.com/super-simple-virtual-buffer-withdrawal-strategy/">
+  <link rel="alternate" type="application/rss+xml" title="Moneycle" href="http://www.moneycle.com/feed.xml" />
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.4/d3.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.3/nv.d3.min.js"></script>
+
+  <script src="/javascript/d3pie.min.js"></script>
+  <script src="/javascript/d3.slider.js"></script>
+  <link rel="stylesheet" href="/css/d3.slider.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.css">
+
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/"><img alt="Moneycle" src="/images/logo.png" width="174" height="39"></a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Super-Simple Virtual-Buffer Withdrawal Strategy</h1>
+    <p class="post-meta">May 31, 2016</p>
+  </header>
+
+  <div class="post-abstract">
+    While the 30-30 Withdrawal Strategy is a pretty simple way to withdraw your money from your portfolio at a rate of 3.33%, it does require a little bit of bookkeeping and is limited to a single withdrawal rate.  In this article, I look at simplifying that withdrawal strategy even further.
+
+  </div>
+
+  <article class="post-content">
+    <img class="post-image" src="/images/einstein.jpg"/>
+    <p>While the <a href="/the-30-30-withdrawal-strategy/">30-30 Withdrawal Strategy</a> is a
+nice clean method for withdrawing money from your portfolio,
+it does require you to keep track of a buffer which
+drives the calculation for your withdrawal amount every year.
+I felt like there should be a way to calculate the withdrawal in terms of only
+your current withdrawal amount and your current portfolio value thus alleviating
+the need to keep track of a separate spending buffer.
+After playing with the math, it turns out there is a pretty simple formula
+that achieves this goal.</p>
+
+<h2 id="a-bit-of-math">A Bit of Math</h2>
+
+<p>The amount that is initially spent from your portfolio is determined directly
+by multiplying your withdrawal rate by your portfolio value.  Using the same
+variables as the <a href="/safe-withdrawal-rates-for-vampires/">Safe Withdrawal Rates for Vampires</a>
+article,</p>
+
+<pre><code>W = Pw
+</code></pre>
+
+<p>where,</p>
+
+<pre><code>W = annual withdrawal amount
+w = annual withdrawal rate
+P = portfolio value
+k = buffer size in years
+</code></pre>
+
+<p>And if we have a buffer of <code>k</code> years, then the total buffer size initially
+is,</p>
+
+<pre><code>initial buffer size = kW
+</code></pre>
+
+<p>After a year of spending from the buffer, it is reduced by the withdrawal amount,
+<code>W</code>.  So we are left with,</p>
+
+<pre><code> buffer after 1 year of spending = kW-W = W(k-1)
+</code></pre>
+
+<p>At this point, we add back an amount equal to the new portfolio value times the
+withdrawal rate to arrive at the new buffer size,</p>
+
+<pre><code> updated buffer value after 1 year = W(k-1) + Pw
+</code></pre>
+
+<p>And to compute the new withdrawal amount, we just divide this amount
+by the size of the buffer in years (<code>k</code>),</p>
+
+<pre><code>new annual withdrawal amount = W(k-1)/k + Pw/k
+</code></pre>
+
+<p>Because I prefer to think of my withdrawals as monthly, let’s rewrite this
+in terms of monthly withdrawals,</p>
+
+<pre><code>new monthly withdrawal amount = (W/12)(k-1)/k + Pw/12k
+</code></pre>
+
+<p>Given that <code>k</code> and <code>w</code> are constant values, we now have a formula for computing
+our new withdrawal amount from the current monthly withdrawal (<code>W/12</code>),
+and the current portfolio value (<code>P</code>).</p>
+
+<h2 id="example-using-30-30-numbers">Example Using 30-30 Numbers</h2>
+
+<p>Let’s put some numbers to this to make it less abstract.  Start with a
+portfolio of <code>P = $720,000</code> and go with the 30-30 Withdrawal Strategy numbers
+for buffer size (<code>k = 2.5 years</code>), and withdrawal rate (<code>w = 3.33%</code>).
+For these values, the initial monthly withdrawal is simply,</p>
+
+<pre><code>Pw/12 = $720000*0.0333/12 = $2000/month
+</code></pre>
+
+<p>If you want, you can set aside your buffer of 2.5 years ($60,000) in a safe place.
+But the beauty of this strategy is that you don’t have to do so.  You can also
+just assume that your buffer is fully invested within the bond portion of your
+portfolio; it’s up to you.  This is why I call it a “virtual” buffer because
+you get the advantages the buffer gives you without having to keep track of it.</p>
+
+<p>Now, let’s assume a year has passed and it has been a good year and the portfolio
+has gone up to $765,000.  Now your monthly withdrawal amount is computed as,</p>
+
+<pre><code>(W/12)(k-1)/k + Pw/12k = $2000(1.5/2.5) + $765000*.03333/(12*2.5))
+                       = $2000 * 0.6 + $765000/900
+                       = $1200 + $850
+                       = $2050
+</code></pre>
+
+<p>So even though the portfolio increased by 6.25% (<code>765000/720000</code>), the monthly
+spending only went up 2.5% (<code>2050/2000</code>) due to the virtual 2.5-year buffering.</p>
+
+<p>Also, look how simple the calculation is every year.  In this example, multiplying
+your current income by 0.6, divide your portfolio by 900, and add those 2 numbers
+together.  Pretty simple right?</p>
+
+<h2 id="making-it-even-simpler">Making it Even Simpler</h2>
+
+<p>As easy as this calculation is, I couldn’t help but noticing that dividing by
+900 is a little awkward.  What if we changed the buffer size so that we ended
+up dividing by 1000.  If we can divide by 1000 then the calculation can almost
+be done in your head.  To state this mathematically, we want,</p>
+
+<pre><code>12k/w = 1000
+</code></pre>
+
+<p>If the annual withdrawal rate is fixed, then we solve for the buffer size to get,</p>
+
+<pre><code>k = 1000w/12
+</code></pre>
+
+<p>Substituting this back into our withdrawal equation,</p>
+
+<pre><code>new monthly withdrawal amount = (W/12)(1-0.012/w) + P/1000
+</code></pre>
+
+<p>Revisiting the first example with a portfolio of $720,000 and a withdrawal
+rate of 3.333%, the first year withdrawal is still $2000/monthly because the
+withdrawal rate is the same.  After the first year with a new portfolio value
+of $765,000, the new monthly withdrawal now becomes,</p>
+
+<pre><code>(W/12)(1-0.012/w) + P/1000 = $2000(1-0.012/0.03333) + $765000/1000
+                           = $2000 * 0.64 + $765000/1000
+                           = $1280 + $765
+                           = $2045
+</code></pre>
+
+<p>So, you can see that the slightly modified equation only decreased the income by
+$5/month.  This decrease is due to a slightly larger buffer (2.778 years vs 2.5 years)
+which means that the market gyrations are smoothed a little more than before.</p>
+
+<h2 id="the-super-simple-virtual-buffer-withdrawal-formula">The Super-Simple Virtual-Buffer Withdrawal Formula</h2>
+
+<p>To summarize all the above math, in the first year of withdrawals, you withdrawal
+from your portfolio by simply multiplying your portfolio value by your withdrawal
+rate.</p>
+
+<div class="highlight">
+  <pre><code>initial monthly withdrawal = Pw/12
+</code></pre>
+</div>
+
+<p>Then, after each year you compute your new withdrawal amount with this
+super-simple formula.</p>
+
+<div class="highlight">
+  <pre><code>new monthly withdrawal = M * beta + P/1000
+</code></pre>
+</div>
+
+<p>where,</p>
+
+<pre><code>M = previous monthly withdrawal
+beta = monthly withdrawal multiplier = 1 - 1.2%/w
+w = annual withdrawal rate
+P = current portfolio value
+</code></pre>
+
+<p>The graph below shows the monthly withdrawal multiplier as a function of
+annual withdrawal rate.  If you hover over the chart you will see other
+information including a “Sample Allocation” which shows how you might need
+to allocate more to stocks as your withdrawal rate goes up.</p>
+
+<div id="beta-graph" class="chart">
+    <svg></svg>
+</div>
+
+<style>
+  .chart {
+    clear: both;
+  }
+  .chart, svg {
+    height: 360px;
+  }
+</style>
+
+<script>
+  var betaXY = [];
+  for(var w = 0.012; w < 0.0451; w += 0.0001) {
+    w = Math.round(w*10000)/10000;
+    betaXY.push([w, 1-0.012/w]);
+  }
+
+  var betaData = [
+    {
+      name: 'Monthly Withdrawal Multiplier',
+      xy: betaXY,
+      color: '#2020aa'
+    },
+  ];
+
+  function newChart(data, selector, interactive) {
+
+    var aChart = nv.models.lineChart()
+                  .interactive(interactive)
+                  .useInteractiveGuideline(interactive)
+                  .showLegend(true)
+                  .showYAxis(true)
+                  .showXAxis(true);
+
+    aChart.xAxis
+        .axisLabel('Annual Withdrawal Rate')
+        .tickFormat(d3.format('.3p'))
+        .showMaxMin(false);
+
+    aChart.yAxis     //Chart y-axis settings
+        .axisLabel('Monthly Withdrawal Multiplier')
+        .tickFormat(d3.format('.3f'))
+        .showMaxMin(false);
+
+    aChart.xDomain([0.012, 0.045]);
+    aChart.yDomain([0, 0.8]);
+
+    var inflation = 0.02;
+    var stockRet = 0.08;
+    var bondRet = 0.03;
+    aChart.interactiveLayer.tooltip.contentGenerator(function (d) {
+      var w = d.value;
+      var beta = d.series[0].value;
+      var k = 1000*w/12;
+      var totalRet = (w + inflation)/(1-w*k);
+      var stockPercent = Math.round(100*Math.min(1.0, (totalRet + bondRet*((k-1)*w-1))/(stockRet - bondRet)))/100;
+      var bufferPercent = Math.round(100*Math.min(1-stockPercent, 2*w))/100;
+      var bondPercent = Math.max(0, 1.0 - stockPercent - bufferPercent);
+
+      var html = "Annual Withdrawal Rate: <b>" + d3.format(".3p")(w) + "</b><br/>";
+      html += "Monthly Withdrawal Multiplier: <b>" + d3.format(".3f")(beta) + "</b><br/>";
+      html += "Virtual Buffer Size: <b>" + d3.format(".2f")(k) + " years</b><br/>";
+
+      html += "Sample Allocation:<br/>";
+      html += "&nbsp;&nbsp;stocks: <b>" + d3.format("%")(stockPercent) + "</b><br/>";
+      html += "&nbsp;&nbsp;bonds: <b>" + d3.format("%")(bondPercent) + "</b><br/>";
+      html += "&nbsp;&nbsp;buffer: <b>" + d3.format("%")(bufferPercent) + "</b><br/>";
+      return html;
+    });
+
+    var chartData = chartifyData(data);
+
+    d3.select(selector)
+        .datum(chartData)
+        .call(aChart);
+
+    //Update the chart when window resizes.
+    nv.utils.windowResize(function() {
+      aChart.update();
+    });
+
+    return aChart;
+  }
+
+  function chartifyData(data) {
+    //Line chart data should be sent as an array of series objects.
+    return data.map(function(obj) {
+      return {
+        values: transformXY(obj.xy),
+        key: obj.name,
+        color: obj.color,
+        disabled: obj.disabled ? true : false
+      }
+    });
+  }
+
+  function transformXY(data) {
+    var result = [];
+    for (i = 0; i < data.length; i++) {
+      var point = data[i];
+      result.push({x: point[0], y: point[1], stock: 0.99});
+    }
+    return result;
+  }
+
+  nv.addGraph(newChart(betaData, '#beta-graph svg', true));
+
+</script>
+
+<h2 id="sample-portfolios">Sample Portfolios</h2>
+
+<p>Here are a few possible portfolio types you could choose from depending on your
+risk tolerance.  The Step-By-Step section that follows walks through a simple example
+using the “moderate” strategy numbers.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th style="text-align: center">annual withdrawal rate</th>
+      <th style="text-align: center">monthly withdrawal multiplier</th>
+      <th style="text-align: center">virtual buffer size</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>conservative</td>
+      <td style="text-align: center">2.40%</td>
+      <td style="text-align: center">0.5</td>
+      <td style="text-align: center">2.00 yrs</td>
+    </tr>
+    <tr>
+      <td>moderate</td>
+      <td style="text-align: center">3.00%</td>
+      <td style="text-align: center">0.6</td>
+      <td style="text-align: center">2.50 yrs</td>
+    </tr>
+    <tr>
+      <td>moderately aggressive</td>
+      <td style="text-align: center">3.33%</td>
+      <td style="text-align: center">0.64</td>
+      <td style="text-align: center">2.78 yrs</td>
+    </tr>
+    <tr>
+      <td>aggressive</td>
+      <td style="text-align: center">4.00%</td>
+      <td style="text-align: center">0.7</td>
+      <td style="text-align: center">3.33 yrs</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="step-by-step">Step-By-Step</h2>
+
+<p>Implementing the Super-Simple Virtual-Buffer Withdrawal strategy is as follows:</p>
+
+<ol>
+  <li>
+    <p>Compute your initial monthly withdrawal from the equation <code>Pw/12</code>.
+For example, with a $400,000 portfolio (<code>P</code>) and a 3% withdrawal rate (<code>w</code>),
+your monthly withdrawal is,</p>
+
+    <p><code>$400,000*0.03/12 = $1000</code></p>
+  </li>
+  <li>
+    <p>Withdrawal from the portfolio for a full year using the last computed value.</p>
+  </li>
+  <li>
+    <p>At the end of each year, compute your new monthly withdrawal rate using
+the equation <code>M * beta + P/1000</code>.  For example,
+with a 3% withdrawal rate (<code>w</code>), your beta multiplier is <code>1 - 1.2%/3% = 0.6</code>.
+If your portfolio (<code>P</code>) has increased to $420,000 after the first year,
+then your new withdrawal is,</p>
+
+    <p><code>$1000*0.6 + $420000/1000 = $600 + $420 = $1020</code></p>
+  </li>
+  <li>
+    <p>Go back to step 2 and repeat.</p>
+  </li>
+</ol>
+
+<h2 id="nerd-alert">Nerd Alert</h2>
+
+<p>Some readers may have noticed that the formula for this withdrawal strategy
+looks an awful lot like an <a href="https://en.wikipedia.org/wiki/Exponential_smoothing">exponential smoothed average</a>.
+If we rewrite the withdrawal formula like this,</p>
+
+<pre><code>M(t) = (1-alpha) * M(t-1) + alpha * Pw/12
+</code></pre>
+
+<p>where</p>
+
+<pre><code>alpha = 1.2%/w
+</code></pre>
+
+<p>then you can see that it is indeed an exponential moving average of the
+term <code>Pw/12</code>.  That term represents the annual withdrawal rate projected down
+to the monthly level.</p>
+
+<p>For exponential smoothed averages, a smaller <code>alpha</code> represents an average that has
+a larger smoothing effect.  In the case of this withdrawal strategy,
+the smaller <code>alpha</code> corresponds to larger withdrawal rates which means that larger
+withdrawal rates will have larger smoothing effects.</p>
+
+<h2 id="parting-thoughts">Parting Thoughts</h2>
+
+<p>Albert Einstein has been attributed with the saying that “everything should be made
+as simple as possible, but not simpler”.  The super-simple virtual-buffer withdrawal
+strategy is simple and requires no bookkeeping other than checking your portfolio
+value once a year.  Is there a simpler strategy?  Yes, you could simply
+take a constant value out without checking your portfolio balance.
+But such a strategy could be risky since it ignores the possibility of a
+declining portfolio balance.</p>
+
+<p>The super-simple strategy also has flexibility which comes from the fact that
+the buffer is “virtual”.  Whether or not you keep an actual buffer is up to you.
+Generally it’s a good idea to keep a couple years or so of spending outside
+of your investments so that you know it will be there when you need it.  But this
+strategy doesn’t require you do so, it’s up to you.</p>
+
+<h3 id="related">Related</h3>
+
+<ul>
+  <li><a href="/safe-withdrawal-rates-for-vampires/">Safe Withdrawal Rates for Vampires</a></li>
+  <li><a href="/buffer-withdrawals-to-stabilize-income/">Buffer Withdrawals to Stabilize Income</a></li>
+  <li><a href="/the-30-30-withdrawal-strategy/">The 30-30 Withdrawal Strategy</a></li>
+</ul>
+
+  </article>
+
+</div>
+
+<div class="googlead">
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- Moneycle Responsive -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-1137447718577367"
+       data-ad-slot="3849810865"
+       data-ad-format="auto"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+
+<div class="comments">
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'moneycle';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>M<span class='brand-color'>o</span>neycle</li>
+          <li><a href="mailto:sir@moneycle.com">sir@moneycle.com</a></li>
+          <li>&copy; <time datetime="2016-05-30T19:50:35-06:00">2016</time>. All rights reserved.</li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          <li>
+            <a href="/feed.xml">RSS feed</a>
+          </li>
+
+          
+          <li>
+            <a href="https://twitter.com/moneymonocle">
+              <span class="icon  icon--twitter">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+                </svg>
+              </span>
+
+              <span class="username">moneymonocle</span>
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://github.com/moneycle">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">moneycle</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">Don your money monocle (top hats are optional) as we explore topics related to money, investing and early retirement.
+</p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

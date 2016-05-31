@@ -99,15 +99,17 @@ pre,
 code {
   font-size: 18px;
   border: 1px solid #e8e8e8;
-  border-radius: 3px;
+  border-radius: 6px;
   background-color: #eef; }
+
+.highlight pre {
+  border: 2px solid #a02020; }
 
 code {
   padding: 1px 5px; }
 
 pre {
-  padding: 8px 12px;
-  overflow-x: scroll; }
+  padding: 8px 12px; }
   pre > code {
     border: 0;
     padding-right: 0;
