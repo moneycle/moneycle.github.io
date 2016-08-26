@@ -6,9 +6,227 @@
 </description>
     <link>http://www.moneycle.com/</link>
     <atom:link href="http://www.moneycle.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 31 May 2016 10:46:36 -0600</pubDate>
-    <lastBuildDate>Tue, 31 May 2016 10:46:36 -0600</lastBuildDate>
+    <pubDate>Thu, 25 Aug 2016 18:19:40 -0600</pubDate>
+    <lastBuildDate>Thu, 25 Aug 2016 18:19:40 -0600</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Radioactive Half-Life of Expenses</title>
+        <description>&lt;p&gt;In the world of science, the term “half-life” is used to describe &lt;a href=&quot;https://en.wikipedia.org/wiki/Half-life&quot;&gt;“the time required
+for a quantity to reduce to half its initial value”&lt;/a&gt;.
+One common application of this concept is for radioactive decay and the half-life
+is a useful measure in science to characterize how quickly something will decay over
+time.  Probably the most common application of this concept is used in &lt;a href=&quot;https://en.wikipedia.org/wiki/Radiocarbon_dating&quot;&gt;carbon dating&lt;/a&gt; which allows scientists
+to fairly accurately estimate the age of objects containing radiocarbon.&lt;/p&gt;
+
+&lt;p&gt;It occurred to me that portfolio expenses can have a similar effect as radioactive
+decay.  Namely, the higher the expense, the faster your portfolio will reduce to
+half of the value it would have achieved without the expense.  Let’s take a look
+at the math of compounding returns to see how quickly a portfolio’s value decays
+with expenses.&lt;/p&gt;
+
+&lt;h2 id=&quot;lump-sum-investment&quot;&gt;Lump-Sum Investment&lt;/h2&gt;
+
+&lt;p&gt;Consider the case of investing a lump-sum amount.  The compounded return
+of the investment with a rate of return &lt;code&gt;r&lt;/code&gt;, after &lt;code&gt;N&lt;/code&gt; years is&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;final_value = initial_value * (1 + r)^N
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So, without any expenses eating into the return, the ratio of the final_value to
+the initial value represents how much your portfolio would grow without expenses&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;growth_without_expenses = final_value / initial_value
+                        = (1 + r)^N
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now consider a expense or expense of &lt;code&gt;e&lt;/code&gt; being subtracted off of that return every year.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;final_value = initial_value * [(1 + r)(1 - e)]^N
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now the growth is smaller,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;growth_with_expenses = final_value / initial_value
+                     = [(1 + r)(1 - e)]^N
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And to compute the half-life of these expenses, we want to know when the the growth
+with expenses is half of the growth without those expenses.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;growth_with_expenses / growth_without_expenses = 1/2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;or,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[(1 + r)(1 - e)]^N / (1 + r)^N = 0.5
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Solving for &lt;code&gt;N&lt;/code&gt; gives us the half-life as a function of expenses,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;N = log(0.5) / log(1-e)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;That’s it!  We now have an equation that directly computes how many years it takes
+for a given expense to cut your total portfolio in half.  Notice that for a lump-sum
+investment, it doesn’t matter how big your return is, it only matters what
+the expense is.&lt;/p&gt;
+
+&lt;p&gt;In the following plot I show the half-life as well as the 3/4-life and 7/8-life.
+Losing half of your portfolio is terrible, but even losing a quarter or eighth
+can be painful, especially when we’re talking about a portfolio that might
+need to grow to over $1 million to support a comfortable retirement.  Do you want
+to pay $125,000 (1/8 of $1M) or more in expenses over the course of your investment life?&lt;/p&gt;
+
+&lt;div id=&quot;halfLife-graph&quot; class=&quot;chart&quot;&gt;
+    &lt;svg&gt;&lt;/svg&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+  .chart {
+    clear: both;
+  }
+  .chart, svg {
+    height: 360px;
+  }
+&lt;/style&gt;
+
+&lt;script&gt;
+  var expenseInc = 0.0005;
+  var maxExpense = 0.03;
+  var halfLifeXY = [];
+  var quarterLifeXY = [];
+  var eighthLifeXY = [];
+  for(var w = expenseInc; w &lt;= maxExpense; w += expenseInc) {
+    w = Math.round(w*10000)/10000;
+    halfLifeXY.push([w, Math.log(0.5)/Math.log(1-w)]);
+    quarterLifeXY.push([w, Math.log(0.75)/Math.log(1-w)]);
+    eighthLifeXY.push([w, Math.log(0.875)/Math.log(1-w)]);
+  }
+
+  var halfLifeData = [
+  {
+    name: &#39;Half-Life&#39;,
+    xy: halfLifeXY,
+    color: &#39;#aa2020&#39;
+  },
+  {
+    name: &#39;3/4-Life&#39;,
+    xy: quarterLifeXY,
+    color: &#39;#2020aa&#39;
+  },
+  {
+    name: &#39;7/8-Life&#39;,
+    xy: eighthLifeXY,
+    color: &#39;#20aa20&#39;
+  },
+  ];
+
+  function newChart(data, selector, interactive) {
+
+    var aChart = nv.models.lineChart()
+                  .interactive(interactive)
+                  .useInteractiveGuideline(interactive)
+                  .showLegend(true)
+                  .showYAxis(true)
+                  .showXAxis(true);
+
+    aChart.xAxis
+        .axisLabel(&#39;Expense (%)&#39;)
+        .tickFormat(d3.format(&#39;.3p&#39;))
+        .showMaxMin(false);
+
+    aChart.yAxis     //Chart y-axis settings
+        .axisLabel(&#39;Half-Life (years)&#39;)
+        .tickFormat(d3.format(&#39;.1f&#39;))
+        .showMaxMin(false);
+
+    aChart.xDomain([0.00, maxExpense]);
+    aChart.yDomain([0, 105]);
+
+    var chartData = chartifyData(data);
+
+    d3.select(selector)
+        .datum(chartData)
+        .call(aChart);
+
+    //Update the chart when window resizes.
+    nv.utils.windowResize(function() {
+      aChart.update();
+    });
+
+    return aChart;
+  }
+
+  function chartifyData(data) {
+    //Line chart data should be sent as an array of series objects.
+    return data.map(function(obj) {
+      return {
+        values: transformXY(obj.xy),
+        key: obj.name,
+        color: obj.color,
+        disabled: obj.disabled ? true : false
+      }
+    });
+  }
+
+  function transformXY(data) {
+    var result = [];
+    for (i = 0; i &lt; data.length; i++) {
+      var point = data[i];
+      result.push({x: point[0], y: point[1]});
+    }
+    return result;
+  }
+
+  nv.addGraph(newChart(halfLifeData, &#39;#halfLife-graph svg&#39;, true));
+
+&lt;/script&gt;
+
+&lt;p&gt;Let me walk you through some key points from the graph above.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;You want your half-life number to be very large which means you want to be as
+  close to zero expenses as possible.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.forbes.com/sites/rickferri/2013/05/27/the-heavy-toll-of-investment-expenses/#3875f0443ebc&quot;&gt;According to Morningstar&lt;/a&gt;, in 2013 the “typical” managed fund of stocks has a expense of 1.2%.  Such a expense would eat up
+  half of your gains in 57 years which seems like a long time.  But you would lose
+  an eighth of your portfolio value in just 11 years.&lt;/li&gt;
+  &lt;li&gt;It gets even worse if you consider the “all-in” costs of actively managed funds.
+  &lt;a href=&quot;http://www.cfapubs.org/doi/sum/10.2469/faj.v70.n1.1&quot;&gt;John Bogle suggests&lt;/a&gt; that there are
+  many unaccounted costs in an actively managed fund that can increase the actual
+  “all-in” expense to something more like 2.21%.  The main unaccounted for costs are
+  “transaction costs, cash drag, and sales loads”.  These extra costs are hard to
+  quantify but they effectively can reduce your expected return beyond the published
+  expenses.
+  In any case, if you believe Bogle’s hypothesis, then an actively managed fund with
+  a 2.2% expense has a half-life of only 31 years and a 7/8-life of just 6 years!
+  That means that you could be losing as much as an eighth of your portfolio every
+  6 years if you invest in actively-managed funds.&lt;/li&gt;
+  &lt;li&gt;Contrast this with a leading low-cost index fund from Vanguard like the &lt;a href=&quot;https://personal.vanguard.com/us/funds/snapshot?FundId=0585&amp;amp;FundIntExt=INT&quot;&gt;Total Stock Market Index&lt;/a&gt; fund (VTSAX)
+  which has an expense ratio of 0.05%.  This expense would take 1385 years to lose half
+  it’s value or 267 years to lose an eighth.  To put it another way, after 40 years
+  an expense of 0.05% would only take 2.0% off of your portfolio value which is less
+  than some funds would cost in a single year.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;By now, just about everybody knows that low-cost funds are a great way to invest and maximize
+returns.
+Putting these expenses in terms of how they eat away at your portfolio can be eye-opening.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 25 Aug 2016 00:00:00 -0600</pubDate>
+        
+          <link>http://www.moneycle.com/radioactive-half-life-of-expenses/</link>
+        
+        <guid isPermaLink="true">http://www.moneycle.com/radioactive-half-life-of-expenses/</guid>
+        
+        <category>investing</category>
+        
+        <category>spending</category>
+        
+        <category>other</category>
+        
+        
+      </item>
     
       <item>
         <title>Super-Simple Virtual-Buffer Withdrawal Strategy</title>
@@ -2313,309 +2531,6 @@ benefit will be.&lt;/p&gt;
         <category>spending</category>
         
         <category>other</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Building a Bridge to Social Security</title>
-        <description>&lt;p&gt;If you read any early &lt;a href=&quot;http://www.mrmoneymustache.com/2012/05/29/how-much-do-i-need-for-retirement/&quot;&gt;retirement blogs&lt;/a&gt;,
-you may have encountered a rule of thumb that says something like
-“you need to save 25 times your annual expenses in order to retire”.  That 25
-number, the &lt;em&gt;expense multiplier&lt;/em&gt;, comes from a 4% withdrawal assumption. So
-if you withdraw 4% from your portfolio to cover your expenses, that means your
-portfolio must be at least as big as the inverse of 4% or 25.
-Because you only retire once, I prefer to be a little more conservative
-and use an expense multiplier of 30 which corresponds to a 3.33% withdrawal rate.&lt;/p&gt;
-
-&lt;p&gt;While this kind of rule is a great rule of thumb for giving people an idea of
-how much money they will need to save, it tends to ignore the income that
-you will earn from a future income stream such as social security or a pension&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.
-In the early retirement circles the effects of social security tend to be ignored
-perhaps because it seems like far-off and insignificant event.  But the effects
-of that extra income increase over time so your financial independence could be
-closer than you previously thought.&lt;/p&gt;
-
-&lt;h2 id=&quot;simple-example&quot;&gt;Simple Example&lt;/h2&gt;
-
-&lt;p&gt;To illustrate the effects with an extreme example, consider the case of somebody
-named Woodrow who is 69 years old and has expenses of $40,000/year. Furthermore,
-if Woodrow expects to receive $40,000/year from social security at age 70&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;,
-then he will only need to have savings of $40,000 to be able to retire right now.
-In this extreme example, Woodrow’s expense multiplier is 1 because he only needs
-to have saved 1 times his annual expenses in order to retire now.
-Think of needed savings as a 1-year bridge that allow Woodrow to live
-comfortably until his full social security benefits kick in.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/ss-bridge-short.png&quot; alt=&quot;Retiring a little early&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;In the illustration above, the green area represents the funds that are
-needed to fill the gap until social security kicks in.&lt;/p&gt;
-
-&lt;p&gt;In scenarios like this, where your future social security payments will cover your expenses,
-it’s fairly easy to extrapolate this simple example to longer time periods.
-In such scenarios you only need to save enough money to get to the age when
-you will begin collecting social security.
-So if Woodrow had been age 60 in the above example, he would need to have savings
-of &lt;code&gt;10*$50,000&lt;/code&gt; or $500,000 in order to cover his expenses for the 10 years before
-he received social security.  His expense multiplier is the number of
-years until he begins collecting social security.&lt;/p&gt;
-
-&lt;p&gt;Also of note, if Woodrow is 30 or more years from receiving social security,
-he doesn’t necessarily need a portfolio bigger than 30 times his expenses because,
-theoretically he should be able to live off of the 3.33% withdrawal indefinitely
-(or whatever you consider to be a safe withdrawal rate).&lt;/p&gt;
-
-&lt;h2 id=&quot;early-retirement-example&quot;&gt;Early Retirement Example&lt;/h2&gt;
-
-&lt;p&gt;The above example is interesting and illustrates how accounting for
-social security can dramatically reduce a person’s expense multiplier.
-But early retirees are more likely to be in a situation where the social security
-amount will not cover all of their expenses in the future because they may not
-have contributed a full 35 years into the system.  In this case, a social security
-bridge may need to be supplemented by additional withdrawals to meet spending needs.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/ss-bridge-medium.png&quot; alt=&quot;Retiring early&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Let’s consider another person named Priscilla who is aged 55 and estimates that
-she will receive $30k/year (in today’s dollars) from social security if she waits
-until age 70.
-But Priscilla’s expenses are $40k/year.  To bridge the 15-year social security gap,
-Priscilla needs 15 times the $30k, or $450k to get her to the level of income
-that social security will provide.
-Then she will need an additional piece of her portfolio to get her the
-extra $10k/year needed to cover her expenses.  Using a 3.33% withdrawal rate
-means Priscilla will need an additional &lt;code&gt;30*$10k&lt;/code&gt; or $300k.&lt;/p&gt;
-
-&lt;p&gt;In Priscilla’s example she would need $750k to retire at age 55 with $40k in
-expenses.  This means that her expense multiplier is reduced from 30
-(inverse of 3.33%) to &lt;code&gt;750k/40k&lt;/code&gt; or 18.75.
-To put it another way, without considering social security Priscilla might have
-concluded that she needed to save &lt;code&gt;30*40k&lt;/code&gt; or $1.2m, which is 60% more than the $750k
-she actually needs when taking social security into account.&lt;/p&gt;
-
-&lt;h2 id=&quot;very-early-retirement-example&quot;&gt;Very Early Retirement Example&lt;/h2&gt;
-
-&lt;p&gt;Retiring very early can put you into a situation where building a social
-security bridge doesn’t make sense initially.  For example, if you retire at age 30, then
-building a bridge for 40 years means you might start withdrawing funds at a 2.5%
-rate which is likely more conservative than necessary.
-To get around this problem, you can initially take withdrawals at your preferred
-safe withdrawal rate until you hit the age of &lt;code&gt;70-1/withdrawal_rate&lt;/code&gt;.
-Then you can implement a social security bridge from that age forward.
-This is illustrated below where initially all income is from safe withdrawals,
-then a social security bridge kicks in later.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/ss-bridge-long.png&quot; alt=&quot;Retiring Even Earlier&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Consider the case of Gunther who is retiring at age 35.  Good for you Gunther!
-Because Gunther has contributed into social security for much less time than the
-maximum of 35 years&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;, his estimated social security payments at age 70 will only
-be $10k.  Because his social security payments are so far in the future, he needs to have
-an initial portfolio equal to his expenses divided by his withdrawal rate.&lt;/p&gt;
-
-&lt;p&gt;So if Gunther needs $40k of income and wants to use a 3.33% withdrawal rate,
-he should start with a portfolio of &lt;code&gt;30*$40k&lt;/code&gt; or $1.2m.  Then, at age 40, he
-can break his portfolio into two pieces.  One piece, $300k (or higher depending
-on inflation and social security adjustments), will be used as
-a social security bridge.  The remaining part of his portfolio can continue
-at the safe withdrawal rate.&lt;/p&gt;
-
-&lt;p&gt;Why would Gunther do use a social security brige at all?  The funds
-in the social security bridge piece of his portfolio will be withdrawn at ever
-increasing withdrawal rate until age 70. This means that Gunther’s overall
-withdrawal rate that is effectively higher than 3.33% and increases as he
-approaches age 70 when social security will takes over.  In other words, he
-can safely increase his income between ages 40 and 70 beyond what he would have
-received if he had maintained a 3.33% withdrawal rate.&lt;/p&gt;
-
-&lt;p&gt;One thing that very early retirees should be aware of is that you need to
-contribute into the social security system at least 40 quarters (10 years)
-in order to be eligible for social security payments.  So if you’re an extreme
-saver and can retire in 9 years and 11 months, it would probably be a good idea
-to work that extra month to become eligible for social security benefits later
-in life.  If you’re lucky enough to be in this situation, check the social
-&lt;a href=&quot;http://www.ssa.gov/OACT/COLA/QC.html&quot;&gt;security site&lt;/a&gt; to make sure you don’t
-leave yourself short.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-bridge-fund&quot;&gt;The Bridge Fund&lt;/h2&gt;
-
-&lt;p&gt;How do you build a social security bridge?  The trick is to allocate a chunk
-of money that will pay you an income equal to what you expect to receive from
-social security in the future.  Fortunately, the social security administration
-reports your expected benefits in today’s dollars and adjusts them up every year
-based on current inflation.  This makes it easier to project how much money
-you need now because the calculations are done in current dollars.&lt;/p&gt;
-
-&lt;p&gt;There are several ways you could build a bridge fund.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Bond ladder&lt;/strong&gt; - you could build a bond ladder for the bridge period.  This might
- work well for somebody between 65 and 70 who wants to delay taking social security for
- a few years.  But if you are more than 5 years from taking social security, you
- might want to take a little more risk so that you can keep up with inflation.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Single Premium Immediate Annuities&lt;/strong&gt; - an insurance company would be happy to
-sell you a SPIA that is “term certain”.  For example, if you are 60, you could
-buy a 10-year term-certain immediate annuity that pays you a fixed income for the next 10
-years.  You could also buy one with inflation protection but that will cost a little more.
-While I think &lt;strong&gt;lifetime&lt;/strong&gt; annuities are a really good option to protect against
-longevity risk (outliving your money), a term-certain annuity doesn’t have an
-actuarial component associated with it so you might be able to do better elsewhere.
-But there’s something to be said for a guaranteed stream of income so perhaps this
-option will appeal to you.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Income Replacement Funds&lt;/strong&gt; - Fidelity offers a particular type of fund called
-&lt;a href=&quot;http://moneyover55.about.com/od/investmentincome/a/incomereplacement.htm&quot;&gt;Income Replacement Funds&lt;/a&gt;
-that are designed to distribute your invested funds over a particular period of time.
-One of the stated purposes of these funds is as a bridge to a future income stream
-such as a pension or social security.  The funds do this by investing in a mix of stocks,
-bonds, and cash equivalents and become more conservative as the they nears their
-end date.  Think of this as a period-certain annuity with more risk and possibly more return.
-This might be a good choice if you can handle a little more risk and like something simple.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;DIY Bridge Fund&lt;/strong&gt; - You could build your own bridge fund using low-cost index funds.
-In a future article I will propose a way to build your own bridge fund using a simple
-allocation of low-cost funds.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;math&quot;&gt;Math&lt;/h2&gt;
-
-&lt;p&gt;Now is the time for the geeky part of the article.  Let’s try to develop an
-equation to describe the effective expense multiplier that takes future social
-security income into account.&lt;/p&gt;
-
-&lt;p&gt;The equation for your future income can be written as,&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-income_total = income_ss + porfolio_remaining*withdrawal_rate
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;If you consider that your future portfolio will be reduced by the amount of
-income that was used as a social security bridge, then the amount of income you
-have left to apply your withdrawal rate to is approximately,&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-porfolio_remaining = portfolio_current - years_until_ss * income_ss
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;The 2nd term of the above equation represents an approximation of how much
-your portfolio will be reduced by building your social security bridge.
-This will vary depending on how you build that bridge but this is a good
-ballpark estimate.&lt;/p&gt;
-
-&lt;p&gt;Ultimately we’re interested in determining the expense multiplier needed for
-retirement.  In other words, how big would my portfolio need to be in
-order to be retire today.  Defining the effective expense multiplier as,&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-multiplier_effective = portfolio_current / income_total
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Further, let’s define the safe withdrawal rate multiplier as just&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-multiplier_safe = 1 / withdrawal_safe
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Plugging all those equations in and solving for &lt;code&gt;multiplier_effective&lt;/code&gt;
-gives:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-multiplier_effective = multiplier_safe - (income_ss/income_total) * (multiplier_safe - years_until_ss)
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Notice that the closer you are to collecting social security, the smaller your
-effective expense multiplier is.  So each year you do this calculation will bring you
-closer to retirement even if your portfolio doesn’t grow.  The amount you will
-reduce your effective expense multiplier each year is the ratio of your social security
-income to your total needed income.&lt;/p&gt;
-
-&lt;p&gt;Let’s try applying this equation to Woodrow’s example where he will retire in 1 years:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-multiplier_effective = 30 - (50k/50k) * (30 - 1) = 30 - 29 = 1
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Which is exactly as we expect.  In fact, in cases like Woodrow’s, where the income
-from social security equals (or exceeds) the total income needed, then the equation
-for the effective expense multiplier reduces to:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-multiplier_effective = multiplier_safe - 1 * (multiplier_safe - years_until_ss)
-                     = years_until_ss
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Now try Priscilla’s example,&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-multiplier_effective = 30 - (30k/40k)*(30-15) = 30 - 11.25 = 18.75
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Priscilla’s effective withdrawal rate in the first year would be approximately
-&lt;code&gt;1/18.75&lt;/code&gt; or 5.33%. You may be thinking that a withdrawal of 5.33% is too high
-but remember, she is still withdrawing a conservative 3.33% on the funds outside
-of the bridge fund.&lt;/p&gt;
-
-&lt;p&gt;Also, if Priscilla waits one more year to retire, then her effective expense multiplier
-would go down by (30k/40k) or 0.75, so if she waits until age 56 her expense multiplier
-would be 18.0 so she could be closer to retirement even if her portfolio didn’t
-grow at all.&lt;/p&gt;
-
-&lt;p&gt;Some people would have you believe that social security will be greatly diminished
-in the future.  Whether or not that’s true, time will tell.  If you are worried about
-this possibility then simply adjust downward your social security estimate in the
-above equations to a level you feel comfortable with&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
-
-&lt;p&gt;The inverse of the withdrawal rate is often used as an expense multiplier to figure
-out how big a person’s portfolio needs to be to cover retirement expenses.
-Oftentimes this is stated in terms of how big a portfolio needs to be in order
-to cover expenses &lt;em&gt;above&lt;/em&gt; social security income.  It’s common for early retirees
-to assume that this expense multiplier also applies to their total income but it doesn’t
-account for future income streams like social security.&lt;/p&gt;
-
-&lt;p&gt;By considering how much your future social security income will affect your expense
-multiplier, you may find that you can retire earlier than you previously thought.
-And every year you wait, your expense multiplier goes down so you can move closer to
-achieving retirement even when your portfolio stagnates.&lt;/p&gt;
-
-&lt;h3 id=&quot;related&quot;&gt;Related&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/estimating-your-social-security-benefit-for-an-early-retirement/&quot;&gt;Estimating Your Social Security Benefit for an Early Retirement&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;Most of this article refers to social security for brevity’s sake but the same principles apply equally to other future income streams such as pensions. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;For most people, delaying social security benefits to age 70 is the best decision, so all examples in this article assume that social security benefits will start at that age. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:3&quot;&gt;
-      &lt;p&gt;The Social Security Administration uses the maximum 35 years of earnings over your entire working career in their formula to determine your benefits. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:4&quot;&gt;
-      &lt;p&gt;Yes, I ended that sentence with a preposition.  And I also think that social security will be available when I’m eligible for it.  That’s how crazy I am. &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Thu, 30 Jul 2015 00:00:00 -0600</pubDate>
-        
-          <link>http://www.moneycle.com/building-a-bridge-to-social-security/</link>
-        
-        <guid isPermaLink="true">http://www.moneycle.com/building-a-bridge-to-social-security/</guid>
-        
-        <category>spending</category>
         
         
       </item>
