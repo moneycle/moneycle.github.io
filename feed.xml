@@ -6,9 +6,499 @@
 </description>
     <link>http://www.moneycle.com/</link>
     <atom:link href="http://www.moneycle.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 25 Aug 2016 18:19:40 -0600</pubDate>
-    <lastBuildDate>Thu, 25 Aug 2016 18:19:40 -0600</lastBuildDate>
+    <pubDate>Wed, 19 Oct 2016 18:50:30 -0600</pubDate>
+    <lastBuildDate>Wed, 19 Oct 2016 18:50:30 -0600</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>To Roth or Not to Roth? - Part 1, The Ideal World</title>
+        <description>&lt;style&gt;
+  .center {
+    text-align: center;
+  }
+  .funnel {
+    float: left;
+    margin: 0.4em 1.5em 0.8em 0em;
+  }
+&lt;/style&gt;
+
+&lt;p&gt;Most often when you see an article discussing whether to choose a Roth
+over a Traditional option (401k/403b/IRA), the decision is stated as a comparison
+between current and future tax rates.  While that’s mostly correct advice,
+it fails to recognize that future withdrawals tend to occur across &lt;em&gt;multiple&lt;/em&gt;
+tax brackets while current contributions tend to be in a single tax bracket.
+I first became aware of the concept of filling in lower tax brackets from an
+&lt;a href=&quot;https://thefinancebuff.com/case-against-roth-401k.html&quot;&gt;excellent piece written by The Finance Buff&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In this first of two articles, I take a look at an ideal-world example that
+explores the concept of how much should go towards a Roth versus a Traditional
+option.  In the second article, I will take a look at some more real-world
+cases that should give more concrete advice on how to determine how much to
+contribute to each option.&lt;/p&gt;
+
+&lt;h2 id=&quot;basics-of-roth-vs-traditional&quot;&gt;Basics of Roth vs Traditional&lt;/h2&gt;
+
+&lt;p&gt;First, let’s discuss the basic differences between the Roth and Traditional
+options.  The most important difference between the two options is &lt;strong&gt;when&lt;/strong&gt; you are taxed.
+Roth options are taxed now in that you fund them with after-tax dollars and you are not
+taxed again when you withdrawal the funds.  Traditional options
+are taxed later, so you deduct your contributions from your taxes now and pay
+income taxes later when you make withdrawals.&lt;/p&gt;
+
+&lt;p&gt;If you want to maximize how much money you keep, the basic tradeoff becomes
+one of shifting the taxes to the point in time when you have the lower tax rate.&lt;/p&gt;
+
+&lt;p&gt;When the tax rates are equal now and in the future, then mathematically the amount
+you end up with is identical after the taxes are accounted for.  However, in this
+case I recommend using the Roth option primarily because the Roth has fewer
+requirements on the distribution of funds.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-tradeoff&quot;&gt;The Tradeoff&lt;/h2&gt;
+
+&lt;p&gt;When deciding how much money to allocate to a Roth, the basic goal is to allocate
+funds to the Roth that will be taxed at the same rate or higher in
+the future.  Conversely, all funds that will fall into lower tax brackets in the
+future should be allocated to the Traditional option now.
+This last part is where most people fail to consider the whole picture.
+Just because you may be in the same or even higher tax brackets
+in the future does NOT mean that some of the funds won’t be taxed at a lower rate.&lt;/p&gt;
+
+&lt;h2 id=&quot;filling-up-the-tax-brackets&quot;&gt;Filling Up The Tax Brackets&lt;/h2&gt;
+
+&lt;p&gt;When you make a contribution to a Traditional IRA/401k/403b today,
+in most cases all of that contribution will be in your current income tax bracket.
+Sometimes you might also cross over to the next lower tax-bracket when making a
+contribution if you are near a tax boundary when you begin your contributions.&lt;/p&gt;
+
+&lt;p&gt;But in the future, when you start making withdrawals from your Traditional IRA,
+your withdrawals start filling in the tax brackets from the bottom up.
+I like to visualize this as pouring money into the income “funnel” as depicted below:&lt;/p&gt;
+
+&lt;div class=&quot;center&quot;&gt;
+  &lt;p&gt;&lt;img src=&quot;/images/roth_or_not-funnel.png&quot; alt=&quot;Money Funnel&quot; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;In 2016, for a married couple filing jointly, the personal exemption plus standard
+deduction is $20,700 so that amount is taxed at 0% (which I think of as the 0% tax
+bracket).  Then the 10% bracket swallows up the next $18,550 of income, and the
+15% bracket gets the next $56,750, and so on.  I have made the tax brackets to
+appear as funnel-shaped because the brackets get bigger as income increases.&lt;/p&gt;
+
+&lt;p&gt;Of course, most people will have other sources of income filling in the lower
+tax brackets, and we will consider that case too.
+But the key point is that future withdrawals fill in tax
+brackets from the bottom up before reaching today’s marginal tax bracket.&lt;/p&gt;
+
+&lt;p&gt;So the goal of an investor should be to &lt;strong&gt;plan for today’s Traditional
+contributions to fill up tomorrow’s lower tax brackets&lt;/strong&gt;, then
+&lt;strong&gt;invest the remainder in the Roth option&lt;/strong&gt;.
+That sounds easy on the surface, but the hard part is figuring out how
+to translate that statement into actionable numbers.&lt;/p&gt;
+
+&lt;h2 id=&quot;saving-within-a-single-tax-bracket&quot;&gt;Saving within a Single Tax Bracket&lt;/h2&gt;
+
+&lt;div class=&quot;funnel&quot;&gt;
+  &lt;p&gt;&lt;img src=&quot;/images/roth_or_not-120-16.png&quot; alt=&quot;Earn 120, Save 16&quot; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Let’s start by looking at a typical example where somebody has all of their
+savings occur within a single marginal tax bracket.
+Consider a married couple named Jon &amp;amp; Sally that makes a total income of $120,000
+and saves a total of $16,000 to their retirement plans.  If that money
+is saved in a Traditional retirement plan then they would have a
+gross income (AGI) of $104,000.
+With the standard deduction, the low-end of the 25% tax bracket occurs at $96,000
+of gross income so the $104,000 puts them $8,000 above the lower threshold of
+the 25% tax bracket.&lt;/p&gt;
+
+&lt;p&gt;Let’s further assume that they are saving all they can afford to and that the
+$104,000 of income represents their current AND future day-to-day expenses.  This is
+a bit of a stretch, but I would argue that most people’s spending habits don’t
+change all that much when they transition into retirement.  You will probably be
+spending more in some areas in less in others but basically your spending
+profile won’t change by a drastic amount in retirement.
+Mostly I’m just trying to get a baseline equation, so stick with me for now.
+If that $104,000 of income represents what they need in the future (albeit in
+today’s dollars),
+that suggests that in the future their “livable income” would be roughly $8000
+into the 25% tax bracket.  In the extreme case where this couple has no other sources of
+retirement income, that would mean they would need about 96k/104k (92%) of their
+withdrawals to occur in tax brackets below 25% and the remaining 8k/104k (8%)
+would come out in the 25% tax bracket.&lt;/p&gt;
+
+&lt;p&gt;If you knew that your future funds would come out in the same tax bracket, then
+those funds might as well go into a Roth account today.  So in this example,
+the couple could contribute 8% to their Roth.  Mathematically,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;percent_to_roth = (livable_income - tax_threshold) / livable_income
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Assigning variables,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;L = livable_income = current_income - max_savings
+T = tax_threshold
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;then,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;percent_to_roth = (L - T) / L
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;other-income-sources&quot;&gt;Other Income sources&lt;/h2&gt;
+
+&lt;p&gt;The one assumption that is hard to ignore is that the couple has no other
+income sources in retirement.  But almost everybody has at least one other
+source of income such as Social Security or pensions, and many people will
+have multiple sources of income.  So let’s adjust the math to account for that.&lt;/p&gt;
+
+&lt;div class=&quot;funnel&quot;&gt;
+  &lt;p&gt;&lt;img src=&quot;/images/roth_or_not-120-16-36.png&quot; alt=&quot;Earn 120, Save 16, Base 36&quot; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If Jon &amp;amp; Sally expect to receive other income in the form of social security
+that will total $36,000/year in today’s dollars, then their savings don’t have
+to provide the full $104,000 of income.  Their savings only have to fill the
+funnel up between $36,000 and $104,000, which is a difference of $68,000.
+So when they convert their nest egg to future
+income, 8k/68k or about 12% of that future income is in the same tax bracket
+they are saving in today.  That suggests that they
+could save 12% today in a Roth because it would likely be in the same tax
+bracket if deferred to the future.&lt;/p&gt;
+
+&lt;p&gt;Modifying the first equation,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;percent_to_roth = (L - T) / (L - B)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;where,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;B = base income from &quot;other&quot; sources (in today&#39;s dollars)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Knowing what your future base income from “other” sources can be a difficult
+thing to figure out.  But if you’re only expecting Social Security, I suggest
+you start off with about 40% of your current income.  This is a &lt;strong&gt;very rough&lt;/strong&gt;
+estimate based on the idea that, on average, people receive around 40% of their
+income back in social security.  But you really should take a look at your
+actual social security (or equivalent) statements to get an idea of how much
+you’ll really get.&lt;/p&gt;
+
+&lt;p&gt;At what point does 100% of your total savings go towards a Roth?  Mathematically,
+if &lt;code&gt;(L-T) &amp;gt; (L-B)&lt;/code&gt; the equation goes above 100%.  This simplifies to the
+comparison of &lt;code&gt;B &amp;gt; T&lt;/code&gt;.  So you should contribute everything to Roth when your
+“base income” sources equal or exceed
+your current lower tax threshold.  That makes sense because it means that
+if you know that you will be at or above the current tax rate in the future
+you might as well contribute everything to Roth today.&lt;/p&gt;
+
+&lt;p&gt;Let’s just modify the equation slightly to account for this scenario,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;percent_to_roth = min((L - T) / (L - B), 100%)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;saving-across-multiple-tax-brackets&quot;&gt;Saving Across Multiple Tax Brackets&lt;/h2&gt;
+
+&lt;div class=&quot;funnel&quot;&gt;
+  &lt;p&gt;&lt;img src=&quot;/images/roth_or_not-120-30-36.png&quot; alt=&quot;Earn 120, Save 30, Base 36&quot; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now let’s consider the case where Jon &amp;amp; Sally, are able to save enough to cross
+over into a lower tax bracket if the entire savings were deductible.  So consider
+with the same $120,000 of income and a savings rate of $30,000 per year.
+This suggests that they are able to live comfortably off of the remaining $90,000
+of income.&lt;/p&gt;
+
+&lt;p&gt;With the bottom of the 25% tax bracket is at $96,000, Jon &amp;amp; Sally would then
+be descending into the 15% marginal tax bracket.  Since we’re assuming that
+the $90,000 of income represents their future income needs and $90,000 of income
+would be marginally taxed at 15%, everything they save in the 25% tax bracket
+should simply go to the Traditional savings option.  Then they would apply the
+equation from earlier but only to the portion in the 15% tax bracket.&lt;/p&gt;
+
+&lt;p&gt;So the first $24,000 of savings goes into Traditional.  The remaining $6000 of
+savings would follow the previous equation, &lt;code&gt;(90000-39250)/(90000-36000)&lt;/code&gt; or
+94% of $6000, that goes to Roth.  Notice that I’m using $39,250 as the low end
+of the tax bracket because that’s where the 15% tax bracket bottoms out (for a
+married couple using standard deductions).  Finishing the
+math for this example, 94% of $6000 is &lt;code&gt;0.94*6000/30000&lt;/code&gt; or about 19% of the
+overall savings that goes to Roth.&lt;/p&gt;
+
+&lt;p&gt;Mathematically, we can express the overall equation
+for the dual-tax bracket case like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;percent_to_roth = everything in lowest tax bracket * previous equation
+                = min((T1-L) / S, 100%) * min((L - T0) / (L - B), 100%)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;where,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;S = total amount saved
+L = livable_income
+T0 = tax bracket threshold below L
+T1 = tax bracket threshold above L
+B = future base income
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here’s a plot of what Roth percentage looks like versus income levels
+for a married couple&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; in 2016 with a savings rate of
+&lt;span class=&quot;savings-rate&quot;&gt;12%&lt;/span&gt; and a future
+base income equal to &lt;span class=&quot;base-percent&quot;&gt;40%&lt;/span&gt; of their current income
+(move sliders below the graph to change percentages).&lt;/p&gt;
+
+&lt;div id=&quot;percentRoth-graph&quot; class=&quot;chart&quot;&gt;
+    &lt;svg&gt;&lt;/svg&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Savings Rate as Percentage of Income (&lt;span class=&quot;savings-rate&quot;&gt;&lt;/span&gt;):&lt;/p&gt;
+
+&lt;div id=&quot;savings-slider&quot; class=&quot;slider&quot; align=&quot;center&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Base Income as Percentage of Income (&lt;span class=&quot;base-percent&quot;&gt;&lt;/span&gt;):&lt;/p&gt;
+
+&lt;div id=&quot;base-slider&quot; class=&quot;slider&quot; align=&quot;center&quot;&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+  .chart {
+    clear: both;
+  }
+  .chart, svg {
+    height: 360px;
+  }
+  .slider {
+    width: 90%;
+  }
+&lt;/style&gt;
+
+&lt;script&gt;
+  var salaryInc = 1000;
+  var maxsalary = 500000;
+  var deduction = 20700;
+  var basePercent = 0.4;
+  var savePercent = 0.12;
+
+  var taxLevels = [0, deduction, 18550+deduction, 75300+deduction,
+    151900+deduction, 231450 + deduction, 413350+deduction, 466950 + deduction, maxsalary*2]
+  var taxBrackets = [0, 0.1, 0.15, 0.25, 0.28, 0.33, 0.35, 0.396]
+
+  function taxBracket(income) {
+    var i = 1;
+    while (income &gt;= taxLevels[i]) {
+      i++
+    }
+    return taxBrackets[i-1];
+  }
+
+  function rothPercent(savePercent) {
+    var percentRoth = [];
+    tax0 = 0;
+    tax1 = 1;
+    for(var salary = salaryInc; salary &lt;= maxsalary; salary += salaryInc) {
+      var savings = salary*savePercent;
+      var x = salary - savings;
+      var base = salary*basePercent;
+      var savings = salary*savePercent;
+      if (x &gt; taxLevels[tax1]) {
+        tax0++;
+        tax1++;
+      }
+      percent = Math.min((taxLevels[tax1]-x) / savings, 1.0) *
+        (base &lt; x ? Math.min((x - taxLevels[tax0]) / (x - base), 1.0) : 1.0);
+
+      // max allowed with catchup
+      if (savings &gt; 48000) {
+        percent = Math.min(percent*savings / 48000, 1.0);
+      }
+
+      percentRoth.push([salary, percent]);
+    }
+    return percentRoth;
+  }
+
+  function updateData() {
+    var percentRothXY = rothPercent(savePercent);
+    var data = [
+    {
+      name: &#39;Percent to Roth&#39;,
+      xy: percentRothXY,
+      color: &#39;#aa2020&#39;
+    },
+    ];
+    d3.selectAll(&quot;.savings-rate&quot;).text(&#39;&#39; + Math.round(savePercent*100) + &#39;%&#39;)
+    d3.selectAll(&quot;.base-percent&quot;).text(&#39;&#39; + Math.round(basePercent*100) + &#39;%&#39;)
+    return d3.select(&#39;#percentRoth-graph svg&#39;).datum(chartifyData(data));
+  }
+  var percentRothData = updateData();
+
+  function newChart(chartData, interactive) {
+
+    var aChart = nv.models.lineChart()
+                  .interactive(interactive)
+                  .useInteractiveGuideline(interactive)
+                  .showLegend(true)
+                  .showYAxis(true)
+                  .showXAxis(true);
+
+    aChart.xAxis
+        .axisLabel(&#39;Total Income ($)&#39;)
+        .tickFormat(d3.format(&#39;$f&#39;))
+        .showMaxMin(false);
+    aChart.xAxis.scale(d3.scale.log());
+
+    aChart.yAxis     //Chart y-axis settings
+        .axisLabel(&#39;Percent of Qualified Savings to Roth&#39;)
+        .tickFormat(d3.format(&#39;.0%&#39;))
+        .showMaxMin(false);
+
+    aChart.xDomain([0.00, maxsalary]);
+    aChart.yDomain([0, 1]);
+
+    chartData.call(aChart);
+
+    //Update the chart when window resizes.
+    nv.utils.windowResize(function() {
+      aChart.update();
+    });
+
+    aChart.interactiveLayer.tooltip.contentGenerator(function (d) {
+      var income = d.value;
+      var percentToRoth = d.series[0].value;
+      var savings = income*savePercent;
+      var maxQual = Math.min(48000, savings);
+
+      var html = &quot;Current Income: &lt;b&gt;&quot; + d3.format(&quot;$f&quot;)(income) + &quot;&lt;/b&gt;&lt;br/&gt;&quot;;
+      html += &quot;Tax Bracket: &lt;b&gt;&quot; + d3.format(&quot;.3p&quot;)(taxBracket(income)) + &quot;&lt;/b&gt;&lt;br/&gt;&quot;;
+      html += &quot;Future Base Income: &lt;b&gt;&quot; + d3.format(&quot;$f&quot;)(income*basePercent) + &quot;&lt;/b&gt;&lt;br/&gt;&quot;;
+      html += &quot;Savings Rate: &lt;b&gt;&quot; + d3.format(&quot;.2p&quot;)(savePercent) + &quot;&lt;/b&gt;&lt;br/&gt;&quot;;
+      html += &quot;Savings Amount: &lt;b&gt;&quot; + d3.format(&quot;$f&quot;)(savings) + &quot;&lt;/b&gt;&lt;br/&gt;&quot;;
+      html += &quot;Qualified Savings: &lt;b&gt;&quot; + d3.format(&quot;$f&quot;)(maxQual) + &quot;&lt;/b&gt;&lt;br/&gt;&quot;;
+      html += &quot;Percent to Roth: &lt;b&gt;&quot; + d3.format(&quot;.2p&quot;)(percentToRoth) + &quot;&lt;/b&gt;&lt;br/&gt;&quot;;
+      html += &quot;Amount to Roth: &lt;b&gt;&quot; + d3.format(&quot;$f&quot;)(maxQual * percentToRoth) + &quot;&lt;/b&gt;&lt;br/&gt;&quot;;
+
+      return html;
+    });
+
+    return aChart;
+  }
+
+  function chartifyData(data) {
+    //Line chart data should be sent as an array of series objects.
+    return data.map(function(obj) {
+      return {
+        values: transformXY(obj.xy),
+        key: obj.name,
+        color: obj.color,
+        disabled: obj.disabled ? true : false
+      }
+    });
+  }
+
+  function transformXY(data) {
+    var result = [];
+    for (i = 0; i &lt; data.length; i++) {
+      var point = data[i];
+      result.push({x: point[0], y: point[1]});
+    }
+    return result;
+  }
+
+  rothChart = newChart(percentRothData, true);
+  nv.addGraph(rothChart);
+
+  d3.select(&#39;#savings-slider&#39;).call(d3.slider().axis(d3.svg.axis().ticks(11)).min(1).max(99).step(1).value(savePercent*100).on(&quot;slide&quot;, function(evt, percent) {
+    salaryInc = 3000;
+    savePercent = percent / 100;
+    updateData().call(rothChart);
+  }).on(&quot;slideend&quot;, function(evt, percent) {
+    salaryInc = 1000;
+    savePercent = percent / 100;
+    updateData().call(rothChart);
+  }));
+
+
+  d3.select(&#39;#base-slider&#39;).call(d3.slider().axis(d3.svg.axis().ticks(11)).min(0).max(100).step(1).value(basePercent*100).on(&quot;slide&quot;, function(evt, percent) {
+    salaryInc = 3000;
+    basePercent = percent / 100;
+    updateData().call(rothChart);
+  }).on(&quot;slideend&quot;, function(evt, percent) {
+    salaryInc = 1000;
+    basePercent = percent / 100;
+    updateData().call(rothChart);
+  }));
+&lt;/script&gt;
+
+&lt;h2 id=&quot;insights&quot;&gt;Insights&lt;/h2&gt;
+
+&lt;p&gt;Looking at the plot of Roth percent versus income and playing with the sliders gives
+a few of insights.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The Roth savings rate drops off rapidly right above each tax bracket.  This is due
+  to the fact that your savings at those income levels can quickly push
+  you into a lower tax bracket.   So if you save enough to cross over into
+  a lower tax bracket, all of the savings in the
+  higher tax brackets would tend to go towards the Traditional option, while
+  most of the savings that cross-over into lower tax brackets would go towards
+  the Roth option.&lt;/li&gt;
+  &lt;li&gt;The Roth savings rates tend to peak just below the tax bracket boundaries.
+  That’s because you are as far away as you can be from the lower edge of the
+  tax bracket which means that a higher percentage of your retirement income
+  is likely to be in the same tax bracket (or higher) as you are in now.&lt;/li&gt;
+  &lt;li&gt;Increases to future income pushes the entire curve up.  This means that the more
+  you expect to earn from other sources such as social security and pensions,
+  the closer your retirement tax bracket will be to your current tax bracket
+  so you would tend to want to save more to a Roth.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;when-you-assume-you-make-me-read-part-2&quot;&gt;When You Assume, You Make Me Read Part 2&lt;/h2&gt;
+
+&lt;p&gt;While this analysis is interesting and moving the sliders around is fun, there
+are many assumptions that make it not particularly useful.  Here are some of
+the more egregious assumptions:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The model assumes that the investor will retire exactly when they have enough
+  to retire without considering the probability that most people will either have
+  too little or too much at the time of retirement.  Assuming you work a little
+  past the point of being financially independent, then you would probably want to
+  allocate a little more to the Roth option because the extra savings in the
+  Traditional option would fill up the lower tax brackets in the future.&lt;/li&gt;
+  &lt;li&gt;Returns on the invested funds and inflation were both ignored.  If your
+  investments beat inflation then the amount you have at retirement
+  to fill in lower tax brackets would be larger.
+  This also suggests allocating more funds to Roths.&lt;/li&gt;
+  &lt;li&gt;Employer matches were completely ignored.  Since those matching funds would
+  normally be in before-tax dollars, this would tend to suggest higher allocations
+  towards the Roth option than shown in this analysis.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In Part 2 I’m going to change the perspective of the analysis from mostly theoretical
+to be a bit more practical.  Also, instead of focusing how much to put
+in a &lt;strong&gt;Roth&lt;/strong&gt;, I will change the perspective slightly to examine how much total
+money you should save in your &lt;strong&gt;Traditional&lt;/strong&gt; savings option.&lt;/p&gt;
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;For the plot, I capped the qualified contribution at $48,000 because each person in a couple over 50 can contribute a max of $24,000 to qualified accounts. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Wed, 19 Oct 2016 00:00:00 -0600</pubDate>
+        
+          <link>http://www.moneycle.com/to-roth-or-not-to-roth-part-1/</link>
+        
+        <guid isPermaLink="true">http://www.moneycle.com/to-roth-or-not-to-roth-part-1/</guid>
+        
+        <category>investing</category>
+        
+        <category>spending</category>
+        
+        <category>other</category>
+        
+        
+      </item>
     
       <item>
         <title>Radioactive Half-Life of Expenses</title>
@@ -2378,159 +2868,6 @@ In the end, it comes down to your personal situation and your comfort level with
         <guid isPermaLink="true">http://www.moneycle.com/comparing-target-date-fund-glide-paths/</guid>
         
         <category>investing</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Estimating Your Social Security Benefit for an Early Retirement</title>
-        <description>&lt;p&gt;As demonstrated in the &lt;a href=&quot;./building-a-bridge-to-social-security&quot;&gt;Social Security bridge&lt;/a&gt; article,
-knowing how much your benefit will be could have a large bearing on when you will be able to retire.
-Unfortunately, the benefits statement that the Social Security Administration (SSA) provides
-only estimates your benefit amount in terms of your continued employment until
-your full retirement age.  But you may want to know how much your benefit would
-be if you retired before your full retirement age.&lt;/p&gt;
-
-&lt;h2 id=&quot;prerequisite&quot;&gt;Prerequisite&lt;/h2&gt;
-
-&lt;p&gt;Before you can estimate your benefit at all, you need to suck it up and get
-your last Social Security statement.  If you’ve never logged into the SSA website
-then you may have already received a statement.  By default the SSA sends these
-statements every 5 years starting at age 25.  But if you want the most up-to-date statement then
-you’ll need to &lt;a href=&quot;http://www.ssa.gov/signin&quot;&gt;log in to the SSA website&lt;/a&gt; to see it.&lt;/p&gt;
-
-&lt;h2 id=&quot;quick-estimate&quot;&gt;Quick Estimate&lt;/h2&gt;
-
-&lt;p&gt;If you just want a quick back-of-the-envelope estimate of your benefits then you
-can project the estimated benefit that the SSA provides to the number of years
-you hope to work.  Near the top of the Social Security statement is a section titled
-“Your Estimated Benefits”.  Because delaying benefits to age 70 is usually the smartest
-choice, get the number on the line that says “if you continue working until age 70”.
-This number represents what your benefit might be at age 70 if you continued working at your
-current level of income.&lt;/p&gt;
-
-&lt;p&gt;The way social security works is that they use your top 35 earning years, adjusted for inflation,
-in a formula to calculate your benefits.  And because the estimate on your statement assumes
-you will work until age 70 which is likely more than 35 years, the estimate assumes
-you will not retire early.  For a quick estimate, in the case where you will work less
-than 35 years, you can estimate your benefit as:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-  estimated_benefit = ssa_estimate * years_worked / 35
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Let’s demonstrate this with an example.  If the SSA says your estimated benefit is
-$2800/month but you want to quit working after 25 years of employment, then your
-early-retirement estimate would be about &lt;code&gt;2800 * 25 / 35&lt;/code&gt; or $2000/month.&lt;/p&gt;
-
-&lt;p&gt;You can see that each additional year, up until your 35th working year increases
-your benefit by about &lt;code&gt;1/N&lt;/code&gt; percent.  So working 26 years instead of 25 years means you
-would get about 26/25 or 4% more than if you stopped working after 25 years.  But
-working 11 instead of 10 years could increase that future benefit by 10%.&lt;/p&gt;
-
-&lt;p&gt;Also, working more than 35 years likely will have little effect on your
-benefit except that it might replace one of your lower-earning years in the calculation.&lt;/p&gt;
-
-&lt;p&gt;Keep in mind that you don’t qualify for Social Security benefits until you have worked
-40 quarters (10 years).  So if you’re a super saver and are tempted to retire after
-9.9 years, you might want to see if it’s worth working another month or two to qualify
-for the benefits.&lt;/p&gt;
-
-&lt;h2 id=&quot;better-estimate&quot;&gt;Better Estimate&lt;/h2&gt;
-
-&lt;p&gt;There are quite a few Social Security calculators out there but most of them are
-more geared towards what the best strategy is for taking social security.  The
-best calculator I’ve found for estimating your social security benefits is &lt;a href=&quot;http://www.ssa.gov/planners/retire/AnypiaApplet.html&quot;&gt;the
-“Online Calculator” on the SSA website&lt;/a&gt;.
-Let’s go through how to utilize this calculator for estimating early retirement
-benefits.&lt;/p&gt;
-
-&lt;p&gt;After setting your birthday, the first entry to change on the calculator is the “Age at Retirement”.
-Change that from the default value of 66 to 70 because delaying benefits until age 70
-is usually the best thing to do.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/ss_estimate_age_at_retirement_70.png&quot; alt=&quot;age at retirement = 70&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Filling in the earnings section on the calculator is somewhat tedious.
-There’s no easy way to do it, just type all your earnings into the calculator.
-It’s important that they are entered on the correct years because the calculator will apply
-different adjustments for inflation depending on the year.&lt;/p&gt;
-
-&lt;p&gt;Once you have all the numbers entered, it’s time to sanity check your numbers.
-Take the number in the last year of the table (2014 as of this writing), and
-put that same number in the “Earnings for 2015” and “Earnings for 2016 and later”
-fields then click “Calculate Benefit.”  For example, if you earned $60,000 in 2014,
-enter that for 2015, 2016 and beyond.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/ss_estimate_verify.png&quot; alt=&quot;verify amounts&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Now calculate your benefits by pressing the “Calculate Benefit” button and vieiwing
-the estimates in the “Benefit estimates” section of the calculator.
-If you entered all of your data correctly into the calculator then the field labeled
-“Your monthly retirement benefit” on the calculator should exactly match the amount
-labeled “if you continue working until age 70” on your Social Security statement.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/ss_estimate_result.png&quot; alt=&quot;estimate results&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Now it’s time to play with the numbers.  What if you want to retire at the beginning
-of next year.  You can enter your estimated earnings for the current year and
-enter zero for “Earnings in 2016 and later”.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/ss_estimate_retire_next_year.png&quot; alt=&quot;retire next year&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Unfortunately, this tool isn’t great for what-if scenarios a few years into the
-future.  But you can trick it into giving an answer that might be close to your
-scenario.&lt;/p&gt;
-
-&lt;p&gt;For example, what if you have worked 20 years and want to retire 5 years from now.
-The tool doesn’t let you enter 5 future years of income followed by zeroes.
-So instead, you could take that 5 years of earnings and spread it over the remainder
-of the 35 year timespan and enter that number as your future earnings.  Mathematically,
-the number to enter for future earnings is,&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-fake_future_earnings = actual_earnings * years_until_retirement / (35 - years_worked)
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;By way of example, if you have worked 20 years and expect to earn $60,000 for the next
-5 years, that’s $300,000 total.  Spreading that $300,000 over 35-20 = 15 years means
-that you would enter $20,000 for your future earnings.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/ss_estimate_retire_5_years.png&quot; alt=&quot;retire in 5 years&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Now it’s time for a disclaimer.  Estimating future benefits based on several years
-of fake earnings is probably not going to be terribly accurate because you won’t
-actually be working those future years until you hit 35 years of employment and future
-inflation could wreak havoc with such an estimate.  So take this part with a grain of salt.
-But it should be at least as accurate as the “quick estimate” above.&lt;/p&gt;
-
-&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
-
-&lt;p&gt;Knowing your future Social Security benefits can be important when determining when you will be able
-to retire.  For example, if you want to &lt;a href=&quot;/building-a-bridge-to-social-security/&quot;&gt;build a Social Security bridge&lt;/a&gt;
-you need to know how much money to dedicate to the bridge.&lt;/p&gt;
-
-&lt;p&gt;This article gives you both a quick-and-dirty method and a more accurate method using the calculator
-provided by the Social Security Administration.  So dust off your monocle and figure out how much your
-benefit will be.&lt;/p&gt;
-
-&lt;h3 id=&quot;related&quot;&gt;Related&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/building-a-bridge-to-social-security/&quot;&gt;Building a Bridge to Social Security&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Thu, 20 Aug 2015 00:00:00 -0600</pubDate>
-        
-          <link>http://www.moneycle.com/estimating-your-social-security-benefit-for-an-early-retirement/</link>
-        
-        <guid isPermaLink="true">http://www.moneycle.com/estimating-your-social-security-benefit-for-an-early-retirement/</guid>
-        
-        <category>investing</category>
-        
-        <category>spending</category>
-        
-        <category>other</category>
         
         
       </item>
