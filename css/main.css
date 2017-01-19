@@ -169,6 +169,12 @@ abstract .post-more {
 .brand-color {
   color: #228844; }
 
+.toggle {
+  font-size: 40%; }
+
+.hidden {
+  display: none; }
+
 /**
  * Site header
  */
