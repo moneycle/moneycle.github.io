@@ -11,16 +11,6 @@ abstract: >
   whether you should use the Roth option in your 401k/403b/IRA investments and
   gives some insights on how much to allocate to each.
 ---
-<style>
-  .center {
-    text-align: center;
-  }
-  .funnel {
-    float: left;
-    margin: 0.4em 1.5em 0.8em 0em;
-  }
-</style>
-
 
 Most often when you see an article discussing whether to choose a Roth
 over a Traditional option (401k/403b/IRA), the decision is stated as a comparison
@@ -73,6 +63,17 @@ contribution if you are near a tax boundary when you begin your contributions.
 But in the future, when you start making withdrawals from your Traditional IRA,
 your withdrawals start filling in the tax brackets from the bottom up.
 I like to visualize this as pouring money into the income "funnel" as depicted below:
+
+<style>
+  .center {
+    text-align: center;
+  }
+  .funnel {
+    float: left;
+    margin: 0.4em 1.5em 0.8em 0em;
+  }
+</style>
+
 
 <div markdown="1" class="center">
 ![Money Funnel](/images/roth_or_not-funnel.png)
