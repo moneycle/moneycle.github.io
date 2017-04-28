@@ -6,9 +6,311 @@
 </description>
     <link>http://www.moneycle.com/</link>
     <atom:link href="http://www.moneycle.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 17 Jan 2017 18:28:55 -0700</pubDate>
-    <lastBuildDate>Tue, 17 Jan 2017 18:28:55 -0700</lastBuildDate>
+    <pubDate>Fri, 28 Apr 2017 15:40:51 -0600</pubDate>
+    <lastBuildDate>Fri, 28 Apr 2017 15:40:51 -0600</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>To Roth or Not to Roth - Part 3, Retiring at Age 70</title>
+        <description>&lt;h2 id=&quot;retiring-at-70&quot;&gt;Retiring at 70&lt;/h2&gt;
+
+&lt;p&gt;Age 70 is the focal point of this analysis because it’s the age (technically 70.5)
+where you must begin taking distributions from your Traditional accounts.  It’s
+also the latest age you can delay taking social security (and for many people
+it is also the optimal age).&lt;/p&gt;
+
+&lt;picture&gt;
+
+In order to figure out the maximum Traditional portfolio value at age 70,
+we need to figure out what portfolio value will generate the amount of income
+that fills in the lower tax brackets during retirement.
+Combining that future income level with
+the minimum withdrawal rate will allow us to calculate what the portfolio size
+needs to be at age 70.
+For example, the picture above depicts the case of filling in the tax brackets
+below 15%, which would be the goal if your Traditional IRA contributions were
+deducted from earnings in the 15% tax bracket.
+
+There are multiple ways to generate income from a portfolio.  But if you
+chose to do withdrawals, the IRS dictates what the required minimum distribution
+(RMD) that must be taken so let&#39;s use that because it will put a lower limit
+on the income (and an upper limit on portfolio size).  
+The RMD for age 70 is 27.4 which corresponds to a withdrawal rate of 3.65%.
+
+Using the numbers from the picture, if you want to keep your income below $39k,
+then multiply that income by 27.4 to determine the target portfolio value for
+age 70.  That means that you want your Traditional IRA portfolio to be less
+than or equal to $1,069k when you hit age 70.  That million dollar goal seems
+like a lot (and it is!) but it&#39;s very much within reach over a long-term
+investing horizon.
+
+So, if you currently are 50 years old, you want to project your
+investment 20 years so that you hit that portfolio target at age 70,
+in today&#39;s dollars, when you are 70 years old.
+Doing the calculations in today&#39;s dollars is
+a little easier so use an inflation-adjusted estimate of your portfolio returns
+to project how much you will need in today&#39;s dollar.  For example, if you project
+a return of 7% and inflation of 3% over the next 20 years, then the inflation-adjusted
+return is 4%.  That means that in today&#39;s dollars the portfolio value would be,
+
+    portfolio_today = $1069k / (1.04)^20 = $488k
+
+In other words, $488k today could grow to $1069k in today&#39;s dollars over
+the next 20 years.  So if you are 50 and already have $488k in your portfolio now,
+then it would generate around $39k (in today&#39;s dollars) when you are 70 years
+old.
+
+More generally, the equation to figure out how much money you need in today&#39;s
+dollars to reach a particular income stream at age 70 is,
+
+    portfolio_needed_today = income_70 * 27.4 / (1+return-inflation)^(70-current_age)
+
+## Contributions until age 70
+
+The above equation is a conservative estimate of how big your portfolio needs
+to be to generate a particular income when you&#39;re 70 years old.  But the more
+interesting question to ask is &quot;how much do you need to contribute to your
+current portfolio to achieve that income level?&quot;.  The answer to that question
+may also inform the decision of how much you should be putting into your
+Traditional IRA going forward.
+
+Since we are translating the portfolio values to today&#39;s dollars, let&#39;s
+calculate the contributions needed in terms of the portfolio&#39;s actual current
+value.
+
+    portfolio_shortfall = (portfolio_needed_today - portfolio_actual_today)
+
+Simply put, we need an annual contribution that is big enough to fill
+that shortfall,
+
+    contribution_needed = PV(rate-inflation, 70-current_age, portfolio_shortfall)
+
+The equation for this present value calculation represents what level of
+regular contribution is needed to equal the present value of `portfolio_shortfall`.
+
+    contribution_needed =
+      portfolio_shortfall * net_rate / (1 - (1+net_rate)^(current_age-70))
+
+where,
+
+    net_rate = rate-inflation
+
+## 50-year old
+
+Let&#39;s go back to the previous example.  Let&#39;s say you are 50 years old and
+calculate that you will need $488k in today&#39;s dollars.  If you have nothing
+saved, then your shortfall is the total amount of $488k.  Using an estimated
+return of 7% with inflation at 3%,
+
+    contribution_needed = $488k * .04 / (1-1.04^-20)
+                        = $35.9k
+
+Or almost $36k/year, into your Traditional 401k/IRA.  But if you have already
+saved $244k (half of the needed amount), then you should contribute up to
+$18k/year to your Traditional account, and contributions *above* $18k should
+go to your Roth accounts in this hypothetical example.
+
+## 25-year old, no savings
+
+What about somebody who is just starting to save at age 25?  
+How much should they save?
+The big variable in this question will be what their future tax brackets will
+look like which could change a lot in 45 years.  Just so that we can compare to
+the 50-year old who starts saving later in life, let&#39;s assuming the same target
+of $39k/year in today&#39;s dollars.  That would suggest a &#39;shortfall&#39; of,
+
+    $39k * 27.4 / (1.04)^45 = $183k
+
+Which would suggest contributions of
+
+    contribution_needed = $183k * .04 / (1-1.04^-45)
+                        = $8,832
+
+This shows the value of starting early.  Saving about $9k/year from age 25 until age 70
+generates about the same future income as saving about $36k/year starting at age 50.
+
+But it also suggests that when you start saving from a younger age, then you
+might want to switch over from Traditional to Roth contributions at a lower cutoff.
+
+## Plot Maximum Traditional Contribution vs. X?
+
+What are the variables...
+ * current portfolio
+ * current age
+ * retirement Age
+ * other income sources
+&lt;/picture&gt;
+</description>
+        <pubDate>Fri, 21 Apr 2017 18:43:09 -0600</pubDate>
+        
+          <link>http://www.moneycle.com/to-roth-or-not-to-roth-part-3/</link>
+        
+        <guid isPermaLink="true">http://www.moneycle.com/to-roth-or-not-to-roth-part-3/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>To Roth or Not to Roth? - Part 2, Reframing the Question</title>
+        <description>&lt;p&gt;Many articles are written about the virtues of the Roth account&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;
+or the Traditional account types, but it’s rare to find an article suggesting
+why you should probably consider having both types.&lt;/p&gt;
+
+&lt;p&gt;In this article I try to show that both types have their place, but the
+important thing is to understand the main concept that will help you to determine
+how much of each type you should have.  In short, the thesis of this
+article is that you should first determine the maximum amount to
+contribute to your Traditional account, then you should allocate the remainder
+of your qualified savings to your Roth account.&lt;/p&gt;
+
+&lt;h2 id=&quot;basics---tax-efficiency&quot;&gt;Basics - Tax Efficiency&lt;/h2&gt;
+
+&lt;p&gt;The core decision of choosing Roth vs Traditional comes down to your tax rate
+now (when you save the funds) versus your tax rate in the future (when you
+withdraw the funds).  If your tax rates are identical now
+and in the future you should choose the Roth because it has more flexibility
+(access to principal, no distribution requirements).
+But if your tax rates in the future, at the time of withdrawal, are lower than
+your current marginal tax rate, then you could save money by deferring those
+taxes into the future.&lt;/p&gt;
+
+&lt;p&gt;If you’re a good saver, then there’s a pretty good chance that you should
+be using both Roth and Traditional.  Why?  Because there’s a very real
+possibility that your Traditional savings will outgrow the lower tax brackets,
+especially when you consider other future income sources.&lt;/p&gt;
+
+&lt;h2 id=&quot;filling-future-tax-brackets&quot;&gt;Filling Future Tax Brackets&lt;/h2&gt;
+
+&lt;p&gt;Think about your tax brackets over time.  For example, in an over-simplified
+view of the world (ignoring inflation and other adjustments), your tax brackets
+might look like this.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/roth_or_not_2-brackets.png&quot; alt=&quot;Tax Brackets Over Time&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Granted this is a naive view of tax brackets (they actually do change over time),
+but I’m just trying to make a point so ignore those details for the moment.&lt;/p&gt;
+
+&lt;p&gt;The general idea of saving to a Traditional account is that in the future you
+will take those withdrawals out in lower tax brackets.  I like to visualize this
+as pouring those Traditional IRA funds into the lower tax brackets over the time
+that spans all of your retirement years.
+For example, the following picture shows IRA funds filling up the 0% tax bracket
+from retirement forward, which would be appropriate for anybody in a tax bracket
+above 0% (probably everybody reading this).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/roth_or_not_2-filling_0.png&quot; alt=&quot;Filling 0% Tax Bracket&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The idea of the above picture can be extended to higher tax brackets.  For example,
+if you’re in the 33% tax bracket now, any savings you put into a Traditional IRA
+now could save you money in the future if they were poured into any tax
+bracket below 33% over the course of your retirement.&lt;/p&gt;
+
+&lt;p&gt;You might be thinking that the growth on the assets matter, but for this decision
+it really doesn’t.  That’s because taking a percentage out now and letting your
+investment grow (Roth) is mathematically equivalent to letting your entire
+investment grow and taking the same percentage out later (Traditional).  So it
+just comes down to figuring out when the tax rates will be lower.&lt;/p&gt;
+
+&lt;p&gt;The trick then is to figure out how big your Traditional account savings bucket
+can get before it starts to leak into your current tax bracket in the future.
+Because if you’re going to fill in your future tax brackets at your current
+(or higher) rates, then you might as well contribute to a Roth.&lt;/p&gt;
+
+&lt;h2 id=&quot;upper-bounds-for-traditional-accounts&quot;&gt;Upper Bounds for Traditional Accounts&lt;/h2&gt;
+
+&lt;p&gt;So instead of determining what &lt;em&gt;percentage&lt;/em&gt; to put in a Roth, the problem
+becomes one of figuring out the maximum &lt;em&gt;absolute&lt;/em&gt; amount to put into a
+Traditional account.&lt;/p&gt;
+
+&lt;p&gt;We can approach this problem by putting an upper bound on the size of
+the Traditional IRA bucket (in the picture).  Once you know what that
+upper bound is, you can
+project the maximum that your Traditional contributions should be in order
+to fill that bucket by your retirement date.
+The projection will never be an exact number because returns are unpredictable
+and retirement dates change.  But if you have this framework in place,
+then you can make minor adjustments every year to account for the shifts in
+your portfolio balance and retirement date.&lt;/p&gt;
+
+&lt;h2 id=&quot;other-income-sources&quot;&gt;Other Income Sources&lt;/h2&gt;
+
+&lt;p&gt;Probably one of the hardest variables to predict ahead of time is the amount
+of money you might get from other income sources.  Social Security is one
+source that is fairly predictable, but what about income interest, dividends,
+side-job income, pensions, inherited IRAs, annuities, et cetera.
+You may have a good handle on what those sources are now, but it’s
+not always easy to predict all future income sources.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/roth_or_not_2-other_income.png&quot; alt=&quot;Filling 0% Tax Bracket&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The effect of future income sources is that they fill in your lower tax
+brackets &lt;strong&gt;before&lt;/strong&gt; withdrawals from your Traditional accounts.  This means
+that you might have less room to withdraw funds in those lower tax brackets
+in the future.  So the more future income you have from other sources, the
+less you should contribute to Traditional accounts now.&lt;/p&gt;
+
+&lt;h2 id=&quot;realistic-tax-brackets&quot;&gt;Realistic Tax Brackets&lt;/h2&gt;
+
+&lt;p&gt;To determine the maximum Traditional contributions, we also should consider
+a more realistic view of tax brackets in retirement.  If you’ve read previous
+articles on this blog you may be familiar with the effects of taxes of a couple
+life situations.  There are 3 general bands that can effect tax brackets as
+show below.  The picture below does not represent every situation but is meant
+to suggest how complicated it can get (your situation will be different).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/roth_or_not_2-3_bands.png&quot; alt=&quot;3 Tax-Bracket Bands&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you are getting health care from the ACA before age 65 then you would fall
+into the band I’m calling the “ACA years”.
+Those people eligible to receive Affordable Care Act premium credits may see
+their &lt;a href=&quot;/affordable-care-act-may-increase-your-marginal-tax-rate/&quot;&gt;tax brackets jumbled up&lt;/a&gt;
+by those credits before they start taking medicare at age 65.
+And this situation could very well change by the time you read this given
+the current political climate.&lt;/p&gt;
+
+&lt;p&gt;The second band, which I call the “early medicare years”, is the time before
+age 70 and after age 65.  This band has a fairly “normal” tax bracket signature
+because it is not affected by ACA or Social Security effects on taxes.&lt;/p&gt;
+
+&lt;p&gt;Taking social security can effect the tax brackets at the lower end of the
+income spectrum.  As discussed in a &lt;a href=&quot;/how-social-security-messes-with-your-tax-brackets/&quot;&gt;previous article on this blog&lt;/a&gt;
+these effects can have significant impacts to tax brackets at or below 25%.
+Also, since most people should probably delay taking social security until age
+70 (your situation may vary), we will consider the case of retiring at age 70
+while taking social security in the next article in this series in this band
+which I call the “Social Security years”.&lt;/p&gt;
+
+&lt;h2 id=&quot;coming-next&quot;&gt;Coming Next&lt;/h2&gt;
+
+&lt;p&gt;The next articles in this series will attempt to address the different bands of
+time and how they might inform how much to save in Traditional accounts.
+Ultimately the goal is to give you the tools (and maybe a calculator) to
+estimate how much to contribute to Traditional accounts every year going
+forward until you exit the rat race.&lt;/p&gt;
+
+&lt;h3 id=&quot;related&quot;&gt;Related&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/to-roth-or-not-to-roth-part-1/&quot;&gt;To Roth or Not to Roth? - Part 1, The Ideal World&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/affordable-care-act-may-increase-your-marginal-tax-rate/&quot;&gt;Affordable Care Act May Increase Your Marginal Tax Rate&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/how-social-security-messes-with-your-tax-brackets/&quot;&gt;How Social Security Messes With Your Tax Brackets&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;I use the generic terms “Roth” and “Traditional” to refer to all qualified accounts such as IRA, 401k and 403b.  The basic concepts are the same regardless of the actual account vehicle you use. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Thu, 06 Apr 2017 23:54:55 -0600</pubDate>
+        
+          <link>http://www.moneycle.com/to-roth-or-not-to-roth-part-2/</link>
+        
+        <guid isPermaLink="true">http://www.moneycle.com/to-roth-or-not-to-roth-part-2/</guid>
+        
+        
+      </item>
     
       <item>
         <title>How Social Security Messes With Your Tax Brackets</title>
@@ -381,17 +683,7 @@ decision in light of how your Social Security benefits affect your future tax ra
     
       <item>
         <title>To Roth or Not to Roth? - Part 1, The Ideal World</title>
-        <description>&lt;style&gt;
-  .center {
-    text-align: center;
-  }
-  .funnel {
-    float: left;
-    margin: 0.4em 1.5em 0.8em 0em;
-  }
-&lt;/style&gt;
-
-&lt;p&gt;Most often when you see an article discussing whether to choose a Roth
+        <description>&lt;p&gt;Most often when you see an article discussing whether to choose a Roth
 over a Traditional option (401k/403b/IRA), the decision is stated as a comparison
 between current and future tax rates.  While that’s mostly correct advice,
 it fails to recognize that future withdrawals tend to occur across &lt;em&gt;multiple&lt;/em&gt;
@@ -442,6 +734,16 @@ contribution if you are near a tax boundary when you begin your contributions.&l
 &lt;p&gt;But in the future, when you start making withdrawals from your Traditional IRA,
 your withdrawals start filling in the tax brackets from the bottom up.
 I like to visualize this as pouring money into the income “funnel” as depicted below:&lt;/p&gt;
+
+&lt;style&gt;
+  .center {
+    text-align: center;
+  }
+  .funnel {
+    float: left;
+    margin: 0.4em 1.5em 0.8em 0em;
+  }
+&lt;/style&gt;
 
 &lt;div class=&quot;center&quot;&gt;
   &lt;p&gt;&lt;img src=&quot;/images/roth_or_not-funnel.png&quot; alt=&quot;Money Funnel&quot; /&gt;&lt;/p&gt;
@@ -2385,429 +2687,6 @@ Rinse and repeat.&lt;/p&gt;
         <category>spending</category>
         
         <category>other</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Two Types of Income</title>
-        <description>&lt;p&gt;I’ve been noticing that every income stream follows one of two basic patterns.
-It is either an indefinite stream that will go as long as you live, or it is
-a finite stream that will end at some point in the future.&lt;/p&gt;
-
-&lt;p&gt;Additionally, income streams either start now, or in the future.&lt;/p&gt;
-
-&lt;p&gt;If you think about income in these terms it helps to give you a mental
-framework when trying to structure your portfolio
-to give you the income you need, when you need it.  For example, if you will have
-an indefinite income stream (like a pension) that starts in the future,
-then you may want to create some other income stream now that will last until that
-future date.&lt;/p&gt;
-
-&lt;h2 id=&quot;indefinite-income-streams&quot;&gt;Indefinite Income Streams&lt;/h2&gt;
-
-&lt;p&gt;Indefinite income streams are those that are expected to last as long as you
-and your spouse are alive.  The most common examples of this type of income are
-as follows:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Social Security&lt;/strong&gt; - It will still be there when you need it.  Ignore those
- who say otherwise.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Pensions&lt;/strong&gt; - Pensions from a company you worked at tend to kick in at your
- retirement (or when you reach a particular age).&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Annuities&lt;/strong&gt; - You can buy an annuity from an insurance company that will give
- you income for as long as you live.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Systematic Withdrawals&lt;/strong&gt; - If you withdraw funds from your portfolio at a prudent
-  rate (3-4%) then there is a pretty good chance that it will last last long as you do.
-  The only question is whether or not it will keep pace with inflation.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;finite-income-streams&quot;&gt;Finite Income Streams&lt;/h2&gt;
-
-&lt;p&gt;Finite income streams are those that you expect to end at some point.  Here are
-some examples of those:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Your Job&lt;/strong&gt; - This is the quintessential finite income stream.  You can’t work
-  forever.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Bridge Fund&lt;/strong&gt; - See my article on &lt;a href=&quot;./building-a-bridge-to-social-security&quot;&gt;creating a bridge to social security&lt;/a&gt;
- for an example of how to use funds to bridge to a future date.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Income Replacement Funds&lt;/strong&gt; - Fidelity offers a particular type of fund called
-&lt;a href=&quot;http://moneyover55.about.com/od/investmentincome/a/incomereplacement.htm&quot;&gt;Income Replacement Funds&lt;/a&gt;
-that are designed to provide income until some future date.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Bonds&lt;/strong&gt; - You could buy a portfolio of bonds that return the principal in different
-years and spend that money as it is returned to you.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Lending Money&lt;/strong&gt; - You can lend funds to somebody with the promise that they
- will pay it back with some agreed-upon rate.  Micro-lending companies like Lending
- Club and Prosper are a good way to do this efficiently.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Imprudent Systematic Withdrawals&lt;/strong&gt; - if you draw down your portfolio too quickly,
- you could deplete it in a finite period of time.  Don’t do this.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;income-start-dates&quot;&gt;Income Start Dates&lt;/h2&gt;
-
-&lt;p&gt;In addition to the duration of an income stream, you need to consider when they
-income starts.  For example, if you are retiring at age 62, you &lt;em&gt;could&lt;/em&gt; start taking your
-Social Security right at age 62.  However, it is often beneficial for you to delay
-taking your benefits until age 70.  In that scenario, you would need to figure out
-how to get an income stream that lasts 8 years until your social security kicks in.&lt;/p&gt;
-
-&lt;p&gt;Ultimately, your goal as a retiree is to arrange these blocks of income to give you
-an income stream that lasts indefinitely but is relatively smooth.  I like to think
-of it using building blocks.  Here’s a crude drawing of what I mean.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;                                   +-----------------------------&amp;gt;
-                                   | Longevity Annuity (age 80)
-+----------------+-----------------+-----------------------------&amp;gt;
-|  Bridge Fund   |          Pension (age 65)
-+----------------+----------+------------------------------------&amp;gt;
-|  Income Replacement Fund  | Social Security (age 70)
-+---------------------------+------------------------------------&amp;gt;
-|  Systematic Withdrawals of remaining portfolio
-+----------------------------------------------------------------&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;In this drawing, time goes from left to right.
-This example depicts having a relatively steady stream of income until age 80
-at which point your income is boosted by a longevity annuity.
-The “Longevity Annuity” is one income stream you might want to purchase if you
-anticipate needing extra future income to help with age-related expenses.&lt;/p&gt;
-
-&lt;p&gt;Also in this example, I am also showing a couple of different finite income stream types being
-used to bridge forward to indefinite income streams (pension and social security)
-in the future.  The type of bridge isn’t important, I’m just trying to illustrate
-the concept of bridging forward to that indefinite future income stream.&lt;/p&gt;
-
-&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
-
-&lt;p&gt;This article doesn’t introduce much in the way of new concepts.  But I have found
-it useful in structuring my own portfolio to think of income streams as one of two
-basic types that can be combined like building blocks to give you the income you
-need in retirement.  Hopefully this framework will help you too.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 31 Oct 2015 00:00:00 -0600</pubDate>
-        
-          <link>http://www.moneycle.com/two-types-of-income/</link>
-        
-        <guid isPermaLink="true">http://www.moneycle.com/two-types-of-income/</guid>
-        
-        <category>spending</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Comparing Target-Date Fund Glide Paths</title>
-        <description>&lt;p&gt;Target-date funds are relative newcomers in the investment world.  Most of today’s
-target-date funds were created in the last 10 years or so.  Their popularity has
-grown largely since the passage in 2006 of the &lt;a href=&quot;https://en.wikipedia.org/wiki/Pension_Protection_Act_of_2006&quot;&gt;Pension Protection Act&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The Pension Protection Act stipulates that employers provide what are called
-“Qualified Default Investment Alternatives” which is a fancy way of saying that
-they need to provide default investment alternatives that don’t suck.
-And target-date funds are generally considered to not suck.&lt;/p&gt;
-
-&lt;h2 id=&quot;typical-target-date-fund&quot;&gt;Typical Target-Date Fund&lt;/h2&gt;
-
-&lt;p&gt;The general idea of the target-date fund is to invest for growth when the investor
-is young and gradually decrease the amount of risky investments as the investor
-approaches retirement age.  Typically the risky investment takes the form of
-stocks and the safer investment is in bonds.&lt;/p&gt;
-
-&lt;p&gt;The transition from the early growth period to the later safe period is called
-the “glide-path”.  In visual form, here’s what a typical glide path looks like.&lt;/p&gt;
-
-&lt;div id=&quot;example&quot;&gt;
-    &lt;svg&gt;&lt;/svg&gt;
-&lt;/div&gt;
-
-&lt;p&gt;This plot shows the glide-path continuing to decrease a little past the retirement
-age. This is fairly common and is often referred to as a “glide-through” fund
-versus a fund that stops chaning right at the target-date which is called a “glide-to”
-fund.  It’s good to understand these differences so that you aren’t surprised to
-find that your fund is still changing allocation after the target-date.&lt;/p&gt;
-
-&lt;p&gt;For the purposes of this article, I was focused on some of the
-more popular target-date funds.  Defining popularity is tricky so I chose to just
-consider the biggest and cheapest funds.  “Biggest” funds are defined by their
-assets under management, and “cheapest” funds are defined by their expense ratios.
-The data for this article came mostly from a comprehensive article published by
-Morningstar titled &lt;a href=&quot;http://corporate1.morningstar.com/ResearchArticle.aspx?documentId=705998&quot;&gt;“2015 Target-Date Fund Landscape”&lt;/a&gt;, and was verified by looking
-at the individual mutual-fund companies’ websites.&lt;/p&gt;
-
-&lt;h2 id=&quot;biggest-target-date-funds&quot;&gt;Biggest Target-Date Funds&lt;/h2&gt;
-
-&lt;p&gt;The following table lists the 4 biggest target-date funds in terms of total market share:&lt;/p&gt;
-
-&lt;table id=&quot;funds-by-share&quot;&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;&lt;th&gt;Fund Family&lt;/th&gt;&lt;th&gt;2014 Market Share (%)&lt;/th&gt;&lt;th&gt;Expense Ratio (%)&lt;/th&gt;&lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody /&gt;
-&lt;/table&gt;
-
-&lt;p&gt;These four funds make up wholly two thirds of all target-date funds so they are the gorillas.
-Vanguard is the clear market share leader with over a quarter of the entire target-date fund market.
-But Fidelity has a couple of entries that add up to over 20% of the market.  From what I’ve been
-able to glean, Fidelity’s “K” series of funds is similar to the non-K series except
-that it is only available to 401k plans run by Fidelity.&lt;/p&gt;
-
-&lt;h2 id=&quot;cheapest-target-date-funds&quot;&gt;Cheapest Target-Date Funds&lt;/h2&gt;
-
-&lt;p&gt;And here are the 4 funds with the smallest expense ratios:&lt;/p&gt;
-
-&lt;table id=&quot;funds-by-expense&quot;&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;&lt;th&gt;Fund Family&lt;/th&gt;&lt;th&gt;2014 Market Share (%)&lt;/th&gt;&lt;th&gt;Expense Ratio (%)&lt;/th&gt;&lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody /&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Not surprisingly, the low-cost leader Vanguard is also on this list.
-But the “Fidelity Freedom Index” fund has a slight edge on expense.
-Note that the “Fidelity Freedom Index” is yet another target-date fund
-from Fidelity.  The “Index” variant from Fidelity appears to be their low-cost variant
-composed of only low-cost Fidelity index funds.  The “Index” variant is also only
-available via certain employer-sponsored plans which is why you can’t easily
-find information about them on their public website.&lt;/p&gt;
-
-&lt;h2 id=&quot;glide-paths&quot;&gt;Glide Paths&lt;/h2&gt;
-
-&lt;p&gt;Here are the glide paths for all of the funds mentioned above&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.  The zero point
-on the time axis represents the relative target date.  For example, the point
--10 for a 2040 fund maps to the year 2030.&lt;/p&gt;
-
-&lt;div id=&quot;chart&quot;&gt;
-    &lt;svg&gt;&lt;/svg&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Of these 7 funds, only BlackRock is the only “glide-to” fund that stops changing its
-allocation right at the target date.  BlackRock is also unique in that its equity
-percentage contains a fair amount of real-estate (REIT) investments (15% early on,
-dwindling to near 0% at the end of the glide path).
-I decided to lump the REIT into the “equity” bucket for this graph
-but some would argue that you should put a portion of it into the “bond” bucket.&lt;/p&gt;
-
-&lt;p&gt;All funds except BlackRock start at 90% equities.  If I had allocated 1/3 of the REIT
-to equities then BlackRock would also have close to a 90% equity position at the
-beginning too so consider that when looking at the graph.&lt;/p&gt;
-
-&lt;p&gt;Most funds have finished their glide paths within 7 years but T. Rowe Price continues
-the glide down for 30 years.&lt;/p&gt;
-
-&lt;h2 id=&quot;general-thoughts&quot;&gt;General Thoughts&lt;/h2&gt;
-
-&lt;p&gt;Plotting the different glide paths is an interesting exercise and tool for comparing
-funds to see which one most closely aligns with your goals.  But you don’t have to
-pick the fund that matches your exact retirement date.  For example, if you want
-the glide path to stop right at your retirement date and you like Vanguard,
-then you might want to pick the Vanguard fund that is your retirement date minus
-7 years to line that up with your goals.&lt;/p&gt;
-
-&lt;p&gt;I think that most of these funds end at a very “safe” level of equities, perhaps too
-safe for my tastes, but maybe just right for you.  I suspect that the fund companies
-err on the side of being too conservative to avoid controversy.
-As such, my preference would be to use a target date fund mostly during your
-accumulation years then switch to a balanced fund (or set of funds) that match
-your long-term risk tolerance when you are near your target.&lt;/p&gt;
-
-&lt;p&gt;One thing, a big thing, that these funds can’t account for is how much money
-you have in a pension or social security.  For example, if your social security
-will cover 50% of your future spending, do you really need the rest of your
-portfolio to glide to a 30% equity level?  You may conclude that you can take
-more risk in your portfolio when social security has your back.
-In the end, it comes down to your personal situation and your comfort level with risk.&lt;/p&gt;
-
-&lt;style&gt;
-  #example {
-    clear: both;
-  }
-  #example, svg {
-    height: 360px;
-  }
-
-  #chart {
-    clear: both;
-  }
-  #chart, svg {
-    height: 360px;
-  }
-&lt;/style&gt;
-
-&lt;script&gt;
-  var exampleData = [
-    {
-      name: &#39;Accumulation&#39;,
-      glide: [[-40,90], [-25,90]],
-      color: &#39;#a02020&#39;
-    },
-    {
-      name: &#39;Glide Path&#39;,
-      glide: [[-25,90], [0,40]],
-      color: &#39;#2020aa&#39;
-    },
-    {
-      name: &#39;Preservation&#39;,
-      glide: [[0,40], [5,30], [30,30]],
-      color: &#39;#20a020&#39;
-    }
-  ];
-
-  var allData = [
-    {
-      name: &#39;Fidelity Freedom&#39;,
-      glide: [90, 90, 90, 90, 90, 80, 65, 59, 52, 43, 34, 24, 24, 24, 24],
-      expense: 0.71,
-      share: 9.3,
-      color: &#39;#887722&#39;,
-      url: &#39;https://www.fidelity.com/mutual-funds/asset-allocation-funds/freedom-funds/overview&#39;
-    },
-    {
-      name: &#39;Fidelity Freedom K&#39;,
-      glide: [90, 90, 90, 90, 90, 80, 65, 59, 52, 43, 34, 24, 24, 24, 24],
-      expense: 0.61,
-      share: 12.8,
-      color: &#39;#dd6633&#39;,
-      url: &#39;https://www.fidelity.com/mutual-funds/asset-allocation-funds/freedom-funds/overview&#39;
-    },
-    {
-      name: &#39;Fidelity Freedom Index&#39;,
-      glide: [90, 90, 90, 90, 90, 80, 65, 58, 52, 43, 33, 24, 24, 24, 24],
-      expense: 0.16,
-      share: 1.7,
-      color: &#39;#408800&#39;,
-      url: &#39;https://www.fidelity.com/mutual-funds/asset-allocation-funds/freedom-funds/overview&#39;
-    },
-    {
-      name: &#39;T. Rowe Price Retirement&#39;,
-      glide: [90, 90, 90, 90, 85, 78, 71, 64, 54, 45, 40, 35, 31, 27, 20],
-      expense: 0.78,
-      share: 17.3,
-      color: &#39;#40a9f0&#39;,
-      url: &#39;http://individual.troweprice.com/public/Retail/Mutual-Funds/Target-Date-Funds&#39;
-    },
-    {
-      name: &#39;TIAA-CREF Lifecycle Index&#39;,
-      glide: [90, 90, 90, 90, 81, 73, 65, 57, 50, 44, [9,40], 40, 40, 40, 40, 40],
-      expense: 0.21,
-      share: 0.5,
-      color: &#39;#0b7599&#39;,
-      url: &#39;https://www.tiaa-cref.org/public/products-services/mutual-funds/lifecycle/index.html&#39;
-    },
-    {
-      name: &#39;Vanguard Target Retirement&#39;,
-      glide: [90, 90, 90, 90, 81, 75, 67, 59, 50, 37, [7,30], 30, 30, 30, 30, 30],
-      expense: 0.17,
-      share: 27.3,
-      color: &#39;#96151d&#39;,
-      url: &#39;https://investor.vanguard.com/mutual-funds/target-retirement/&#39;
-    },
-    {
-      name: &#39;BlackRock LifePath Index&#39;,
-      glide: [98, 98, 93, 90, 85, 75, 64, 59, 40, 40, 40, 40, 40, 40, 40],
-      expense: 0.23,
-      share: &#39;0.6&#39;,
-      color: &#39;#000000&#39;,
-      url: &#39;http://www.blackrock.com/investing/financial-professionals/defined-contribution/investment-strategies/lifepath-index-portfolios&#39;
-    }
-  ];
-
-  function newChart(data, selector, interactive) {
-
-    var aChart = nv.models.lineChart()
-                  .interactive(interactive)
-                  .useInteractiveGuideline(interactive)
-                  .showLegend(true)
-                  .showYAxis(true)
-                  .showXAxis(true);
-
-    aChart.xAxis
-        .axisLabel(&#39;Years from Target Date&#39;)
-        .tickFormat(d3.format(&#39;r&#39;));
-
-    aChart.yAxis     //Chart y-axis settings
-        .axisLabel(&#39;Equity Percentage&#39;)
-        .tickFormat(d3.format(&#39;.2p&#39;));
-
-    aChart.yDomain([0, 1]);
-
-    var chartData = fundData(data);
-
-    d3.select(selector)
-        .datum(chartData)
-        .call(aChart);
-
-    //Update the chart when window resizes.
-    nv.utils.windowResize(function() {
-      aChart.update();
-    });
-
-    return aChart;
-  }
-
-  function fundData(data) {
-    //Line chart data should be sent as an array of series objects.
-    return data.map(function(obj) {
-      return {
-        values: transformXY(obj.glide),
-        key: obj.name,
-        color: obj.color
-      }
-    });
-  }
-
-  function transformXY(data) {
-    var result = [];
-    var year = -40;
-    while (data.length &gt; 0) {
-      var percent = data.shift();
-      if (Array.isArray(percent)) {
-        result.push({x: percent[0], y: percent[1]*.01})
-      } else {
-        result.push({x: year, y: percent*.01})
-        year += 5;
-      }
-    }
-    return result;
-  }
-
-
-  nv.addGraph(newChart(exampleData, &#39;#example svg&#39;, false));
-
-  allData.sort(function(a,b) { return b.share - a.share; }).slice(0,4).forEach(function(fund) {
-    tr = d3.select(&#39;#funds-by-share tbody&#39;).append(&#39;tr&#39;)
-    tr.append(&#39;td&#39;).html(&#39;&lt;a href=&quot;&#39; + fund.url + &#39;&quot;&gt;&#39; + fund.name + &#39;&lt;/a&gt;&#39;);
-    tr.append(&#39;td&#39;).attr(&quot;style&quot;, &quot;text-align: center&quot;).html(fund.share);
-    tr.append(&#39;td&#39;).attr(&quot;style&quot;, &quot;text-align: center&quot;).html(fund.expense);
-  });
-
-  allData.sort(function(a,b) { return a.expense - b.expense; }).slice(0,4).forEach(function(fund) {
-    tr = d3.select(&#39;#funds-by-expense tbody&#39;).append(&#39;tr&#39;)
-    tr.append(&#39;td&#39;).html(&#39;&lt;a href=&quot;&#39; + fund.url + &#39;&quot;&gt;&#39; + fund.name + &#39;&lt;/a&gt;&#39;);
-    tr.append(&#39;td&#39;).attr(&quot;style&quot;, &quot;text-align: center&quot;).html(fund.share);
-    tr.append(&#39;td&#39;).attr(&quot;style&quot;, &quot;text-align: center&quot;).html(fund.expense);
-  });
-
-  nv.addGraph(newChart(allData.sort(function(a, b) {
-    return d3.descending(a.expense, b.expense); }), &#39;#chart svg&#39;, true));
-
-&lt;/script&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;click on a fund name to remove it or double click to remove all others &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Fri, 25 Sep 2015 00:00:00 -0600</pubDate>
-        
-          <link>http://www.moneycle.com/comparing-target-date-fund-glide-paths/</link>
-        
-        <guid isPermaLink="true">http://www.moneycle.com/comparing-target-date-fund-glide-paths/</guid>
-        
-        <category>investing</category>
         
         
       </item>

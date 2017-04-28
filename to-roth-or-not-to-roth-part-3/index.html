@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>HSA Tax Advantages</title>
-  <meta name="description" content="This time of year has me thinking more about taxes than normal because I recentlytook a first stab at income taxes for 2015.  While doing my taxes I noticed ...">
+  <title>To Roth or Not to Roth - Part 3, Retiring at Age 70</title>
+  <meta name="description" content="Retiring at 70">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://www.moneycle.com/hsa-tax-advantages/">
+  <link rel="canonical" href="http://www.moneycle.com/to-roth-or-not-to-roth-part-3/">
   <link rel="alternate" type="application/rss+xml" title="Moneycle" href="http://www.moneycle.com/feed.xml" />
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.4/d3.min.js"></script>
@@ -104,101 +104,144 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">HSA Tax Advantages</h1>
-    <p class="post-meta">Jan 22, 2016</p>
+    <h1 class="post-title">To Roth or Not to Roth - Part 3, Retiring at Age 70</h1>
+    <p class="post-meta">Apr 21, 2017</p>
   </header>
 
   <div class="post-abstract">
-    Health Savings Accounts have many tax-related benefits.  Here's a short list of some well-known plus a few lesser known benefits to owning an HSA.
-
+    
   </div>
 
   <article class="post-content">
-    <img class="post-image" src="/images/operating_room.jpg"/>
-    <p>This time of year has me thinking more about taxes than normal because I recently
-took a first stab at income taxes for 2015.  While doing my taxes I noticed the
-subject of Health Savings Accounts (HSAs) coming up in a couple different places
-so I thought I would share why HSAs can be an awesome place to invest your savings.</p>
+    <img class="post-image" src="/images/shakespeare.png"/>
+    <h2 id="retiring-at-70">Retiring at 70</h2>
 
-<p>The main reason that HSAs are great is the ability to pay for things with pre-tax
-dollars.  Depending on your tax bracket, this can be a huge “investment”.  Consider
-going to the doctor and spending $100 from an HSA with before-tax dollars.
-If you had to use after-tax dollars for that same $100 expense, and you were in
-the 25% tax bracket, you would need to earn $133.33 in order to have the $100 left
-over to pay the doctor.  Or to look at it another way, by using an HSA
-you avoided spending $33.33 before tax, which is $25 after tax.</p>
+<p>Age 70 is the focal point of this analysis because it’s the age (technically 70.5)
+where you must begin taking distributions from your Traditional accounts.  It’s
+also the latest age you can delay taking social security (and for many people
+it is also the optimal age).</p>
 
-<p>To put that mathematically, the money saved by using money
-from an HSA instead of after-tax dollars is,</p>
+<picture>
 
-<pre><code>money_saved = (money_without_hsa - money_with_hsa)*(1-tax_rate)
-money_without_hsa = invoice_amount/(1-tax_rate)
-money_with_hsa = invoice_amount
-</code></pre>
+In order to figure out the maximum Traditional portfolio value at age 70,
+we need to figure out what portfolio value will generate the amount of income
+that fills in the lower tax brackets during retirement.
+Combining that future income level with
+the minimum withdrawal rate will allow us to calculate what the portfolio size
+needs to be at age 70.
+For example, the picture above depicts the case of filling in the tax brackets
+below 15%, which would be the goal if your Traditional IRA contributions were
+deducted from earnings in the 15% tax bracket.
 
-<p>which reduces to,</p>
+There are multiple ways to generate income from a portfolio.  But if you
+chose to do withdrawals, the IRS dictates what the required minimum distribution
+(RMD) that must be taken so let's use that because it will put a lower limit
+on the income (and an upper limit on portfolio size).  
+The RMD for age 70 is 27.4 which corresponds to a withdrawal rate of 3.65%.
 
-<pre><code>money_saved = invoice_amount*tax_rate
-</code></pre>
+Using the numbers from the picture, if you want to keep your income below $39k,
+then multiply that income by 27.4 to determine the target portfolio value for
+age 70.  That means that you want your Traditional IRA portfolio to be less
+than or equal to $1,069k when you hit age 70.  That million dollar goal seems
+like a lot (and it is!) but it's very much within reach over a long-term
+investing horizon.
 
-<p>So, if you know you are going to have X dollars in medical expenses, it behooves
-you to have X dollars sitting in your HSA because you will save X dollars
-multiplied by your marginal tax rate in after tax dollars.</p>
+So, if you currently are 50 years old, you want to project your
+investment 20 years so that you hit that portfolio target at age 70,
+in today's dollars, when you are 70 years old.
+Doing the calculations in today's dollars is
+a little easier so use an inflation-adjusted estimate of your portfolio returns
+to project how much you will need in today's dollar.  For example, if you project
+a return of 7% and inflation of 3% over the next 20 years, then the inflation-adjusted
+return is 4%.  That means that in today's dollars the portfolio value would be,
 
-<h2 id="common-hsa-uses">Common HSA uses</h2>
+    portfolio_today = $1069k / (1.04)^20 = $488k
 
-<p>The most common uses for HSAs are basic medial expenses.</p>
+In other words, $488k today could grow to $1069k in today's dollars over
+the next 20 years.  So if you are 50 and already have $488k in your portfolio now,
+then it would generate around $39k (in today's dollars) when you are 70 years
+old.
 
-<ul>
-  <li>Dentist - use your HSA card to pay for that cleaning or root canal.</li>
-  <li>Doctor - doctor bills could be has high as your deductible, so you probably
-want to build your HSA up to the amount of your deductible to cover large
-expenses.</li>
-  <li>Prescriptions - those Viagra pills are expensive!</li>
-  <li>Vision - in addition to regular visits to the eye doctor, you can use HSA funds
-to pay for eyeglasses and eye surgeries including laser surgeries.</li>
-</ul>
+More generally, the equation to figure out how much money you need in today's
+dollars to reach a particular income stream at age 70 is,
 
-<h2 id="lesser-known-hsa-uses">Lesser Known HSA uses</h2>
+    portfolio_needed_today = income_70 * 27.4 / (1+return-inflation)^(70-current_age)
 
-<p>Here are some ways to use HSA dollars that you may not have heard about.</p>
+## Contributions until age 70
 
-<ul>
-  <li>Long-Term Care (LTC) premiums - there are limits, but LTC policy premiums
-can be paid in part using HSA dollars.  The older you are, the more of your
-premiums are allowed to be paid using HSA dollars.  For tax-year 2015 the
-limits are as follows:
-    <ul>
-      <li>40 years old and younger – $380</li>
-      <li>41–50 years old – $710</li>
-      <li>51–60 years old – $1,430</li>
-      <li>61–70 years old – $3,800</li>
-      <li>70 years old and older – $4,750</li>
-    </ul>
-  </li>
-  <li>Medicare premiums - you can’t continue contributing to your HSA after you
-hit medicare age (65).  But you <em>can</em> use your HSA funds to pay for supplemental
-Medicare insurance such as Medicare Part B, D or Medicare Advantage.  This
-is a good reason to contribute above and beyond your deductible level before
-you hit age 65.</li>
-  <li>Construction expenses - as you get older, you may find you need to need to
-make modifications to your house.  Construction expenses to accommodate
-somebody with medical issues may be paid for using HSA funds.  Examples include
-wheelchair ramps, hand rails, widening doorways, etc..</li>
-  <li>Vasectomy - pair your vasectomy operation with your Viagra prescription and
-put the whole thing on your HSA debit card!</li>
-</ul>
+The above equation is a conservative estimate of how big your portfolio needs
+to be to generate a particular income when you're 70 years old.  But the more
+interesting question to ask is "how much do you need to contribute to your
+current portfolio to achieve that income level?".  The answer to that question
+may also inform the decision of how much you should be putting into your
+Traditional IRA going forward.
 
-<p>There are a ton of other things you can use HSA funds for.  Check out
-<a href="https://www.irs.gov/pub/irs-pdf/p502.pdf">the IRS publication</a> for details.</p>
+Since we are translating the portfolio values to today's dollars, let's
+calculate the contributions needed in terms of the portfolio's actual current
+value.
 
-<p>In the grand scheme of investing, HSAs are <a href="https://www.bogleheads.org/wiki/Prioritizing_investments">generally considered the 3rd priority</a>
-behind (1) getting your 401k match if you have it and (2) paying off credit cards.
-Besides the advantages described above, HSAs also act like an IRA in that the
-growth of funds inside the HSA are tax deferred.  While you can take the funds
-out after age 65 and be taxed on them just like an IRA, it’s probably best to
-leave your money in the HSA and continue using it to pay for medical expenses
-until the HSA is drained.</p>
+    portfolio_shortfall = (portfolio_needed_today - portfolio_actual_today)
+
+Simply put, we need an annual contribution that is big enough to fill
+that shortfall,
+
+    contribution_needed = PV(rate-inflation, 70-current_age, portfolio_shortfall)
+
+The equation for this present value calculation represents what level of
+regular contribution is needed to equal the present value of `portfolio_shortfall`.
+
+    contribution_needed =
+      portfolio_shortfall * net_rate / (1 - (1+net_rate)^(current_age-70))
+
+where,
+
+    net_rate = rate-inflation
+
+## 50-year old
+
+Let's go back to the previous example.  Let's say you are 50 years old and
+calculate that you will need $488k in today's dollars.  If you have nothing
+saved, then your shortfall is the total amount of $488k.  Using an estimated
+return of 7% with inflation at 3%,
+
+    contribution_needed = $488k * .04 / (1-1.04^-20)
+                        = $35.9k
+
+Or almost $36k/year, into your Traditional 401k/IRA.  But if you have already
+saved $244k (half of the needed amount), then you should contribute up to
+$18k/year to your Traditional account, and contributions *above* $18k should
+go to your Roth accounts in this hypothetical example.
+
+## 25-year old, no savings
+
+What about somebody who is just starting to save at age 25?  
+How much should they save?
+The big variable in this question will be what their future tax brackets will
+look like which could change a lot in 45 years.  Just so that we can compare to
+the 50-year old who starts saving later in life, let's assuming the same target
+of $39k/year in today's dollars.  That would suggest a 'shortfall' of,
+
+    $39k * 27.4 / (1.04)^45 = $183k
+
+Which would suggest contributions of
+
+    contribution_needed = $183k * .04 / (1-1.04^-45)
+                        = $8,832
+
+This shows the value of starting early.  Saving about $9k/year from age 25 until age 70
+generates about the same future income as saving about $36k/year starting at age 50.
+
+But it also suggests that when you start saving from a younger age, then you
+might want to switch over from Traditional to Roth contributions at a lower cutoff.
+
+## Plot Maximum Traditional Contribution vs. X?
+
+What are the variables...
+ * current portfolio
+ * current age
+ * retirement Age
+ * other income sources
+</picture>
 
   </article>
 
