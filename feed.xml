@@ -6,149 +6,9 @@
 </description>
     <link>http://www.moneycle.com/</link>
     <atom:link href="http://www.moneycle.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 28 Apr 2017 15:40:51 -0600</pubDate>
-    <lastBuildDate>Fri, 28 Apr 2017 15:40:51 -0600</lastBuildDate>
+    <pubDate>Fri, 28 Apr 2017 15:49:01 -0600</pubDate>
+    <lastBuildDate>Fri, 28 Apr 2017 15:49:01 -0600</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
-    
-      <item>
-        <title>To Roth or Not to Roth - Part 3, Retiring at Age 70</title>
-        <description>&lt;h2 id=&quot;retiring-at-70&quot;&gt;Retiring at 70&lt;/h2&gt;
-
-&lt;p&gt;Age 70 is the focal point of this analysis because it’s the age (technically 70.5)
-where you must begin taking distributions from your Traditional accounts.  It’s
-also the latest age you can delay taking social security (and for many people
-it is also the optimal age).&lt;/p&gt;
-
-&lt;picture&gt;
-
-In order to figure out the maximum Traditional portfolio value at age 70,
-we need to figure out what portfolio value will generate the amount of income
-that fills in the lower tax brackets during retirement.
-Combining that future income level with
-the minimum withdrawal rate will allow us to calculate what the portfolio size
-needs to be at age 70.
-For example, the picture above depicts the case of filling in the tax brackets
-below 15%, which would be the goal if your Traditional IRA contributions were
-deducted from earnings in the 15% tax bracket.
-
-There are multiple ways to generate income from a portfolio.  But if you
-chose to do withdrawals, the IRS dictates what the required minimum distribution
-(RMD) that must be taken so let&#39;s use that because it will put a lower limit
-on the income (and an upper limit on portfolio size).  
-The RMD for age 70 is 27.4 which corresponds to a withdrawal rate of 3.65%.
-
-Using the numbers from the picture, if you want to keep your income below $39k,
-then multiply that income by 27.4 to determine the target portfolio value for
-age 70.  That means that you want your Traditional IRA portfolio to be less
-than or equal to $1,069k when you hit age 70.  That million dollar goal seems
-like a lot (and it is!) but it&#39;s very much within reach over a long-term
-investing horizon.
-
-So, if you currently are 50 years old, you want to project your
-investment 20 years so that you hit that portfolio target at age 70,
-in today&#39;s dollars, when you are 70 years old.
-Doing the calculations in today&#39;s dollars is
-a little easier so use an inflation-adjusted estimate of your portfolio returns
-to project how much you will need in today&#39;s dollar.  For example, if you project
-a return of 7% and inflation of 3% over the next 20 years, then the inflation-adjusted
-return is 4%.  That means that in today&#39;s dollars the portfolio value would be,
-
-    portfolio_today = $1069k / (1.04)^20 = $488k
-
-In other words, $488k today could grow to $1069k in today&#39;s dollars over
-the next 20 years.  So if you are 50 and already have $488k in your portfolio now,
-then it would generate around $39k (in today&#39;s dollars) when you are 70 years
-old.
-
-More generally, the equation to figure out how much money you need in today&#39;s
-dollars to reach a particular income stream at age 70 is,
-
-    portfolio_needed_today = income_70 * 27.4 / (1+return-inflation)^(70-current_age)
-
-## Contributions until age 70
-
-The above equation is a conservative estimate of how big your portfolio needs
-to be to generate a particular income when you&#39;re 70 years old.  But the more
-interesting question to ask is &quot;how much do you need to contribute to your
-current portfolio to achieve that income level?&quot;.  The answer to that question
-may also inform the decision of how much you should be putting into your
-Traditional IRA going forward.
-
-Since we are translating the portfolio values to today&#39;s dollars, let&#39;s
-calculate the contributions needed in terms of the portfolio&#39;s actual current
-value.
-
-    portfolio_shortfall = (portfolio_needed_today - portfolio_actual_today)
-
-Simply put, we need an annual contribution that is big enough to fill
-that shortfall,
-
-    contribution_needed = PV(rate-inflation, 70-current_age, portfolio_shortfall)
-
-The equation for this present value calculation represents what level of
-regular contribution is needed to equal the present value of `portfolio_shortfall`.
-
-    contribution_needed =
-      portfolio_shortfall * net_rate / (1 - (1+net_rate)^(current_age-70))
-
-where,
-
-    net_rate = rate-inflation
-
-## 50-year old
-
-Let&#39;s go back to the previous example.  Let&#39;s say you are 50 years old and
-calculate that you will need $488k in today&#39;s dollars.  If you have nothing
-saved, then your shortfall is the total amount of $488k.  Using an estimated
-return of 7% with inflation at 3%,
-
-    contribution_needed = $488k * .04 / (1-1.04^-20)
-                        = $35.9k
-
-Or almost $36k/year, into your Traditional 401k/IRA.  But if you have already
-saved $244k (half of the needed amount), then you should contribute up to
-$18k/year to your Traditional account, and contributions *above* $18k should
-go to your Roth accounts in this hypothetical example.
-
-## 25-year old, no savings
-
-What about somebody who is just starting to save at age 25?  
-How much should they save?
-The big variable in this question will be what their future tax brackets will
-look like which could change a lot in 45 years.  Just so that we can compare to
-the 50-year old who starts saving later in life, let&#39;s assuming the same target
-of $39k/year in today&#39;s dollars.  That would suggest a &#39;shortfall&#39; of,
-
-    $39k * 27.4 / (1.04)^45 = $183k
-
-Which would suggest contributions of
-
-    contribution_needed = $183k * .04 / (1-1.04^-45)
-                        = $8,832
-
-This shows the value of starting early.  Saving about $9k/year from age 25 until age 70
-generates about the same future income as saving about $36k/year starting at age 50.
-
-But it also suggests that when you start saving from a younger age, then you
-might want to switch over from Traditional to Roth contributions at a lower cutoff.
-
-## Plot Maximum Traditional Contribution vs. X?
-
-What are the variables...
- * current portfolio
- * current age
- * retirement Age
- * other income sources
-&lt;/picture&gt;
-</description>
-        <pubDate>Fri, 21 Apr 2017 18:43:09 -0600</pubDate>
-        
-          <link>http://www.moneycle.com/to-roth-or-not-to-roth-part-3/</link>
-        
-        <guid isPermaLink="true">http://www.moneycle.com/to-roth-or-not-to-roth-part-3/</guid>
-        
-        
-      </item>
     
       <item>
         <title>To Roth or Not to Roth? - Part 2, Reframing the Question</title>
@@ -2687,6 +2547,113 @@ Rinse and repeat.&lt;/p&gt;
         <category>spending</category>
         
         <category>other</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Two Types of Income</title>
+        <description>&lt;p&gt;I’ve been noticing that every income stream follows one of two basic patterns.
+It is either an indefinite stream that will go as long as you live, or it is
+a finite stream that will end at some point in the future.&lt;/p&gt;
+
+&lt;p&gt;Additionally, income streams either start now, or in the future.&lt;/p&gt;
+
+&lt;p&gt;If you think about income in these terms it helps to give you a mental
+framework when trying to structure your portfolio
+to give you the income you need, when you need it.  For example, if you will have
+an indefinite income stream (like a pension) that starts in the future,
+then you may want to create some other income stream now that will last until that
+future date.&lt;/p&gt;
+
+&lt;h2 id=&quot;indefinite-income-streams&quot;&gt;Indefinite Income Streams&lt;/h2&gt;
+
+&lt;p&gt;Indefinite income streams are those that are expected to last as long as you
+and your spouse are alive.  The most common examples of this type of income are
+as follows:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Social Security&lt;/strong&gt; - It will still be there when you need it.  Ignore those
+ who say otherwise.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Pensions&lt;/strong&gt; - Pensions from a company you worked at tend to kick in at your
+ retirement (or when you reach a particular age).&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Annuities&lt;/strong&gt; - You can buy an annuity from an insurance company that will give
+ you income for as long as you live.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Systematic Withdrawals&lt;/strong&gt; - If you withdraw funds from your portfolio at a prudent
+  rate (3-4%) then there is a pretty good chance that it will last last long as you do.
+  The only question is whether or not it will keep pace with inflation.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;finite-income-streams&quot;&gt;Finite Income Streams&lt;/h2&gt;
+
+&lt;p&gt;Finite income streams are those that you expect to end at some point.  Here are
+some examples of those:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Your Job&lt;/strong&gt; - This is the quintessential finite income stream.  You can’t work
+  forever.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Bridge Fund&lt;/strong&gt; - See my article on &lt;a href=&quot;./building-a-bridge-to-social-security&quot;&gt;creating a bridge to social security&lt;/a&gt;
+ for an example of how to use funds to bridge to a future date.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Income Replacement Funds&lt;/strong&gt; - Fidelity offers a particular type of fund called
+&lt;a href=&quot;http://moneyover55.about.com/od/investmentincome/a/incomereplacement.htm&quot;&gt;Income Replacement Funds&lt;/a&gt;
+that are designed to provide income until some future date.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Bonds&lt;/strong&gt; - You could buy a portfolio of bonds that return the principal in different
+years and spend that money as it is returned to you.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Lending Money&lt;/strong&gt; - You can lend funds to somebody with the promise that they
+ will pay it back with some agreed-upon rate.  Micro-lending companies like Lending
+ Club and Prosper are a good way to do this efficiently.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Imprudent Systematic Withdrawals&lt;/strong&gt; - if you draw down your portfolio too quickly,
+ you could deplete it in a finite period of time.  Don’t do this.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;income-start-dates&quot;&gt;Income Start Dates&lt;/h2&gt;
+
+&lt;p&gt;In addition to the duration of an income stream, you need to consider when they
+income starts.  For example, if you are retiring at age 62, you &lt;em&gt;could&lt;/em&gt; start taking your
+Social Security right at age 62.  However, it is often beneficial for you to delay
+taking your benefits until age 70.  In that scenario, you would need to figure out
+how to get an income stream that lasts 8 years until your social security kicks in.&lt;/p&gt;
+
+&lt;p&gt;Ultimately, your goal as a retiree is to arrange these blocks of income to give you
+an income stream that lasts indefinitely but is relatively smooth.  I like to think
+of it using building blocks.  Here’s a crude drawing of what I mean.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;                                   +-----------------------------&amp;gt;
+                                   | Longevity Annuity (age 80)
++----------------+-----------------+-----------------------------&amp;gt;
+|  Bridge Fund   |          Pension (age 65)
++----------------+----------+------------------------------------&amp;gt;
+|  Income Replacement Fund  | Social Security (age 70)
++---------------------------+------------------------------------&amp;gt;
+|  Systematic Withdrawals of remaining portfolio
++----------------------------------------------------------------&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In this drawing, time goes from left to right.
+This example depicts having a relatively steady stream of income until age 80
+at which point your income is boosted by a longevity annuity.
+The “Longevity Annuity” is one income stream you might want to purchase if you
+anticipate needing extra future income to help with age-related expenses.&lt;/p&gt;
+
+&lt;p&gt;Also in this example, I am also showing a couple of different finite income stream types being
+used to bridge forward to indefinite income streams (pension and social security)
+in the future.  The type of bridge isn’t important, I’m just trying to illustrate
+the concept of bridging forward to that indefinite future income stream.&lt;/p&gt;
+
+&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;This article doesn’t introduce much in the way of new concepts.  But I have found
+it useful in structuring my own portfolio to think of income streams as one of two
+basic types that can be combined like building blocks to give you the income you
+need in retirement.  Hopefully this framework will help you too.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 31 Oct 2015 00:00:00 -0600</pubDate>
+        
+          <link>http://www.moneycle.com/two-types-of-income/</link>
+        
+        <guid isPermaLink="true">http://www.moneycle.com/two-types-of-income/</guid>
+        
+        <category>spending</category>
         
         
       </item>
