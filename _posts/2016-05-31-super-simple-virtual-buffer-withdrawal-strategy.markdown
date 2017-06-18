@@ -343,6 +343,7 @@ strategy doesn't require you do so, it's up to you.
 
 ### Related
 
+* [Super-Simple Virtual-Buffer Withdrawal Strategy - Revisited](/super-simple-virtual-buffer-withdrawal-strategy-revisited/)
 * [Safe Withdrawal Rates for Vampires](/safe-withdrawal-rates-for-vampires/)
 * [Buffer Withdrawals to Stabilize Income](/buffer-withdrawals-to-stabilize-income/)
 * [The 30-30 Withdrawal Strategy](/the-30-30-withdrawal-strategy/)
