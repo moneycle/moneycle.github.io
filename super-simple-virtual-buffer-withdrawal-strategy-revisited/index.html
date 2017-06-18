@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>A Penny Saved Is Four Dollars Earned</title>
-  <meta name="description" content="We’ve all heard the phrase “a penny saved is a penny earned”, which is usuallyattributed to Benjamin Franklin, inventor of the bifocals.And while Benjamin Fr...">
+  <title>Super-Simple Virtual-Buffer Withdrawal Strategy - Revisited</title>
+  <meta name="description" content="I was recently re-reading the original article that presented the concept ofthis simple withdrawal strategy and found the explanation to be overly complexwhi...">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://www.moneycle.com/a-penny-saved-is-four-dollars-earned/">
+  <link rel="canonical" href="http://www.moneycle.com/super-simple-virtual-buffer-withdrawal-strategy-revisited/">
   <link rel="alternate" type="application/rss+xml" title="Moneycle" href="http://www.moneycle.com/feed.xml" />
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.4/d3.min.js"></script>
@@ -104,147 +104,139 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">A Penny Saved Is Four Dollars Earned</h1>
-    <p class="post-meta">Feb 28, 2015</p>
+    <h1 class="post-title">Super-Simple Virtual-Buffer Withdrawal Strategy - Revisited</h1>
+    <p class="post-meta">Jun 17, 2017</p>
   </header>
 
   <div class="post-abstract">
-    What is the true impact of spending relative to how much you need to save to support that spending in retirement?
+    While the concept of this withdrawal strategy is simple, the original presentation of it was overly complex.  In this rewriting, I attempt to show that it really is a simple strategy that anybody can implement.
 
   </div>
 
   <article class="post-content">
-    <img class="post-image" src="/images/benjamin-franklin-383_479.jpeg"/>
-    <p>We’ve all heard the phrase “a penny saved is a penny earned”, which is usually
-attributed to Benjamin Franklin, inventor of the bifocals.
-And while Benjamin Franklin is revered by the monocle-loving crowd,
-his adage does not accurately represent the true worth of a penny saved in the
-context of an early retirement.  Let’s take a look at what a penny saved in your
-monthly expenses equals in terms of how much money you need to save.</p>
+    <img class="post-image" src="/images/einstein.jpg"/>
+    <p>I was recently re-reading the original article that presented the concept of
+this simple withdrawal strategy and found the explanation to be overly complex
+which seems wrong for something that’s supposed to be simple.
+So I ask you, dear reader, for another chance to describe the strategy in a way
+that is more approachable (with less math) to the average reader.
+In fact, the most complex thing about the strategy is the name<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>.</p>
 
-<h2 id="retirement-income">Retirement Income</h2>
+<h2 id="the-simplest-version">The Simplest Version</h2>
 
-<p>When thinking about retirement income, a good rule-of-thumb is to use the 4% rule.
-This isn’t a hard and fast rule, but it does give us a good idea of how much
-money we need to save for a particular income.  For example, a portfolio of
-$300,000 can reasonably be expected to generate an income of $12,000 per year
-(4% of $300,000), or $1000 per month.  Conversely, if we want an
-income of $1000 per month, we need to save 300 times that amount in our retirement
-account.</p>
+<p>In it’s simplest form, the strategy boils down to the following 2 equations:</p>
 
-<p>When we talk about income needs in retirement, all we’re really talking about
-is covering our living expenses.  So, if we can reduce our expenses by
-$1 per month, then we can retire with $300 less in our portfolio.</p>
+<div class="highlight">
+  <pre><code>initial_monthly_withdrawal = portfolio_value / 400
+next_monthly_withdrawal    =
+     ⅔ * current_withdrawal + ⅓ * current_portfolio_value / 400
+</code></pre>
+</div>
 
-<h2 id="taxes">Taxes</h2>
+<p>The first equation tells you how much you can withdrawal monthly from
+your portfolio in the first year that you start taking withdrawals.
+Dividing your portfolio value by 400 is equivalent to taking a 3% annual
+withdrawal and gets the process started.  Conversely, if you multiply your monthly
+expenses by 400, that can give you an approximation of how big your portfolio needs
+to be in order to retire.</p>
 
-<p>Accounting for taxes can be a little more tricky because the tax rate depends
-on when the money is taxed.  If it is taxed while you are in your peak earning
-years, you might be paying a combined 33% or more federal and state taxes,
-not to mention sales tax on whatever your are spending your money on.
-But after retirement, you should be in a lower tax bracket.</p>
+<p>The second equation tells you how much you should adjust your withdrawal amount
+each year.  This particular version of the equation assumes a buffer-size of 3
+years and 3% withdrawal rate.  In case you haven’t been reading other
+articles on this site, the buffer is what provides ballast to the withdrawal
+equation so that your withdrawal amounts aren’t whipped around too much by a
+volatile investment portfolio.</p>
 
-<p>For the sake of argument, let’s assume you have deferred your taxes until retirement
-and that the money you’re spending is coming out of a traditional IRA.
-And let’s say you’re in the 15% federal bracket, 5% state and 5% sales tax.
-It’s pretty easy to get to 25% combined taxes even at lower tax brackets.</p>
+<p><strong>That’s it!</strong>  If you’re comfortable with the assumed withdrawal rate of 3%
+and buffer of 3 years then you can stop reading and just follow the above
+equations (which I use for my own situation).</p>
 
-<p>With this 25% tax rate, instead of saving $300 now to spend $1 later, we would
-have to save $400.  So, if you start with $400, and subtract 25%, or $100 for
-taxes, then you arrive at the $300 needed to sustain $1 in monthly spending.</p>
+<h2 id="example-900000-portfolio">Example: $900,000 portfolio</h2>
 
-<p>In equation form, you need to save <code>$300/(1-tax_rate)</code> to sustain a dollar of monthly
-expenses.  For example, if you’re combined tax rate is 40%, then the
-amount you need to earn to save for a $1 monthly expense would be <code>$300/0.6</code> or $500!</p>
+<p>Let’s take a simple example, start with a portfolio worth $900k.  Dividing
+a this by 400 gives the initial monthly withdrawal of,</p>
 
-<h2 id="monthly-expenses">Monthly Expenses</h2>
+<pre><code>initial_monthly_withdrawal = $900000 / 400
+                           = $2250/month
+</code></pre>
 
-<p>Using the $400 multiplier from above, consider some typical monthly expenses and their
-impact on your savings.</p>
+<p>Piece of cake.  It’s up to you if you actually save the full 3-years of that
+withdrawal amount into a safe place.  I recommend you at least save 1 year’s
+worth, $27k in this example, in a safe account such as an interest-bearing savings.
+Or maybe you’d feel better putting the entire 3-year buffer, $81k, in savings,
+that’s fine too.  It mostly depends on your risk tolerance.</p>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">If you will be spending …</th>
-      <th>You need to save…</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">$8 your Hulu subscription</td>
-      <td>$3,200</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">$30 to have your dachshund bathed</td>
-      <td>$12,000</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">$50 extra on your phone bill</td>
-      <td>$20,000</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">$100 extra on your cable bill</td>
-      <td>$40,000</td>
-    </tr>
-  </tbody>
-</table>
+<p>Next, after one year, you re-evaluate the portfolio to decide whether to increase
+or decrease your withdrawal amount.  Let’s say portfolio has had a good year, and is
+worth $990k at the end of the year.  Your next year’s withdrawal rate
+is computed as,</p>
 
-<p>The math on this is easy to do in your head, which is partly why I chose the
-25% tax rate for our examples.  Multiplying by 400 is simply multiplying by
-2 twice then adding 2 zeroes.  So, when you consider the money you need to
-save to cover a cost of say, $6.35, times 2 is $12.70, times 2 is $25.40,
-and add 2 zeros to arrive at $2540.  You don’t need a fancy monocle to do
-that in your head!</p>
+<pre><code>next_monthly_withdrawal = ⅔ * 2250 + ⅓ * 990000 / 400
+                        = 1500 + 825
+                        = $2325/month
+</code></pre>
 
-<h2 id="daily-expenses">Daily Expenses</h2>
+<p>So even though the portfolio grew by 10%, you only increase the monthly withdrawal
+amount by 3.33% (because of the buffering).  It works both way, if the market has
+a particularly bad year, it won’t kill your monthly withdrawal income.</p>
 
-<p>Daily expenses have an even bigger impact per dollar.  If you consider a daily
-expense to be around 25 times per month, then you need 25*$400, or $10,000,
-to cover every $1 of daily expenses in the future.
-The math couldn’t be easier, just add 4 zeros.</p>
+<p>In every year after the first year, you just use the 2nd equation to determine
+the withdrawal amount for the following year.  Over
+the long haul, with these equations, your withdrawal amount will hover around 3%
+of your total portfolio value<sup id="fnref:3"><a href="#fn:3" class="footnote">2</a></sup>.</p>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">If you will be spending …</th>
-      <th>You need to save…</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">$1 to have your monocle cleaned</td>
-      <td>$10,000</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">$2 for a fountain drink with lunch</td>
-      <td>$20,000</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">$5 for a venti Starbucks Frappucino</td>
-      <td>$50,000</td>
-    </tr>
-  </tbody>
-</table>
+<h2 id="the-general-version">The General Version</h2>
 
-<p>Now, if you can’t live without your Starbucks, maybe just downgrading to the
-grande size will save you $10,000.  And maybe you could even learn to clean
-your own damn monocle and save another $10,000.</p>
+<p>If you prefer a little more control over the withdrawal rate and buffer size,
+then here’s the more general equations for this strategy:</p>
 
-<h2 id="summary">Summary</h2>
+<div class="highlight">
+  <pre><code>initial_monthly_withdrawal =
+     portfolio_value * withdrawal_rate / 12
+next_monthly_withdrawal    =
+     (1-1/buffer_size) * current_withdrawal +
+       (1/buffer_size) * portfolio_value * withdrawal_rate / 12
+</code></pre>
+</div>
 
-<p>I have been a little bit loose with the numbers partially because it’s hard to
-know exactly what your withdrawal and tax rates will be.  But the point of this
-article is to give you some ballpark numbers with which to evaluate whether an
-added expense is worth it.  Simply put, to figure out how much money you’ll
-need to support a spending level in retirement:</p>
+<p>For example, if you prefer a more aggressive 4% withdrawal that is stabilized
+by a larger 5-year buffer then the withdrawal equations would simplify to,</p>
+
+<pre><code>initial_monthly_withdrawal = portfolio_value / 300
+next_monthly_withdrawal    =
+     ⅘ * current_withdrawal + ⅕ * current_portfolio_value / 300
+</code></pre>
+
+<h2 id="easy-peasy">Easy Peasy</h2>
+
+<p>That’s all there is to implementing the Super-Simple Virtual-Buffer Withdrawal Strategy.
+If you want to see the math behind the strategy, refer to the overly-complex
+<a href="/super-simple-virtual-buffer-withdrawal-strategy/">original article</a>.
+The main takeaway from this strategy is that you only need to know two data
+points each year, (1) the current withdrawal amount and (2) the current
+portfolio value.
+With those two numbers, you can calculate the next year’s withdrawal amount in
+a way that is simple to compute but still buffers your retirement income against
+wild fluctuations in the market.</p>
+
+<h3 id="related">Related</h3>
 
 <ul>
-  <li>for monthly expenses, multiply the expense by 400.</li>
-  <li>for daily expenses, multiply the expense by 10,000.</li>
+  <li><a href="/super-simple-virtual-buffer-withdrawal-strategy/">Super-Simple Virtual-Buffer Withdrawal Strategy</a></li>
+  <li><a href="/safe-withdrawal-rates-for-vampires/">Safe Withdrawal Rates for Vampires</a></li>
+  <li><a href="/buffer-withdrawals-to-stabilize-income/">Buffer Withdrawals to Stabilize Income</a></li>
+  <li><a href="/the-30-30-withdrawal-strategy/">The 30-30 Withdrawal Strategy</a></li>
 </ul>
-
-<p>Hopefully this rule-of-thumb will help you think about the impact of
-spending on your retirement.</p>
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>I’m open to suggestions on better names for the strategy <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>Technically if the market steadily increases over the long term your withdrawal amount would probably lag slightly below 3% on average, but who’s counting? <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
 
   </article>
 
