@@ -78,7 +78,7 @@ find yourself temporarily unemployed. For example, if you work in a high demand
 field then maybe just having 3 months worth of expenses saved in your emergency
 fund is adequate.
 But if your skills are very specialized, you might want to consider something
-like a year's worth of emergency funds.  
+like a year's worth of emergency funds.
 If you're not sure, default to 6 months of expenses.
 
 The emergency fund is the ballast of your "safety" bucket and should be invested
@@ -86,7 +86,7 @@ for safety only.  Resist the urge to invest these assets for growth.
 The purpose of this fund is as a safety net, so you
 don't want to risk having it decline in value when you need it most.
 After you have fully-funded your emergency fund it's time to switch gears and
-invest for long-term growth.  The simplest growth investment is 100% stocks
+invest for long-term growth.  The simplest "growth" investment is 100% stocks
 using something like a total market stock index fund.  But if a 100% stock
 allocation seems too risky for you then consider a mix of stocks and bonds
 such as 90/10 stocks/bonds, or 80/20 stocks/bonds.
@@ -143,19 +143,20 @@ When you hit this milestone (M3), you're not quite there yet but you can start
 to think seriously about your impending financial independence and whether
 you will want to continue working.  As such, the
 next investment is back into "safety".  I'm suggesting that you save 5 years
-of expenses in safety but that number is somewhat arbitrary.  The key is to
+of expenses in "safety" but that number is somewhat arbitrary.  The key is to
 have a comfortable amount of expenses in non-risky buckets so that you will
 be positioned to pull the trigger on retirement and not have to worry about
 a market correction in the first few years of retirement.
 
 If you want, you can just add these "safety" funds into your existing
-emergency fund because the primary need for this fund,
+emergency fund because the primary need for the emergency fund,
 to cover employment income gaps, is going away.
 In effect, your emergency fund is transforming from a safety net
 into a spending bucket.
 
 Also, as with the previous milestone, you should still rebalance every year
-to keep your "growth" at 20x expenses and you stability at 5x expenses.
+to keep your "growth" bucket at 20x expenses and you "stability" bucket
+at 5x expenses.
 Based on market conditions you may find you need to backfill either growth
 or stability.
 But you can also use gains from those buckets to feed into your "safety"
@@ -167,28 +168,26 @@ When you have 20x expenses in "growth", 5x expenses in "stability", and
 5x expenses in "safety", then congratulations!
 You have reached financial independence (FI)!
 
-If you do choose to continue working after FI, I recommend putting all the
+If you do choose to continue working after FI, I recommend putting all
 future extra savings into the long-term "growth" bucket because, by design,
 you won't need those funds in the near term.
 Alternatively, you could also just keep the 20/5/5 growth/stability/safety
 ratios going and increase your spending accordingly when you do
 eventually retire.
 
-If you chose to have 100% stocks in your "growth" bucket when you hit
-the FI milestone, then you will have 67% stocks in your overall portfolio.
+If you had chosen to keep 100% stocks in your "growth" bucket then,
+when you hit the FI milestone, you will have 67% stocks in your overall portfolio.
 If you prefer to target a little smaller stock allocation in your portfolio
 at retirement, then you can **use your target
-percentage to inform how much to keep in your growth portfolio**.
+percentage to inform how much to keep in your "growth" bucket**.
 For example, if you'd like to hit a target of 60% overall stocks on your
-FI date, then
-**multiply the targeted stock allocation by 1.5**
+FI date, then **multiply the targeted stock allocation by 1.5**
 (30 years total / 20 years in "growth")
 to arrive at a 90% stock percentage in your "growth" buckets.
-I think anything between 75-100% is fine for the growth bucket but you should
-give some serious thought to how you would feel if you reached FI right
-before the market takes a big hit.  After you reach FI your primary goal
-will naturally switch from achieving growth to protecting what you have
-accumulated.
+I think any stock allocation between 75-100% is fine for the "growth" bucket
+but you should give some serious thought to how you would feel if you reached
+FI right before the market takes a big hit.  If you're not sure, start with 90%
+stocks in "growth".
 
 ## Not Quite a Target-Date Fund
 
@@ -251,6 +250,10 @@ and taxable accounts for your portfolio.
  * Put as much into the "growth" bucket as early as possible, then add
    "stability" and "safety" later as you approach retirement.  
    This approach maximizes the amount of time your riskier assets have to grow.
+ * Invest in "stability" (bonds) only after you have accumulated 20 years
+   worth of expenses in "growth".
+ * Multiply your desired stock allocation at retirement by 1.5 to arrive at
+   the percentage of stocks to have in the "growth" bucket during accumulation.
  * Following this investment strategy will slowly transition your assets into
    retirement so you don't have to scramble to reallocate assets to an
    appropriate post-retirement mix.
