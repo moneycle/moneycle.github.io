@@ -30,8 +30,7 @@ now that I've reached the FI milestone and it informs how I now think about
 the whole financial journey in retrospect.
 
 As such, in this article I propose what I think is a lifelong investment
-strategy that is better geared towards achieving and maintaining financial
-independence (FI).
+strategy that is better geared towards achieving and maintaining FI.
 The graph below illustrates this strategy using a hypothetical timeline from an
 investor's beginning all the way through FI.
 
@@ -166,7 +165,7 @@ buckets and get you to FI that much faster.
 
 When you have 20x expenses in "growth", 5x expenses in "stability", and
 5x expenses in "safety", then congratulations!
-You have reached financial independence (FI)!
+You have reached financial independence!
 
 If you do choose to continue working after FI, I recommend putting all
 future extra savings into the long-term "growth" bucket because, by design,
