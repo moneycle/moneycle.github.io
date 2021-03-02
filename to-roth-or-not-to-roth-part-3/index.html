@@ -2,6 +2,7 @@
 <html>
 
   <head>
+  <script data-ad-client="ca-pub-1137447718577367" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -47,46 +48,6 @@
         
           
           <a class="page-link" href="/about/">About</a>
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
           
         
           
@@ -153,8 +114,8 @@ at age 70 and beyond.</p>
 
 <p>Furthermore, the government requires that you start taking distributions from
 your tax-deferred accounts in the year you hit age 70.5. In that first year,
-you are required to distribute at least 3.65% (<code>portfolio_value/27.4</code>)
-of your tax-deferred portfolio as income.<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>
+you are required to distribute at least 3.65% (<code class="language-plaintext highlighter-rouge">portfolio_value/27.4</code>)
+of your tax-deferred portfolio as income.<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup>
 As such, the amount that must be taken in that first year dictates how big your
 portfolio could be before you must start taking income that creeps into higher
 tax brackets.</p>
@@ -166,13 +127,13 @@ If you want to make sure your future portfolio (age 70.5) generates no more
 than $20k of income, then the upper limit on your portfolio value at that age
 is determined by</p>
 
-<pre><code>portfolio_income = portfolio_at_70 / 27.4 &lt; $20k
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>portfolio_income = portfolio_at_70 / 27.4 &lt; $20k
+</code></pre></div></div>
 
 <p>So it’s a simple case to solve for the portfolio value</p>
 
-<pre><code>portfolio_at_70 &lt; $20k * 27.4 = $548k.
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>portfolio_at_70 &lt; $20k * 27.4 = $548k.
+</code></pre></div></div>
 
 <p>So finally we have a number, $548k for a married couple ($274k for a single).
 It’s a number with lots of assumptions and what-ifs
@@ -185,8 +146,8 @@ that income threshold is more of an art than a science since future tax
 brackets are somewhat unknowable.</p>
 
 <div class="highlight">
-  <pre><code>portfolio_at_70 &lt; income_threshold * 27.4
-</code></pre>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>portfolio_at_70 &lt; income_threshold * 27.4
+</code></pre></div>  </div>
 </div>
 
 <p>If you were born in the 2nd half of the year, replace 27.4 with 26.5 in the above
@@ -209,20 +170,20 @@ to be 2% over the next 25 years, we could calculate what portfolio value today
 would grow to $548k as,</p>
 
 <div class="highlight">
-  <pre><code>portfolio_target = portfolio_70 / (1 + net_return)^(70-age)
-</code></pre>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>portfolio_target = portfolio_70 / (1 + net_return)^(70-age)
+</code></pre></div>  </div>
 </div>
 
 <p>where,</p>
 
-<pre><code>net_return = portfolio_return - inflation
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>net_return = portfolio_return - inflation
+</code></pre></div></div>
 
 <p>So for that 45-year old in the example,</p>
 
-<pre><code>portfolio_today = $548k / (1.04)^25
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>portfolio_today = $548k / (1.04)^25
                 = $205k
-</code></pre>
+</code></pre></div></div>
 
 <p>What does this mean?  If that 45-year old has already managed to save $205k
 in tax-deferred accounts which return 4% after inflation, then they may want to
@@ -241,35 +202,35 @@ calculate the contributions needed in terms of the portfolio’s actual
 value in today’s dollars.</p>
 
 <div class="highlight">
-  <pre><code>portfolio_shortfall = (portfolio_target - portfolio_today)
-</code></pre>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>portfolio_shortfall = (portfolio_target - portfolio_today)
+</code></pre></div>  </div>
 </div>
 
 <p>Simply put, we need an annual contribution going forward that is big enough to
 fill that shortfall, so using the present-value calculation,</p>
 
-<pre><code>contribution = PV(net_return,
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>contribution = PV(net_return,
                   70-current_age,
                   portfolio_shortfall)
-</code></pre>
+</code></pre></div></div>
 
 <p>The <a href="https://en.wikipedia.org/wiki/Present_value">present value calculation</a>
 represents what level of regular contribution
-that are needed to produce the present value of <code>portfolio_shortfall</code>.</p>
+that are needed to produce the present value of <code class="language-plaintext highlighter-rouge">portfolio_shortfall</code>.</p>
 
 <div class="highlight">
-  <pre><code>contribution = portfolio_shortfall * net_return ÷
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>contribution = portfolio_shortfall * net_return ÷
                 (1 - (1+net_return)^(age-70))
-</code></pre>
+</code></pre></div>  </div>
 </div>
 
 <p>Using our 45-year-old example, and assuming they have already saved $105k,
 then the shortfall is $100k.  With a 4% return after inflation
 they could contribute up to,</p>
 
-<pre><code>contribution = $100k * 0.04 / (1 - 1.04^-25)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>contribution = $100k * 0.04 / (1 - 1.04^-25)
              = $6401
-</code></pre>
+</code></pre></div></div>
 
 <p>So a contribution of $6401/year would get this theoretical person’s portfolio
 to the level that would produce $20k of income (in today’s dollars) at age 70
@@ -515,10 +476,10 @@ On the contrary, save as much as you can but put extra contributions
 into a Roth account if possible.
 And if you don’t want to work until age 70, forthcoming articles in this series
 will discuss how to calculate your contributions when retiring before age 70.</p>
-<div class="footnotes">
+<div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:1">
-      <p>Technically, if your birthday is between July and December then you can begin RMDs in the year in which you turn 71 which has a divisor of 26.5 instead of 27.4.  For simplicity, this article only uses the 27.4 number but you may want to substitute 26.5 for your own calculations if you were born in the 2nd half of the year. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:1" role="doc-endnote">
+      <p>Technically, if your birthday is between July and December then you can begin RMDs in the year in which you turn 71 which has a divisor of 26.5 instead of 27.4.  For simplicity, this article only uses the 27.4 number but you may want to substitute 26.5 for your own calculations if you were born in the 2nd half of the year. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>
@@ -570,7 +531,7 @@ will discuss how to calculate your contributions when retiring before age 70.</p
         <ul class="contact-list">
           <li>M<span class='brand-color'>o</span>neycle</li>
           <li><a href="mailto:sir@moneycle.com">sir@moneycle.com</a></li>
-          <li>&copy; <time datetime="2018-09-06T10:56:01-06:00">2018</time>. All rights reserved.</li>
+          <li>&copy; <time datetime="2021-03-01T19:12:39-07:00">2021</time>. All rights reserved.</li>
         </ul>
       </div>
 

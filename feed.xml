@@ -6,9 +6,9 @@
 </description>
     <link>http://www.moneycle.com/</link>
     <atom:link href="http://www.moneycle.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 06 Sep 2018 10:56:01 -0600</pubDate>
-    <lastBuildDate>Thu, 06 Sep 2018 10:56:01 -0600</lastBuildDate>
-    <generator>Jekyll v2.5.3</generator>
+    <pubDate>Mon, 01 Mar 2021 19:12:39 -0700</pubDate>
+    <lastBuildDate>Mon, 01 Mar 2021 19:12:39 -0700</lastBuildDate>
+    <generator>Jekyll v3.9.0</generator>
     
       <item>
         <title>Journey to Financial Independence</title>
@@ -328,8 +328,8 @@ at age 70 and beyond.&lt;/p&gt;
 
 &lt;p&gt;Furthermore, the government requires that you start taking distributions from
 your tax-deferred accounts in the year you hit age 70.5. In that first year,
-you are required to distribute at least 3.65% (&lt;code&gt;portfolio_value/27.4&lt;/code&gt;)
-of your tax-deferred portfolio as income.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;
+you are required to distribute at least 3.65% (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;portfolio_value/27.4&lt;/code&gt;)
+of your tax-deferred portfolio as income.&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;
 As such, the amount that must be taken in that first year dictates how big your
 portfolio could be before you must start taking income that creeps into higher
 tax brackets.&lt;/p&gt;
@@ -341,13 +341,13 @@ If you want to make sure your future portfolio (age 70.5) generates no more
 than $20k of income, then the upper limit on your portfolio value at that age
 is determined by&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;portfolio_income = portfolio_at_70 / 27.4 &amp;lt; $20k
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;portfolio_income = portfolio_at_70 / 27.4 &amp;lt; $20k
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;So it’s a simple case to solve for the portfolio value&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;portfolio_at_70 &amp;lt; $20k * 27.4 = $548k.
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;portfolio_at_70 &amp;lt; $20k * 27.4 = $548k.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;So finally we have a number, $548k for a married couple ($274k for a single).
 It’s a number with lots of assumptions and what-ifs
@@ -360,8 +360,8 @@ that income threshold is more of an art than a science since future tax
 brackets are somewhat unknowable.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;
-  &lt;pre&gt;&lt;code&gt;portfolio_at_70 &amp;lt; income_threshold * 27.4
-&lt;/code&gt;&lt;/pre&gt;
+  &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;portfolio_at_70 &amp;lt; income_threshold * 27.4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;p&gt;If you were born in the 2nd half of the year, replace 27.4 with 26.5 in the above
@@ -384,20 +384,20 @@ to be 2% over the next 25 years, we could calculate what portfolio value today
 would grow to $548k as,&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;
-  &lt;pre&gt;&lt;code&gt;portfolio_target = portfolio_70 / (1 + net_return)^(70-age)
-&lt;/code&gt;&lt;/pre&gt;
+  &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;portfolio_target = portfolio_70 / (1 + net_return)^(70-age)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;p&gt;where,&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;net_return = portfolio_return - inflation
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;net_return = portfolio_return - inflation
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;So for that 45-year old in the example,&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;portfolio_today = $548k / (1.04)^25
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;portfolio_today = $548k / (1.04)^25
                 = $205k
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;What does this mean?  If that 45-year old has already managed to save $205k
 in tax-deferred accounts which return 4% after inflation, then they may want to
@@ -416,35 +416,35 @@ calculate the contributions needed in terms of the portfolio’s actual
 value in today’s dollars.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;
-  &lt;pre&gt;&lt;code&gt;portfolio_shortfall = (portfolio_target - portfolio_today)
-&lt;/code&gt;&lt;/pre&gt;
+  &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;portfolio_shortfall = (portfolio_target - portfolio_today)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Simply put, we need an annual contribution going forward that is big enough to
 fill that shortfall, so using the present-value calculation,&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;contribution = PV(net_return,
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;contribution = PV(net_return,
                   70-current_age,
                   portfolio_shortfall)
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;The &lt;a href=&quot;https://en.wikipedia.org/wiki/Present_value&quot;&gt;present value calculation&lt;/a&gt;
 represents what level of regular contribution
-that are needed to produce the present value of &lt;code&gt;portfolio_shortfall&lt;/code&gt;.&lt;/p&gt;
+that are needed to produce the present value of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;portfolio_shortfall&lt;/code&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;
-  &lt;pre&gt;&lt;code&gt;contribution = portfolio_shortfall * net_return ÷
+  &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;contribution = portfolio_shortfall * net_return ÷
                 (1 - (1+net_return)^(age-70))
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Using our 45-year-old example, and assuming they have already saved $105k,
 then the shortfall is $100k.  With a 4% return after inflation
 they could contribute up to,&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;contribution = $100k * 0.04 / (1 - 1.04^-25)
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;contribution = $100k * 0.04 / (1 - 1.04^-25)
              = $6401
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;So a contribution of $6401/year would get this theoretical person’s portfolio
 to the level that would produce $20k of income (in today’s dollars) at age 70
@@ -510,7 +510,7 @@ $20k as a &lt;em&gt;crude&lt;/em&gt; approximation of the 0% tax bracket for a m
 &lt;/style&gt;
 
 &lt;script&gt;
-  d3.select(&#39;#puppy&#39;).remove();
+  d3.select('#puppy').remove();
 
   var age = 45;
   var portfolio = 100000;
@@ -553,37 +553,37 @@ $20k as a &lt;em&gt;crude&lt;/em&gt; approximation of the 0% tax bracket for a m
     maxContribution = 0;
     var data = [
     {
-      name: &#39;4% return&#39;,
+      name: '4% return',
       xy: contributionAmount(0.04),
-      color: &#39;#aaaa20&#39;
+      color: '#aaaa20'
     },
     {
-      name: &#39;6% return&#39;,
+      name: '6% return',
       xy: contributionAmount(0.06),
-      color: &#39;#aa2020&#39;
+      color: '#aa2020'
     },
     {
-      name: &#39;8% return&#39;,
+      name: '8% return',
       xy: contributionAmount(0.08),
-      color: &#39;#20aa20&#39;
+      color: '#20aa20'
     },
     {
-      name: &#39;10% return&#39;,
+      name: '10% return',
       xy: contributionAmount(0.10),
-      color: &#39;#2020aa&#39;
+      color: '#2020aa'
     },
     ];
-    if (typeof theChart !== &#39;undefined&#39;) {
+    if (typeof theChart !== 'undefined') {
       theChart.xDomain([0.00, maxPortfolio]);
       theChart.yDomain([0, maxContribution]);
     }
 
-    d3.selectAll(&quot;.current-age&quot;).text(&#39;&#39; + age);
-    d3.selectAll(&quot;.inflation-rate&quot;).text(&#39;&#39; + Math.round(inflationRate*1000)/10 + &#39;%&#39;);
-    d3.selectAll(&quot;.portfolio-value&quot;).text(d3.format(&#39;$,f&#39;)(portfolio));
-    d3.selectAll(&quot;.income-threshold&quot;).text(&#39;$&#39; + threshold);
+    d3.selectAll(&quot;.current-age&quot;).text('' + age);
+    d3.selectAll(&quot;.inflation-rate&quot;).text('' + Math.round(inflationRate*1000)/10 + '%');
+    d3.selectAll(&quot;.portfolio-value&quot;).text(d3.format('$,f')(portfolio));
+    d3.selectAll(&quot;.income-threshold&quot;).text('$' + threshold);
 
-    return d3.select(&#39;#percentRoth-graph svg&#39;).datum(chartifyData(data));
+    return d3.select('#percentRoth-graph svg').datum(chartifyData(data));
   }
   var theData = updateData();
 
@@ -597,13 +597,13 @@ $20k as a &lt;em&gt;crude&lt;/em&gt; approximation of the 0% tax bracket for a m
                   .showXAxis(true);
 
     aChart.xAxis
-        .axisLabel(&#39;Current Tax-Deferred Portfolio Value&#39;)
-        .tickFormat(d3.format(&#39;$,f&#39;))
+        .axisLabel('Current Tax-Deferred Portfolio Value')
+        .tickFormat(d3.format('$,f'))
         .showMaxMin(false);
 
     aChart.yAxis     //Chart y-axis settings
-        .axisLabel(&#39;Annual Tax-Deferred Contribution&#39;)
-        .tickFormat(d3.format(&#39;$,f&#39;))
+        .axisLabel('Annual Tax-Deferred Contribution')
+        .tickFormat(d3.format('$,f'))
         .showMaxMin(false);
 
     aChart.xDomain([0.00, maxPortfolio]);
@@ -644,15 +644,15 @@ $20k as a &lt;em&gt;crude&lt;/em&gt; approximation of the 0% tax bracket for a m
   theChart = newChart(theData, true);
   nv.addGraph(theChart);
 
-  d3.select(&#39;#inflation-slider&#39;).call(d3.slider().axis(d3.svg.axis().ticks(6)).min(0).max(5).step(0.1).value(inflationRate*100).on(&quot;slide&quot;, function(evt, rate) {
+  d3.select('#inflation-slider').call(d3.slider().axis(d3.svg.axis().ticks(6)).min(0).max(5).step(0.1).value(inflationRate*100).on(&quot;slide&quot;, function(evt, rate) {
     inflationRate = rate / 100;
     updateData().call(theChart);
   }));
-  d3.select(&#39;#age-slider&#39;).call(d3.slider().axis(d3.svg.axis().ticks(11)).min(19).max(69).step(1).value(age).on(&quot;slide&quot;, function(evt, newAge) {
+  d3.select('#age-slider').call(d3.slider().axis(d3.svg.axis().ticks(11)).min(19).max(69).step(1).value(age).on(&quot;slide&quot;, function(evt, newAge) {
     age = newAge;
     updateData().call(theChart);
   }));
-  d3.select(&#39;#threshold-slider&#39;).call(d3.slider().axis(d3.svg.axis().ticks(11)).min(thresholdIncr).max(maxThreshold).step(thresholdIncr).value(threshold).on(&quot;slide&quot;, function(evt, newValue) {
+  d3.select('#threshold-slider').call(d3.slider().axis(d3.svg.axis().ticks(11)).min(thresholdIncr).max(maxThreshold).step(thresholdIncr).value(threshold).on(&quot;slide&quot;, function(evt, newValue) {
     threshold = newValue;
     updateData().call(theChart);
   }));
@@ -690,10 +690,10 @@ On the contrary, save as much as you can but put extra contributions
 into a Roth account if possible.
 And if you don’t want to work until age 70, forthcoming articles in this series
 will discuss how to calculate your contributions when retiring before age 70.&lt;/p&gt;
-&lt;div class=&quot;footnotes&quot;&gt;
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
   &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;Technically, if your birthday is between July and December then you can begin RMDs in the year in which you turn 71 which has a divisor of 26.5 instead of 27.4.  For simplicity, this article only uses the 27.4 number but you may want to substitute 26.5 for your own calculations if you were born in the 2nd half of the year. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Technically, if your birthday is between July and December then you can begin RMDs in the year in which you turn 71 which has a divisor of 26.5 instead of 27.4.  For simplicity, this article only uses the 27.4 number but you may want to substitute 26.5 for your own calculations if you were born in the 2nd half of the year. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
@@ -714,17 +714,17 @@ this simple withdrawal strategy and found the explanation to be overly complex
 which seems wrong for something that’s supposed to be simple.
 So I ask you, dear reader, for another chance to describe the strategy in a way
 that is more approachable (with less math) to the average reader.
-In fact, the most complex thing about the strategy is the name&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+In fact, the most complex thing about the strategy is the name&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;the-simplest-version&quot;&gt;The Simplest Version&lt;/h2&gt;
 
 &lt;p&gt;In it’s simplest form, the strategy boils down to the following 2 equations:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;
-  &lt;pre&gt;&lt;code&gt;initial_monthly_withdrawal = portfolio_value / 400
+  &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;initial_monthly_withdrawal = portfolio_value / 400
 next_monthly_withdrawal    =
      ⅔ * current_withdrawal + ⅓ * current_portfolio_value / 400
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;p&gt;The first equation tells you how much you can withdrawal monthly from
@@ -750,9 +750,9 @@ equations (which I use for my own situation).&lt;/p&gt;
 &lt;p&gt;Let’s take a simple example, start with a portfolio worth $900k.  Dividing
 a this by 400 gives the initial monthly withdrawal of,&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;initial_monthly_withdrawal = $900000 / 400
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;initial_monthly_withdrawal = $900000 / 400
                            = $2250/month
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Piece of cake.  It’s up to you if you actually save the full 3-years of that
 withdrawal amount into a safe place.  I recommend you at least save 1 year’s
@@ -765,10 +765,10 @@ or decrease your withdrawal amount.  Let’s say portfolio has had a good year, 
 worth $990k at the end of the year.  Your next year’s withdrawal rate
 is computed as,&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;next_monthly_withdrawal = ⅔ * 2250 + ⅓ * 990000 / 400
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;next_monthly_withdrawal = ⅔ * 2250 + ⅓ * 990000 / 400
                         = 1500 + 825
                         = $2325/month
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;So even though the portfolio grew by 10%, you only increase the monthly withdrawal
 amount by 3.33% (because of the buffering).  It works both way, if the market has
@@ -777,7 +777,7 @@ a particularly bad year, it won’t kill your monthly withdrawal income.&lt;/p&g
 &lt;p&gt;In every year after the first year, you just use the 2nd equation to determine
 the withdrawal amount for the following year.  Over
 the long haul, with these equations, your withdrawal amount will hover around 3%
-of your total portfolio value&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+of your total portfolio value&lt;sup id=&quot;fnref:3&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;the-general-version&quot;&gt;The General Version&lt;/h2&gt;
 
@@ -785,21 +785,21 @@ of your total portfolio value&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;
 then here’s the more general equations for this strategy:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;
-  &lt;pre&gt;&lt;code&gt;initial_monthly_withdrawal =
+  &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;initial_monthly_withdrawal =
      portfolio_value * withdrawal_rate / 12
 next_monthly_withdrawal    =
      (1-1/buffer_size) * current_withdrawal +
        (1/buffer_size) * portfolio_value * withdrawal_rate / 12
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;p&gt;For example, if you prefer a more aggressive 4% withdrawal that is stabilized
 by a larger 5-year buffer then the withdrawal equations would simplify to,&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;initial_monthly_withdrawal = portfolio_value / 300
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;initial_monthly_withdrawal = portfolio_value / 300
 next_monthly_withdrawal    =
      ⅘ * current_withdrawal + ⅕ * current_portfolio_value / 300
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;easy-peasy&quot;&gt;Easy Peasy&lt;/h2&gt;
 
@@ -821,13 +821,13 @@ wild fluctuations in the market.&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;/buffer-withdrawals-to-stabilize-income/&quot;&gt;Buffer Withdrawals to Stabilize Income&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;/the-30-30-withdrawal-strategy/&quot;&gt;The 30-30 Withdrawal Strategy&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&quot;footnotes&quot;&gt;
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
   &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;I’m open to suggestions on better names for the strategy &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;I’m open to suggestions on better names for the strategy &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
-    &lt;li id=&quot;fn:3&quot;&gt;
-      &lt;p&gt;Technically if the market steadily increases over the long term your withdrawal amount would probably lag slightly below 3% on average, but who’s counting? &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;li id=&quot;fn:3&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Technically if the market steadily increases over the long term your withdrawal amount would probably lag slightly below 3% on average, but who’s counting? &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
@@ -843,7 +843,7 @@ wild fluctuations in the market.&lt;/p&gt;
     
       <item>
         <title>To Roth or Not to Roth? - Part 2, Reframing the Question</title>
-        <description>&lt;p&gt;Many articles are written about the virtues of the Roth account&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;
+        <description>&lt;p&gt;Many articles are written about the virtues of the Roth account&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;
 or the Traditional account types, but it’s rare to find an article suggesting
 why you should probably consider having both types.&lt;/p&gt;
 
@@ -986,10 +986,10 @@ forward until you exit the rat race.&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;/affordable-care-act-may-increase-your-marginal-tax-rate/&quot;&gt;Affordable Care Act May Increase Your Marginal Tax Rate&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;/how-social-security-messes-with-your-tax-brackets/&quot;&gt;How Social Security Messes With Your Tax Brackets&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&quot;footnotes&quot;&gt;
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
   &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;I use the generic terms “Roth” and “Traditional” to refer to all qualified accounts such as IRA, 401k and 403b.  The basic concepts are the same regardless of the actual account vehicle you use. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;I use the generic terms “Roth” and “Traditional” to refer to all qualified accounts such as IRA, 401k and 403b.  The basic concepts are the same regardless of the actual account vehicle you use. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
@@ -1037,7 +1037,7 @@ in your marginal tax rate.  For example, if you are married and your provisional
 income is above $44,000, then your tax rate may be 85% higher than you think it
 is because 85% more of your total income will be taxed.&lt;/p&gt;
 
-&lt;h2 id=&quot;for-math-nerds-click-to-showhidejavascriptvoid0classtoggle-onclicktogglemath&quot;&gt;For Math Nerds &lt;a href=&quot;javascript:void(0);&quot; class=&quot;toggle&quot; onclick=&quot;toggle(&#39;#math&#39;)&quot;&gt;click to show/hide&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;for-math-nerds-click-to-showhide&quot;&gt;For Math Nerds &lt;a href=&quot;javascript:void(0);&quot; class=&quot;toggle&quot; onclick=&quot;toggle('#math')&quot;&gt;click to show/hide&lt;/a&gt;&lt;/h2&gt;
 
 &lt;div id=&quot;math&quot; class=&quot;hidden&quot;&gt;
   &lt;p&gt;The graph in the previous section was generated by calculating the taxable income
@@ -1047,35 +1047,35 @@ tax rates.  Here is the math that is used to calculate the taxable income.&lt;/p
   &lt;p&gt;As mentioned above, provisional income is defined as half of social security
 income plus “other” income,&lt;/p&gt;
 
-  &lt;pre&gt;&lt;code&gt;income_prov = income_ss/2 + income_other
-&lt;/code&gt;&lt;/pre&gt;
+  &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;income_prov = income_ss/2 + income_other
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
 
   &lt;p&gt;Half of the provisional income above the first threshold (single = $25k,
 married = $32k) is taxable,&lt;/p&gt;
 
-  &lt;pre&gt;&lt;code&gt;income_taxable = income_other +
+  &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;income_taxable = income_other +
                  max(0, 0.5(income_prov - threshold_1))
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
 
-  &lt;p&gt;The &lt;code&gt;max()&lt;/code&gt; constraint makes sure anything below the threshold is not subtracted
-from &lt;code&gt;income_other&lt;/code&gt;.  Likewise, adding in the second threshold (single = $34k,
+  &lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;max()&lt;/code&gt; constraint makes sure anything below the threshold is not subtracted
+from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;income_other&lt;/code&gt;.  Likewise, adding in the second threshold (single = $34k,
 married = $44k), 35% of income above that threshold is added to the 50% above the
 first threshold (for a total of 85% above both thresholds),&lt;/p&gt;
 
-  &lt;pre&gt;&lt;code&gt;income_taxable = income_other +
+  &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;income_taxable = income_other +
                  max(0, 0.50(income_prov - threshold_1)) +
                  max(0, 0.35(income_prov - threshold_2))
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
 
   &lt;p&gt;But we also need to add in the constraint that no more than 85% of social security
 is taxed.  This gives us a unified equation to calculate taxable income,&lt;/p&gt;
 
   &lt;div class=&quot;highlight&quot;&gt;
-    &lt;pre&gt;&lt;code&gt;income_taxable = income_other +
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;income_taxable = income_other +
                  min(0.85*income_ss,
                      max(0, 0.50(income_prov - threshold_1)) +
                      max(0, 0.35(income_prov - threshold_2)))
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/div&gt;
 
 &lt;/div&gt;
@@ -1124,7 +1124,7 @@ the graph to see how it affects the tax brackets.&lt;/p&gt;
 &lt;/style&gt;
 
 &lt;script&gt;
-  d3.select(&#39;#puppy&#39;).remove();
+  d3.select('#puppy').remove();
 
   var salaryInc = 1000;
   var maxSalary = 250000;
@@ -1192,26 +1192,26 @@ the graph to see how it affects the tax brackets.&lt;/p&gt;
     var marginalTaxXY = taxRate();
     var data = [
     {
-      name: &#39;Other Income&#39;,
+      name: 'Other Income',
       xy: marginalTaxXY,
-      color: &#39;#20aa20&#39;
+      color: '#20aa20'
     },
     {
-      name: &#39;Social Security&#39;,
+      name: 'Social Security',
       xy: [[0,0], [ssIncome, 0]],
-      color: &#39;#aa2020&#39;,
+      color: '#aa2020',
       width: 5
     },
     {
-      name: &#39;Tax Free&#39;,
+      name: 'Tax Free',
       xy: [[ssIncome,1.0], [totalIncomeFor(deduction, ssIncome), 1.0]],
-      color: &#39;#ffeeaa&#39;,
+      color: '#ffeeaa',
       width: 5,
       area: true
     },
     ];
     d3.selectAll(&quot;.ss-income&quot;).text(d3.format(&quot;$,f&quot;)(ssIncome))
-    return d3.select(&#39;#taxBracketWithSS svg&#39;).datum(chartifyData(data));
+    return d3.select('#taxBracketWithSS svg').datum(chartifyData(data));
   }
   var marginalTaxData = updateData();
 
@@ -1225,13 +1225,13 @@ the graph to see how it affects the tax brackets.&lt;/p&gt;
                   .showXAxis(true);
 
     aChart.xAxis
-        .axisLabel(&#39;Total Income ($)&#39;)
-        .tickFormat(d3.format(&#39;$,f&#39;))
+        .axisLabel('Total Income ($)')
+        .tickFormat(d3.format('$,f'))
         .showMaxMin(false);
 
     aChart.yAxis     //Chart y-axis settings
-        .axisLabel(&#39;Marginal Tax Rate&#39;)
-        .tickFormat(d3.format(&#39;.0%&#39;))
+        .axisLabel('Marginal Tax Rate')
+        .tickFormat(d3.format('.0%'))
         .showMaxMin(false);
 
     aChart.xDomain([0.00, maxSalary]);
@@ -1273,7 +1273,7 @@ the graph to see how it affects the tax brackets.&lt;/p&gt;
   rothChart = newChart(marginalTaxData, true);
   nv.addGraph(rothChart);
 
-  d3.select(&#39;#ss-income-slider&#39;).call(d3.slider().axis(d3.svg.axis().ticks(11)).min(0).max(maxBenefit).step(1000).value(ssIncome).on(&quot;slide&quot;, function(evt, ssi) {
+  d3.select('#ss-income-slider').call(d3.slider().axis(d3.svg.axis().ticks(11)).min(0).max(maxBenefit).step(1000).value(ssIncome).on(&quot;slide&quot;, function(evt, ssi) {
     salaryInc = 100000;
     ssIncome = ssi;
     updateData().call(rothChart);
@@ -1300,7 +1300,7 @@ the graph to see how it affects the tax brackets.&lt;/p&gt;
   disappears!  That is due to the fact that 10% bracket is increased by 50% to 15%
   because your provisional income is between the 1st and 2nd thresholds.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;SS ≈ $47,000&lt;/strong&gt; a crazy new 46.25% tax bracket appears and represents the
-  25% tax bracket being increased by 85%.  &lt;/li&gt;
+  25% tax bracket being increased by 85%.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;SS ≈ $53,000&lt;/strong&gt; the 15% tax bracket becomes extinct if you are lucky enough
   to get this much Social Security income (for a married couple).  In other words,
   beyond the tax-free zone of deductions and exemptions, the first tax bracket
@@ -1492,19 +1492,19 @@ would come out in the 25% tax bracket.&lt;/p&gt;
 those funds might as well go into a Roth account today.  So in this example,
 the couple could contribute 8% to their Roth.  Mathematically,&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;percent_to_roth = (livable_income - tax_threshold) / livable_income
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;percent_to_roth = (livable_income - tax_threshold) / livable_income
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Assigning variables,&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;L = livable_income = current_income - max_savings
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;L = livable_income = current_income - max_savings
 T = tax_threshold
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;then,&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;percent_to_roth = (L - T) / L
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;percent_to_roth = (L - T) / L
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;other-income-sources&quot;&gt;Other Income sources&lt;/h2&gt;
 
@@ -1529,13 +1529,13 @@ bracket if deferred to the future.&lt;/p&gt;
 
 &lt;p&gt;Modifying the first equation,&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;percent_to_roth = (L - T) / (L - B)
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;percent_to_roth = (L - T) / (L - B)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;where,&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;B = base income from &quot;other&quot; sources (in today&#39;s dollars)
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;B = base income from &quot;other&quot; sources (in today's dollars)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Knowing what your future base income from “other” sources can be a difficult
 thing to figure out.  But if you’re only expecting Social Security, I suggest
@@ -1546,8 +1546,8 @@ actual social security (or equivalent) statements to get an idea of how much
 you’ll really get.&lt;/p&gt;
 
 &lt;p&gt;At what point does 100% of your total savings go towards a Roth?  Mathematically,
-if &lt;code&gt;(L-T) &amp;gt; (L-B)&lt;/code&gt; the equation goes above 100%.  This simplifies to the
-comparison of &lt;code&gt;B &amp;gt; T&lt;/code&gt;.  So you should contribute everything to Roth when your
+if &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(L-T) &amp;gt; (L-B)&lt;/code&gt; the equation goes above 100%.  This simplifies to the
+comparison of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B &amp;gt; T&lt;/code&gt;.  So you should contribute everything to Roth when your
 “base income” sources equal or exceed
 your current lower tax threshold.  That makes sense because it means that
 if you know that you will be at or above the current tax rate in the future
@@ -1555,8 +1555,8 @@ you might as well contribute everything to Roth today.&lt;/p&gt;
 
 &lt;p&gt;Let’s just modify the equation slightly to account for this scenario,&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;percent_to_roth = min((L - T) / (L - B), 100%)
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;percent_to_roth = min((L - T) / (L - B), 100%)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;saving-across-multiple-tax-brackets&quot;&gt;Saving Across Multiple Tax Brackets&lt;/h2&gt;
 
@@ -1578,31 +1578,31 @@ should simply go to the Traditional savings option.  Then they would apply the
 equation from earlier but only to the portion in the 15% tax bracket.&lt;/p&gt;
 
 &lt;p&gt;So the first $24,000 of savings goes into Traditional.  The remaining $6000 of
-savings would follow the previous equation, &lt;code&gt;(90000-39250)/(90000-36000)&lt;/code&gt; or
+savings would follow the previous equation, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(90000-39250)/(90000-36000)&lt;/code&gt; or
 94% of $6000, that goes to Roth.  Notice that I’m using $39,250 as the low end
 of the tax bracket because that’s where the 15% tax bracket bottoms out (for a
 married couple using standard deductions).  Finishing the
-math for this example, 94% of $6000 is &lt;code&gt;0.94*6000/30000&lt;/code&gt; or about 19% of the
+math for this example, 94% of $6000 is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0.94*6000/30000&lt;/code&gt; or about 19% of the
 overall savings that goes to Roth.&lt;/p&gt;
 
 &lt;p&gt;Mathematically, we can express the overall equation
 for the dual-tax bracket case like this:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;percent_to_roth = everything in lowest tax bracket * previous equation
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;percent_to_roth = everything in lowest tax bracket * previous equation
                 = min((T1-L) / S, 100%) * min((L - T0) / (L - B), 100%)
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;where,&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;S = total amount saved
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;S = total amount saved
 L = livable_income
 T0 = tax bracket threshold below L
 T1 = tax bracket threshold above L
 B = future base income
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Here’s a plot of what Roth percentage looks like versus income levels
-for a married couple&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; in 2016 with a savings rate of
+for a married couple&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; in 2016 with a savings rate of
 &lt;span class=&quot;savings-rate&quot;&gt;12%&lt;/span&gt; and a future
 base income equal to &lt;span class=&quot;base-percent&quot;&gt;40%&lt;/span&gt; of their current income
 (move sliders below the graph to change percentages).&lt;/p&gt;
@@ -1682,14 +1682,14 @@ base income equal to &lt;span class=&quot;base-percent&quot;&gt;40%&lt;/span&gt;
     var percentRothXY = rothPercent(savePercent);
     var data = [
     {
-      name: &#39;Percent to Roth&#39;,
+      name: 'Percent to Roth',
       xy: percentRothXY,
-      color: &#39;#aa2020&#39;
+      color: '#aa2020'
     },
     ];
-    d3.selectAll(&quot;.savings-rate&quot;).text(&#39;&#39; + Math.round(savePercent*100) + &#39;%&#39;)
-    d3.selectAll(&quot;.base-percent&quot;).text(&#39;&#39; + Math.round(basePercent*100) + &#39;%&#39;)
-    return d3.select(&#39;#percentRoth-graph svg&#39;).datum(chartifyData(data));
+    d3.selectAll(&quot;.savings-rate&quot;).text('' + Math.round(savePercent*100) + '%')
+    d3.selectAll(&quot;.base-percent&quot;).text('' + Math.round(basePercent*100) + '%')
+    return d3.select('#percentRoth-graph svg').datum(chartifyData(data));
   }
   var percentRothData = updateData();
 
@@ -1703,14 +1703,14 @@ base income equal to &lt;span class=&quot;base-percent&quot;&gt;40%&lt;/span&gt;
                   .showXAxis(true);
 
     aChart.xAxis
-        .axisLabel(&#39;Total Income ($)&#39;)
-        .tickFormat(d3.format(&#39;$f&#39;))
+        .axisLabel('Total Income ($)')
+        .tickFormat(d3.format('$f'))
         .showMaxMin(false);
     aChart.xAxis.scale(d3.scale.log());
 
     aChart.yAxis     //Chart y-axis settings
-        .axisLabel(&#39;Percent of Qualified Savings to Roth&#39;)
-        .tickFormat(d3.format(&#39;.0%&#39;))
+        .axisLabel('Percent of Qualified Savings to Roth')
+        .tickFormat(d3.format('.0%'))
         .showMaxMin(false);
 
     aChart.xDomain([0.00, maxsalary]);
@@ -1768,7 +1768,7 @@ base income equal to &lt;span class=&quot;base-percent&quot;&gt;40%&lt;/span&gt;
   rothChart = newChart(percentRothData, true);
   nv.addGraph(rothChart);
 
-  d3.select(&#39;#savings-slider&#39;).call(d3.slider().axis(d3.svg.axis().ticks(11)).min(1).max(99).step(1).value(savePercent*100).on(&quot;slide&quot;, function(evt, percent) {
+  d3.select('#savings-slider').call(d3.slider().axis(d3.svg.axis().ticks(11)).min(1).max(99).step(1).value(savePercent*100).on(&quot;slide&quot;, function(evt, percent) {
     salaryInc = 3000;
     savePercent = percent / 100;
     updateData().call(rothChart);
@@ -1779,7 +1779,7 @@ base income equal to &lt;span class=&quot;base-percent&quot;&gt;40%&lt;/span&gt;
   }));
 
 
-  d3.select(&#39;#base-slider&#39;).call(d3.slider().axis(d3.svg.axis().ticks(11)).min(0).max(100).step(1).value(basePercent*100).on(&quot;slide&quot;, function(evt, percent) {
+  d3.select('#base-slider').call(d3.slider().axis(d3.svg.axis().ticks(11)).min(0).max(100).step(1).value(basePercent*100).on(&quot;slide&quot;, function(evt, percent) {
     salaryInc = 3000;
     basePercent = percent / 100;
     updateData().call(rothChart);
@@ -1839,10 +1839,10 @@ the more egregious assumptions:&lt;/p&gt;
 to be a bit more practical.  Also, instead of focusing how much to put
 in a &lt;strong&gt;Roth&lt;/strong&gt;, I will change the perspective slightly to examine how much total
 money you should save in your &lt;strong&gt;Traditional&lt;/strong&gt; savings option.&lt;/p&gt;
-&lt;div class=&quot;footnotes&quot;&gt;
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
   &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;For the plot, I capped the qualified contribution at $48,000 because each person in a couple over 50 can contribute a max of $24,000 to qualified accounts. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;For the plot, I capped the qualified contribution at $48,000 because each person in a couple over 50 can contribute a max of $24,000 to qualified accounts. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
@@ -1880,44 +1880,44 @@ with expenses.&lt;/p&gt;
 &lt;h2 id=&quot;lump-sum-investment&quot;&gt;Lump-Sum Investment&lt;/h2&gt;
 
 &lt;p&gt;Consider the case of investing a lump-sum amount.  The compounded return
-of the investment with a rate of return &lt;code&gt;r&lt;/code&gt;, after &lt;code&gt;N&lt;/code&gt; years is&lt;/p&gt;
+of the investment with a rate of return &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;r&lt;/code&gt;, after &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;N&lt;/code&gt; years is&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;final_value = initial_value * (1 + r)^N
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;final_value = initial_value * (1 + r)^N
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;So, without any expenses eating into the return, the ratio of the final_value to
 the initial value represents how much your portfolio would grow without expenses&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;growth_without_expenses = final_value / initial_value
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;growth_without_expenses = final_value / initial_value
                         = (1 + r)^N
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Now consider a expense or expense of &lt;code&gt;e&lt;/code&gt; being subtracted off of that return every year.&lt;/p&gt;
+&lt;p&gt;Now consider a expense or expense of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;e&lt;/code&gt; being subtracted off of that return every year.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;final_value = initial_value * [(1 + r)(1 - e)]^N
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;final_value = initial_value * [(1 + r)(1 - e)]^N
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Now the growth is smaller,&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;growth_with_expenses = final_value / initial_value
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;growth_with_expenses = final_value / initial_value
                      = [(1 + r)(1 - e)]^N
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;And to compute the half-life of these expenses, we want to know when the the growth
 with expenses is half of the growth without those expenses.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;growth_with_expenses / growth_without_expenses = 1/2
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;growth_with_expenses / growth_without_expenses = 1/2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;or,&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;[(1 + r)(1 - e)]^N / (1 + r)^N = 0.5
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[(1 + r)(1 - e)]^N / (1 + r)^N = 0.5
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Solving for &lt;code&gt;N&lt;/code&gt; gives us the half-life as a function of expenses,&lt;/p&gt;
+&lt;p&gt;Solving for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;N&lt;/code&gt; gives us the half-life as a function of expenses,&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;N = log(0.5) / log(1-e)
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;N = log(0.5) / log(1-e)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;That’s it!  We now have an equation that directly computes how many years it takes
 for a given expense to cut your total portfolio in half.  Notice that for a lump-sum
@@ -1958,19 +1958,19 @@ to pay $125,000 (1/8 of $1M) or more in expenses over the course of your investm
 
   var halfLifeData = [
   {
-    name: &#39;Half-Life&#39;,
+    name: 'Half-Life',
     xy: halfLifeXY,
-    color: &#39;#aa2020&#39;
+    color: '#aa2020'
   },
   {
-    name: &#39;3/4-Life&#39;,
+    name: '3/4-Life',
     xy: quarterLifeXY,
-    color: &#39;#2020aa&#39;
+    color: '#2020aa'
   },
   {
-    name: &#39;7/8-Life&#39;,
+    name: '7/8-Life',
     xy: eighthLifeXY,
-    color: &#39;#20aa20&#39;
+    color: '#20aa20'
   },
   ];
 
@@ -1984,13 +1984,13 @@ to pay $125,000 (1/8 of $1M) or more in expenses over the course of your investm
                   .showXAxis(true);
 
     aChart.xAxis
-        .axisLabel(&#39;Expense (%)&#39;)
-        .tickFormat(d3.format(&#39;.3p&#39;))
+        .axisLabel('Expense (%)')
+        .tickFormat(d3.format('.3p'))
         .showMaxMin(false);
 
     aChart.yAxis     //Chart y-axis settings
-        .axisLabel(&#39;Half-Life (years)&#39;)
-        .tickFormat(d3.format(&#39;.1f&#39;))
+        .axisLabel('Half-Life (years)')
+        .tickFormat(d3.format('.1f'))
         .showMaxMin(false);
 
     aChart.xDomain([0.00, maxExpense]);
@@ -2031,7 +2031,7 @@ to pay $125,000 (1/8 of $1M) or more in expenses over the course of your investm
     return result;
   }
 
-  nv.addGraph(newChart(halfLifeData, &#39;#halfLife-graph svg&#39;, true));
+  nv.addGraph(newChart(halfLifeData, '#halfLife-graph svg', true));
 
 &lt;/script&gt;
 
@@ -2099,60 +2099,60 @@ by multiplying your withdrawal rate by your portfolio value.  Using the same
 variables as the &lt;a href=&quot;/safe-withdrawal-rates-for-vampires/&quot;&gt;Safe Withdrawal Rates for Vampires&lt;/a&gt;
 article,&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;W = Pw
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;W = Pw
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;where,&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;W = annual withdrawal amount
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;W = annual withdrawal amount
 w = annual withdrawal rate
 P = portfolio value
 k = buffer size in years
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;And if we have a buffer of &lt;code&gt;k&lt;/code&gt; years, then the total buffer size initially
+&lt;p&gt;And if we have a buffer of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;k&lt;/code&gt; years, then the total buffer size initially
 is,&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;initial buffer size = kW
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;initial buffer size = kW
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;After a year of spending from the buffer, it is reduced by the withdrawal amount,
-&lt;code&gt;W&lt;/code&gt;.  So we are left with,&lt;/p&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;W&lt;/code&gt;.  So we are left with,&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt; buffer after 1 year of spending = kW-W = W(k-1)
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; buffer after 1 year of spending = kW-W = W(k-1)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;At this point, we add back an amount equal to the new portfolio value times the
 withdrawal rate to arrive at the new buffer size,&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt; updated buffer value after 1 year = W(k-1) + Pw
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; updated buffer value after 1 year = W(k-1) + Pw
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;And to compute the new withdrawal amount, we just divide this amount
-by the size of the buffer in years (&lt;code&gt;k&lt;/code&gt;),&lt;/p&gt;
+by the size of the buffer in years (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;k&lt;/code&gt;),&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;new annual withdrawal amount = W(k-1)/k + Pw/k
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;new annual withdrawal amount = W(k-1)/k + Pw/k
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Because I prefer to think of my withdrawals as monthly, let’s rewrite this
 in terms of monthly withdrawals,&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;new monthly withdrawal amount = (W/12)(k-1)/k + Pw/12k
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;new monthly withdrawal amount = (W/12)(k-1)/k + Pw/12k
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Given that &lt;code&gt;k&lt;/code&gt; and &lt;code&gt;w&lt;/code&gt; are constant values, we now have a formula for computing
-our new withdrawal amount from the current monthly withdrawal (&lt;code&gt;W/12&lt;/code&gt;),
-and the current portfolio value (&lt;code&gt;P&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;Given that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;k&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;w&lt;/code&gt; are constant values, we now have a formula for computing
+our new withdrawal amount from the current monthly withdrawal (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;W/12&lt;/code&gt;),
+and the current portfolio value (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;P&lt;/code&gt;).&lt;/p&gt;
 
 &lt;h2 id=&quot;example-using-30-30-numbers&quot;&gt;Example Using 30-30 Numbers&lt;/h2&gt;
 
 &lt;p&gt;Let’s put some numbers to this to make it less abstract.  Start with a
-portfolio of &lt;code&gt;P = $720,000&lt;/code&gt; and go with the 30-30 Withdrawal Strategy numbers
-for buffer size (&lt;code&gt;k = 2.5 years&lt;/code&gt;), and withdrawal rate (&lt;code&gt;w = 3.33%&lt;/code&gt;).
+portfolio of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;P = $720,000&lt;/code&gt; and go with the 30-30 Withdrawal Strategy numbers
+for buffer size (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;k = 2.5 years&lt;/code&gt;), and withdrawal rate (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;w = 3.33%&lt;/code&gt;).
 For these values, the initial monthly withdrawal is simply,&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;Pw/12 = $720000*0.0333/12 = $2000/month
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Pw/12 = $720000*0.0333/12 = $2000/month
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;If you want, you can set aside your buffer of 2.5 years ($60,000) in a safe place.
 But the beauty of this strategy is that you don’t have to do so.  You can also
@@ -2163,14 +2163,14 @@ you get the advantages the buffer gives you without having to keep track of it.&
 &lt;p&gt;Now, let’s assume a year has passed and it has been a good year and the portfolio
 has gone up to $765,000.  Now your monthly withdrawal amount is computed as,&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;(W/12)(k-1)/k + Pw/12k = $2000(1.5/2.5) + $765000*.03333/(12*2.5))
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(W/12)(k-1)/k + Pw/12k = $2000(1.5/2.5) + $765000*.03333/(12*2.5))
                        = $2000 * 0.6 + $765000/900
                        = $1200 + $850
                        = $2050
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;So even though the portfolio increased by 6.25% (&lt;code&gt;765000/720000&lt;/code&gt;), the monthly
-spending only went up 2.5% (&lt;code&gt;2050/2000&lt;/code&gt;) due to the virtual 2.5-year buffering.&lt;/p&gt;
+&lt;p&gt;So even though the portfolio increased by 6.25% (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;765000/720000&lt;/code&gt;), the monthly
+spending only went up 2.5% (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2050/2000&lt;/code&gt;) due to the virtual 2.5-year buffering.&lt;/p&gt;
 
 &lt;p&gt;Also, look how simple the calculation is every year.  In this example, multiplying
 your current income by 0.6, divide your portfolio by 900, and add those 2 numbers
@@ -2183,29 +2183,29 @@ together.  Pretty simple right?&lt;/p&gt;
 up dividing by 1000?  If we can divide by 1000 then the calculation can almost
 be done in your head.  To state this mathematically, we want,&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;12k/w = 1000
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;12k/w = 1000
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;If the annual withdrawal rate is fixed, then we solve for the buffer size to get,&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;k = 1000w/12
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;k = 1000w/12
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Substituting this back into our withdrawal equation,&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;new monthly withdrawal amount = (W/12)(1-0.012/w) + P/1000
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;new monthly withdrawal amount = (W/12)(1-0.012/w) + P/1000
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Revisiting the first example with a portfolio of $720,000 and a withdrawal
 rate of 3.333%, the first year withdrawal is still $2000/monthly because the
 withdrawal rate is the same.  After the first year with a new portfolio value
 of $765,000, the new monthly withdrawal now becomes,&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;(W/12)(1-0.012/w) + P/1000 = $2000(1-0.012/0.03333) + $765000/1000
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(W/12)(1-0.012/w) + P/1000 = $2000(1-0.012/0.03333) + $765000/1000
                            = $2000 * 0.64 + $765000/1000
                            = $1280 + $765
                            = $2045
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;So, you can see that the slightly modified equation only decreased the income by
 $5/month.  This decrease is due to a slightly larger buffer (2.778 years vs 2.5 years)
@@ -2218,25 +2218,25 @@ from your portfolio by simply multiplying your portfolio value by your withdrawa
 rate.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;
-  &lt;pre&gt;&lt;code&gt;initial monthly withdrawal = Pw/12
-&lt;/code&gt;&lt;/pre&gt;
+  &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;initial monthly withdrawal = Pw/12
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Then, after each year you compute your new withdrawal amount with this
 super-simple formula.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;
-  &lt;pre&gt;&lt;code&gt;new monthly withdrawal = M * beta + P/1000
-&lt;/code&gt;&lt;/pre&gt;
+  &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;new monthly withdrawal = M * beta + P/1000
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;p&gt;where,&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;M = previous monthly withdrawal
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;M = previous monthly withdrawal
 beta = monthly withdrawal multiplier = 1 - 1.2%/w
 w = annual withdrawal rate
 P = current portfolio value
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;The graph below shows the monthly withdrawal multiplier as a function of
 annual withdrawal rate.  If you hover over the chart you will see other
@@ -2265,9 +2265,9 @@ to allocate more to stocks as your withdrawal rate goes up.&lt;/p&gt;
 
   var betaData = [
     {
-      name: &#39;Monthly Withdrawal Multiplier&#39;,
+      name: 'Monthly Withdrawal Multiplier',
       xy: betaXY,
-      color: &#39;#2020aa&#39;
+      color: '#2020aa'
     },
   ];
 
@@ -2281,13 +2281,13 @@ to allocate more to stocks as your withdrawal rate goes up.&lt;/p&gt;
                   .showXAxis(true);
 
     aChart.xAxis
-        .axisLabel(&#39;Annual Withdrawal Rate&#39;)
-        .tickFormat(d3.format(&#39;.3p&#39;))
+        .axisLabel('Annual Withdrawal Rate')
+        .tickFormat(d3.format('.3p'))
         .showMaxMin(false);
 
     aChart.yAxis     //Chart y-axis settings
-        .axisLabel(&#39;Monthly Withdrawal Multiplier&#39;)
-        .tickFormat(d3.format(&#39;.3f&#39;))
+        .axisLabel('Monthly Withdrawal Multiplier')
+        .tickFormat(d3.format('.3f'))
         .showMaxMin(false);
 
     aChart.xDomain([0.012, 0.045]);
@@ -2351,7 +2351,7 @@ to allocate more to stocks as your withdrawal rate goes up.&lt;/p&gt;
     return result;
   }
 
-  nv.addGraph(newChart(betaData, &#39;#beta-graph svg&#39;, true));
+  nv.addGraph(newChart(betaData, '#beta-graph svg', true));
 
 &lt;/script&gt;
 
@@ -2404,23 +2404,23 @@ using the “moderate” strategy numbers.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
-    &lt;p&gt;Compute your initial monthly withdrawal from the equation &lt;code&gt;Pw/12&lt;/code&gt;.
-For example, with a $400,000 portfolio (&lt;code&gt;P&lt;/code&gt;) and a 3% withdrawal rate (&lt;code&gt;w&lt;/code&gt;),
+    &lt;p&gt;Compute your initial monthly withdrawal from the equation &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Pw/12&lt;/code&gt;.
+For example, with a $400,000 portfolio (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;P&lt;/code&gt;) and a 3% withdrawal rate (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;w&lt;/code&gt;),
 your monthly withdrawal is,&lt;/p&gt;
 
-    &lt;p&gt;&lt;code&gt;$400,000*0.03/12 = $1000&lt;/code&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$400,000*0.03/12 = $1000&lt;/code&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Withdrawal from the portfolio for a full year using the last computed value.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;At the end of each year, compute your new monthly withdrawal rate using
-the equation &lt;code&gt;M * beta + P/1000&lt;/code&gt;.  For example,
-with a 3% withdrawal rate (&lt;code&gt;w&lt;/code&gt;), your beta multiplier is &lt;code&gt;1 - 1.2%/3% = 0.6&lt;/code&gt;.
-If your portfolio (&lt;code&gt;P&lt;/code&gt;) has increased to $420,000 after the first year,
+the equation &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;M * beta + P/1000&lt;/code&gt;.  For example,
+with a 3% withdrawal rate (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;w&lt;/code&gt;), your beta multiplier is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1 - 1.2%/3% = 0.6&lt;/code&gt;.
+If your portfolio (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;P&lt;/code&gt;) has increased to $420,000 after the first year,
 then your new withdrawal is,&lt;/p&gt;
 
-    &lt;p&gt;&lt;code&gt;$1000*0.6 + $420000/1000 = $600 + $420 = $1020&lt;/code&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$1000*0.6 + $420000/1000 = $600 + $420 = $1020&lt;/code&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Go back to step 2 and repeat.&lt;/p&gt;
@@ -2433,21 +2433,21 @@ then your new withdrawal is,&lt;/p&gt;
 looks an awful lot like an &lt;a href=&quot;https://en.wikipedia.org/wiki/Exponential_smoothing&quot;&gt;exponential smoothed average&lt;/a&gt;.
 If we rewrite the withdrawal formula like this,&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;M(t) = (1-alpha) * M(t-1) + alpha * Pw/12
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;M(t) = (1-alpha) * M(t-1) + alpha * Pw/12
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;where&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;alpha = 1.2%/w
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;alpha = 1.2%/w
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;then you can see that it is indeed an exponential moving average of the
-term &lt;code&gt;Pw/12&lt;/code&gt;.  That term represents the annual withdrawal rate projected down
+term &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Pw/12&lt;/code&gt;.  That term represents the annual withdrawal rate projected down
 to the monthly level.&lt;/p&gt;
 
-&lt;p&gt;For exponential smoothed averages, a smaller &lt;code&gt;alpha&lt;/code&gt; represents an average that has
+&lt;p&gt;For exponential smoothed averages, a smaller &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alpha&lt;/code&gt; represents an average that has
 a larger smoothing effect.  In the case of this withdrawal strategy,
-the smaller &lt;code&gt;alpha&lt;/code&gt; corresponds to larger withdrawal rates which means that larger
+the smaller &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alpha&lt;/code&gt; corresponds to larger withdrawal rates which means that larger
 withdrawal rates will have larger smoothing effects.&lt;/p&gt;
 
 &lt;h2 id=&quot;parting-thoughts&quot;&gt;Parting Thoughts&lt;/h2&gt;
@@ -2564,13 +2564,13 @@ and 400% FPL to come up with the following graph.&lt;/p&gt;
  for Medicaid and may choose to not buy insurance and thus may not be affected at all.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;$21,187 (133% FPL)&lt;/strong&gt; - there is a spike at this income level because there’s
  a jump in the subsidy reduction from 2.01% to 3.02%.  So as your income increases
- from 132% to 133% of FPL, your subsidy goes down by &lt;code&gt;133*.0302-132*.0201&lt;/code&gt; =
+ from 132% to 133% of FPL, your subsidy goes down by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;133*.0302-132*.0201&lt;/code&gt; =
  136% ($217 more taxes for $159 increase in income).&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;$21,187 - 47,790 (133-300% FPL)&lt;/strong&gt; - in this range the IRS table publishes an
  ever increasing subsidy reduction rate which translates to a gradually
  increasing marginal tax rate.  The jaggedness is due the rounding of the values
  in the IRS table.  The average effect on marginal tax rate across this range is
- &lt;code&gt;(300*.0956-133*.0302)/(300-133)&lt;/code&gt; = 14.8%.
+ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(300*.0956-133*.0302)/(300-133)&lt;/code&gt; = 14.8%.
  At it’s peak it approaches 18.5% for incomes right below 300% of FPL.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;$47,740 - 63,720 (300-400% FPL)&lt;/strong&gt; - this is the top range in which a subsidy
  is available and the reduction is a constant 9.56% across the entire range.&lt;/li&gt;
@@ -2648,7 +2648,7 @@ you to push your income below 400% FPL and get a tax subsidy for a few years.&lt
 want to take as much income as you can between ages 65 and 70 while staying
 in the 15% tax bracket.  This is because at age 70, you will most likely begin
 taking social security and also be required (at age 70.5) to take required minimum
-distributions from your IRAs which all adds up to more taxable income.  &lt;/p&gt;
+distributions from your IRAs which all adds up to more taxable income.&lt;/p&gt;
 
 &lt;p&gt;So the overall strategy is,
 (1) take as little taxable income as possible while receiving ACA subsidies,
@@ -2862,29 +2862,29 @@ distributions from your IRAs which all adds up to more taxable income.  &lt;/p&g
 
   var bracketData = [
     {
-      name: &#39;Marginal Tax Rate&#39;,
+      name: 'Marginal Tax Rate',
       xy: [[0,0], [income10 - 50, 0], [income10, 0.10], [income15 - 50, 0.10], [income15, 0.15], [income25 - 50, 0.15], [income25, 0.25], [incomeMax, 0.25]],
-      color: &#39;#2020aa&#39;
+      color: '#2020aa'
     },
   ];
 
   var acaData = [
     {
-      name: &#39;ACA Tax Credit Reduction&#39;,
+      name: 'ACA Tax Credit Reduction',
       xy: acaTax.concat([[4*fpl+1, 0], [incomeMax, 0]]),
-      color: &#39;#20a020&#39;
+      color: '#20a020'
     },
   ];
 
   var combinedData = [
     {
-      name: &#39;Effective Marginal Tax Rate&#39;,
+      name: 'Effective Marginal Tax Rate',
       xy: acaTax.map(function(x) {
         income = x[0];
         tax = x[1] + ((income &lt; income10) ? 0 : ((income &lt; income15) ? 0.1 : (income &lt; income25 ? 0.15 : 0.25)));
         return [income, tax];
       }).concat([[4*fpl+1, 0.15], [income25 - 50, 0.15], [income25, 0.25], [incomeMax, 0.25]]),
-      color: &#39;#a02020&#39;
+      color: '#a02020'
     },
     {
       name: bracketData[0].name,
@@ -2902,9 +2902,9 @@ distributions from your IRAs which all adds up to more taxable income.  &lt;/p&g
 
   var capGainsData = [
     {
-      name: &#39;Effective Capital Gains Rate&#39;,
+      name: 'Effective Capital Gains Rate',
       xy: acaTax.concat([[4*fpl+1, 0], [income25-50, 0], [income25, 0.15], [incomeMax, 0.15]]),
-      color: &#39;#a02020&#39;
+      color: '#a02020'
     },
   ];
 
@@ -2918,13 +2918,13 @@ distributions from your IRAs which all adds up to more taxable income.  &lt;/p&g
                   .showXAxis(true);
 
     aChart.xAxis
-        .axisLabel(&#39;Income (AGI)&#39;)
-        .tickFormat(d3.format(&#39;$,r&#39;))
+        .axisLabel('Income (AGI)')
+        .tickFormat(d3.format('$,r'))
         .showMaxMin(false);
 
     aChart.yAxis     //Chart y-axis settings
-        .axisLabel(&#39;Marginal Tax Rate&#39;)
-        .tickFormat(d3.format(&#39;.3p&#39;))
+        .axisLabel('Marginal Tax Rate')
+        .tickFormat(d3.format('.3p'))
         .showMaxMin(false);
 
     aChart.xDomain([0, incomeMax*1.01]);
@@ -2965,10 +2965,10 @@ distributions from your IRAs which all adds up to more taxable income.  &lt;/p&g
     return result;
   }
 
-  nv.addGraph(newChart(bracketData, &#39;#brackets svg&#39;, true));
-  nv.addGraph(newChart(acaData, &#39;#acacredits svg&#39;, true));
-  nv.addGraph(newChart(combinedData, &#39;#effective svg&#39;, true));
-  nv.addGraph(newChart(capGainsData, &#39;#capgains svg&#39;, true));
+  nv.addGraph(newChart(bracketData, '#brackets svg', true));
+  nv.addGraph(newChart(acaData, '#acacredits svg', true));
+  nv.addGraph(newChart(combinedData, '#effective svg', true));
+  nv.addGraph(newChart(capGainsData, '#capgains svg', true));
 
 &lt;/script&gt;
 
@@ -3006,15 +3006,15 @@ you avoided spending $33.33 before tax, which is $25 after tax.&lt;/p&gt;
 &lt;p&gt;To put that mathematically, the money saved by using money
 from an HSA instead of after-tax dollars is,&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;money_saved = (money_without_hsa - money_with_hsa)*(1-tax_rate)
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;money_saved = (money_without_hsa - money_with_hsa)*(1-tax_rate)
 money_without_hsa = invoice_amount/(1-tax_rate)
 money_with_hsa = invoice_amount
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;which reduces to,&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;money_saved = invoice_amount*tax_rate
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;money_saved = invoice_amount*tax_rate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;So, if you know you are going to have X dollars in medical expenses, it behooves
 you to have X dollars sitting in your HSA because you will save X dollars

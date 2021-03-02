@@ -2,6 +2,7 @@
 <html>
 
   <head>
+  <script data-ad-client="ca-pub-1137447718577367" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -55,46 +56,6 @@
         
           
         
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
       </div>
     </nav>
 
@@ -130,7 +91,7 @@ and use an expense multiplier of 30 which corresponds to a 3.33% withdrawal rate
 
 <p>While this kind of rule is a great rule of thumb for giving people an idea of
 how much money they will need to save, it tends to ignore the income that
-you will earn from a future income stream such as social security or a pension<sup id="fnref:2"><a href="#fn:2" class="footnote">1</a></sup>.
+you will earn from a future income stream such as social security or a pension<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote">1</a></sup>.
 In the early retirement circles the effects of social security tend to be ignored
 perhaps because it seems like far-off and insignificant event.  But the effects
 of that extra income increase over time so your financial independence could be
@@ -140,7 +101,7 @@ closer than you previously thought.</p>
 
 <p>To illustrate the effects with an extreme example, consider the case of somebody
 named Woodrow who is 69 years old and has expenses of $40,000/year. Furthermore,
-if Woodrow expects to receive $40,000/year from social security at age 70<sup id="fnref:1"><a href="#fn:1" class="footnote">2</a></sup>,
+if Woodrow expects to receive $40,000/year from social security at age 70<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">2</a></sup>,
 then he will only need to have savings of $40,000 to be able to retire right now.
 In this extreme example, Woodrow’s expense multiplier is 1 because he only needs
 to have saved 1 times his annual expenses in order to retire now.
@@ -157,7 +118,7 @@ it’s fairly easy to extrapolate this simple example to longer time periods.
 In such scenarios you only need to save enough money to get to the age when
 you will begin collecting social security.
 So if Woodrow had been age 60 in the above example, he would need to have savings
-of <code>10*$50,000</code> or $500,000 in order to cover his expenses for the 10 years before
+of <code class="language-plaintext highlighter-rouge">10*$50,000</code> or $500,000 in order to cover his expenses for the 10 years before
 he received social security.  His expense multiplier is the number of
 years until he begins collecting social security.</p>
 
@@ -185,13 +146,13 @@ Priscilla needs 15 times the $30k, or $450k to get her to the level of income
 that social security will provide.
 Then she will need an additional piece of her portfolio to get her the
 extra $10k/year needed to cover her expenses.  Using a 3.33% withdrawal rate
-means Priscilla will need an additional <code>30*$10k</code> or $300k.</p>
+means Priscilla will need an additional <code class="language-plaintext highlighter-rouge">30*$10k</code> or $300k.</p>
 
 <p>In Priscilla’s example she would need $750k to retire at age 55 with $40k in
 expenses.  This means that her expense multiplier is reduced from 30
-(inverse of 3.33%) to <code>750k/40k</code> or 18.75.
+(inverse of 3.33%) to <code class="language-plaintext highlighter-rouge">750k/40k</code> or 18.75.
 To put it another way, without considering social security Priscilla might have
-concluded that she needed to save <code>30*40k</code> or $1.2m, which is 60% more than the $750k
+concluded that she needed to save <code class="language-plaintext highlighter-rouge">30*40k</code> or $1.2m, which is 60% more than the $750k
 she actually needs when taking social security into account.</p>
 
 <h2 id="very-early-retirement-example">Very Early Retirement Example</h2>
@@ -201,7 +162,7 @@ security bridge doesn’t make sense initially.  For example, if you retire at a
 building a bridge for 40 years means you might start withdrawing funds at a 2.5%
 rate which is likely more conservative than necessary.
 To get around this problem, you can initially take withdrawals at your preferred
-safe withdrawal rate until you hit the age of <code>70-1/withdrawal_rate</code>.
+safe withdrawal rate until you hit the age of <code class="language-plaintext highlighter-rouge">70-1/withdrawal_rate</code>.
 Then you can implement a social security bridge from that age forward.
 This is illustrated below where initially all income is from safe withdrawals,
 then a social security bridge kicks in later.</p>
@@ -210,12 +171,12 @@ then a social security bridge kicks in later.</p>
 
 <p>Consider the case of Gunther who is retiring at age 35.  Good for you Gunther!
 Because Gunther has contributed into social security for much less time than the
-maximum of 35 years<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup>, his estimated social security payments at age 70 will only
+maximum of 35 years<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote">3</a></sup>, his estimated social security payments at age 70 will only
 be $10k.  Because his social security payments are so far in the future, he needs to have
 an initial portfolio equal to his expenses divided by his withdrawal rate.</p>
 
 <p>So if Gunther needs $40k of income and wants to use a 3.33% withdrawal rate,
-he should start with a portfolio of <code>30*$40k</code> or $1.2m.  Then, at age 40, he
+he should start with a portfolio of <code class="language-plaintext highlighter-rouge">30*$40k</code> or $1.2m.  Then, at age 40, he
 can break his portfolio into two pieces.  One piece, $300k (or higher depending
 on inflation and social security adjustments), will be used as
 a social security bridge.  The remaining part of his portfolio can continue
@@ -292,17 +253,15 @@ security income into account.</p>
 
 <p>The equation for your future income can be written as,</p>
 
-<p><code>
-income_total = income_ss + porfolio_remaining*withdrawal_rate
-</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>income_total = income_ss + porfolio_remaining*withdrawal_rate
+</code></pre></div></div>
 
 <p>If you consider that your future portfolio will be reduced by the amount of
 income that was used as a social security bridge, then the amount of income you
 have left to apply your withdrawal rate to is approximately,</p>
 
-<p><code>
-porfolio_remaining = portfolio_current - years_until_ss * income_ss
-</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>porfolio_remaining = portfolio_current - years_until_ss * income_ss
+</code></pre></div></div>
 
 <p>The 2nd term of the above equation represents an approximation of how much
 your portfolio will be reduced by building your social security bridge.
@@ -313,22 +272,19 @@ ballpark estimate.</p>
 retirement.  In other words, how big would my portfolio need to be in
 order to be retire today.  Defining the effective expense multiplier as,</p>
 
-<p><code>
-multiplier_effective = portfolio_current / income_total
-</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>multiplier_effective = portfolio_current / income_total
+</code></pre></div></div>
 
 <p>Further, let’s define the safe withdrawal rate multiplier as just</p>
 
-<p><code>
-multiplier_safe = 1 / withdrawal_safe
-</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>multiplier_safe = 1 / withdrawal_safe
+</code></pre></div></div>
 
-<p>Plugging all those equations in and solving for <code>multiplier_effective</code>
+<p>Plugging all those equations in and solving for <code class="language-plaintext highlighter-rouge">multiplier_effective</code>
 gives:</p>
 
-<p><code>
-multiplier_effective = multiplier_safe - (income_ss/income_total) * (multiplier_safe - years_until_ss)
-</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>multiplier_effective = multiplier_safe - (income_ss/income_total) * (multiplier_safe - years_until_ss)
+</code></pre></div></div>
 
 <p>Notice that the closer you are to collecting social security, the smaller your
 effective expense multiplier is.  So each year you do this calculation will bring you
@@ -338,27 +294,24 @@ income to your total needed income.</p>
 
 <p>Let’s try applying this equation to Woodrow’s example where he will retire in 1 years:</p>
 
-<p><code>
-multiplier_effective = 30 - (50k/50k) * (30 - 1) = 30 - 29 = 1
-</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>multiplier_effective = 30 - (50k/50k) * (30 - 1) = 30 - 29 = 1
+</code></pre></div></div>
 
 <p>Which is exactly as we expect.  In fact, in cases like Woodrow’s, where the income
 from social security equals (or exceeds) the total income needed, then the equation
 for the effective expense multiplier reduces to:</p>
 
-<p><code>
-multiplier_effective = multiplier_safe - 1 * (multiplier_safe - years_until_ss)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>multiplier_effective = multiplier_safe - 1 * (multiplier_safe - years_until_ss)
                      = years_until_ss
-</code></p>
+</code></pre></div></div>
 
 <p>Now try Priscilla’s example,</p>
 
-<p><code>
-multiplier_effective = 30 - (30k/40k)*(30-15) = 30 - 11.25 = 18.75
-</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>multiplier_effective = 30 - (30k/40k)*(30-15) = 30 - 11.25 = 18.75
+</code></pre></div></div>
 
 <p>Priscilla’s effective withdrawal rate in the first year would be approximately
-<code>1/18.75</code> or 5.33%. You may be thinking that a withdrawal of 5.33% is too high
+<code class="language-plaintext highlighter-rouge">1/18.75</code> or 5.33%. You may be thinking that a withdrawal of 5.33% is too high
 but remember, she is still withdrawing a conservative 3.33% on the funds outside
 of the bridge fund.</p>
 
@@ -370,7 +323,7 @@ grow at all.</p>
 <p>Some people would have you believe that social security will be greatly diminished
 in the future.  Whether or not that’s true, time will tell.  If you are worried about
 this possibility then simply adjust downward your social security estimate in the
-above equations to a level you feel comfortable with<sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup>.</p>
+above equations to a level you feel comfortable with<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote">4</a></sup>.</p>
 
 <h2 id="summary">Summary</h2>
 
@@ -392,19 +345,19 @@ achieving retirement even when your portfolio stagnates.</p>
   <li><a href="/estimating-your-social-security-benefit-for-an-early-retirement/">Estimating Your Social Security Benefit for an Early Retirement</a></li>
 </ul>
 
-<div class="footnotes">
+<div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:2">
-      <p>Most of this article refers to social security for brevity’s sake but the same principles apply equally to other future income streams such as pensions. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:2" role="doc-endnote">
+      <p>Most of this article refers to social security for brevity’s sake but the same principles apply equally to other future income streams such as pensions. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:1">
-      <p>For most people, delaying social security benefits to age 70 is the best decision, so all examples in this article assume that social security benefits will start at that age. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:1" role="doc-endnote">
+      <p>For most people, delaying social security benefits to age 70 is the best decision, so all examples in this article assume that social security benefits will start at that age. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:3">
-      <p>The Social Security Administration uses the maximum 35 years of earnings over your entire working career in their formula to determine your benefits. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:3" role="doc-endnote">
+      <p>The Social Security Administration uses the maximum 35 years of earnings over your entire working career in their formula to determine your benefits. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:4">
-      <p>Yes, I ended that sentence with a preposition.  And I also think that social security will be available when I’m eligible for it.  That’s how crazy I am. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:4" role="doc-endnote">
+      <p>Yes, I ended that sentence with a preposition.  And I also think that social security will be available when I’m eligible for it.  That’s how crazy I am. <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>
@@ -456,7 +409,7 @@ achieving retirement even when your portfolio stagnates.</p>
         <ul class="contact-list">
           <li>M<span class='brand-color'>o</span>neycle</li>
           <li><a href="mailto:sir@moneycle.com">sir@moneycle.com</a></li>
-          <li>&copy; <time datetime="2018-09-06T10:56:01-06:00">2018</time>. All rights reserved.</li>
+          <li>&copy; <time datetime="2021-03-01T19:12:39-07:00">2021</time>. All rights reserved.</li>
         </ul>
       </div>
 

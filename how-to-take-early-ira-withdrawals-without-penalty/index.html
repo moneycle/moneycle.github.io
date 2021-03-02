@@ -2,6 +2,7 @@
 <html>
 
   <head>
+  <script data-ad-client="ca-pub-1137447718577367" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -47,46 +48,6 @@
         
           
           <a class="page-link" href="/about/">About</a>
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
           
         
           
@@ -200,26 +161,25 @@ it right.</p>
 <p>For all of these methods, you will need the following 3 numbers:</p>
 
 <ol>
-  <li><code>rate</code> = 120% of the Applicable Federal Rate.  Don’t worry, you’re not alone,
+  <li><code class="language-plaintext highlighter-rouge">rate</code> = 120% of the Applicable Federal Rate.  Don’t worry, you’re not alone,
   nobody else has heard of this number either.  It’s a number that the IRS
   publishes monthly and can be
   <a href="http://apps.irs.gov/app/picklist/list/federalRates.html">found here</a>.
   You are allowed to choose one of the past 2 months when you do the calculation
   but to be safe I would just choose the rate from the most recent month.</li>
-  <li><code>expectancy</code> = your remaining life expectancy in years.  This is also published
+  <li><code class="language-plaintext highlighter-rouge">expectancy</code> = your remaining life expectancy in years.  This is also published
   by the IRS and can be <a href="http://www.irs.gov/pub/irs-pdf/p590b.pdf">found here</a>.
   Look in Appendix B for the life expectancy tables using the age you will be on
   your birthday this year.</li>
-  <li><code>principal</code> = the size of the account you will be taking distributions from.</li>
+  <li><code class="language-plaintext highlighter-rouge">principal</code> = the size of the account you will be taking distributions from.</li>
 </ol>
 
 <h3 id="spreadsheet-formula">Spreadsheet Formula</h3>
 
 <p>The spreadsheet formula that I have tested using Google Spreadsheet is simply:</p>
 
-<p><code>
-=-pmt(rate, expectancy, principal)
-</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>=-pmt(rate, expectancy, principal)
+</code></pre></div></div>
 
 <p>This will give you the amount you can withdraw annually so divide by 12 if you
 are going to make monthly withdrawals.</p>
@@ -243,9 +203,8 @@ both calculators.</p>
 <p>For the mathematically inclined, you can also plug your numbers into
 <a href="https://en.wikipedia.org/wiki/Amortization_calculator#The_formula">the annuity formula</a>.</p>
 
-<p><code>
-income = principal * rate / (1 - (1+rate)^-expectancy)
-</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>income = principal * rate / (1 - (1+rate)^-expectancy)
+</code></pre></div></div>
 
 <h2 id="account-size-needed-for-a-desired-income">Account Size Needed for a Desired Income</h2>
 
@@ -265,9 +224,8 @@ multiply by $100,000 to arrive at a principal of $303,910.</p>
 <p>The more direct approach, is to invert the ‘math equation’ above and calculate
 your payment directly with this formula:</p>
 
-<p><code>
-principal = income * (1 - (1+rate)^-expectancy) / rate
-</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>principal = income * (1 - (1+rate)^-expectancy) / rate
+</code></pre></div></div>
 
 <p>In any case, once you arrive at what you think the correct principal amount is,
 double check it by any of the above methods to make sure it gives you the desired
@@ -331,7 +289,7 @@ since this is just income that you deferred from the past.</p>
         <ul class="contact-list">
           <li>M<span class='brand-color'>o</span>neycle</li>
           <li><a href="mailto:sir@moneycle.com">sir@moneycle.com</a></li>
-          <li>&copy; <time datetime="2018-09-06T10:56:01-06:00">2018</time>. All rights reserved.</li>
+          <li>&copy; <time datetime="2021-03-01T19:12:39-07:00">2021</time>. All rights reserved.</li>
         </ul>
       </div>
 

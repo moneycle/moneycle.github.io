@@ -2,6 +2,7 @@
 <html>
 
   <head>
+  <script data-ad-client="ca-pub-1137447718577367" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -47,46 +48,6 @@
         
           
           <a class="page-link" href="/about/">About</a>
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
           
         
           
@@ -141,26 +102,25 @@ different stock allocation strategies to see how this affected the math.</p>
 
 <h2 id="the-basics">The Basics</h2>
 
-<p>The basic idea of the spending buffer is to split your portfolio (<code>P</code>) into the
-investments (<code>V</code>) and withdrawal buffer (<code>U</code>).</p>
+<p>The basic idea of the spending buffer is to split your portfolio (<code class="language-plaintext highlighter-rouge">P</code>) into the
+investments (<code class="language-plaintext highlighter-rouge">V</code>) and withdrawal buffer (<code class="language-plaintext highlighter-rouge">U</code>).</p>
 
-<p><code>
-P = V + U
-</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>P = V + U
+</code></pre></div></div>
 
 <p>Each year, you take a percentage of your portfolio (your withdrawal rate) and add
 it to your buffer.  Then you divide that buffer by the size (in years) and withdraw
-that amount as your income for the coming year.  If your buffer size is <code>k</code> years,
-this means that normally you will have <code>k-1</code> years worth of spending sitting in the buffer.
-Your buffer will only temporarily have <code>k</code> years of spending in the short time
+that amount as your income for the coming year.  If your buffer size is <code class="language-plaintext highlighter-rouge">k</code> years,
+this means that normally you will have <code class="language-plaintext highlighter-rouge">k-1</code> years worth of spending sitting in the buffer.
+Your buffer will only temporarily have <code class="language-plaintext highlighter-rouge">k</code> years of spending in the short time
 between when you add annual withdrawal to the buffer and then withdraw your
 spending funds from the buffer.</p>
 
 <p>Why do this?  The main reason to do this is to buffer the ups and downs of the
 stock market.  The bigger your buffer is, the smaller the variation will be
 on your withdrawal income.  Statistically, if you sample data that has a
-standard deviation of <code>σ</code>, then taking <code>N</code> samples of that data will have
-a standard deviation of <code>σ/sqrt(N)</code><sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>.  Applying that principal to a
+standard deviation of <code class="language-plaintext highlighter-rouge">σ</code>, then taking <code class="language-plaintext highlighter-rouge">N</code> samples of that data will have
+a standard deviation of <code class="language-plaintext highlighter-rouge">σ/sqrt(N)</code><sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup>.  Applying that principal to a
 withdrawal buffer, if we sample a portfolio that has a 20% standard deviation
 per year, a 4-year buffer of that data would have a 10% standard deviation.
 In short, a withdrawal buffer reduces the volatility of your income compared to
@@ -168,18 +128,16 @@ directly withdrawing a fixed percentage from your portfolio.</p>
 
 <h2 id="some-math">Some Math</h2>
 
-<p>Let’s define a single years’ worth of the buffer to be <code>W</code>, then</p>
+<p>Let’s define a single years’ worth of the buffer to be <code class="language-plaintext highlighter-rouge">W</code>, then</p>
 
-<p><code>
-P = V + (k-1)W
-</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>P = V + (k-1)W
+</code></pre></div></div>
 
-<p>Typically the invesment piece (<code>V</code>) would be made up of some combination of stocks (<code>S</code>)
-and bonds (<code>B</code>).</p>
+<p>Typically the invesment piece (<code class="language-plaintext highlighter-rouge">V</code>) would be made up of some combination of stocks (<code class="language-plaintext highlighter-rouge">S</code>)
+and bonds (<code class="language-plaintext highlighter-rouge">B</code>).</p>
 
-<p><code>
-V = S + B
-</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>V = S + B
+</code></pre></div></div>
 
 <p>And the withdrawal buffer would be invested conservatively in cash-equivalents
 since that is the money will support your living expenses in the near future.</p>
@@ -316,38 +274,34 @@ d3.select('#stock-slider').call(d3.slider().axis(true).min(0).max(85).step(5).va
 the percentage of the overall portfolio in stocks fluctuates.
 I would prefer to keep the stock percentage at some fixed value so I will
 diverge from the Galeno Strategy on this point.
-If the stock percentage is <code>s</code>,</p>
+If the stock percentage is <code class="language-plaintext highlighter-rouge">s</code>,</p>
 
-<p><code>
-  S = sP
-</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  S = sP
+</code></pre></div></div>
 
 <p>The reason I like to keep the stock percentage fixed is to that it enables you to
 take gains when the market is up and move more money back into stocks when the market
 is down, simply by rebalancing to that fixed percentage.  This is in keeping with the
 asset allocation strategies that we all know and love.</p>
 
-<p>If we define the withdrawal rate (<code>w</code>) as a percentage of the overall portfolio,</p>
+<p>If we define the withdrawal rate (<code class="language-plaintext highlighter-rouge">w</code>) as a percentage of the overall portfolio,</p>
 
-<p><code>
-W = wP
-</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>W = wP
+</code></pre></div></div>
 
 <p>The portfolio equation now looks like this,</p>
 
-<p><code>
-P = sP + B + (k-1)wP
-</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>P = sP + B + (k-1)wP
+</code></pre></div></div>
 
 <p>The bond piece is the part of the portfolio that fluctuates to accommodate swings
 in the stock market and can be written as,</p>
 
-<p><code>
-B = (1-s)P - (k-1)wP
-</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>B = (1-s)P - (k-1)wP
+</code></pre></div></div>
 
 <p>Notice that for the degenerate case of no buffer (k=1), the bond percentage is
-simply <code>(1-s)</code>.  So for a 60% stock target, the bonds would be 40% as expected.</p>
+simply <code class="language-plaintext highlighter-rouge">(1-s)</code>.  So for a 60% stock target, the bonds would be 40% as expected.</p>
 
 <h2 id="keeping-up-with-inflation">Keeping Up with Inflation</h2>
 
@@ -356,24 +310,21 @@ that the portfolio that is left over after a withdrawal must increase enough
 to cover the money lost to the withdrawal as well as covering the effects of
 inflation,</p>
 
-<p><code>
-(P - kW)(1 + r) + (k-1)W &gt; P(1 + i)
-</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(P - kW)(1 + r) + (k-1)W &gt; P(1 + i)
+</code></pre></div></div>
 
-<p>Substituting <code>W=wP</code> and solving for <code>w</code>,</p>
+<p>Substituting <code class="language-plaintext highlighter-rouge">W=wP</code> and solving for <code class="language-plaintext highlighter-rouge">w</code>,</p>
 
-<p><code>
-w &lt; (r - i) / (1 + kr)
-</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>w &lt; (r - i) / (1 + kr)
+</code></pre></div></div>
 
 <p>Interestingly, even in the degenerate case where we don’t have a buffer (k=1),
-then the maximum withdrawal rate that keeps up with inflation is not simply <code>r-i</code>
-but is reduced by <code>1/(1+r)</code>.  For example, if your portfolio returns 7% and inflation
+then the maximum withdrawal rate that keeps up with inflation is not simply <code class="language-plaintext highlighter-rouge">r-i</code>
+but is reduced by <code class="language-plaintext highlighter-rouge">1/(1+r)</code>.  For example, if your portfolio returns 7% and inflation
 is 3%, then the maximum withdrawal would not be 4% but rather it would be,</p>
 
-<p><code>
-w &lt; (.07-.03)/(1.07) = 3.74%
-</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>w &lt; (.07-.03)/(1.07) = 3.74%
+</code></pre></div></div>
 
 <p>This is because your portfolio remaining after the withdrawal has to overcome
 both inflation <strong>and</strong> the effects of withdrawing part of the portfolio.</p>
@@ -444,7 +395,7 @@ rate of 3%.</p>
   </li>
   <li>
     <p>Multiply your new portfolio value by your withdrawal rate to get your
-  buffer increment.  For example, $1,040,000*3% = $31,200.  </p>
+  buffer increment.  For example, $1,040,000*3% = $31,200.</p>
   </li>
   <li>
     <p>Move the buffer increment amount into your existing buffer.  You might
@@ -472,10 +423,10 @@ Implementing such a strategy is fairly easy if you follow the steps outlined abo
   <li><a href="/super-simple-virtual-buffer-withdrawal-strategy/">Super-Simple Virtual-Buffer Withdrawal Strategy</a></li>
 </ul>
 
-<div class="footnotes">
+<div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:1">
-      <p>See <a href="http://en.wikipedia.org/wiki/Standard_error#Standard_error_of_the_mean">standard error of the mean</a>. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:1" role="doc-endnote">
+      <p>See <a href="http://en.wikipedia.org/wiki/Standard_error#Standard_error_of_the_mean">standard error of the mean</a>. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>
@@ -527,7 +478,7 @@ Implementing such a strategy is fairly easy if you follow the steps outlined abo
         <ul class="contact-list">
           <li>M<span class='brand-color'>o</span>neycle</li>
           <li><a href="mailto:sir@moneycle.com">sir@moneycle.com</a></li>
-          <li>&copy; <time datetime="2018-09-06T10:56:01-06:00">2018</time>. All rights reserved.</li>
+          <li>&copy; <time datetime="2021-03-01T19:12:39-07:00">2021</time>. All rights reserved.</li>
         </ul>
       </div>
 

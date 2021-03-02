@@ -2,6 +2,7 @@
 <html>
 
   <head>
+  <script data-ad-client="ca-pub-1137447718577367" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -47,46 +48,6 @@
         
           
           <a class="page-link" href="/about/">About</a>
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
           
         
           
@@ -143,41 +104,37 @@ to decrease each year, so he needs to be careful with how much he spends.  In ot
 words, he wants his portfolio on average to grow by the rate of inflation while at
 the same time withdrawing some amount of money to live on.  In equation form:</p>
 
-<p><code>
-(portfolio-withdrawal)(1+appreciation) &gt;= portfolio(1+inflation)
-</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(portfolio-withdrawal)(1+appreciation) &gt;= portfolio(1+inflation)
+</code></pre></div></div>
 
 <p>This equation says that the portfolio in a given year will appreciate by at
 least the rate of inflation after subtracting the withdrawal amount.
 Let’s use shorter variable names to help make it more readable</p>
 
-<p><code>
-(P - W)(1 + r) &gt;= P(1 + i)
-</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(P - W)(1 + r) &gt;= P(1 + i)
+</code></pre></div></div>
 
 <p>where</p>
 
 <ul>
-  <li><code>P = portfolio value</code></li>
-  <li><code>W = withdrawal amount</code></li>
-  <li><code>w = withdrawal rate = W/P</code></li>
-  <li><code>r = porfolio appreciation</code></li>
-  <li><code>i = inflation rate</code></li>
+  <li><code class="language-plaintext highlighter-rouge">P = portfolio value</code></li>
+  <li><code class="language-plaintext highlighter-rouge">W = withdrawal amount</code></li>
+  <li><code class="language-plaintext highlighter-rouge">w = withdrawal rate = W/P</code></li>
+  <li><code class="language-plaintext highlighter-rouge">r = porfolio appreciation</code></li>
+  <li><code class="language-plaintext highlighter-rouge">i = inflation rate</code></li>
 </ul>
 
-<p>Replacing withdrawal amount with <code>W = Pw</code>,</p>
+<p>Replacing withdrawal amount with <code class="language-plaintext highlighter-rouge">W = Pw</code>,</p>
 
-<p>Then we can divide both sides of the equation by the <code>P</code> we get:</p>
+<p>Then we can divide both sides of the equation by the <code class="language-plaintext highlighter-rouge">P</code> we get:</p>
 
-<p><code>
-(1 - w)(1 + r) &gt;= (1 + i)
-</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(1 - w)(1 + r) &gt;= (1 + i)
+</code></pre></div></div>
 
-<p>And now it’s fairly simple to solve the <code>withdrawal rate</code> as:</p>
+<p>And now it’s fairly simple to solve the <code class="language-plaintext highlighter-rouge">withdrawal rate</code> as:</p>
 
-<p><code>
-w &lt;= (r - i) / (1 + r)
-</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>w &lt;= (r - i) / (1 + r)
+</code></pre></div></div>
 
 <p>Notice that the numerator is the difference between Vlad’s portfolio return
 and long-term inflation.  So if his portfolio appreciates at a rate less than
@@ -199,9 +156,8 @@ which shows a historical inflation rate of 3.2% over the same time period.</p>
 
 <p>Plugging those numbers into the above equations gives:</p>
 
-<p><code>
-withdrawal rate &lt;= 6.35%
-</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>withdrawal rate &lt;= 6.35%
+</code></pre></div></div>
 
 <p>So, with average stock returns and average inflation values, a withdrawal of 6.35%
 or less could allow Vlad to keep up with inflation.  Keep in mind that average
@@ -216,7 +172,7 @@ out the market swings.</p>
 <p>One way to reduced volatility to a portfolio is by adding bonds.</p>
 
 <p>Historical bond rates are harder to come by but over period of 1926-2014
-bonds have returned approximately 5.4% with a standard deviation of 5.6%<sup id="fnref:11"><a href="#fn:11" class="footnote">1</a></sup>.
+bonds have returned approximately 5.4% with a standard deviation of 5.6%<sup id="fnref:11" role="doc-noteref"><a href="#fn:11" class="footnote">1</a></sup>.
 So if Vlad invests his bond portfolio in Vanguard Total Bond Market ETF (BND)
 with an expense ratio of 0.07%, let’s assume he gets a return of 5.3% on the bonds.</p>
 
@@ -235,14 +191,14 @@ allocations based on the returns estimated for each allocation:</p>
   </thead>
   <tbody>
     <tr>
-      <td>Historical Portfolio Return<sup id="fnref:1"><a href="#fn:1" class="footnote">2</a></sup></td>
+      <td>Historical Portfolio Return<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">2</a></sup></td>
       <td style="text-align: center">6.6%</td>
       <td style="text-align: center">7.3%</td>
       <td style="text-align: center">8.2%</td>
       <td style="text-align: center">9.2%</td>
     </tr>
     <tr>
-      <td>Spending Standard Deviation<sup id="fnref:5"><a href="#fn:5" class="footnote">3</a></sup></td>
+      <td>Spending Standard Deviation<sup id="fnref:5" role="doc-noteref"><a href="#fn:5" class="footnote">3</a></sup></td>
       <td style="text-align: center">5%</td>
       <td style="text-align: center">8%</td>
       <td style="text-align: center">11%</td>
@@ -271,10 +227,10 @@ So for a moderate 60/40 portfolio, Vlad would need to save at least 22 times his
 annual expenses before he could retire from his night job, and he could withdraw
 up to 4.7% to keep up with inflation.</p>
 
-<h2 id="buffer-the-vampire-strategy22">Buffer the Vampire Strategy<sup id="fnref:22"><a href="#fn:22" class="footnote">4</a></sup></h2>
+<h2 id="buffer-the-vampire-strategy">Buffer the Vampire Strategy<sup id="fnref:22" role="doc-noteref"><a href="#fn:22" class="footnote">4</a></sup></h2>
 
 <p>Even with the moderate 60/40 portfolio, Vlad has a decent chance that his portfolio
-(and spending) could drop by 14%<sup id="fnref:7"><a href="#fn:7" class="footnote">5</a></sup> in any given year.<br />
+(and spending) could drop by 14%<sup id="fnref:7" role="doc-noteref"><a href="#fn:7" class="footnote">5</a></sup> in any given year.<br />
 One way he could reduce the volatility of his expenses even further is to allocate
 a portion of his portfolio to a spending buffer.</p>
 
@@ -417,7 +373,7 @@ d3.select('#stock-slider').call(d3.slider().axis(true).min(0).max(85).step(5).va
 
 <p>Having a 5-year buffer for his spending means that Vlad’s spending will only be
 impacted by 1/5th of the fluctuations in the market.  The standard deviation of
-Vlad’s spending will be reduced<sup id="fnref:2"><a href="#fn:2" class="footnote">6</a></sup> by approximately <code>1/sqrt(5)</code>.
+Vlad’s spending will be reduced<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote">6</a></sup> by approximately <code class="language-plaintext highlighter-rouge">1/sqrt(5)</code>.
 In our example with a 60/40 split, the standard deviation goes from 11% down to 5%.
 Vampires get grumpy with big swings in spending so this helps to prevent Vlad
 from biting people.</p>
@@ -429,43 +385,40 @@ is allocated to cash or cash equivalents.</p>
 
 <p>Re-working the original equations with a spending buffer:</p>
 
-<p><code>
-(P - kW)(1 + r) + kW - W &gt;= P(1 + i)
-</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(P - kW)(1 + r) + kW - W &gt;= P(1 + i)
+</code></pre></div></div>
 
-<p>where <code>k = spending buffer size in years</code>.  In this equation <code>P-kW</code> represents
-the piece of the portfolio that is invested and <code>kW-W</code> represents the buffer after
+<p>where <code class="language-plaintext highlighter-rouge">k = spending buffer size in years</code>.  In this equation <code class="language-plaintext highlighter-rouge">P-kW</code> represents
+the piece of the portfolio that is invested and <code class="language-plaintext highlighter-rouge">kW-W</code> represents the buffer after
 1 year’s worth of spending has been withdrawn.  In short, we want the appreciation
 from the invested part of the portfolio to be enough so that the <strong>entire</strong>
 portfolio keeps up with inflation.</p>
 
 <p>Solving this equation for withdrawal rate,</p>
 
-<p><code>
-w &lt;= (r - i) / (1 + kr)
-</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>w &lt;= (r - i) / (1 + kr)
+</code></pre></div></div>
 
 <p>Taking this a little further, if Vlad wants to keep the stock portion of the
 portfolio fixed at some percentage while bonds and the buffer make up the remainder,
 then the rate of return could be written in terms of this percentage,</p>
 
-<p><code>
-r = s*r_s + (1 - s)*r_b - (k - 1)*w*r_b
-</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>r = s*r_s + (1 - s)*r_b - (k - 1)*w*r_b
+</code></pre></div></div>
 
 <p>Where</p>
 
 <ul>
-  <li><code>s = percentage of portfolio in stocks</code></li>
-  <li><code>r_s = rate of return on stocks</code></li>
-  <li><code>r_b = rate of return on bonds</code></li>
+  <li><code class="language-plaintext highlighter-rouge">s = percentage of portfolio in stocks</code></li>
+  <li><code class="language-plaintext highlighter-rouge">r_s = rate of return on stocks</code></li>
+  <li><code class="language-plaintext highlighter-rouge">r_b = rate of return on bonds</code></li>
 </ul>
 
 <p>The first 2 terms of this equation represent the return we would have had without
 buffering and the last term represents the amount of potential returns lost to
 the buffering (assuming it would have been invested in bonds).</p>
 
-<p>Substituting <code>r</code> from the last equation into the equation before that gives us
+<p>Substituting <code class="language-plaintext highlighter-rouge">r</code> from the last equation into the equation before that gives us
 a quadratic equation to solve for withdrawal rate (I may expand this
 in another article but will leave this detail out for now).</p>
 
@@ -474,7 +427,7 @@ in another article but will leave this detail out for now).</p>
 <table>
   <thead>
     <tr>
-      <th>Stocks/Bonds<sup id="fnref:3"><a href="#fn:3" class="footnote">7</a></sup>/Buffer<sup id="fnref:3:1"><a href="#fn:3" class="footnote">7</a></sup> =</th>
+      <th>Stocks/Bonds<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote">7</a></sup>/Buffer<sup id="fnref:3:1" role="doc-noteref"><a href="#fn:3" class="footnote">7</a></sup> =</th>
       <th style="text-align: center">20/72/8</th>
       <th style="text-align: center">40/50/10</th>
       <th style="text-align: center">60/27/13</th>
@@ -483,14 +436,14 @@ in another article but will leave this detail out for now).</p>
   </thead>
   <tbody>
     <tr>
-      <td>Historical Portfolio Return<sup id="fnref:1:1"><a href="#fn:1" class="footnote">2</a></sup></td>
+      <td>Historical Portfolio Return<sup id="fnref:1:1" role="doc-noteref"><a href="#fn:1" class="footnote">2</a></sup></td>
       <td style="text-align: center">5.9%</td>
       <td style="text-align: center">6.7%</td>
       <td style="text-align: center">7.6%</td>
       <td style="text-align: center">8.4%</td>
     </tr>
     <tr>
-      <td>Spending Standard Deviation<sup id="fnref:6"><a href="#fn:6" class="footnote">8</a></sup></td>
+      <td>Spending Standard Deviation<sup id="fnref:6" role="doc-noteref"><a href="#fn:6" class="footnote">8</a></sup></td>
       <td style="text-align: center">2%</td>
       <td style="text-align: center">3.5%</td>
       <td style="text-align: center">5%</td>
@@ -568,7 +521,7 @@ reduce the volatility.</p>
 <p>If you are a vampire who wants to implement a Roth ladder strategy, you might
 want to consider a 6-year buffer. This would allow you convert your traditional IRA
 to a Roth IRA and wait the required 5 years before withdrawing the money without
-penalty<sup id="fnref:4"><a href="#fn:4" class="footnote">9</a></sup>.  But 6-years is a long time to not keep money invested so with such
+penalty<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote">9</a></sup>.  But 6-years is a long time to not keep money invested so with such
 a large buffer it might make sense to invest 1 or 2 years of a bigger buffer into
 a bond fund.</p>
 
@@ -591,34 +544,34 @@ stream kicks in.  It would be interesting to see how much of an effect that is.<
   <li><a href="/super-simple-virtual-buffer-withdrawal-strategy/">Super-Simple Virtual-Buffer Withdrawal Strategy</a></li>
 </ul>
 
-<div class="footnotes">
+<div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:11">
-      <p>Bond Performance - 1926-2014: 5.4%, std dev = 5.6%, comes from a combination of <a href="https://personal.vanguard.com/us/insights/saving-investing/model-portfolio-allocations">Vanguard data</a> and the <a href="http://www.jvlassociates.com/files/Performance%20Probabilities%20(Bell%20Curve%20)%20%201926%20-%202014.pdf">comparable intermediate govt bond</a>. <a href="#fnref:11" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:11" role="doc-endnote">
+      <p>Bond Performance - 1926-2014: 5.4%, std dev = 5.6%, comes from a combination of <a href="https://personal.vanguard.com/us/insights/saving-investing/model-portfolio-allocations">Vanguard data</a> and the <a href="http://www.jvlassociates.com/files/Performance%20Probabilities%20(Bell%20Curve%20)%20%201926%20-%202014.pdf">comparable intermediate govt bond</a>. <a href="#fnref:11" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:1">
-      <p>Portfolio return for mixed portfolios are crude approximations for illustrative purposes only. <a href="#fnref:1" class="reversefootnote">&#8617;</a> <a href="#fnref:1:1" class="reversefootnote">&#8617;<sup>2</sup></a></p>
+    <li id="fn:1" role="doc-endnote">
+      <p>Portfolio return for mixed portfolios are crude approximations for illustrative purposes only. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:1:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
     </li>
-    <li id="fn:5">
-      <p>Standard deviations for different allocations estimated from graph on <a href="http://www.forbes.com/sites/rickferri/2015/02/06/the-center-of-gravity-for-retirees/2/">this page</a> <a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:5" role="doc-endnote">
+      <p>Standard deviations for different allocations estimated from graph on <a href="http://www.forbes.com/sites/rickferri/2015/02/06/the-center-of-gravity-for-retirees/2/">this page</a> <a href="#fnref:5" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:22">
-      <p>No relation to <a href="https://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer">Buffy the Vampire Slayer</a>. <a href="#fnref:22" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:22" role="doc-endnote">
+      <p>No relation to <a href="https://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer">Buffy the Vampire Slayer</a>. <a href="#fnref:22" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:7">
-      <p>14% drop is 2 standard deviations, or 22%, below average return of 8.2% <a href="#fnref:7" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:7" role="doc-endnote">
+      <p>14% drop is 2 standard deviations, or 22%, below average return of 8.2% <a href="#fnref:7" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:2">
-      <p>See <a href="http://en.wikipedia.org/wiki/Standard_error#Standard_error_of_the_mean">standard error of the mean</a>. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:2" role="doc-endnote">
+      <p>See <a href="http://en.wikipedia.org/wiki/Standard_error#Standard_error_of_the_mean">standard error of the mean</a>. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:3">
-      <p>Bonds and buffer percentages are initial values, buffer size varies slightly after the first year. <a href="#fnref:3" class="reversefootnote">&#8617;</a> <a href="#fnref:3:1" class="reversefootnote">&#8617;<sup>2</sup></a></p>
+    <li id="fn:3" role="doc-endnote">
+      <p>Bonds and buffer percentages are initial values, buffer size varies slightly after the first year. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:3:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
     </li>
-    <li id="fn:6">
-      <p>Based on portfolio deviation divided by sqrt(5) for the buffering effect. <a href="#fnref:6" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:6" role="doc-endnote">
+      <p>Based on portfolio deviation divided by sqrt(5) for the buffering effect. <a href="#fnref:6" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:4">
-      <p>I’m pretty sure vampires are not subject to the rules concerning age of 59.5 and withdrawals. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:4" role="doc-endnote">
+      <p>I’m pretty sure vampires are not subject to the rules concerning age of 59.5 and withdrawals. <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>
@@ -670,7 +623,7 @@ stream kicks in.  It would be interesting to see how much of an effect that is.<
         <ul class="contact-list">
           <li>M<span class='brand-color'>o</span>neycle</li>
           <li><a href="mailto:sir@moneycle.com">sir@moneycle.com</a></li>
-          <li>&copy; <time datetime="2018-09-06T10:56:01-06:00">2018</time>. All rights reserved.</li>
+          <li>&copy; <time datetime="2021-03-01T19:12:39-07:00">2021</time>. All rights reserved.</li>
         </ul>
       </div>
 

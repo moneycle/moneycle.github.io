@@ -2,6 +2,7 @@
 <html>
 
   <head>
+  <script data-ad-client="ca-pub-1137447718577367" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -47,46 +48,6 @@
         
           
           <a class="page-link" href="/about/">About</a>
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
           
         
           
@@ -237,19 +198,19 @@ would come out in the 25% tax bracket.</p>
 those funds might as well go into a Roth account today.  So in this example,
 the couple could contribute 8% to their Roth.  Mathematically,</p>
 
-<pre><code>percent_to_roth = (livable_income - tax_threshold) / livable_income
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>percent_to_roth = (livable_income - tax_threshold) / livable_income
+</code></pre></div></div>
 
 <p>Assigning variables,</p>
 
-<pre><code>L = livable_income = current_income - max_savings
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>L = livable_income = current_income - max_savings
 T = tax_threshold
-</code></pre>
+</code></pre></div></div>
 
 <p>then,</p>
 
-<pre><code>percent_to_roth = (L - T) / L
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>percent_to_roth = (L - T) / L
+</code></pre></div></div>
 
 <h2 id="other-income-sources">Other Income sources</h2>
 
@@ -274,13 +235,13 @@ bracket if deferred to the future.</p>
 
 <p>Modifying the first equation,</p>
 
-<pre><code>percent_to_roth = (L - T) / (L - B)
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>percent_to_roth = (L - T) / (L - B)
+</code></pre></div></div>
 
 <p>where,</p>
 
-<pre><code>B = base income from "other" sources (in today's dollars)
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>B = base income from "other" sources (in today's dollars)
+</code></pre></div></div>
 
 <p>Knowing what your future base income from “other” sources can be a difficult
 thing to figure out.  But if you’re only expecting Social Security, I suggest
@@ -291,8 +252,8 @@ actual social security (or equivalent) statements to get an idea of how much
 you’ll really get.</p>
 
 <p>At what point does 100% of your total savings go towards a Roth?  Mathematically,
-if <code>(L-T) &gt; (L-B)</code> the equation goes above 100%.  This simplifies to the
-comparison of <code>B &gt; T</code>.  So you should contribute everything to Roth when your
+if <code class="language-plaintext highlighter-rouge">(L-T) &gt; (L-B)</code> the equation goes above 100%.  This simplifies to the
+comparison of <code class="language-plaintext highlighter-rouge">B &gt; T</code>.  So you should contribute everything to Roth when your
 “base income” sources equal or exceed
 your current lower tax threshold.  That makes sense because it means that
 if you know that you will be at or above the current tax rate in the future
@@ -300,8 +261,8 @@ you might as well contribute everything to Roth today.</p>
 
 <p>Let’s just modify the equation slightly to account for this scenario,</p>
 
-<pre><code>percent_to_roth = min((L - T) / (L - B), 100%)
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>percent_to_roth = min((L - T) / (L - B), 100%)
+</code></pre></div></div>
 
 <h2 id="saving-across-multiple-tax-brackets">Saving Across Multiple Tax Brackets</h2>
 
@@ -323,31 +284,31 @@ should simply go to the Traditional savings option.  Then they would apply the
 equation from earlier but only to the portion in the 15% tax bracket.</p>
 
 <p>So the first $24,000 of savings goes into Traditional.  The remaining $6000 of
-savings would follow the previous equation, <code>(90000-39250)/(90000-36000)</code> or
+savings would follow the previous equation, <code class="language-plaintext highlighter-rouge">(90000-39250)/(90000-36000)</code> or
 94% of $6000, that goes to Roth.  Notice that I’m using $39,250 as the low end
 of the tax bracket because that’s where the 15% tax bracket bottoms out (for a
 married couple using standard deductions).  Finishing the
-math for this example, 94% of $6000 is <code>0.94*6000/30000</code> or about 19% of the
+math for this example, 94% of $6000 is <code class="language-plaintext highlighter-rouge">0.94*6000/30000</code> or about 19% of the
 overall savings that goes to Roth.</p>
 
 <p>Mathematically, we can express the overall equation
 for the dual-tax bracket case like this:</p>
 
-<pre><code>percent_to_roth = everything in lowest tax bracket * previous equation
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>percent_to_roth = everything in lowest tax bracket * previous equation
                 = min((T1-L) / S, 100%) * min((L - T0) / (L - B), 100%)
-</code></pre>
+</code></pre></div></div>
 
 <p>where,</p>
 
-<pre><code>S = total amount saved
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>S = total amount saved
 L = livable_income
 T0 = tax bracket threshold below L
 T1 = tax bracket threshold above L
 B = future base income
-</code></pre>
+</code></pre></div></div>
 
 <p>Here’s a plot of what Roth percentage looks like versus income levels
-for a married couple<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> in 2016 with a savings rate of
+for a married couple<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup> in 2016 with a savings rate of
 <span class="savings-rate">12%</span> and a future
 base income equal to <span class="base-percent">40%</span> of their current income
 (move sliders below the graph to change percentages).</p>
@@ -584,10 +545,10 @@ the more egregious assumptions:</p>
 to be a bit more practical.  Also, instead of focusing how much to put
 in a <strong>Roth</strong>, I will change the perspective slightly to examine how much total
 money you should save in your <strong>Traditional</strong> savings option.</p>
-<div class="footnotes">
+<div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:1">
-      <p>For the plot, I capped the qualified contribution at $48,000 because each person in a couple over 50 can contribute a max of $24,000 to qualified accounts. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:1" role="doc-endnote">
+      <p>For the plot, I capped the qualified contribution at $48,000 because each person in a couple over 50 can contribute a max of $24,000 to qualified accounts. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>
@@ -639,7 +600,7 @@ money you should save in your <strong>Traditional</strong> savings option.</p>
         <ul class="contact-list">
           <li>M<span class='brand-color'>o</span>neycle</li>
           <li><a href="mailto:sir@moneycle.com">sir@moneycle.com</a></li>
-          <li>&copy; <time datetime="2018-09-06T10:56:01-06:00">2018</time>. All rights reserved.</li>
+          <li>&copy; <time datetime="2021-03-01T19:12:39-07:00">2021</time>. All rights reserved.</li>
         </ul>
       </div>
 

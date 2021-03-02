@@ -2,6 +2,7 @@
 <html>
 
   <head>
+  <script data-ad-client="ca-pub-1137447718577367" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -55,46 +56,6 @@
         
           
         
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
       </div>
     </nav>
 
@@ -136,60 +97,60 @@ by multiplying your withdrawal rate by your portfolio value.  Using the same
 variables as the <a href="/safe-withdrawal-rates-for-vampires/">Safe Withdrawal Rates for Vampires</a>
 article,</p>
 
-<pre><code>W = Pw
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>W = Pw
+</code></pre></div></div>
 
 <p>where,</p>
 
-<pre><code>W = annual withdrawal amount
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>W = annual withdrawal amount
 w = annual withdrawal rate
 P = portfolio value
 k = buffer size in years
-</code></pre>
+</code></pre></div></div>
 
-<p>And if we have a buffer of <code>k</code> years, then the total buffer size initially
+<p>And if we have a buffer of <code class="language-plaintext highlighter-rouge">k</code> years, then the total buffer size initially
 is,</p>
 
-<pre><code>initial buffer size = kW
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>initial buffer size = kW
+</code></pre></div></div>
 
 <p>After a year of spending from the buffer, it is reduced by the withdrawal amount,
-<code>W</code>.  So we are left with,</p>
+<code class="language-plaintext highlighter-rouge">W</code>.  So we are left with,</p>
 
-<pre><code> buffer after 1 year of spending = kW-W = W(k-1)
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> buffer after 1 year of spending = kW-W = W(k-1)
+</code></pre></div></div>
 
 <p>At this point, we add back an amount equal to the new portfolio value times the
 withdrawal rate to arrive at the new buffer size,</p>
 
-<pre><code> updated buffer value after 1 year = W(k-1) + Pw
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> updated buffer value after 1 year = W(k-1) + Pw
+</code></pre></div></div>
 
 <p>And to compute the new withdrawal amount, we just divide this amount
-by the size of the buffer in years (<code>k</code>),</p>
+by the size of the buffer in years (<code class="language-plaintext highlighter-rouge">k</code>),</p>
 
-<pre><code>new annual withdrawal amount = W(k-1)/k + Pw/k
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>new annual withdrawal amount = W(k-1)/k + Pw/k
+</code></pre></div></div>
 
 <p>Because I prefer to think of my withdrawals as monthly, let’s rewrite this
 in terms of monthly withdrawals,</p>
 
-<pre><code>new monthly withdrawal amount = (W/12)(k-1)/k + Pw/12k
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>new monthly withdrawal amount = (W/12)(k-1)/k + Pw/12k
+</code></pre></div></div>
 
-<p>Given that <code>k</code> and <code>w</code> are constant values, we now have a formula for computing
-our new withdrawal amount from the current monthly withdrawal (<code>W/12</code>),
-and the current portfolio value (<code>P</code>).</p>
+<p>Given that <code class="language-plaintext highlighter-rouge">k</code> and <code class="language-plaintext highlighter-rouge">w</code> are constant values, we now have a formula for computing
+our new withdrawal amount from the current monthly withdrawal (<code class="language-plaintext highlighter-rouge">W/12</code>),
+and the current portfolio value (<code class="language-plaintext highlighter-rouge">P</code>).</p>
 
 <h2 id="example-using-30-30-numbers">Example Using 30-30 Numbers</h2>
 
 <p>Let’s put some numbers to this to make it less abstract.  Start with a
-portfolio of <code>P = $720,000</code> and go with the 30-30 Withdrawal Strategy numbers
-for buffer size (<code>k = 2.5 years</code>), and withdrawal rate (<code>w = 3.33%</code>).
+portfolio of <code class="language-plaintext highlighter-rouge">P = $720,000</code> and go with the 30-30 Withdrawal Strategy numbers
+for buffer size (<code class="language-plaintext highlighter-rouge">k = 2.5 years</code>), and withdrawal rate (<code class="language-plaintext highlighter-rouge">w = 3.33%</code>).
 For these values, the initial monthly withdrawal is simply,</p>
 
-<pre><code>Pw/12 = $720000*0.0333/12 = $2000/month
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Pw/12 = $720000*0.0333/12 = $2000/month
+</code></pre></div></div>
 
 <p>If you want, you can set aside your buffer of 2.5 years ($60,000) in a safe place.
 But the beauty of this strategy is that you don’t have to do so.  You can also
@@ -200,14 +161,14 @@ you get the advantages the buffer gives you without having to keep track of it.<
 <p>Now, let’s assume a year has passed and it has been a good year and the portfolio
 has gone up to $765,000.  Now your monthly withdrawal amount is computed as,</p>
 
-<pre><code>(W/12)(k-1)/k + Pw/12k = $2000(1.5/2.5) + $765000*.03333/(12*2.5))
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(W/12)(k-1)/k + Pw/12k = $2000(1.5/2.5) + $765000*.03333/(12*2.5))
                        = $2000 * 0.6 + $765000/900
                        = $1200 + $850
                        = $2050
-</code></pre>
+</code></pre></div></div>
 
-<p>So even though the portfolio increased by 6.25% (<code>765000/720000</code>), the monthly
-spending only went up 2.5% (<code>2050/2000</code>) due to the virtual 2.5-year buffering.</p>
+<p>So even though the portfolio increased by 6.25% (<code class="language-plaintext highlighter-rouge">765000/720000</code>), the monthly
+spending only went up 2.5% (<code class="language-plaintext highlighter-rouge">2050/2000</code>) due to the virtual 2.5-year buffering.</p>
 
 <p>Also, look how simple the calculation is every year.  In this example, multiplying
 your current income by 0.6, divide your portfolio by 900, and add those 2 numbers
@@ -220,29 +181,29 @@ together.  Pretty simple right?</p>
 up dividing by 1000?  If we can divide by 1000 then the calculation can almost
 be done in your head.  To state this mathematically, we want,</p>
 
-<pre><code>12k/w = 1000
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>12k/w = 1000
+</code></pre></div></div>
 
 <p>If the annual withdrawal rate is fixed, then we solve for the buffer size to get,</p>
 
-<pre><code>k = 1000w/12
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>k = 1000w/12
+</code></pre></div></div>
 
 <p>Substituting this back into our withdrawal equation,</p>
 
-<pre><code>new monthly withdrawal amount = (W/12)(1-0.012/w) + P/1000
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>new monthly withdrawal amount = (W/12)(1-0.012/w) + P/1000
+</code></pre></div></div>
 
 <p>Revisiting the first example with a portfolio of $720,000 and a withdrawal
 rate of 3.333%, the first year withdrawal is still $2000/monthly because the
 withdrawal rate is the same.  After the first year with a new portfolio value
 of $765,000, the new monthly withdrawal now becomes,</p>
 
-<pre><code>(W/12)(1-0.012/w) + P/1000 = $2000(1-0.012/0.03333) + $765000/1000
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(W/12)(1-0.012/w) + P/1000 = $2000(1-0.012/0.03333) + $765000/1000
                            = $2000 * 0.64 + $765000/1000
                            = $1280 + $765
                            = $2045
-</code></pre>
+</code></pre></div></div>
 
 <p>So, you can see that the slightly modified equation only decreased the income by
 $5/month.  This decrease is due to a slightly larger buffer (2.778 years vs 2.5 years)
@@ -255,25 +216,25 @@ from your portfolio by simply multiplying your portfolio value by your withdrawa
 rate.</p>
 
 <div class="highlight">
-  <pre><code>initial monthly withdrawal = Pw/12
-</code></pre>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>initial monthly withdrawal = Pw/12
+</code></pre></div>  </div>
 </div>
 
 <p>Then, after each year you compute your new withdrawal amount with this
 super-simple formula.</p>
 
 <div class="highlight">
-  <pre><code>new monthly withdrawal = M * beta + P/1000
-</code></pre>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>new monthly withdrawal = M * beta + P/1000
+</code></pre></div>  </div>
 </div>
 
 <p>where,</p>
 
-<pre><code>M = previous monthly withdrawal
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>M = previous monthly withdrawal
 beta = monthly withdrawal multiplier = 1 - 1.2%/w
 w = annual withdrawal rate
 P = current portfolio value
-</code></pre>
+</code></pre></div></div>
 
 <p>The graph below shows the monthly withdrawal multiplier as a function of
 annual withdrawal rate.  If you hover over the chart you will see other
@@ -441,23 +402,23 @@ using the “moderate” strategy numbers.</p>
 
 <ol>
   <li>
-    <p>Compute your initial monthly withdrawal from the equation <code>Pw/12</code>.
-For example, with a $400,000 portfolio (<code>P</code>) and a 3% withdrawal rate (<code>w</code>),
+    <p>Compute your initial monthly withdrawal from the equation <code class="language-plaintext highlighter-rouge">Pw/12</code>.
+For example, with a $400,000 portfolio (<code class="language-plaintext highlighter-rouge">P</code>) and a 3% withdrawal rate (<code class="language-plaintext highlighter-rouge">w</code>),
 your monthly withdrawal is,</p>
 
-    <p><code>$400,000*0.03/12 = $1000</code></p>
+    <p><code class="language-plaintext highlighter-rouge">$400,000*0.03/12 = $1000</code></p>
   </li>
   <li>
     <p>Withdrawal from the portfolio for a full year using the last computed value.</p>
   </li>
   <li>
     <p>At the end of each year, compute your new monthly withdrawal rate using
-the equation <code>M * beta + P/1000</code>.  For example,
-with a 3% withdrawal rate (<code>w</code>), your beta multiplier is <code>1 - 1.2%/3% = 0.6</code>.
-If your portfolio (<code>P</code>) has increased to $420,000 after the first year,
+the equation <code class="language-plaintext highlighter-rouge">M * beta + P/1000</code>.  For example,
+with a 3% withdrawal rate (<code class="language-plaintext highlighter-rouge">w</code>), your beta multiplier is <code class="language-plaintext highlighter-rouge">1 - 1.2%/3% = 0.6</code>.
+If your portfolio (<code class="language-plaintext highlighter-rouge">P</code>) has increased to $420,000 after the first year,
 then your new withdrawal is,</p>
 
-    <p><code>$1000*0.6 + $420000/1000 = $600 + $420 = $1020</code></p>
+    <p><code class="language-plaintext highlighter-rouge">$1000*0.6 + $420000/1000 = $600 + $420 = $1020</code></p>
   </li>
   <li>
     <p>Go back to step 2 and repeat.</p>
@@ -470,21 +431,21 @@ then your new withdrawal is,</p>
 looks an awful lot like an <a href="https://en.wikipedia.org/wiki/Exponential_smoothing">exponential smoothed average</a>.
 If we rewrite the withdrawal formula like this,</p>
 
-<pre><code>M(t) = (1-alpha) * M(t-1) + alpha * Pw/12
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>M(t) = (1-alpha) * M(t-1) + alpha * Pw/12
+</code></pre></div></div>
 
 <p>where</p>
 
-<pre><code>alpha = 1.2%/w
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>alpha = 1.2%/w
+</code></pre></div></div>
 
 <p>then you can see that it is indeed an exponential moving average of the
-term <code>Pw/12</code>.  That term represents the annual withdrawal rate projected down
+term <code class="language-plaintext highlighter-rouge">Pw/12</code>.  That term represents the annual withdrawal rate projected down
 to the monthly level.</p>
 
-<p>For exponential smoothed averages, a smaller <code>alpha</code> represents an average that has
+<p>For exponential smoothed averages, a smaller <code class="language-plaintext highlighter-rouge">alpha</code> represents an average that has
 a larger smoothing effect.  In the case of this withdrawal strategy,
-the smaller <code>alpha</code> corresponds to larger withdrawal rates which means that larger
+the smaller <code class="language-plaintext highlighter-rouge">alpha</code> corresponds to larger withdrawal rates which means that larger
 withdrawal rates will have larger smoothing effects.</p>
 
 <h2 id="parting-thoughts">Parting Thoughts</h2>
@@ -559,7 +520,7 @@ strategy doesn’t require you do so, it’s up to you.</p>
         <ul class="contact-list">
           <li>M<span class='brand-color'>o</span>neycle</li>
           <li><a href="mailto:sir@moneycle.com">sir@moneycle.com</a></li>
-          <li>&copy; <time datetime="2018-09-06T10:56:01-06:00">2018</time>. All rights reserved.</li>
+          <li>&copy; <time datetime="2021-03-01T19:12:39-07:00">2021</time>. All rights reserved.</li>
         </ul>
       </div>
 
