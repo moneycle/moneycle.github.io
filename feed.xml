@@ -4,10 +4,10 @@
     <title>Moneycle</title>
     <description>Don your money monocle (top hats are optional) as we explore topics related to money, investing and early retirement.
 </description>
-    <link>http://www.moneycle.com/</link>
-    <atom:link href="http://www.moneycle.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 01 Mar 2021 19:12:39 -0700</pubDate>
-    <lastBuildDate>Mon, 01 Mar 2021 19:12:39 -0700</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 02 Mar 2021 12:15:07 -0700</pubDate>
+    <lastBuildDate>Tue, 02 Mar 2021 12:15:07 -0700</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -285,9 +285,9 @@ FI faster.&lt;/li&gt;
 </description>
         <pubDate>Wed, 08 Aug 2018 00:00:00 -0600</pubDate>
         
-          <link>http://www.moneycle.com/journey-to-financial-independence/</link>
+          <link>http://localhost:4000/journey-to-financial-independence/</link>
         
-        <guid isPermaLink="true">http://www.moneycle.com/journey-to-financial-independence/</guid>
+        <guid isPermaLink="true">http://localhost:4000/journey-to-financial-independence/</guid>
         
         
       </item>
@@ -700,9 +700,9 @@ will discuss how to calculate your contributions when retiring before age 70.&lt
 </description>
         <pubDate>Mon, 14 Aug 2017 00:00:00 -0600</pubDate>
         
-          <link>http://www.moneycle.com/to-roth-or-not-to-roth-part-3/</link>
+          <link>http://localhost:4000/to-roth-or-not-to-roth-part-3/</link>
         
-        <guid isPermaLink="true">http://www.moneycle.com/to-roth-or-not-to-roth-part-3/</guid>
+        <guid isPermaLink="true">http://localhost:4000/to-roth-or-not-to-roth-part-3/</guid>
         
         
       </item>
@@ -834,9 +834,9 @@ wild fluctuations in the market.&lt;/p&gt;
 </description>
         <pubDate>Sat, 17 Jun 2017 00:00:00 -0600</pubDate>
         
-          <link>http://www.moneycle.com/super-simple-virtual-buffer-withdrawal-strategy-revisited/</link>
+          <link>http://localhost:4000/super-simple-virtual-buffer-withdrawal-strategy-revisited/</link>
         
-        <guid isPermaLink="true">http://www.moneycle.com/super-simple-virtual-buffer-withdrawal-strategy-revisited/</guid>
+        <guid isPermaLink="true">http://localhost:4000/super-simple-virtual-buffer-withdrawal-strategy-revisited/</guid>
         
         
       </item>
@@ -996,9 +996,9 @@ forward until you exit the rat race.&lt;/p&gt;
 </description>
         <pubDate>Thu, 06 Apr 2017 23:54:55 -0600</pubDate>
         
-          <link>http://www.moneycle.com/to-roth-or-not-to-roth-part-2/</link>
+          <link>http://localhost:4000/to-roth-or-not-to-roth-part-2/</link>
         
-        <guid isPermaLink="true">http://www.moneycle.com/to-roth-or-not-to-roth-part-2/</guid>
+        <guid isPermaLink="true">http://localhost:4000/to-roth-or-not-to-roth-part-2/</guid>
         
         
       </item>
@@ -1365,9 +1365,9 @@ decision in light of how your Social Security benefits affect your future tax ra
 </description>
         <pubDate>Wed, 18 Jan 2017 00:00:00 -0700</pubDate>
         
-          <link>http://www.moneycle.com/how-social-security-messes-with-your-tax-brackets/</link>
+          <link>http://localhost:4000/how-social-security-messes-with-your-tax-brackets/</link>
         
-        <guid isPermaLink="true">http://www.moneycle.com/how-social-security-messes-with-your-tax-brackets/</guid>
+        <guid isPermaLink="true">http://localhost:4000/how-social-security-messes-with-your-tax-brackets/</guid>
         
         
       </item>
@@ -1849,9 +1849,9 @@ money you should save in your &lt;strong&gt;Traditional&lt;/strong&gt; savings o
 </description>
         <pubDate>Wed, 19 Oct 2016 00:00:00 -0600</pubDate>
         
-          <link>http://www.moneycle.com/to-roth-or-not-to-roth-part-1/</link>
+          <link>http://localhost:4000/to-roth-or-not-to-roth-part-1/</link>
         
-        <guid isPermaLink="true">http://www.moneycle.com/to-roth-or-not-to-roth-part-1/</guid>
+        <guid isPermaLink="true">http://localhost:4000/to-roth-or-not-to-roth-part-1/</guid>
         
         <category>investing</category>
         
@@ -2067,9 +2067,9 @@ Putting these expenses in terms of how they eat away at your portfolio can be ey
 </description>
         <pubDate>Thu, 25 Aug 2016 00:00:00 -0600</pubDate>
         
-          <link>http://www.moneycle.com/radioactive-half-life-of-expenses/</link>
+          <link>http://localhost:4000/radioactive-half-life-of-expenses/</link>
         
-        <guid isPermaLink="true">http://www.moneycle.com/radioactive-half-life-of-expenses/</guid>
+        <guid isPermaLink="true">http://localhost:4000/radioactive-half-life-of-expenses/</guid>
         
         <category>investing</category>
         
@@ -2477,9 +2477,9 @@ strategy doesn’t require you do so, it’s up to you.&lt;/p&gt;
 </description>
         <pubDate>Tue, 31 May 2016 00:00:00 -0600</pubDate>
         
-          <link>http://www.moneycle.com/super-simple-virtual-buffer-withdrawal-strategy/</link>
+          <link>http://localhost:4000/super-simple-virtual-buffer-withdrawal-strategy/</link>
         
-        <guid isPermaLink="true">http://www.moneycle.com/super-simple-virtual-buffer-withdrawal-strategy/</guid>
+        <guid isPermaLink="true">http://localhost:4000/super-simple-virtual-buffer-withdrawal-strategy/</guid>
         
         <category>investing</category>
         
@@ -2975,9 +2975,9 @@ distributions from your IRAs which all adds up to more taxable income.&lt;/p&gt;
 </description>
         <pubDate>Sat, 07 May 2016 00:00:00 -0600</pubDate>
         
-          <link>http://www.moneycle.com/affordable-care-act-may-increase-your-marginal-tax-rate/</link>
+          <link>http://localhost:4000/affordable-care-act-may-increase-your-marginal-tax-rate/</link>
         
-        <guid isPermaLink="true">http://www.moneycle.com/affordable-care-act-may-increase-your-marginal-tax-rate/</guid>
+        <guid isPermaLink="true">http://localhost:4000/affordable-care-act-may-increase-your-marginal-tax-rate/</guid>
         
         <category>investing</category>
         
@@ -3077,9 +3077,9 @@ until the HSA is drained.&lt;/p&gt;
 </description>
         <pubDate>Fri, 22 Jan 2016 00:00:00 -0700</pubDate>
         
-          <link>http://www.moneycle.com/hsa-tax-advantages/</link>
+          <link>http://localhost:4000/hsa-tax-advantages/</link>
         
-        <guid isPermaLink="true">http://www.moneycle.com/hsa-tax-advantages/</guid>
+        <guid isPermaLink="true">http://localhost:4000/hsa-tax-advantages/</guid>
         
         <category>investing</category>
         
